@@ -1,0 +1,49 @@
+//test operators (integers)
+assert 1 + 1 == 2, "1 + 1 == 2";
+assert 1 - 1 == 0, "1 - 1 == 0";
+assert 2 * 2 == 4, "2 * 2 == 4";
+assert 1 / 2 == 0, "1 / 2 == 0"; //integer division
+assert 5 % 2 == 1, "5 % 2 == 1";
+
+//test operators (floats)
+assert 1.0 + 1.0 == 2.0, "1.0 + 1.0 == 2.0";
+assert 1.0 - 1.0 == 0.0, "1.0 - 1.0 == 0.0";
+assert 2.0 * 2.0 == 4.0, "2.0 * 2.0 == 4.0";
+assert 1.0 / 2.0 == 0.5, "1.0 / 2.0 == 0.5";
+
+
+var a = 10;
+
+a += 20;
+a -= 25;
+
+assert a == 5, "+= or -= failed";
+
+a *= 5;
+a /= 2;
+
+assert a == 12, "*= or /= failed";
+
+a %= 8;
+
+assert a == 4, "%= failed";
+
+//strings as special cases
+var s = "foo";
+
+assert s + "bar" == "foobar", "string addition failed";
+assert s == "foo", "string addition failed (was too sticky)";
+
+s += "bar";
+
+assert s == "foobar", "string addition failed (wasn't sticky enough)";
+
+//check order of operations
+assert 30 / 3 * 2 == 20, "Order of operations failed (raw numbers)";
+var x = 30;
+var y = 3;
+var z = 2;
+assert x / y * z == 20, "Order of operations failed (variables)";
+
+
+print "All good";

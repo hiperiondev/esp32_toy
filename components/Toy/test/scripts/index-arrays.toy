@@ -1,0 +1,105 @@
+
+//test basic indexing
+{
+    var week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
+    assert week[1] == "tuesday", "basic indexing failed (single element)";
+
+    assert week[1:1] == ["tuesday"], "basic indexing failed (single element as array)";
+
+    assert week[:] == ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"], "basic default indexing failed (first and second)";
+    assert week[::] == ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"], "basic default indexing failed (first, second and third)";
+}
+
+
+//test basic replacement
+{
+    var week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
+    week[3:3] = "Holiday";
+
+    assert week == ["monday", "tuesday", "wednesday", "Holiday", "friday", "saturday", "sunday"], "basic replacement failed";
+}
+
+
+//test backwards
+{
+    var week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
+    assert week[::-1] == ["sunday", "saturday", "friday", "thursday", "wednesday", "tuesday", "monday"], "backwards failed";
+}
+
+
+//test array weird manipulation
+{
+    var week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
+    week[::-2] = ["first", "second", "third"];
+
+    assert week == ["monday", "tuesday", "third", "thursday", "second", "saturday", "first"], "array weird manipulation failed";
+}
+
+
+//test index arithmetic
+{
+    var a = [1, 2, 3];
+
+    a[1] *= 3;
+
+    assert a == [1, 6, 3], "index arithmetic failed";
+}
+
+
+//test indexing with variables
+{
+    var week = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+
+    var first = 1;
+    var second = 2;
+    var third = -1;
+
+    assert week[first:second:third] == ["wednesday", "tuesday"], "indexing with variables failed";
+}
+
+
+//test nested indexing
+{
+    var a = [[[0]]];
+
+    a[0][0][0] = 42;
+
+    assert a[0][0] == [42], "nested indexing failed";
+}
+
+
+//test nested indexing multipliciation assignment
+{
+    var a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+    a[1][1] *= 10;
+
+    assert a == [[1, 2, 3], [4, 50, 6], [7, 8, 9]], "nested indexing multipliciation assignment failed";
+}
+
+
+//test combine example
+{
+    fn combine(a, b, c) {
+        return [a, b, c];
+    }
+
+    assert combine(1, 2, 3) == [1, 2, 3], "combine example failed";
+}
+
+
+//test deep-combine example
+{
+    fn combine(a, b, c, d) {
+        return [[a, b], [c, d]];
+    }
+
+    assert combine(1, 2, 3, 4) == [[1, 2], [3, 4]], "deep-combine example failed";
+}
+
+
+print "All good";

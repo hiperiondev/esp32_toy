@@ -1,0 +1,5 @@
+//test the opaque data type works
+
+var o: opaque = produce();
+
+consume(o);

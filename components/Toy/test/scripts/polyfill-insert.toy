@@ -1,0 +1,22 @@
+//polyfill the insert function
+fn insert(self, k, v) {
+    var tmp1 = v;
+    var tmp2;
+    for (var i = k; i < self.length(); i++) {
+        tmp2 = self[i];
+        self[i] = tmp1;
+        tmp1 = tmp2;
+    }
+
+    self.push(tmp1);
+    return self;
+}
+
+var a = [1, 2, 3];
+
+a = a.insert(1, 42);
+
+assert a == [1, 42, 2, 3], "polyfill insert failed";
+
+
+print "All good";

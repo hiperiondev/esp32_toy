@@ -1,0 +1,14 @@
+idf_component_register(
+    SRCS
+        main.c
+    INCLUDE_DIRS
+        .
+    REQUIRES
+        console
+        ftpserver
+        nvs_flash
+        hal_esp32
+        Toy
+        Toy_library
+        Toy_repl_main_esp32
+)  
