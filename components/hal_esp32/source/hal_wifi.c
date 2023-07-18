@@ -1,12 +1,12 @@
 /*
- * @file hal_port_wifi.c
+ * @file hal_wifi.c
  * @brief WIFI port
  *
  * @author Emiliano Gonzalez (egonzalez . hiperion @ gmail . com))
  * @version 0.1
  * @date 2023
  * @copyright MIT License
- * @see https://github.com/hiperiondev/esp32-microvium
+ * @see
  * @note This is based on other projects. See license files
  */
 
@@ -25,7 +25,7 @@
 
 #include "hal_wifi.h"
 
-static const char *TAG = "wifi";
+static const char *TAG = "hal_wifi";
 
 /* FreeRTOS event group to signal when we are connected*/
 static EventGroupHandle_t s_wifi_event_group;

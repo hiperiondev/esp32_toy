@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "hal_fs.h"
+
 #include "toy_repl_tools.h"
 #include "toy_lib_about.h"
 #include "toy_lib_standard.h"
@@ -14,7 +16,7 @@
 
 //IO functions
 const unsigned char* Toy_readFile(const char *path, size_t *fileSize) {
-    FILE *file = fopen(path, "rb");
+    FILE *file = fs_open(path, "rb");
 
     if (file == NULL) {
         fprintf(stderr, TOY_CC_ERROR "Could not open file \"%s\"\n" TOY_CC_RESET, path);
@@ -47,7 +49,7 @@ const unsigned char* Toy_readFile(const char *path, size_t *fileSize) {
 }
 
 int Toy_writeFile(const char *path, const unsigned char *bytes, size_t size) {
-    FILE *file = fopen(path, "wb");
+    FILE *file = fs_open(path, "wb");
 
     if (file == NULL) {
         fprintf(stderr, TOY_CC_ERROR "Could not open file \"%s\"\n" TOY_CC_RESET, path);

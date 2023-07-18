@@ -1,17 +1,17 @@
 /*
- * @file hal_port_wifi.h
+ * @file hal_wifi.h
  * @brief WIFI port
  *
  * @author Emiliano Gonzalez (egonzalez . hiperion @ gmail . com))
  * @version 0.1
  * @date 2023
  * @copyright MIT License
- * @see https://github.com/hiperiondev/esp32-microvium
+ * @see
  * @note This is based on other projects. See license files
  */
 
-#ifndef HAL_PORT_WIFI_H_
-#define HAL_PORT_WIFI_H_
+#ifndef HAL_WIFI_H_
+#define HAL_WIFI_H_
 
 #define DEFAULT_SCAN_LIST_SIZE 50
 
@@ -111,4 +111,4 @@ void wifi_connect_sta(const char *name, const char *pass);
  */
 void wifi_stop(void);
 
-#endif /* HAL_PORT_WIFI_H_ */
+#endif /* HAL_WIFI_H_ */

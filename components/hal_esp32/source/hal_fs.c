@@ -1,12 +1,12 @@
 /*
- * @file hal_port_fs.c
+ * @file hal_fs.c
  * @brief FILESYSTEM port
  *
  * @author Emiliano Gonzalez (egonzalez . hiperion @ gmail . com))
  * @version 0.1
  * @date 2023
  * @copyright MIT License
- * @see https://github.com/hiperiondev/esp32-microvium
+ * @see
  * @note This is based on other projects. See license files
  */
 
@@ -23,7 +23,7 @@
 #include "hal_fs.h"
 #include "esp_littlefs.h"
 
-static const char *TAG = "littlefs";
+static const char *TAG = "hal_fs";
 
 #define FORMAT_IF_MOUNT_FAILED  1
 

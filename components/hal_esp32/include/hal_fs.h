@@ -1,17 +1,17 @@
 /*
- * @file hal_port_fs.h
+ * @file hal_fs.h
  * @brief FILESYSTEM port
  *
  * @author Emiliano Gonzalez (egonzalez . hiperion @ gmail . com))
  * @version 0.1
  * @date 2023
  * @copyright MIT License
- * @see https://github.com/hiperiondev/esp32-microvium
+ * @see
  * @note This is based on other projects. See license files
  */
 
-#ifndef HAL_PORT_FS_H_
-#define HAL_PORT_FS_H_
+#ifndef HAL_FS_H_
+#define HAL_FS_H_
 
 #include <stdio.h>
 
@@ -35,4 +35,4 @@ FILE* littlefs_freopen(const char *filename, const char *opentype, FILE *stream)
   int littlefs_remove(const char *file);
   int littlefs_rename(const char *file, char *newname);
 
-#endif /* HAL_PORT_FS_H_ */
+#endif /* HAL_FS_H_ */

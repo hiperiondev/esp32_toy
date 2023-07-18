@@ -12,7 +12,7 @@
 
 #define INPUT_BUFFER_SIZE 2048
 
-void repl(const char *initialInput) {
+static void repl(const char *initialInput) {
     //repl does it's own thing for now
     bool error = false;
 

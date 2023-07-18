@@ -10,4 +10,5 @@ idf_component_register(
         include/
     REQUIRES
         Toy
+        hal_esp32
 )
