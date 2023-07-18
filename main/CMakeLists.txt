@@ -9,5 +9,4 @@ idf_component_register(
         nvs_flash
         hal_esp32
         Toy
-        Toy_library
 )  
