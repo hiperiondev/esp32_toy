@@ -8,7 +8,9 @@
 #include "toy_lib_random.h"
 #include "toy_lib_runner.h"
 #include "toy_console_colors.h"
-#include "toy.h"
+#include "toy_drive_system.h"
+#include "toy_compiler.h"
+#include "toy_parser.h"
 
 #define INPUT_BUFFER_SIZE 2048
 
