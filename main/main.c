@@ -71,8 +71,8 @@ void runBinaryCustom(const unsigned char *tb, size_t size) {
     Toy_initInterpreter(&interpreter);
 
     //NOTE: suppress print output for testing
-    Toy_setInterpreterPrint(&interpreter, noPrintFn);
-    Toy_setInterpreterAssert(&interpreter, noAssertFn);
+    //Toy_setInterpreterPrint(&interpreter, noPrintFn);
+    //Toy_setInterpreterAssert(&interpreter, noAssertFn);
 
     Toy_runInterpreter(&interpreter, tb, size);
     Toy_freeInterpreter(&interpreter);
