@@ -173,7 +173,12 @@ void toy_task(void *pvParameter) {
 
     printf(TOY_CC_NOTICE "COMPILER: All good\n" TOY_CC_RESET);
 
+
     // test interpreter
+    printf(">> test bycode <<\n");
+    Toy_runBinaryFile("compiler_sample_code.tb");
+    printf(">> ----------- <<\n");
+
     {
         //test init & free
         Toy_Interpreter interpreter;
@@ -294,7 +299,7 @@ void app_main() {
     xTaskCreatePinnedToCore(
             toy_task,
             "toy_task",
-            15000,
+            35000,
             NULL,
             10,
             &toytsk_handle,

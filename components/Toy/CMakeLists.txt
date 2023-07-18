@@ -4,9 +4,8 @@ file(
             source/common/*.c
             source/compiler/*.c
             source/interpreter/*.c
-            source/others/*.c
-            library/repl/*.c
-            library/source/*.c
+            library/others/*.c
+            library/libs/*.c
 )
 
 idf_component_register(
@@ -15,9 +14,8 @@ idf_component_register(
         include/common/
         include/compiler/
         include/interpreter/
-        include/others/
-        library/repl/
-        library/include/
+        library/others/
+        library/libs/
     REQUIRES
         hal_esp32
 )
