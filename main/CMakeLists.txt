@@ -10,5 +10,4 @@ idf_component_register(
         hal_esp32
         Toy
         Toy_library
-        Toy_repl_main_esp32
 )  
