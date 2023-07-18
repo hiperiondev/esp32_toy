@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "hal_fs.h"
-
 #include "toy_repl_tools.h"
 #include "toy_lib_about.h"
 #include "toy_lib_standard.h"
@@ -13,6 +11,16 @@
 #include "toy_parser.h"
 #include "toy_compiler.h"
 #include "toy_interpreter.h"
+
+// for external filesystem HAL
+#ifdef _EXTERNAL_FS_HAL_
+    #include _EXTERNAL_FS_HAL_
+#else
+    #define fs_open(FN, OT)       fopen(FN, OT)
+    #define fs_reopen(FN, OT, ST) freopen(FN, OT, ST)
+    #define fs_remove(FN)         remove(FN)
+    #define fs_rename(ON, NN)     rename(ON, NN)
+#endif
 
 //IO functions
 const unsigned char* Toy_readFile(const char *path, size_t *fileSize) {

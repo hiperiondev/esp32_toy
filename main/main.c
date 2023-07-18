@@ -4,7 +4,6 @@
  * @brief main program
  * @details
  * This is based on other projects:
- *   HALFRED ver. 0.2.0 [bsd license: see LICENSE-HALFRED.txt](http://www.wsn.agh.edu.pl/download/public/halfred/0.2.0/)
  *   Others (see individual files)
  *
  *   please contact their authors for more information.
@@ -13,7 +12,7 @@
  * @version 0.1
  * @date 2023
  * @copyright MIT License
- * @see https://github.com/hiperiondev/esp32-microvium
+ * @see
  */
 
 #define LOG_LOCAL_LEVEL ESP_LOG_INFO
@@ -50,12 +49,14 @@ TaskHandle_t ftpservertsk_handle;
 #define WIFI_SSID "test"
 #define WIFI_PASS "test1234"
 
+int ignoredAssertions = 0;
+
+/*
 //suppress the print output
 static void noPrintFn(const char *output) {
     //NO OP
 }
 
-int ignoredAssertions = 0;
 static void noAssertFn(const char *output) {
     if (strncmp(output, "!ignore", 7) == 0) {
         ignoredAssertions++;
@@ -65,6 +66,7 @@ static void noAssertFn(const char *output) {
         printf("\n" TOY_CC_RESET); //default new line
     }
 }
+*/
 
 void runBinaryCustom(const unsigned char *tb, size_t size) {
     Toy_Interpreter interpreter;
@@ -211,8 +213,8 @@ void toy_task(void *pvParameter) {
         const unsigned char *bytecode = Toy_collateCompiler(&compiler, &size);
 
         //NOTE: suppress print output for testing
-        Toy_setInterpreterPrint(&interpreter, noPrintFn);
-        Toy_setInterpreterAssert(&interpreter, noAssertFn);
+        //Toy_setInterpreterPrint(&interpreter, noPrintFn);
+        //Toy_setInterpreterAssert(&interpreter, noAssertFn);
 
         //run
         Toy_runInterpreter(&interpreter, bytecode, size);

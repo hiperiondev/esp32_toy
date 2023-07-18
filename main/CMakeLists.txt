@@ -8,5 +8,5 @@ idf_component_register(
         ftpserver
         nvs_flash
         hal_esp32
-        Toy
+        toy_lang
 )  
