@@ -17,7 +17,7 @@ STATIC_ASSERT(sizeof(unsigned int) == 4);
 
 static const char *build = __DATE__ " " __TIME__;
 
-const char* Toy_private_version_build() {
+const char* Toy_private_version_build(void) {
     return build;
 }
 

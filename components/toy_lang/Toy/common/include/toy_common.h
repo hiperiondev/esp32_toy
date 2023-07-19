@@ -29,7 +29,13 @@
 
 #endif
 
-TOY_API const char* Toy_private_version_build();
+/**
+ * @fn const char* Toy_private_version_build(void)
+ * @brief
+ *
+ * @return
+ */
+TOY_API const char* Toy_private_version_build(void);
 
 /**
  * @typedef Toy_CommandLine
