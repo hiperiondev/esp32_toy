@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d9/d63/structToy__CommandLine" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_CommandLine</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1a860bb29e35a3d4411e235d8a40830a34" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_CommandLine::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <qualifiedname>Toy_CommandLine::error</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="35" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1a790700ab7204a71bfadecc4cf9fc2392" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_CommandLine::help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <qualifiedname>Toy_CommandLine::help</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="36" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1ad44f9d6f56559a1752c3662323595903" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_CommandLine::version</definition>
+        <argsstring></argsstring>
+        <name>version</name>
+        <qualifiedname>Toy_CommandLine::version</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="37" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1a458f3aa894791c7fd6774557e39ad45c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Toy_CommandLine::binaryfile</definition>
+        <argsstring></argsstring>
+        <name>binaryfile</name>
+        <qualifiedname>Toy_CommandLine::binaryfile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="38" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1a2770914457f28d0c42dce865822cccde" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Toy_CommandLine::sourcefile</definition>
+        <argsstring></argsstring>
+        <name>sourcefile</name>
+        <qualifiedname>Toy_CommandLine::sourcefile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="39" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1abaed27214f20e4a3723af67f507da47c" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Toy_CommandLine::compilefile</definition>
+        <argsstring></argsstring>
+        <name>compilefile</name>
+        <qualifiedname>Toy_CommandLine::compilefile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="40" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1ab7842da257661b0e53dcfe52cf9cf70a" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Toy_CommandLine::outfile</definition>
+        <argsstring></argsstring>
+        <name>outfile</name>
+        <qualifiedname>Toy_CommandLine::outfile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>defaults to out.tb </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="41" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1afe78f73b441f829233a71941de3b3192" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Toy_CommandLine::source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <qualifiedname>Toy_CommandLine::source</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="42" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1a41e97887bb63cabd5fb3db2275fba4df" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Toy_CommandLine::initialfile</definition>
+        <argsstring></argsstring>
+        <name>initialfile</name>
+        <qualifiedname>Toy_CommandLine::initialfile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="43" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1a87a182fa5818e7c8785c3c846228d7fd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_CommandLine::enablePrintNewline</definition>
+        <argsstring></argsstring>
+        <name>enablePrintNewline</name>
+        <qualifiedname>Toy_CommandLine::enablePrintNewline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="44" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1a5a73d367b22e2547c7e350c5d57ea13b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_CommandLine::parseBytecodeHeader</definition>
+        <argsstring></argsstring>
+        <name>parseBytecodeHeader</name>
+        <qualifiedname>Toy_CommandLine::parseBytecodeHeader</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="45" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d63/structToy__CommandLine_1af53e063062a69d5e9658b0b6ba03b902" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_CommandLine::verbose</definition>
+        <argsstring></argsstring>
+        <name>verbose</name>
+        <qualifiedname>Toy_CommandLine::verbose</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="46" column="10" bodyfile="compiler/include/toy_repl_common.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="compiler/include/toy_repl_common.h" line="34" column="1" bodyfile="compiler/include/toy_repl_common.h" bodystart="34" bodyend="47"/>
+    <listofallmembers>
+      <member refid="d9/d63/structToy__CommandLine_1a458f3aa894791c7fd6774557e39ad45c" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>binaryfile</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1abaed27214f20e4a3723af67f507da47c" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>compilefile</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1a87a182fa5818e7c8785c3c846228d7fd" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>enablePrintNewline</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1a860bb29e35a3d4411e235d8a40830a34" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>error</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1a790700ab7204a71bfadecc4cf9fc2392" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>help</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1a41e97887bb63cabd5fb3db2275fba4df" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>initialfile</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1ab7842da257661b0e53dcfe52cf9cf70a" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>outfile</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1a5a73d367b22e2547c7e350c5d57ea13b" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>parseBytecodeHeader</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1afe78f73b441f829233a71941de3b3192" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>source</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1a2770914457f28d0c42dce865822cccde" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>sourcefile</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1af53e063062a69d5e9658b0b6ba03b902" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>verbose</name></member>
+      <member refid="d9/d63/structToy__CommandLine_1ad44f9d6f56559a1752c3662323595903" prot="public" virt="non-virtual"><scope>Toy_CommandLine</scope><name>version</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d4/d71/toy__reffunction_8h" kind="file" language="C++">
+    <compoundname>toy_reffunction.h</compoundname>
+    <includes local="no">stddef.h</includes>
+    <includes refid="d7/d1d/toy__common_8h" local="yes">toy_common.h</includes>
+    <includedby refid="d3/d5f/toy__literal_8h" local="yes">toy_literal.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>toy_common.h</label>
+        <link refid="d7/d1d/toy__common_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>toy_reffunction.h</label>
+        <link refid="d4/d71/toy__reffunction_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>stdbool.h</label>
+      </node>
+      <node id="2">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="8">
+        <label>toy_literal_array.h</label>
+        <link refid="d0/dfc/toy__literal__array_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>toy_ast_node.h</label>
+        <link refid="d3/df7/toy__ast__node_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>toy_compiler.h</label>
+        <link refid="d3/d43/toy__compiler_8h"/>
+      </node>
+      <node id="5">
+        <label>toy_parser.h</label>
+        <link refid="dc/d33/toy__parser_8h"/>
+      </node>
+      <node id="7">
+        <label>toy_builtin.h</label>
+        <link refid="d7/dbe/toy__builtin_8h"/>
+      </node>
+      <node id="6">
+        <label>toy_interpreter.h</label>
+        <link refid="dc/dcc/toy__interpreter_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>toy_literal.h</label>
+        <link refid="d3/d5f/toy__literal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>toy_literal_dictionary.h</label>
+        <link refid="dd/da4/toy__literal__dictionary_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>toy_reffunction.h</label>
+        <link refid="d4/d71/toy__reffunction_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>toy_scope.h</label>
+        <link refid="d2/db4/toy__scope_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d3/d2c/structToy__RefFunction" prot="public">Toy_RefFunction</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d4/d71/toy__reffunction_8h_1a449b74030a0d110f725ddb841b0b0fc3" prot="public" static="no">
+        <type>void *(*</type>
+        <definition>void *(* Toy_RefFunctionAllocatorFn)(void *pointer, size_t oldSize, size_t newSize)</definition>
+        <argsstring>)(void *pointer, size_t oldSize, size_t newSize)</argsstring>
+        <name>Toy_RefFunctionAllocatorFn</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pointer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>oldSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="23" column="9" bodyfile="interpreter/include/toy_reffunction.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d4/d71/toy__reffunction_8h_1a8f549bd7fc3a8067dddeaeeab77b9d52" prot="public" static="no">
+        <type>struct <ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref></type>
+        <definition>Toy_RefFunction</definition>
+        <argsstring></argsstring>
+        <name>Toy_RefFunction</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="43" column="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d4/d71/toy__reffunction_8h_1ac5bc20f329feef204bbd03a9eb3a6535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_setRefFunctionAllocatorFn</definition>
+        <argsstring>(Toy_RefFunctionAllocatorFn)</argsstring>
+        <name>Toy_setRefFunctionAllocatorFn</name>
+        <param>
+          <type><ref refid="d4/d71/toy__reffunction_8h_1a449b74030a0d110f725ddb841b0b0fc3" kindref="member">Toy_RefFunctionAllocatorFn</ref></type>
+        </param>
+        <briefdescription>
+<para>Conforms to and is invoked by Toy&apos;s memory API, and generally shouldn&apos;t be used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Toy_RefFunctionAllocatorFn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="31" column="14" declfile="interpreter/include/toy_reffunction.h" declline="31" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d71/toy__reffunction_8h_1ae483f78001b6088908a89711bc1f8ebe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref> *</type>
+        <definition>Toy_RefFunction * Toy_createRefFunction</definition>
+        <argsstring>(const void *data, size_t length)</argsstring>
+        <name>Toy_createRefFunction</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Returns a new <ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref>, containing a copy of data, or NULL on error. This function also sets the returned refFunction&apos;s reference counter to 1. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="55" column="25" declfile="interpreter/include/toy_reffunction.h" declline="55" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d71/toy__reffunction_8h_1aaee055bf74711e1ef602cfa888cad5bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_deleteRefFunction</definition>
+        <argsstring>(Toy_RefFunction *refFunction)</argsstring>
+        <name>Toy_deleteRefFunction</name>
+        <param>
+          <type><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref> *</type>
+          <declname>refFunction</declname>
+        </param>
+        <briefdescription>
+<para>Reduces the refFunction&apos;s reference counter by 1 and, if it reaches 0, frees the memory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>refFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="63" column="14" declfile="interpreter/include/toy_reffunction.h" declline="63" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d71/toy__reffunction_8h_1a1a189325be94e8fe4a04d947e1ec5a10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API int</type>
+        <definition>int Toy_countRefFunction</definition>
+        <argsstring>(Toy_RefFunction *refFunction)</argsstring>
+        <name>Toy_countRefFunction</name>
+        <param>
+          <type><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref> *</type>
+          <declname>refFunction</declname>
+        </param>
+        <briefdescription>
+<para>Returns the total number of references to refFunction, for debugging. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>refFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="72" column="13" declfile="interpreter/include/toy_reffunction.h" declline="72" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d71/toy__reffunction_8h_1ab07959ecc82c2707741ca73886510531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API size_t</type>
+        <definition>size_t Toy_lengthRefFunction</definition>
+        <argsstring>(Toy_RefFunction *refFunction)</argsstring>
+        <name>Toy_lengthRefFunction</name>
+        <param>
+          <type><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref> *</type>
+          <declname>refFunction</declname>
+        </param>
+        <briefdescription>
+<para>Returns the length of the underlying bytecode of refFunction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>refFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="81" column="16" declfile="interpreter/include/toy_reffunction.h" declline="81" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d71/toy__reffunction_8h_1a71c76f610ee897a0b098172108922db3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref> *</type>
+        <definition>Toy_RefFunction * Toy_copyRefFunction</definition>
+        <argsstring>(Toy_RefFunction *refFunction)</argsstring>
+        <name>Toy_copyRefFunction</name>
+        <param>
+          <type><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref> *</type>
+          <declname>refFunction</declname>
+        </param>
+        <briefdescription>
+<para>Increases the reference counter of refFunction by 1, before returning the given pointer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>refFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="90" column="25" declfile="interpreter/include/toy_reffunction.h" declline="90" declcolumn="25"/>
+      </memberdef>
+      <memberdef kind="function" id="d4/d71/toy__reffunction_8h_1ace66658823e3a230ca67a56ada2525fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref> *</type>
+        <definition>Toy_RefFunction * Toy_deepCopyRefFunction</definition>
+        <argsstring>(Toy_RefFunction *refFunction)</argsstring>
+        <name>Toy_deepCopyRefFunction</name>
+        <param>
+          <type><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref> *</type>
+          <declname>refFunction</declname>
+        </param>
+        <briefdescription>
+<para>Behaves identically to Toy_copyRefFunction, except that it explicitly preforms a deep copy of the internal memory. Using this function should be done carefully, as it incurs a performance penalty that negates the benefit of this module. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>refFunction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="99" column="25" declfile="interpreter/include/toy_reffunction.h" declline="99" declcolumn="25"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_REFFUNCTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_REFFUNCTION_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d1d/toy__common_8h" kindref="compound">toy_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//memory<sp/>allocation<sp/>hook</highlight></codeline>
+<codeline lineno="23" refid="d4/d71/toy__reffunction_8h_1a449b74030a0d110f725ddb841b0b0fc3" refkind="member"><highlight class="comment"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>(*Toy_RefFunctionAllocatorFn)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*pointer,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>oldSize,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>newSize);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="d4/d71/toy__reffunction_8h_1ac5bc20f329feef204bbd03a9eb3a6535" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d71/toy__reffunction_8h_1ac5bc20f329feef204bbd03a9eb3a6535" kindref="member">Toy_setRefFunctionAllocatorFn</ref>(<ref refid="d4/d71/toy__reffunction_8h_1a449b74030a0d110f725ddb841b0b0fc3" kindref="member">Toy_RefFunctionAllocatorFn</ref>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//the<sp/>RefFunction<sp/>structure</highlight></codeline>
+<codeline lineno="39" refid="d3/d2c/structToy__RefFunction" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref><sp/>{</highlight></codeline>
+<codeline lineno="40" refid="d3/d2c/structToy__RefFunction_1a6492ad2fc96e1528c65d9f5dbe0c8eac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d3/d2c/structToy__RefFunction_1a6492ad2fc96e1528c65d9f5dbe0c8eac" kindref="member">length</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="d3/d2c/structToy__RefFunction_1a9e818c9e6844dec4956672739726748a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/d2c/structToy__RefFunction_1a9e818c9e6844dec4956672739726748a" kindref="member">refCount</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="d3/d2c/structToy__RefFunction_1a221c894092e435ee316053b01eb5656e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="d3/d2c/structToy__RefFunction_1a221c894092e435ee316053b01eb5656e" kindref="member">data</ref>[];<sp/></highlight></codeline>
+<codeline lineno="43" refid="d4/d71/toy__reffunction_8h_1a8f549bd7fc3a8067dddeaeeab77b9d52" refkind="member"><highlight class="normal">}<sp/><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">//API</highlight></codeline>
+<codeline lineno="55" refid="d4/d71/toy__reffunction_8h_1ae483f78001b6088908a89711bc1f8ebe" refkind="member"><highlight class="comment"></highlight><highlight class="normal">TOY_API<sp/><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref>*<sp/><ref refid="d4/d71/toy__reffunction_8h_1ae483f78001b6088908a89711bc1f8ebe" kindref="member">Toy_createRefFunction</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>length);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="d4/d71/toy__reffunction_8h_1aaee055bf74711e1ef602cfa888cad5bd" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d4/d71/toy__reffunction_8h_1aaee055bf74711e1ef602cfa888cad5bd" kindref="member">Toy_deleteRefFunction</ref>(<ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref><sp/>*refFunction);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="d4/d71/toy__reffunction_8h_1a1a189325be94e8fe4a04d947e1ec5a10" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d4/d71/toy__reffunction_8h_1a1a189325be94e8fe4a04d947e1ec5a10" kindref="member">Toy_countRefFunction</ref>(<ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref><sp/>*refFunction);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="d4/d71/toy__reffunction_8h_1ab07959ecc82c2707741ca73886510531" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="d4/d71/toy__reffunction_8h_1ab07959ecc82c2707741ca73886510531" kindref="member">Toy_lengthRefFunction</ref>(<ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref><sp/>*refFunction);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="d4/d71/toy__reffunction_8h_1a71c76f610ee897a0b098172108922db3" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref>*<sp/><ref refid="d4/d71/toy__reffunction_8h_1a71c76f610ee897a0b098172108922db3" kindref="member">Toy_copyRefFunction</ref>(<ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref><sp/>*refFunction);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99" refid="d4/d71/toy__reffunction_8h_1ace66658823e3a230ca67a56ada2525fe" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref>*<sp/><ref refid="d4/d71/toy__reffunction_8h_1ace66658823e3a230ca67a56ada2525fe" kindref="member">Toy_deepCopyRefFunction</ref>(<ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref><sp/>*refFunction);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_REFFUNCTION_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="interpreter/include/toy_reffunction.h"/>
+  </compounddef>
+</doxygen>

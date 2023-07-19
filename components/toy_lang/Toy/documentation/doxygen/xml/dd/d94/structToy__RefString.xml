@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dd/d94/structToy__RefString" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_RefString</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dd/d94/structToy__RefString_1adcdbf671cc8cf725c229cf7b1a25067d" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Toy_RefString::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <qualifiedname>Toy_RefString::length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_refstring.h" line="42" column="12" bodyfile="common/include/toy_refstring.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d94/structToy__RefString_1a8956294763e9ff93cf42ad206deb58a5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_RefString::refCount</definition>
+        <argsstring></argsstring>
+        <name>refCount</name>
+        <qualifiedname>Toy_RefString::refCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_refstring.h" line="43" column="9" bodyfile="common/include/toy_refstring.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d94/structToy__RefString_1a6461fcb05d046a039edb79c12f505311" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Toy_RefString::data[]</definition>
+        <argsstring>[]</argsstring>
+        <name>data</name>
+        <qualifiedname>Toy_RefString::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_refstring.h" line="44" column="10" bodyfile="common/include/toy_refstring.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="common/include/toy_refstring.h" line="41" column="1" bodyfile="common/include/toy_refstring.h" bodystart="41" bodyend="45"/>
+    <listofallmembers>
+      <member refid="dd/d94/structToy__RefString_1a6461fcb05d046a039edb79c12f505311" prot="public" virt="non-virtual"><scope>Toy_RefString</scope><name>data</name></member>
+      <member refid="dd/d94/structToy__RefString_1adcdbf671cc8cf725c229cf7b1a25067d" prot="public" virt="non-virtual"><scope>Toy_RefString</scope><name>length</name></member>
+      <member refid="dd/d94/structToy__RefString_1a8956294763e9ff93cf42ad206deb58a5" prot="public" virt="non-virtual"><scope>Toy_RefString</scope><name>refCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

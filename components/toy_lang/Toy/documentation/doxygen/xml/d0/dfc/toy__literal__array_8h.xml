@@ -1,0 +1,434 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d0/dfc/toy__literal__array_8h" kind="file" language="C++">
+    <compoundname>toy_literal_array.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="d7/d1d/toy__common_8h" local="yes">toy_common.h</includes>
+    <includes refid="d3/d5f/toy__literal_8h" local="yes">toy_literal.h</includes>
+    <includedby refid="d3/d43/toy__compiler_8h" local="yes">toy_compiler.h</includedby>
+    <includedby refid="dc/dcc/toy__interpreter_8h" local="yes">toy_interpreter.h</includedby>
+    <includedby refid="d2/db4/toy__scope_8h" local="yes">toy_scope.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>toy_common.h</label>
+        <link refid="d7/d1d/toy__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>toy_literal_array.h</label>
+        <link refid="d0/dfc/toy__literal__array_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>toy_refstring.h</label>
+        <link refid="d5/de2/toy__refstring_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>toy_literal.h</label>
+        <link refid="d3/d5f/toy__literal_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>toy_reffunction.h</label>
+        <link refid="d4/d71/toy__reffunction_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>toy_literal_array.h</label>
+        <link refid="d0/dfc/toy__literal__array_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>toy_compiler.h</label>
+        <link refid="d3/d43/toy__compiler_8h"/>
+      </node>
+      <node id="4">
+        <label>toy_builtin.h</label>
+        <link refid="d7/dbe/toy__builtin_8h"/>
+      </node>
+      <node id="3">
+        <label>toy_interpreter.h</label>
+        <link refid="dc/dcc/toy__interpreter_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>toy_scope.h</label>
+        <link refid="d2/db4/toy__scope_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d5/d6a/structToy__LiteralArray" prot="public">Toy_LiteralArray</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d0/dfc/toy__literal__array_8h_1ab0c80896e545abb4e13474788cf56d04" prot="public" static="no">
+        <type>struct <ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref></type>
+        <definition>typedef struct Toy_LiteralArray Toy_LiteralArray</definition>
+        <argsstring></argsstring>
+        <name>Toy_LiteralArray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="24" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d0/dfc/toy__literal__array_8h_1a841d502cbb65c1d4e8b683ffaf593cc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_initLiteralArray</definition>
+        <argsstring>(Toy_LiteralArray *array)</argsstring>
+        <name>Toy_initLiteralArray</name>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+<para>initializes a <ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> pointed to by array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="32" column="14" declfile="common/include/toy_literal_array.h" declline="32" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dfc/toy__literal__array_8h_1a1a1d146ee4d91361f56d4772e94fb8fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_freeLiteralArray</definition>
+        <argsstring>(Toy_LiteralArray *array)</argsstring>
+        <name>Toy_freeLiteralArray</name>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+<para>Frees a <ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> pointed to by array. Every literal within is passed to Toy_freeLiteral before its memory is released. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="40" column="14" declfile="common/include/toy_literal_array.h" declline="40" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dfc/toy__literal__array_8h_1a56a6246c032ae01f2a028253fb824b9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API int</type>
+        <definition>int Toy_pushLiteralArray</definition>
+        <argsstring>(Toy_LiteralArray *array, Toy_Literal literal)</argsstring>
+        <name>Toy_pushLiteralArray</name>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>literal</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new literal to the end of the array, growing the array&apos;s internal buffer if needed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>index of the inserted value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="50" column="13" declfile="common/include/toy_literal_array.h" declline="50" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dfc/toy__literal__array_8h_1ab29183e333dbef0571b76bb822155e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+        <definition>Toy_Literal Toy_popLiteralArray</definition>
+        <argsstring>(Toy_LiteralArray *array)</argsstring>
+        <name>Toy_popLiteralArray</name>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <briefdescription>
+<para>Removes the literal at the end of the array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>index of the deleted value. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="59" column="21" declfile="common/include/toy_literal_array.h" declline="59" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dfc/toy__literal__array_8h_1a40857925b380470ba002a6ae50bdf467" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API bool</type>
+        <definition>bool Toy_setLiteralArray</definition>
+        <argsstring>(Toy_LiteralArray *array, Toy_Literal index, Toy_Literal value)</argsstring>
+        <name>Toy_setLiteralArray</name>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>index</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Frees the literal at the position represented by the integer literal index, and stores value in its place. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true on success, otherwise it returns false. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="70" column="14" declfile="common/include/toy_literal_array.h" declline="70" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dfc/toy__literal__array_8h_1a53f18d4f7c43f5b930c8221f62b846fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+        <definition>Toy_Literal Toy_getLiteralArray</definition>
+        <argsstring>(Toy_LiteralArray *array, Toy_Literal index)</argsstring>
+        <name>Toy_getLiteralArray</name>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Returns the literal at the position represented by the integer literal index, or returns a null literal if none is found. If index is not an integer literal or is out of bounds, this function returns a null literal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="81" column="21" declfile="common/include/toy_literal_array.h" declline="81" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/dfc/toy__literal__array_8h_1aa066478450d5ea219a16a096e6a2e728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Toy_findLiteralIndex</definition>
+        <argsstring>(Toy_LiteralArray *array, Toy_Literal literal)</argsstring>
+        <name>Toy_findLiteralIndex</name>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>literal</declname>
+        </param>
+        <briefdescription>
+<para>@????@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="91" column="5" declfile="common/include/toy_literal_array.h" declline="91" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@????@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_LITERAL_ARRAY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_LITERAL_ARRAY_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d1d/toy__common_8h" kindref="compound">toy_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d5f/toy__literal_8h" kindref="compound">toy_literal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="d5/d6a/structToy__LiteralArray" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>{</highlight></codeline>
+<codeline lineno="21" refid="d5/d6a/structToy__LiteralArray_1a13be77c2d51ef60c330823d80aa17be4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>*<ref refid="d5/d6a/structToy__LiteralArray_1a13be77c2d51ef60c330823d80aa17be4" kindref="member">literals</ref>;<sp/></highlight></codeline>
+<codeline lineno="22" refid="d5/d6a/structToy__LiteralArray_1af09ac41c521e3d673848d4d019f2ab0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d5/d6a/structToy__LiteralArray_1af09ac41c521e3d673848d4d019f2ab0e" kindref="member">capacity</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="d5/d6a/structToy__LiteralArray_1a7921894446c581c39ff12a9499c67154" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d5/d6a/structToy__LiteralArray_1a7921894446c581c39ff12a9499c67154" kindref="member">count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="d0/dfc/toy__literal__array_8h_1a841d502cbb65c1d4e8b683ffaf593cc7" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/dfc/toy__literal__array_8h_1a841d502cbb65c1d4e8b683ffaf593cc7" kindref="member">Toy_initLiteralArray</ref>(<ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*array);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="d0/dfc/toy__literal__array_8h_1a1a1d146ee4d91361f56d4772e94fb8fe" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/dfc/toy__literal__array_8h_1a1a1d146ee4d91361f56d4772e94fb8fe" kindref="member">Toy_freeLiteralArray</ref>(<ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*array);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="d0/dfc/toy__literal__array_8h_1a56a6246c032ae01f2a028253fb824b9c" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d0/dfc/toy__literal__array_8h_1a56a6246c032ae01f2a028253fb824b9c" kindref="member">Toy_pushLiteralArray</ref>(<ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*array,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>literal);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="d0/dfc/toy__literal__array_8h_1ab29183e333dbef0571b76bb822155e8c" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d0/dfc/toy__literal__array_8h_1ab29183e333dbef0571b76bb822155e8c" kindref="member">Toy_popLiteralArray</ref>(<ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*array);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="d0/dfc/toy__literal__array_8h_1a40857925b380470ba002a6ae50bdf467" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d0/dfc/toy__literal__array_8h_1a40857925b380470ba002a6ae50bdf467" kindref="member">Toy_setLiteralArray</ref>(<ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*array,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>index,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>value);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="d0/dfc/toy__literal__array_8h_1a53f18d4f7c43f5b930c8221f62b846fa" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d0/dfc/toy__literal__array_8h_1a53f18d4f7c43f5b930c8221f62b846fa" kindref="member">Toy_getLiteralArray</ref>(<ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*array,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>index);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="d0/dfc/toy__literal__array_8h_1aa066478450d5ea219a16a096e6a2e728" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d0/dfc/toy__literal__array_8h_1aa066478450d5ea219a16a096e6a2e728" kindref="member">Toy_findLiteralIndex</ref>(<ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*array,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>literal);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>add<sp/>a<sp/>function<sp/>to<sp/>get<sp/>the<sp/>capacity<sp/>&amp;<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_LITERAL_ARRAY_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/include/toy_literal_array.h"/>
+  </compounddef>
+</doxygen>

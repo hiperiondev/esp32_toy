@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d3/ddc/structToy__Compiler" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_Compiler</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/ddc/structToy__Compiler_1a02c598a0bb6f192e28030928dac9c574" prot="public" static="no" mutable="no">
+        <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref></type>
+        <definition>Toy_LiteralArray Toy_Compiler::literalCache</definition>
+        <argsstring></argsstring>
+        <name>literalCache</name>
+        <qualifiedname>Toy_Compiler::literalCache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_compiler.h" line="25" column="22" bodyfile="compiler/include/toy_compiler.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddc/structToy__Compiler_1a6061ac384654314c4dda5230daa7cc45" prot="public" static="no" mutable="no">
+        <type>unsigned char *</type>
+        <definition>unsigned char* Toy_Compiler::bytecode</definition>
+        <argsstring></argsstring>
+        <name>bytecode</name>
+        <qualifiedname>Toy_Compiler::bytecode</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_compiler.h" line="26" column="19" bodyfile="compiler/include/toy_compiler.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddc/structToy__Compiler_1a656f00ea824058ce6e6d3f91ff50da94" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Compiler::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <qualifiedname>Toy_Compiler::capacity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_compiler.h" line="27" column="9" bodyfile="compiler/include/toy_compiler.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddc/structToy__Compiler_1a2ad1f8c73febf6f8e846cb66c384c0de" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Compiler::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <qualifiedname>Toy_Compiler::count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_compiler.h" line="28" column="9" bodyfile="compiler/include/toy_compiler.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddc/structToy__Compiler_1a594fbc0d6259f36435ff51ff213f87e5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_Compiler::panic</definition>
+        <argsstring></argsstring>
+        <name>panic</name>
+        <qualifiedname>Toy_Compiler::panic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_compiler.h" line="29" column="10" bodyfile="compiler/include/toy_compiler.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Toy_Compiler</label>
+        <link refid="d3/ddc/structToy__Compiler"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>literalCache</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Toy_Interpreter</label>
+        <link refid="de/da4/structToy__Interpreter"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>literalCache</edgelabel>
+          <edgelabel>stack</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>hooks</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Toy_Literal</label>
+        <link refid="d3/da0/structToy__Literal"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>array</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>dictionary</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>hook</edgelabel>
+          <edgelabel>native</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>subtypes</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Toy_LiteralArray</label>
+        <link refid="d5/d6a/structToy__LiteralArray"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>literals</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Toy_LiteralDictionary</label>
+        <link refid="d9/db5/structToy__LiteralDictionary"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>entries</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Toy_RefFunction</label>
+        <link refid="d3/d2c/structToy__RefFunction"/>
+      </node>
+      <node id="4">
+        <label>Toy_RefString</label>
+        <link refid="dd/d94/structToy__RefString"/>
+      </node>
+      <node id="9">
+        <label>Toy_Scope</label>
+        <link refid="de/de6/structToy__Scope"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>types</edgelabel>
+          <edgelabel>variables</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>ancestor</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Toy_private_dictionary_entry</label>
+        <link refid="d2/d62/structToy__private__dictionary__entry"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>key</edgelabel>
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="compiler/include/toy_compiler.h" line="24" column="1" bodyfile="compiler/include/toy_compiler.h" bodystart="24" bodyend="30"/>
+    <listofallmembers>
+      <member refid="d3/ddc/structToy__Compiler_1a6061ac384654314c4dda5230daa7cc45" prot="public" virt="non-virtual"><scope>Toy_Compiler</scope><name>bytecode</name></member>
+      <member refid="d3/ddc/structToy__Compiler_1a656f00ea824058ce6e6d3f91ff50da94" prot="public" virt="non-virtual"><scope>Toy_Compiler</scope><name>capacity</name></member>
+      <member refid="d3/ddc/structToy__Compiler_1a2ad1f8c73febf6f8e846cb66c384c0de" prot="public" virt="non-virtual"><scope>Toy_Compiler</scope><name>count</name></member>
+      <member refid="d3/ddc/structToy__Compiler_1a02c598a0bb6f192e28030928dac9c574" prot="public" virt="non-virtual"><scope>Toy_Compiler</scope><name>literalCache</name></member>
+      <member refid="d3/ddc/structToy__Compiler_1a594fbc0d6259f36435ff51ff213f87e5" prot="public" virt="non-virtual"><scope>Toy_Compiler</scope><name>panic</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

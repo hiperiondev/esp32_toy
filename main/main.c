@@ -1,31 +1,46 @@
 /*
- * @file main.c
+ * Copyright 2022 Emiliano Gonzalez (egonzalez . hiperion @ gmail . com))
+ * * Project Site: https://github.com/hiperiondev/esp32-berry-lang *
  *
- * @brief main program
- * @details
  * This is based on other projects:
- *   Others (see individual files)
+ *    Berry (https://github.com/berry-lang/berry)
+ *    LittleFS port for ESP-IDF (https://github.com/joltwallet/esp_littlefs)
+ *    Lightweight TFTP server library (https://github.com/lexus2k/libtftp)
+ *    esp32 run berry language (https://github.com/HoGC/esp32_berry)
+ *    Tasmota (https://github.com/arendst/Tasmota)
+ *    Others (see individual files)
  *
- *   please contact their authors for more information.
+ *    please contact their authors for more information.
  *
- * @author Emiliano Gonzalez (egonzalez . hiperion @ gmail . com))
- * @version 0.1
- * @date 2023
- * @copyright MIT License
- * @see
+ * This is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 3, or (at your option)
+ * any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this software; see the file COPYING.  If not, write to
+ * the Free Software Foundation, Inc., 51 Franklin Street,
+ * Boston, MA 02110-1301, USA.
  */
 
-#define LOG_LOCAL_LEVEL ESP_LOG_INFO
-
-#include <stdlib.h>
 #include <stdio.h>
-#include <assert.h>
-#include <stdint.h>
-#include <stdbool.h>
+#include <stddef.h>
 #include <string.h>
 
-#include <esp_err.h>
-#include <esp_log.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "linenoise/linenoise.h"
+
+#include "esp_err.h"
+#include "esp_log.h"
+#include "esp_vfs.h"
+#include "esp_vfs_dev.h"
+#include "driver/uart.h"
 
 #include "nvs.h"
 #include "nvs_flash.h"
@@ -42,253 +57,121 @@
 #include "toy_memory.h"
 #include "toy_repl_tools.h"
 
+#include "toy_lib_about.h"
+#include "toy_lib_random.h"
+#include "toy_lib_runner.h"
+#include "toy_lib_standard.h"
+
 static char TAG[] = "main";
 TaskHandle_t toytsk_handle;
 TaskHandle_t ftpservertsk_handle;
 
 #define WIFI_SSID "test"
 #define WIFI_PASS "test1234"
+#define CONSOLE_UART_CHANNEL  UART_NUM_0
 
-int ignoredAssertions = 0;
+void interpret_line(Toy_Interpreter *interp, const char *source) {
+    //const char *source = "print \"minimal test: OK\";";
 
-/*
-//suppress the print output
-static void noPrintFn(const char *output) {
-    //NO OP
-}
+    //test basic compilation & collation
+    Toy_Lexer lexer;
+    Toy_Parser parser;
+    Toy_Compiler compiler;
+    Toy_Interpreter interpreter = *interp;
 
-static void noAssertFn(const char *output) {
-    if (strncmp(output, "!ignore", 7) == 0) {
-        ignoredAssertions++;
-    } else {
-        printf(TOY_CC_ERROR "Assertion failure: ");
-        printf("%s", output);
-        printf("\n" TOY_CC_RESET); //default new line
-    }
-}
-*/
-
-void runBinaryCustom(const unsigned char *tb, size_t size) {
-    Toy_Interpreter interpreter;
+    Toy_initLexer(&lexer, source);
+    Toy_initParser(&parser, &lexer);
+    Toy_initCompiler(&compiler);
     Toy_initInterpreter(&interpreter);
 
-    //NOTE: suppress print output for testing
-    //Toy_setInterpreterPrint(&interpreter, noPrintFn);
-    //Toy_setInterpreterAssert(&interpreter, noAssertFn);
+    Toy_ASTNode *node = Toy_scanParser(&parser);
 
-    Toy_runInterpreter(&interpreter, tb, size);
-    Toy_freeInterpreter(&interpreter);
-}
+    //write
+    Toy_writeCompiler(&compiler, node);
 
-void runSourceCustom(const char *source) {
+    //collate
     size_t size = 0;
-    const unsigned char *tb = Toy_compileString(source, &size);
-    if (!tb) {
-        return;
-    }
-    runBinaryCustom(tb, size);
+    const unsigned char *bytecode = Toy_collateCompiler(&compiler, &size);
+
+    //run
+    Toy_runInterpreter(&interpreter, bytecode, size);
+
+    //cleanup
+    Toy_freeASTNode(node);
+    Toy_freeParser(&parser);
+    Toy_freeCompiler(&compiler);
+    //Toy_freeInterpreter(&interpreter);
 }
 
-void runSourceFileCustom(const char *fname) {
-    size_t size = 0; //not used
-    const char *source = (const char*) Toy_readFile(fname, &size);
-    runSourceCustom(source);
-    free((void*) source);
-}
+void toy_task(void *arg) {
+    int probe_status;
+    char *line = NULL;
+    bool error;
 
-void toy_task(void *pvParameter) {
-    // test compiler
-    {
-        //test init & free
-        Toy_Compiler compiler;
-        Toy_initCompiler(&compiler);
-        Toy_freeCompiler(&compiler);
+    Toy_Lexer lexer;
+    Toy_Parser parser;
+    Toy_Compiler compiler;
+    Toy_Interpreter interpreter;
+
+    ///////////////////////////////////////////////////////
+
+    // Initialize VFS & UART so we can use std::cout/cin
+    setvbuf(stdin, NULL, _IONBF, 0);
+    setvbuf(stdout, NULL, _IONBF, 0);
+
+    // Install UART driver for interrupt-driven reads and writes
+    ESP_ERROR_CHECK(uart_driver_install( (uart_port_t)CONSOLE_UART_CHANNEL, 256, 0, 0, NULL, 0 ));
+
+    // Tell VFS to use UART driver
+    esp_vfs_dev_uart_use_driver(CONSOLE_UART_CHANNEL);
+    esp_vfs_dev_uart_port_set_rx_line_endings(CONSOLE_UART_CHANNEL, ESP_LINE_ENDINGS_CR);
+    // Move the caret to the beginning of the next line on '\n'
+    esp_vfs_dev_uart_port_set_tx_line_endings(CONSOLE_UART_CHANNEL, ESP_LINE_ENDINGS_CRLF);
+
+    probe_status = linenoiseProbe();
+    if (probe_status) {
+        // zero indicates success
+        linenoiseSetDumbMode(1);
+        printf("\r\n"
+                "Your terminal application does not support escape sequences.\n\n"
+                "Line editing and history features are disabled.\n\n"
+                "On Windows, try using Putty instead.\r\n");
+
+    } else {
+        //printf("\033[2J\033[1H");
+        printf("\n");
     }
 
-    {
-        //source
-        char *source = "print null;";
+    ///////////////////////////////////////////////////////
 
-        //test basic compilation & collation
-        Toy_Lexer lexer;
-        Toy_Parser parser;
-        Toy_Compiler compiler;
+    Toy_initInterpreter(&interpreter);
 
-        Toy_initLexer(&lexer, source);
-        Toy_initParser(&parser, &lexer);
-        Toy_initCompiler(&compiler);
+    //inject the libs
+    Toy_injectNativeHook(&interpreter, "about", Toy_hookAbout);
+    Toy_injectNativeHook(&interpreter, "standard", Toy_hookStandard);
+    Toy_injectNativeHook(&interpreter, "random", Toy_hookRandom);
+    Toy_injectNativeHook(&interpreter, "runner", Toy_hookRunner);
 
-        Toy_ASTNode *node = Toy_scanParser(&parser);
+    ///////////////////////////////////////////////////////
 
-        //write
-        Toy_writeCompiler(&compiler, node);
+    interpret_line(&interpreter, "print \"minimal test: OK\";");
 
-        //collate
-        size_t size = 0;
-        unsigned char *bytecode = Toy_collateCompiler(&compiler, &size);
+    ///////////////////////////////////////////////////////
 
-        //cleanup
-        TOY_FREE_ARRAY(unsigned char, bytecode, size);
-        Toy_freeASTNode(node);
-        Toy_freeParser(&parser);
-        Toy_freeCompiler(&compiler);
-    }
+    while ((line = linenoise(TOY_CC_NOTICE "Toy> " TOY_CC_RESET)) != NULL) {
+        if (line[0] != '\0' && line[0] != '/') {
+            interpret_line(&interpreter, line);
 
-    {
-        //source
-        size_t sourceLength = 0;
-        const char *source = (const char*) Toy_readFile("compiler_sample_code.toy", &sourceLength);
-
-        //test basic compilation & collation
-        Toy_Lexer lexer;
-        Toy_Parser parser;
-        Toy_Compiler compiler;
-
-        Toy_initLexer(&lexer, source);
-        Toy_initParser(&parser, &lexer);
-        Toy_initCompiler(&compiler);
-
-        Toy_ASTNode *node = Toy_scanParser(&parser);
-        while (node != NULL) {
-            if (node->type == TOY_AST_NODE_ERROR) {
-                printf(TOY_CC_ERROR "ERROR: Error node found" TOY_CC_RESET);
-                goto end;
-            }
-
-            //write
-            Toy_writeCompiler(&compiler, node);
-            Toy_freeASTNode(node);
-
-            node = Toy_scanParser(&parser);
-        }
-
-        //collate
-        size_t size = 0;
-        unsigned char *bytecode = Toy_collateCompiler(&compiler, &size);
-
-        //cleanup
-        TOY_FREE_ARRAY(char, source, sourceLength);
-        TOY_FREE_ARRAY(unsigned char, bytecode, size);
-        Toy_freeParser(&parser);
-        Toy_freeCompiler(&compiler);
-    }
-
-    printf(TOY_CC_NOTICE "COMPILER: All good\n" TOY_CC_RESET);
-
-
-    // test interpreter
-    printf(">> test bycode <<\n");
-    Toy_runBinaryFile("compiler_sample_code.tb");
-    printf(">> ----------- <<\n");
-
-    {
-        //test init & free
-        Toy_Interpreter interpreter;
-        Toy_initInterpreter(&interpreter);
-        Toy_freeInterpreter(&interpreter);
-    }
-
-    {
-        //source
-        const char *source = "print null;";
-
-        //test basic compilation & collation
-        Toy_Lexer lexer;
-        Toy_Parser parser;
-        Toy_Compiler compiler;
-        Toy_Interpreter interpreter;
-
-        Toy_initLexer(&lexer, source);
-        Toy_initParser(&parser, &lexer);
-        Toy_initCompiler(&compiler);
-        Toy_initInterpreter(&interpreter);
-
-        Toy_ASTNode *node = Toy_scanParser(&parser);
-
-        //write
-        Toy_writeCompiler(&compiler, node);
-
-        //collate
-        size_t size = 0;
-        const unsigned char *bytecode = Toy_collateCompiler(&compiler, &size);
-
-        //NOTE: suppress print output for testing
-        //Toy_setInterpreterPrint(&interpreter, noPrintFn);
-        //Toy_setInterpreterAssert(&interpreter, noAssertFn);
-
-        //run
-        Toy_runInterpreter(&interpreter, bytecode, size);
-
-        //cleanup
-        Toy_freeASTNode(node);
-        Toy_freeParser(&parser);
-        Toy_freeCompiler(&compiler);
-        Toy_freeInterpreter(&interpreter);
-    }
-
-    {
-        //run each file
-        const char *filenames[] = {
-                "arithmetic.toy",
-                "casting-parentheses-bugfix.toy",
-                "casting.toy",
-                "coercions.toy",
-                "comparisons.toy",
-                "dot-and-matrix.toy",
-                "dot-assignments-bugfix.toy",
-                "dot-chaining.toy",
-                "dot-modulo-bugfix.toy",
-                "dottify-bugfix.toy",
-                "function-within-function-bugfix.toy",
-                "functions.toy",
-                "increment-postfix-bugfix.toy",
-                "index-arrays.toy",
-                "index-assignment-both-bugfix.toy",
-                "index-assignment-intermediate-bugfix.toy",
-                "index-assignment-left-bugfix.toy",
-                "index-dictionaries.toy",
-                "index-strings.toy",
-                "jumps.toy",
-                "jumps-in-functions.toy",
-                "logicals.toy",
-                "long-array.toy",
-                "long-dictionary.toy",
-                "long-literals.toy",
-                "native-functions.toy",
-                "or-chaining-bugfix.toy",
-                "panic-within-functions.toy",
-                "polyfill-insert.toy",
-                "polyfill-remove.toy",
-                "short-circuiting-support.toy",
-                "ternary-expressions.toy",
-                "types.toy",
-                NULL
-        };
-
-        for (int i = 0; filenames[i]; i++) {
-            printf("Running %s\n", filenames[i]);
-
-            char buffer[128];
-            snprintf(buffer, 128, "%s", filenames[i]);
-
-            runSourceFileCustom(buffer);
+            linenoiseHistoryAdd(line);
+            linenoiseFree(line);
         }
     }
 
-    //1, to allow for the assertion test
-    if (ignoredAssertions > 1) {
-        printf(TOY_CC_ERROR "Assertions hidden: %d\n", ignoredAssertions);
-        goto end;
-    }
-
-    printf(TOY_CC_NOTICE "INTERPRETER: All good\n" TOY_CC_RESET);
-
-    end:
-    while (1)
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+    Toy_freeInterpreter(&interpreter);
+    vTaskDelete(NULL);
 }
 
-void app_main() {
+void app_main(void) {
     nvs_flash_init();
     fs_init();
 

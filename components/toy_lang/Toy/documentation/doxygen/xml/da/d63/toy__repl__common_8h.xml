@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="da/d63/toy__repl__common_8h" kind="file" language="C++">
+    <compoundname>toy_repl_common.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes local="no">stdint.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>toy_repl_common.h</label>
+        <link refid="da/d63/toy__repl__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="4">
+        <label>stdint.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d9/d63/structToy__CommandLine" prot="public">Toy_CommandLine</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="da/d63/toy__repl__common_8h_1ac5d32cd460bbb99a09c29215b8430c77" prot="public" static="no">
+        <name>TOY_VERSION_BUILD</name>
+        <initializer><ref refid="da/d63/toy__repl__common_8h_1aa5f6051f01a1b39e60f2c3a488eb2c08" kindref="member">Toy_private_version_build</ref>()</initializer>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="19" column="9" bodyfile="compiler/include/toy_repl_common.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="da/d63/toy__repl__common_8h_1ae2336f79785e849dc7ec81e015135420" prot="public" static="no" mutable="no">
+        <type>TOY_API <ref refid="d9/d63/structToy__CommandLine" kindref="compound">Toy_CommandLine</ref></type>
+        <definition>TOY_API Toy_CommandLine Toy_commandLine</definition>
+        <argsstring></argsstring>
+        <name>Toy_commandLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Toy_commandLine </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="50" column="25" bodyfile="compiler/include/toy_repl_common.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="da/d63/toy__repl__common_8h_1aa5f6051f01a1b39e60f2c3a488eb2c08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API const char *</type>
+        <definition>const char * Toy_private_version_build</definition>
+        <argsstring>(void)</argsstring>
+        <name>Toy_private_version_build</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="27" column="20" declfile="compiler/include/toy_repl_common.h" declline="27" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d63/toy__repl__common_8h_1a861c9dcd4a46351ab92edd01b614beb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_initCommandLine</definition>
+        <argsstring>(int argc, const char *argv[])</argsstring>
+        <name>Toy_initCommandLine</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="59" column="14" declfile="compiler/include/toy_repl_common.h" declline="59" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d63/toy__repl__common_8h_1a65ed2875c32e4b91a9ae0461e3a0c475" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_usageCommandLine</definition>
+        <argsstring>(int argc, const char *argv[])</argsstring>
+        <name>Toy_usageCommandLine</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="68" column="14" declfile="compiler/include/toy_repl_common.h" declline="68" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d63/toy__repl__common_8h_1ac0aa410bf2db8a223c3230b7d0ede2dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_helpCommandLine</definition>
+        <argsstring>(int argc, const char *argv[])</argsstring>
+        <name>Toy_helpCommandLine</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="77" column="14" declfile="compiler/include/toy_repl_common.h" declline="77" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d63/toy__repl__common_8h_1a63d7e449af4cb3b5825648d5c4799fb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_copyrightCommandLine</definition>
+        <argsstring>(int argc, const char *argv[])</argsstring>
+        <name>Toy_copyrightCommandLine</name>
+        <param>
+          <type>int</type>
+          <declname>argc</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>argv</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>argc</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argv</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_repl_common.h" line="86" column="14" declfile="compiler/include/toy_repl_common.h" declline="86" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_REPL_COMMON_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_REPL_COMMON_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdint.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="da/d63/toy__repl__common_8h_1ac5d32cd460bbb99a09c29215b8430c77" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_VERSION_BUILD<sp/>Toy_private_version_build()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="da/d63/toy__repl__common_8h_1aa5f6051f01a1b39e60f2c3a488eb2c08" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="da/d63/toy__repl__common_8h_1aa5f6051f01a1b39e60f2c3a488eb2c08" kindref="member">Toy_private_version_build</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="d9/d63/structToy__CommandLine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35" refid="d9/d63/structToy__CommandLine_1a860bb29e35a3d4411e235d8a40830a34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d9/d63/structToy__CommandLine_1a860bb29e35a3d4411e235d8a40830a34" kindref="member">error</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="d9/d63/structToy__CommandLine_1a790700ab7204a71bfadecc4cf9fc2392" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d9/d63/structToy__CommandLine_1a790700ab7204a71bfadecc4cf9fc2392" kindref="member">help</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="d9/d63/structToy__CommandLine_1ad44f9d6f56559a1752c3662323595903" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d9/d63/structToy__CommandLine_1ad44f9d6f56559a1752c3662323595903" kindref="member">version</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="d9/d63/structToy__CommandLine_1a458f3aa894791c7fd6774557e39ad45c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d9/d63/structToy__CommandLine_1a458f3aa894791c7fd6774557e39ad45c" kindref="member">binaryfile</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="d9/d63/structToy__CommandLine_1a2770914457f28d0c42dce865822cccde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d9/d63/structToy__CommandLine_1a2770914457f28d0c42dce865822cccde" kindref="member">sourcefile</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="d9/d63/structToy__CommandLine_1abaed27214f20e4a3723af67f507da47c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d9/d63/structToy__CommandLine_1abaed27214f20e4a3723af67f507da47c" kindref="member">compilefile</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="d9/d63/structToy__CommandLine_1ab7842da257661b0e53dcfe52cf9cf70a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d9/d63/structToy__CommandLine_1ab7842da257661b0e53dcfe52cf9cf70a" kindref="member">outfile</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="d9/d63/structToy__CommandLine_1afe78f73b441f829233a71941de3b3192" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d9/d63/structToy__CommandLine_1afe78f73b441f829233a71941de3b3192" kindref="member">source</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="d9/d63/structToy__CommandLine_1a41e97887bb63cabd5fb3db2275fba4df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d9/d63/structToy__CommandLine_1a41e97887bb63cabd5fb3db2275fba4df" kindref="member">initialfile</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="d9/d63/structToy__CommandLine_1a87a182fa5818e7c8785c3c846228d7fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d9/d63/structToy__CommandLine_1a87a182fa5818e7c8785c3c846228d7fd" kindref="member">enablePrintNewline</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="d9/d63/structToy__CommandLine_1a5a73d367b22e2547c7e350c5d57ea13b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d9/d63/structToy__CommandLine_1a5a73d367b22e2547c7e350c5d57ea13b" kindref="member">parseBytecodeHeader</ref>;<sp/></highlight></codeline>
+<codeline lineno="46" refid="d9/d63/structToy__CommandLine_1af53e063062a69d5e9658b0b6ba03b902" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d9/d63/structToy__CommandLine_1af53e063062a69d5e9658b0b6ba03b902" kindref="member">verbose</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}<sp/><ref refid="d9/d63/structToy__CommandLine" kindref="compound">Toy_CommandLine</ref>;<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="comment">//these<sp/>are<sp/>intended<sp/>for<sp/>the<sp/>repl<sp/>only,<sp/>despite<sp/>using<sp/>the<sp/>api<sp/>prefix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="da/d63/toy__repl__common_8h_1ae2336f79785e849dc7ec81e015135420" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="d9/d63/structToy__CommandLine" kindref="compound">Toy_CommandLine</ref><sp/><ref refid="da/d63/toy__repl__common_8h_1ae2336f79785e849dc7ec81e015135420" kindref="member">Toy_commandLine</ref>;<sp/></highlight></codeline>
+<codeline lineno="59" refid="da/d63/toy__repl__common_8h_1a861c9dcd4a46351ab92edd01b614beb9" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d63/toy__repl__common_8h_1a861c9dcd4a46351ab92edd01b614beb9" kindref="member">Toy_initCommandLine</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="da/d63/toy__repl__common_8h_1a65ed2875c32e4b91a9ae0461e3a0c475" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d63/toy__repl__common_8h_1a65ed2875c32e4b91a9ae0461e3a0c475" kindref="member">Toy_usageCommandLine</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="da/d63/toy__repl__common_8h_1ac0aa410bf2db8a223c3230b7d0ede2dd" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d63/toy__repl__common_8h_1ac0aa410bf2db8a223c3230b7d0ede2dd" kindref="member">Toy_helpCommandLine</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="da/d63/toy__repl__common_8h_1a63d7e449af4cb3b5825648d5c4799fb4" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="da/d63/toy__repl__common_8h_1a63d7e449af4cb3b5825648d5c4799fb4" kindref="member">Toy_copyrightCommandLine</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*argv[]);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_REPL_COMMON_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="compiler/include/toy_repl_common.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d7/da7/structToy__NodeBreak" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_NodeBreak</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/da7/structToy__NodeBreak_1adeb4353a7be90cc3b091e05136d34d17" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref></type>
+        <definition>Toy_ASTNodeType Toy_NodeBreak::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Toy_NodeBreak::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="442" column="21" bodyfile="compiler/include/toy_ast_node.h" bodystart="442" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="compiler/include/toy_ast_node.h" line="441" column="1" bodyfile="compiler/include/toy_ast_node.h" bodystart="441" bodyend="443"/>
+    <listofallmembers>
+      <member refid="d7/da7/structToy__NodeBreak_1adeb4353a7be90cc3b091e05136d34d17" prot="public" virt="non-virtual"><scope>Toy_NodeBreak</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

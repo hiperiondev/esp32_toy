@@ -5,6 +5,7 @@ idf_component_register(
         .
     REQUIRES
         console
+        driver
         ftpserver
         nvs_flash
         hal_esp32

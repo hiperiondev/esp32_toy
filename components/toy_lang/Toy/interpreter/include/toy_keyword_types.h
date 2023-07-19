@@ -1,3 +1,9 @@
+/**
+ * @file toy_keyword_types.h
+ * @brief @@???@@
+ *
+ */
+
 #ifndef TOY_KEYWORD_TYPES_H_
 #define TOY_KEYWORD_TYPES_H_
 
@@ -5,20 +11,20 @@
 
 /**
  * @typedef Toy_KeywordType
- * @brief
+ * @brief @@???@@
  *
  */
 typedef struct {
-    Toy_TokenType type; /**< */
-    char *keyword;      /**< */
+    Toy_TokenType type; /**< @@???@@ */
+    char *keyword;      /**< @@???@@ */
 } Toy_KeywordType;
 
 
-extern Toy_KeywordType Toy_keywordTypes[]; /**< Toy_keywordTypes */
+extern Toy_KeywordType Toy_keywordTypes[]; /**< @@???@@ */
 
 /**
  * @fn char* Toy_findKeywordByType(Toy_TokenType type)
- * @brief
+ * @brief @@???@@
  *
  * @param type
  * @return
@@ -27,7 +33,7 @@ char* Toy_findKeywordByType(Toy_TokenType type);
 
 /**
  * @fn Toy_TokenType Toy_findTypeByKeyword(const char *keyword)
- * @brief
+ * @brief @@???@@
  *
  * @param keyword
  * @return

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="df/d6e/structToy__NodePostfixIncrement" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_NodePostfixIncrement</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="df/d6e/structToy__NodePostfixIncrement_1a0a8e1b71f71c246192f3eb02dd9e35f3" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref></type>
+        <definition>Toy_ASTNodeType Toy_NodePostfixIncrement::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Toy_NodePostfixIncrement::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="517" column="21" bodyfile="compiler/include/toy_ast_node.h" bodystart="517" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/d6e/structToy__NodePostfixIncrement_1a36bdd439c61b01f2a1440a2431af22b4" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+        <definition>Toy_Literal Toy_NodePostfixIncrement::identifier</definition>
+        <argsstring></argsstring>
+        <name>identifier</name>
+        <qualifiedname>Toy_NodePostfixIncrement::identifier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="518" column="17" bodyfile="compiler/include/toy_ast_node.h" bodystart="518" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>Toy_Interpreter</label>
+        <link refid="de/da4/structToy__Interpreter"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>literalCache</edgelabel>
+          <edgelabel>stack</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>hooks</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Toy_Literal</label>
+        <link refid="d3/da0/structToy__Literal"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>array</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>dictionary</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>hook</edgelabel>
+          <edgelabel>native</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>subtypes</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Toy_LiteralArray</label>
+        <link refid="d5/d6a/structToy__LiteralArray"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>literals</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Toy_LiteralDictionary</label>
+        <link refid="d9/db5/structToy__LiteralDictionary"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>entries</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Toy_NodePostfixIncrement</label>
+        <link refid="df/d6e/structToy__NodePostfixIncrement"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>identifier</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Toy_RefFunction</label>
+        <link refid="d3/d2c/structToy__RefFunction"/>
+      </node>
+      <node id="3">
+        <label>Toy_RefString</label>
+        <link refid="dd/d94/structToy__RefString"/>
+      </node>
+      <node id="9">
+        <label>Toy_Scope</label>
+        <link refid="de/de6/structToy__Scope"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>types</edgelabel>
+          <edgelabel>variables</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>ancestor</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Toy_private_dictionary_entry</label>
+        <link refid="d2/d62/structToy__private__dictionary__entry"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>key</edgelabel>
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="compiler/include/toy_ast_node.h" line="516" column="1" bodyfile="compiler/include/toy_ast_node.h" bodystart="516" bodyend="519"/>
+    <listofallmembers>
+      <member refid="df/d6e/structToy__NodePostfixIncrement_1a36bdd439c61b01f2a1440a2431af22b4" prot="public" virt="non-virtual"><scope>Toy_NodePostfixIncrement</scope><name>identifier</name></member>
+      <member refid="df/d6e/structToy__NodePostfixIncrement_1a0a8e1b71f71c246192f3eb02dd9e35f3" prot="public" virt="non-virtual"><scope>Toy_NodePostfixIncrement</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

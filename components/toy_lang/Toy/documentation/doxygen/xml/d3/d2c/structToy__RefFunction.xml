@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d3/d2c/structToy__RefFunction" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_RefFunction</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/d2c/structToy__RefFunction_1a6492ad2fc96e1528c65d9f5dbe0c8eac" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Toy_RefFunction::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <qualifiedname>Toy_RefFunction::length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="40" column="12" bodyfile="interpreter/include/toy_reffunction.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d2c/structToy__RefFunction_1a9e818c9e6844dec4956672739726748a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_RefFunction::refCount</definition>
+        <argsstring></argsstring>
+        <name>refCount</name>
+        <qualifiedname>Toy_RefFunction::refCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="41" column="9" bodyfile="interpreter/include/toy_reffunction.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d2c/structToy__RefFunction_1a221c894092e435ee316053b01eb5656e" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Toy_RefFunction::data[]</definition>
+        <argsstring>[]</argsstring>
+        <name>data</name>
+        <qualifiedname>Toy_RefFunction::data</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_reffunction.h" line="42" column="19" bodyfile="interpreter/include/toy_reffunction.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="interpreter/include/toy_reffunction.h" line="39" column="1" bodyfile="interpreter/include/toy_reffunction.h" bodystart="39" bodyend="43"/>
+    <listofallmembers>
+      <member refid="d3/d2c/structToy__RefFunction_1a221c894092e435ee316053b01eb5656e" prot="public" virt="non-virtual"><scope>Toy_RefFunction</scope><name>data</name></member>
+      <member refid="d3/d2c/structToy__RefFunction_1a6492ad2fc96e1528c65d9f5dbe0c8eac" prot="public" virt="non-virtual"><scope>Toy_RefFunction</scope><name>length</name></member>
+      <member refid="d3/d2c/structToy__RefFunction_1a9e818c9e6844dec4956672739726748a" prot="public" virt="non-virtual"><scope>Toy_RefFunction</scope><name>refCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

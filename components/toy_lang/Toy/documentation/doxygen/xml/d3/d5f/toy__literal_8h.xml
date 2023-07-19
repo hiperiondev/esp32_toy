@@ -1,0 +1,1490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d3/d5f/toy__literal_8h" kind="file" language="C++">
+    <compoundname>toy_literal.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="d7/d1d/toy__common_8h" local="yes">toy_common.h</includes>
+    <includes refid="d5/de2/toy__refstring_8h" local="yes">toy_refstring.h</includes>
+    <includes refid="d4/d71/toy__reffunction_8h" local="yes">toy_reffunction.h</includes>
+    <includedby refid="d3/df7/toy__ast__node_8h" local="yes">toy_ast_node.h</includedby>
+    <includedby refid="dc/dcc/toy__interpreter_8h" local="yes">toy_interpreter.h</includedby>
+    <includedby refid="d0/dfc/toy__literal__array_8h" local="yes">toy_literal_array.h</includedby>
+    <includedby refid="dd/da4/toy__literal__dictionary_8h" local="yes">toy_literal_dictionary.h</includedby>
+    <includedby refid="d2/db4/toy__scope_8h" local="yes">toy_scope.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>toy_common.h</label>
+        <link refid="d7/d1d/toy__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>toy_refstring.h</label>
+        <link refid="d5/de2/toy__refstring_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>toy_literal.h</label>
+        <link refid="d3/d5f/toy__literal_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>toy_reffunction.h</label>
+        <link refid="d4/d71/toy__reffunction_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>toy_literal_array.h</label>
+        <link refid="d0/dfc/toy__literal__array_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>toy_ast_node.h</label>
+        <link refid="d3/df7/toy__ast__node_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>toy_compiler.h</label>
+        <link refid="d3/d43/toy__compiler_8h"/>
+      </node>
+      <node id="4">
+        <label>toy_parser.h</label>
+        <link refid="dc/d33/toy__parser_8h"/>
+      </node>
+      <node id="6">
+        <label>toy_builtin.h</label>
+        <link refid="d7/dbe/toy__builtin_8h"/>
+      </node>
+      <node id="5">
+        <label>toy_interpreter.h</label>
+        <link refid="dc/dcc/toy__interpreter_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>toy_literal.h</label>
+        <link refid="d3/d5f/toy__literal_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>toy_literal_dictionary.h</label>
+        <link refid="dd/da4/toy__literal__dictionary_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>toy_scope.h</label>
+        <link refid="d2/db4/toy__scope_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d3/da0/structToy__Literal" prot="public">Toy_Literal</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a56006f07f1246e02710a9b3ccee30d20" prot="public" static="no">
+        <name>TOY_IS_NULL</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea80f774e1bb70f6d5c103a783fe749eb1" kindref="member">TOY_LITERAL_NULL</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="134" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a9792afb8a408a0547955ac510823509e" prot="public" static="no">
+        <name>TOY_IS_BOOLEAN</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaa932ce4da60f4ed636ae7d81bdc817d3" kindref="member">TOY_LITERAL_BOOLEAN</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="135" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a19e938d1230ce5422516fda8abcea413" prot="public" static="no">
+        <name>TOY_IS_INTEGER</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea6e13ecc0c3735548c5864c9dee043f88" kindref="member">TOY_LITERAL_INTEGER</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="136" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a28fbc56c908b012e141f1d541e178e31" prot="public" static="no">
+        <name>TOY_IS_FLOAT</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea9d01af7dcc732d97fe4203290010ba9a" kindref="member">TOY_LITERAL_FLOAT</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="137" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a47318a85ed278d3437e3a928024707ae" prot="public" static="no">
+        <name>TOY_IS_STRING</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaa5bffb412094abd0c8891200242bc192" kindref="member">TOY_LITERAL_STRING</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="138" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ab5cde11d74ac0e024b7edb72c5f0e389" prot="public" static="no">
+        <name>TOY_IS_ARRAY</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf51b93d3b085e39ceec127300eb42235" kindref="member">TOY_LITERAL_ARRAY</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="139" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a1d52dd3509ecae0e0c9cd87132736e9f" prot="public" static="no">
+        <name>TOY_IS_DICTIONARY</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea8ba088eea2c754feef3f3237c35df9b2" kindref="member">TOY_LITERAL_DICTIONARY</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="140" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a84638c62dc9fa5ca53693ec50f64b276" prot="public" static="no">
+        <name>TOY_IS_FUNCTION</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea6847b29c6b8a361001ac951b0b6286b1" kindref="member">TOY_LITERAL_FUNCTION</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="141" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a083d94d4cbe7f0139d669104a31c6611" prot="public" static="no">
+        <name>TOY_IS_FUNCTION_NATIVE</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf7b5ea17222c532a61e5bfda4ff1297f" kindref="member">TOY_LITERAL_FUNCTION_NATIVE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="142" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a33a1b6445ea5c840a773d9d394dca0c6" prot="public" static="no">
+        <name>TOY_IS_FUNCTION_HOOK</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf14210ac1459b8b06061353685ab59a1" kindref="member">TOY_LITERAL_FUNCTION_HOOK</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="143" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a1d715b3f1a82754ee0bd2c037b995274" prot="public" static="no">
+        <name>TOY_IS_IDENTIFIER</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aead4b402669f1b40ea01dd0a800fd3e736" kindref="member">TOY_LITERAL_IDENTIFIER</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="144" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a6426fdc9082cd6ec13af389320ade05c" prot="public" static="no">
+        <name>TOY_IS_TYPE</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea140bb230b1f197b9b543ce5b7775767a" kindref="member">TOY_LITERAL_TYPE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="145" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a320537d60975afe2f29c765343b0092f" prot="public" static="no">
+        <name>TOY_IS_OPAQUE</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeabdcb6f908df16c1f5d53efff6d321bd2" kindref="member">TOY_LITERAL_OPAQUE</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="146" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1af1ab53e62f05bf4a7d20054295f950b3" prot="public" static="no">
+        <name>TOY_AS_BOOLEAN</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).as.boolean)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="148" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ae2dc43e15ada717bbf8d5447167b7a7f" prot="public" static="no">
+        <name>TOY_AS_INTEGER</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).as.integer)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="149" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ac81f0bf20743ee01773bb77012a66d27" prot="public" static="no">
+        <name>TOY_AS_FLOAT</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).as.number)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="150" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a5f2014e22323f401747a520ba94f583b" prot="public" static="no">
+        <name>TOY_AS_STRING</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).as.string.ptr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="151" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a2574b4d9842e2142d405a550eab80816" prot="public" static="no">
+        <name>TOY_AS_ARRAY</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref>*)((value).as.array))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="152" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a0db3e7a9ca2836da47431dec4bfb4fd3" prot="public" static="no">
+        <name>TOY_AS_DICTIONARY</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d9/db5/structToy__LiteralDictionary" kindref="compound">Toy_LiteralDictionary</ref>*)((value).as.dictionary))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="153" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a20ccf2cb21121a6e544155106d5193c0" prot="public" static="no">
+        <name>TOY_AS_FUNCTION</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).as.function)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="154" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1af735072539a7786f9a15650bd5e83c7a" prot="public" static="no">
+        <name>TOY_AS_FUNCTION_NATIVE</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).as.function.inner.native)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="155" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ac3619d503e16cb573f4e3ff218149026" prot="public" static="no">
+        <name>TOY_AS_FUNCTION_HOOK</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).as.function.inner.hook)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="156" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ab57ed439627f99543bcb8e3484d5bed2" prot="public" static="no">
+        <name>TOY_AS_IDENTIFIER</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).as.identifier.ptr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="157" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a62043f7f0a3cd3fddeccfea0c55f4329" prot="public" static="no">
+        <name>TOY_AS_TYPE</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).as.type)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="158" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a6a44c5f21854fb1a05c568ca1e2a6538" prot="public" static="no">
+        <name>TOY_AS_OPAQUE</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).as.opaque.ptr)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="159" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a437b21a2bd43bfeb2f4545e4e21d89ad" prot="public" static="no">
+        <name>TOY_TO_NULL_LITERAL</name>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .integer = 0 }, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea80f774e1bb70f6d5c103a783fe749eb1" kindref="member">TOY_LITERAL_NULL</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="161" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1adc51b5f1157f106f1369b260e7343c0e" prot="public" static="no">
+        <name>TOY_TO_BOOLEAN_LITERAL</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .boolean = value }, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaa932ce4da60f4ed636ae7d81bdc817d3" kindref="member">TOY_LITERAL_BOOLEAN</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="162" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a470c367a7cb484c27b7300906ff2963e" prot="public" static="no">
+        <name>TOY_TO_INTEGER_LITERAL</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .integer = value }, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea6e13ecc0c3735548c5864c9dee043f88" kindref="member">TOY_LITERAL_INTEGER</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="163" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ade018b2a5cfa548589f35e1aa453bf74" prot="public" static="no">
+        <name>TOY_TO_FLOAT_LITERAL</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .number = value }, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea9d01af7dcc732d97fe4203290010ba9a" kindref="member">TOY_LITERAL_FLOAT</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="164" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a0e468556c58d82faaba85d0ce224f675" prot="public" static="no">
+        <name>TOY_TO_STRING_LITERAL</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .string = { .ptr = value }},<ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaa5bffb412094abd0c8891200242bc192" kindref="member">TOY_LITERAL_STRING</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="165" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a3b37e311987c72e4d5704e89744f9c49" prot="public" static="no">
+        <name>TOY_TO_ARRAY_LITERAL</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .array = value }, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf51b93d3b085e39ceec127300eb42235" kindref="member">TOY_LITERAL_ARRAY</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="166" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a30b05f8702bea257185e80a164bfe642" prot="public" static="no">
+        <name>TOY_TO_DICTIONARY_LITERAL</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .dictionary = value }, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea8ba088eea2c754feef3f3237c35df9b2" kindref="member">TOY_LITERAL_DICTIONARY</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="167" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a1f754ab6092ee802fec56e67bf71e72b" prot="public" static="no">
+        <name>TOY_TO_FUNCTION_LITERAL</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .function = { .inner = { .ptr = value }, .scope = NULL }}, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea6847b29c6b8a361001ac951b0b6286b1" kindref="member">TOY_LITERAL_FUNCTION</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="168" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ae9ccd695e38eedabd91c280ce68e9ae4" prot="public" static="no">
+        <name>TOY_TO_FUNCTION_NATIVE_LITERAL</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .function = { .inner = { .native = value }, .scope = NULL }}, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf7b5ea17222c532a61e5bfda4ff1297f" kindref="member">TOY_LITERAL_FUNCTION_NATIVE</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="169" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a033ec3a4d0c41936d196f9e7eecb7344" prot="public" static="no">
+        <name>TOY_TO_FUNCTION_HOOK_LITERAL</name>
+        <param><defname>value</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .function = { .inner = { .hook = value }, .scope = NULL }}, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf14210ac1459b8b06061353685ab59a1" kindref="member">TOY_LITERAL_FUNCTION_HOOK</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="170" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1af8d65ef9b0ebb2ebf0a8e3cf282cdb5a" prot="public" static="no">
+        <name>TOY_TO_IDENTIFIER_LITERAL</name>
+        <param><defname>value</defname></param>
+        <initializer><ref refid="d3/d5f/toy__literal_8h_1abc7696ac618fab0f02c2ce24bdda13cf" kindref="member">Toy_private_toIdentifierLiteral</ref>(value)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="171" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a431bf7737e36bb24ddf9ee60c4e28ca3" prot="public" static="no">
+        <name>TOY_TO_TYPE_LITERAL</name>
+        <param><defname>value</defname></param>
+        <param><defname>c</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .type = { .typeOf = value, .constant = c, .subtypes = NULL, .capacity = 0, .count = 0 }}, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea140bb230b1f197b9b543ce5b7775767a" kindref="member">TOY_LITERAL_TYPE</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="172" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a231c19d4d9ee140e27192ad79650e8c2" prot="public" static="no">
+        <name>TOY_TO_OPAQUE_LITERAL</name>
+        <param><defname>value</defname></param>
+        <param><defname>t</defname></param>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .opaque = { .ptr = value, .tag = t }}, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeabdcb6f908df16c1f5d53efff6d321bd2" kindref="member">TOY_LITERAL_OPAQUE</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="173" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ad41c40de80719b3b236be5e3f8d38997" prot="public" static="no">
+        <name>TOY_IS_INDEX_BLANK</name>
+        <param><defname>value</defname></param>
+        <initializer>((value).type == <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea5555e0674082c4422562bac72c188568" kindref="member">TOY_LITERAL_INDEX_BLANK</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="176" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ad51ebc4b3d2b7bae0a1c32f30baec410" prot="public" static="no">
+        <name>TOY_TO_INDEX_BLANK_LITERAL</name>
+        <initializer>((<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>){{ .integer = 0 }, <ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea5555e0674082c4422562bac72c188568" kindref="member">TOY_LITERAL_INDEX_BLANK</ref>})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="177" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1aabccb595491056818b080234d36f38f3" prot="public" static="no">
+        <name>TOY_IS_TRUTHY</name>
+        <param><defname>x</defname></param>
+        <initializer><ref refid="d3/d5f/toy__literal_8h_1aaa2e8962a687673fff9647f7b0a50baa" kindref="member">Toy_private_isTruthy</ref>(x)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="187" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ac75f2195b1e17fe9e90b4cc340df7e63" prot="public" static="no">
+        <name>TOY_AS_FUNCTION_BYTECODE_LENGTH</name>
+        <param><defname>lit</defname></param>
+        <initializer>(<ref refid="d4/d71/toy__reffunction_8h_1ab07959ecc82c2707741ca73886510531" kindref="member">Toy_lengthRefFunction</ref>((lit).inner.ptr))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="189" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1afd9679a46927d281dd48548753ad590e" prot="public" static="no">
+        <name>TOY_MAX_STRING_LENGTH</name>
+        <initializer>4096</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="191" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1a221625609a51005673cdcb2b05c08ab0" prot="public" static="no">
+        <name>TOY_HASH_I</name>
+        <param><defname>lit</defname></param>
+        <initializer>((lit).as.identifier.hash)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="192" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1ad36f5ae9c1e8ed019661be16784faae3" prot="public" static="no">
+        <name>TOY_TYPE_PUSH_SUBTYPE</name>
+        <param><defname>lit</defname></param>
+        <param><defname>subtype</defname></param>
+        <initializer><ref refid="d3/d5f/toy__literal_8h_1a96c75bc294dcb8e8b5cda583ad4c6e58" kindref="member">Toy_private_typePushSubtype</ref>(lit, subtype)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="193" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d3/d5f/toy__literal_8h_1abbea922a200e8a9e59cc40ccc0d917fc" prot="public" static="no">
+        <name>TOY_GET_OPAQUE_TAG</name>
+        <param><defname>o</defname></param>
+        <initializer>o.as.opaque.tag</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="194" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870ae" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Toy_LiteralType</name>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea80f774e1bb70f6d5c103a783fe749eb1" prot="public">
+          <name>TOY_LITERAL_NULL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_NULL </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaa932ce4da60f4ed636ae7d81bdc817d3" prot="public">
+          <name>TOY_LITERAL_BOOLEAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_BOOLEAN </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea6e13ecc0c3735548c5864c9dee043f88" prot="public">
+          <name>TOY_LITERAL_INTEGER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_INTEGER </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea9d01af7dcc732d97fe4203290010ba9a" prot="public">
+          <name>TOY_LITERAL_FLOAT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_FLOAT </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaa5bffb412094abd0c8891200242bc192" prot="public">
+          <name>TOY_LITERAL_STRING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_STRING </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf51b93d3b085e39ceec127300eb42235" prot="public">
+          <name>TOY_LITERAL_ARRAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_ARRAY </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea8ba088eea2c754feef3f3237c35df9b2" prot="public">
+          <name>TOY_LITERAL_DICTIONARY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_DICTIONARY </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea6847b29c6b8a361001ac951b0b6286b1" prot="public">
+          <name>TOY_LITERAL_FUNCTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_FUNCTION </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aead4b402669f1b40ea01dd0a800fd3e736" prot="public">
+          <name>TOY_LITERAL_IDENTIFIER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_IDENTIFIER </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea140bb230b1f197b9b543ce5b7775767a" prot="public">
+          <name>TOY_LITERAL_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_TYPE </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeabdcb6f908df16c1f5d53efff6d321bd2" prot="public">
+          <name>TOY_LITERAL_OPAQUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_OPAQUE </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea50c63d5d5cd0e092b83e728030eb1d5d" prot="public">
+          <name>TOY_LITERAL_ANY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_LITERAL_ANY </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea3f14f7bfc1c595315175548dc0a107fc" prot="public">
+          <name>TOY_LITERAL_TYPE_INTERMEDIATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>used to process types in the compiler only </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea29ded732303f33e6a01aaccf85fc7502" prot="public">
+          <name>TOY_LITERAL_ARRAY_INTERMEDIATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>used to process arrays in the compiler only </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea9d1f0613ced311480732ca54c7292e0f" prot="public">
+          <name>TOY_LITERAL_DICTIONARY_INTERMEDIATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>used to process dictionaries in the compiler only </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeab871a9dc1bb08e8ee55b9aa052568798" prot="public">
+          <name>TOY_LITERAL_FUNCTION_INTERMEDIATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>used to process functions in the compiler only </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea7daf5e2d39660edb51c57903bdbb8c50" prot="public">
+          <name>TOY_LITERAL_FUNCTION_ARG_REST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>used to process function rest parameters only </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf7b5ea17222c532a61e5bfda4ff1297f" prot="public">
+          <name>TOY_LITERAL_FUNCTION_NATIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for handling native functions only </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf14210ac1459b8b06061353685ab59a1" prot="public">
+          <name>TOY_LITERAL_FUNCTION_HOOK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for handling hook functions within literals only </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea5555e0674082c4422562bac72c188568" prot="public">
+          <name>TOY_LITERAL_INDEX_BLANK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for blank indexing i.e. arr[:] </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="55" column="1" bodyfile="interpreter/include/toy_literal.h" bodystart="55" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d3/d5f/toy__literal_8h_1a75c718108573cac8d200bf51870c522b" prot="public" static="no">
+        <type>int(*</type>
+        <definition>int(* Toy_NativeFn)(struct Toy_Interpreter *interpreter, struct Toy_LiteralArray *arguments)</definition>
+        <argsstring>)(struct Toy_Interpreter *interpreter, struct Toy_LiteralArray *arguments)</argsstring>
+        <name>Toy_NativeFn</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interpreter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="30" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/d5f/toy__literal_8h_1a6569b94d4c6ef28b9c1f948fdd14fc4a" prot="public" static="no">
+        <type>int(*</type>
+        <definition>int(* Toy_HookFn)(struct Toy_Interpreter *interpreter, struct Toy_Literal identifier, struct Toy_Literal alias)</definition>
+        <argsstring>)(struct Toy_Interpreter *interpreter, struct Toy_Literal identifier, struct Toy_Literal alias)</argsstring>
+        <name>Toy_HookFn</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interpreter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="41" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/d5f/toy__literal_8h_1a176336391a32bc4eb6e8d776d3e19c35" prot="public" static="no">
+        <type>void(*</type>
+        <definition>void(* Toy_PrintFn)(const char *)</definition>
+        <argsstring>)(const char *)</argsstring>
+        <name>Toy_PrintFn</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="48" column="9" bodyfile="interpreter/include/toy_literal.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/d5f/toy__literal_8h_1ac5e1570c835c4656a57697b7f8444a56" prot="public" static="no">
+        <type>struct <ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+        <definition>Toy_Literal</definition>
+        <argsstring></argsstring>
+        <name>Toy_Literal</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="132" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d3/d5f/toy__literal_8h_1ab26e9d53a87b73da904b5d670b10f5af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_freeLiteral</definition>
+        <argsstring>(Toy_Literal literal)</argsstring>
+        <name>Toy_freeLiteral</name>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>literal</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="185" column="14" declfile="interpreter/include/toy_literal.h" declline="185" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d5f/toy__literal_8h_1aaa2e8962a687673fff9647f7b0a50baa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API bool</type>
+        <definition>bool Toy_private_isTruthy</definition>
+        <argsstring>(Toy_Literal x)</argsstring>
+        <name>Toy_private_isTruthy</name>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="204" column="14" declfile="interpreter/include/toy_literal.h" declline="204" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d5f/toy__literal_8h_1abc7696ac618fab0f02c2ce24bdda13cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+        <definition>Toy_Literal Toy_private_toIdentifierLiteral</definition>
+        <argsstring>(Toy_RefString *ptr)</argsstring>
+        <name>Toy_private_toIdentifierLiteral</name>
+        <param>
+          <type><ref refid="dd/d94/structToy__RefString" kindref="compound">Toy_RefString</ref> *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="213" column="21" declfile="interpreter/include/toy_literal.h" declline="213" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d5f/toy__literal_8h_1a96c75bc294dcb8e8b5cda583ad4c6e58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref> *</type>
+        <definition>Toy_Literal * Toy_private_typePushSubtype</definition>
+        <argsstring>(Toy_Literal *lit, Toy_Literal subtype)</argsstring>
+        <name>Toy_private_typePushSubtype</name>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref> *</type>
+          <declname>lit</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>subtype</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>subtype</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="223" column="21" declfile="interpreter/include/toy_literal.h" declline="223" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d5f/toy__literal_8h_1a5250042b7c6443d3aded392da08bfaa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+        <definition>Toy_Literal Toy_copyLiteral</definition>
+        <argsstring>(Toy_Literal original)</argsstring>
+        <name>Toy_copyLiteral</name>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>original</declname>
+        </param>
+        <briefdescription>
+<para>Returns a copy of the given literal. Literals should never be copied without this function, as it handles a lot of internal memory allocations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>original</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="233" column="21" declfile="interpreter/include/toy_literal.h" declline="233" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d5f/toy__literal_8h_1ac91521046fa2aa8f462649af6cb302b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API bool</type>
+        <definition>bool Toy_literalsAreEqual</definition>
+        <argsstring>(Toy_Literal lhs, Toy_Literal rhs)</argsstring>
+        <name>Toy_literalsAreEqual</name>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>lhs</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Checks to see if two given literals are equal. When an integer and a float are compared, the integer is cooerced into a float for the duration of the call. Arrays and dictionaries are equal only if their keys and values all equal. Likewise, types only equal if all subtypes are equal, in order. Functions and opaques are never equal to anything, while values with the type TOY_LITERAL_ANY are always equal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="246" column="14" declfile="interpreter/include/toy_literal.h" declline="246" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d5f/toy__literal_8h_1ae3ec8788a9a921e00cd164f38b5eacbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API int</type>
+        <definition>int Toy_hashLiteral</definition>
+        <argsstring>(Toy_Literal lit)</argsstring>
+        <name>Toy_hashLiteral</name>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>lit</declname>
+        </param>
+        <briefdescription>
+<para>Finds the hash of a literal, for various purposes. Different hashing algorithms are used for different types, and some types can&apos;t be hashed at all. Types that can&apos;t be hashed: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><itemizedlist>
+<listitem><para>all kinds of functions</para>
+</listitem><listitem><para>type</para>
+</listitem><listitem><para>opaque</para>
+</listitem><listitem><para>any In the case of identifiers, their hashes are precomputed on creation and are stored within the literal.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>lit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="261" column="13" declfile="interpreter/include/toy_literal.h" declline="261" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d5f/toy__literal_8h_1a2fa0bea1a678dc230a691aa6e354d35a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_printLiteral</definition>
+        <argsstring>(Toy_Literal literal)</argsstring>
+        <name>Toy_printLiteral</name>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>literal</declname>
+        </param>
+        <briefdescription>
+<para>Wraps a call to Toy_printLiteralCustom, with a printf-stdout wrapper as printFn. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="270" column="14" declfile="interpreter/include/toy_literal.h" declline="270" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d5f/toy__literal_8h_1abae5bd712823721a0bbb91bd0f983bac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_printLiteralCustom</definition>
+        <argsstring>(Toy_Literal literal, Toy_PrintFn)</argsstring>
+        <name>Toy_printLiteralCustom</name>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>literal</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/d5f/toy__literal_8h_1a176336391a32bc4eb6e8d776d3e19c35" kindref="member">Toy_PrintFn</ref></type>
+        </param>
+        <briefdescription>
+<para>Passes the string representation of literal to printFn. This function is not thread safe - due to the loopy and recursive nature of printing compound values, this function uses some globally persistent variables. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Toy_PrintFn</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="280" column="14" declfile="interpreter/include/toy_literal.h" declline="280" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_LITERAL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_LITERAL_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d1d/toy__common_8h" kindref="compound">toy_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/de2/toy__refstring_8h" kindref="compound">toy_refstring.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d4/d71/toy__reffunction_8h" kindref="compound">toy_reffunction.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d9/db5/structToy__LiteralDictionary" kindref="compound">Toy_LiteralDictionary</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="d3/d5f/toy__literal_8h_1a75c718108573cac8d200bf51870c522b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="d3/d5f/toy__literal_8h_1a75c718108573cac8d200bf51870c522b" kindref="member">Toy_NativeFn</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref>*<sp/>interpreter,<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref>*<sp/>arguments);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="d3/d5f/toy__literal_8h_1a6569b94d4c6ef28b9c1f948fdd14fc4a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>int<sp/>(*<ref refid="d3/d5f/toy__literal_8h_1a6569b94d4c6ef28b9c1f948fdd14fc4a" kindref="member">Toy_HookFn</ref>)(</highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref>*<sp/>interpreter,<sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d3/da0/structToy__Literal_1aebd020b5b3dfba1b89ee3554c4357546" kindref="member">identifier</ref>,<sp/>struct<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>alias);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="d3/d5f/toy__literal_8h_1a176336391a32bc4eb6e8d776d3e19c35" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>void<sp/>(*<ref refid="d3/d5f/toy__literal_8h_1a176336391a32bc4eb6e8d776d3e19c35" kindref="member">Toy_PrintFn</ref>)(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870ae" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="56" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea80f774e1bb70f6d5c103a783fe749eb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea80f774e1bb70f6d5c103a783fe749eb1" kindref="member">TOY_LITERAL_NULL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="57" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaa932ce4da60f4ed636ae7d81bdc817d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaa932ce4da60f4ed636ae7d81bdc817d3" kindref="member">TOY_LITERAL_BOOLEAN</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea6e13ecc0c3735548c5864c9dee043f88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea6e13ecc0c3735548c5864c9dee043f88" kindref="member">TOY_LITERAL_INTEGER</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea9d01af7dcc732d97fe4203290010ba9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea9d01af7dcc732d97fe4203290010ba9a" kindref="member">TOY_LITERAL_FLOAT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaa5bffb412094abd0c8891200242bc192" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaa5bffb412094abd0c8891200242bc192" kindref="member">TOY_LITERAL_STRING</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf51b93d3b085e39ceec127300eb42235" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf51b93d3b085e39ceec127300eb42235" kindref="member">TOY_LITERAL_ARRAY</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea8ba088eea2c754feef3f3237c35df9b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea8ba088eea2c754feef3f3237c35df9b2" kindref="member">TOY_LITERAL_DICTIONARY</ref>,<sp/></highlight></codeline>
+<codeline lineno="63" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea6847b29c6b8a361001ac951b0b6286b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea6847b29c6b8a361001ac951b0b6286b1" kindref="member">TOY_LITERAL_FUNCTION</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aead4b402669f1b40ea01dd0a800fd3e736" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aead4b402669f1b40ea01dd0a800fd3e736" kindref="member">TOY_LITERAL_IDENTIFIER</ref>,<sp/></highlight></codeline>
+<codeline lineno="65" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea140bb230b1f197b9b543ce5b7775767a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea140bb230b1f197b9b543ce5b7775767a" kindref="member">TOY_LITERAL_TYPE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeabdcb6f908df16c1f5d53efff6d321bd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeabdcb6f908df16c1f5d53efff6d321bd2" kindref="member">TOY_LITERAL_OPAQUE</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea50c63d5d5cd0e092b83e728030eb1d5d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea50c63d5d5cd0e092b83e728030eb1d5d" kindref="member">TOY_LITERAL_ANY</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//these<sp/>are<sp/>meta-level<sp/>types<sp/>-<sp/>not<sp/>for<sp/>general<sp/>use</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea3f14f7bfc1c595315175548dc0a107fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea3f14f7bfc1c595315175548dc0a107fc" kindref="member">TOY_LITERAL_TYPE_INTERMEDIATE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea29ded732303f33e6a01aaccf85fc7502" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea29ded732303f33e6a01aaccf85fc7502" kindref="member">TOY_LITERAL_ARRAY_INTERMEDIATE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea9d1f0613ced311480732ca54c7292e0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea9d1f0613ced311480732ca54c7292e0f" kindref="member">TOY_LITERAL_DICTIONARY_INTERMEDIATE</ref>,<sp/></highlight></codeline>
+<codeline lineno="73" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeab871a9dc1bb08e8ee55b9aa052568798" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeab871a9dc1bb08e8ee55b9aa052568798" kindref="member">TOY_LITERAL_FUNCTION_INTERMEDIATE</ref>,<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea7daf5e2d39660edb51c57903bdbb8c50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea7daf5e2d39660edb51c57903bdbb8c50" kindref="member">TOY_LITERAL_FUNCTION_ARG_REST</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf7b5ea17222c532a61e5bfda4ff1297f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf7b5ea17222c532a61e5bfda4ff1297f" kindref="member">TOY_LITERAL_FUNCTION_NATIVE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf14210ac1459b8b06061353685ab59a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aeaf14210ac1459b8b06061353685ab59a1" kindref="member">TOY_LITERAL_FUNCTION_HOOK</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77" refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea5555e0674082c4422562bac72c188568" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870aea5555e0674082c4422562bac72c188568" kindref="member">TOY_LITERAL_INDEX_BLANK</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870ae" kindref="member">Toy_LiteralType</ref>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="d3/da0/structToy__Literal" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87" refid="d3/da0/structToy__Literal_1a0f3db6cab471fd5e8ed1b9f22612dccd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/da0/structToy__Literal_1a0f3db6cab471fd5e8ed1b9f22612dccd" kindref="member">boolean</ref>;<sp/></highlight></codeline>
+<codeline lineno="88" refid="d3/da0/structToy__Literal_1a15dd92d09a8ce35fc6848e44fdf0504f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/da0/structToy__Literal_1a15dd92d09a8ce35fc6848e44fdf0504f" kindref="member">integer</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="d3/da0/structToy__Literal_1adc9a4af6e036b3e59a3f167ce1d9eb4e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="d3/da0/structToy__Literal_1adc9a4af6e036b3e59a3f167ce1d9eb4e" kindref="member">number</ref>;<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92" refid="d3/da0/structToy__Literal_1a12643673f85db726c7b11345e1a0d233" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d94/structToy__RefString" kindref="compound">Toy_RefString</ref>*<sp/><ref refid="d3/da0/structToy__Literal_1a12643673f85db726c7b11345e1a0d233" kindref="member">ptr</ref>;<sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//string<sp/>hash?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94" refid="d3/da0/structToy__Literal_1a2f528eb60d2c87a217dc3e41002759f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="d3/da0/structToy__Literal_1a2f528eb60d2c87a217dc3e41002759f4" kindref="member">string</ref>;<sp/></highlight></codeline>
+<codeline lineno="96" refid="d3/da0/structToy__Literal_1a1196beb73e9a9b41996751ff410a5451" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref>*<sp/><ref refid="d3/da0/structToy__Literal_1a1196beb73e9a9b41996751ff410a5451" kindref="member">array</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97" refid="d3/da0/structToy__Literal_1abf6529939cacb4908366d073aeb6b68c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d9/db5/structToy__LiteralDictionary" kindref="compound">Toy_LiteralDictionary</ref>*<sp/><ref refid="d3/da0/structToy__Literal_1abf6529939cacb4908366d073aeb6b68c" kindref="member">dictionary</ref>;<sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="101" refid="d3/da0/structToy__Literal_1a770bd064383915fdb704c1d484b25ca7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref>*<sp/><ref refid="d3/da0/structToy__Literal_1a770bd064383915fdb704c1d484b25ca7" kindref="member">ptr</ref>;<sp/></highlight></codeline>
+<codeline lineno="102" refid="d3/da0/structToy__Literal_1ae10810389e3bfc21da685d2b15097b82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1a75c718108573cac8d200bf51870c522b" kindref="member">Toy_NativeFn</ref><sp/><ref refid="d3/da0/structToy__Literal_1ae10810389e3bfc21da685d2b15097b82" kindref="member">native</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="103" refid="d3/da0/structToy__Literal_1af2e492ede6c1c0e04445c3d0537704ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1a6569b94d4c6ef28b9c1f948fdd14fc4a" kindref="member">Toy_HookFn</ref><sp/><ref refid="d3/da0/structToy__Literal_1af2e492ede6c1c0e04445c3d0537704ec" kindref="member">hook</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="d3/da0/structToy__Literal_1a4cf4ec82246bb4aee3bbc12eb29ed1af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/>inner;<sp/></highlight></codeline>
+<codeline lineno="105" refid="d3/da0/structToy__Literal_1a7e4344571d532464d076b4f968161bf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref>*<sp/><ref refid="d3/da0/structToy__Literal_1a7e4344571d532464d076b4f968161bf3" kindref="member">scope</ref>;<sp/></highlight></codeline>
+<codeline lineno="106" refid="d3/da0/structToy__Literal_1a404a273ca93a9e989c934c045fadb40c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="d3/da0/structToy__Literal_1a404a273ca93a9e989c934c045fadb40c" kindref="member">function</ref>;<sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="comment">//for<sp/>variable<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="dd/d94/structToy__RefString" kindref="compound">Toy_RefString</ref>*<sp/>ptr;<sp/></highlight></codeline>
+<codeline lineno="110" refid="d3/da0/structToy__Literal_1afec909043e208f91645f0e39464be7af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/da0/structToy__Literal_1afec909043e208f91645f0e39464be7af" kindref="member">hash</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111" refid="d3/da0/structToy__Literal_1aebd020b5b3dfba1b89ee3554c4357546" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="d3/da0/structToy__Literal_1aebd020b5b3dfba1b89ee3554c4357546" kindref="member">identifier</ref>;<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="114" refid="d3/da0/structToy__Literal_1ac2865745b2749ec6ef7ddd16128b1cb1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>*<sp/><ref refid="d3/da0/structToy__Literal_1ac2865745b2749ec6ef7ddd16128b1cb1" kindref="member">subtypes</ref>;<sp/></highlight></codeline>
+<codeline lineno="115" refid="d3/da0/structToy__Literal_1aceb733ce6f4bc542023690bbd7ac9b7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870ae" kindref="member">Toy_LiteralType</ref><sp/><ref refid="d3/da0/structToy__Literal_1aceb733ce6f4bc542023690bbd7ac9b7d" kindref="member">typeOf</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116" refid="d3/da0/structToy__Literal_1ab3ba853b6db7435acc23761e2be0eb90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="d3/da0/structToy__Literal_1ab3ba853b6db7435acc23761e2be0eb90" kindref="member">capacity</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117" refid="d3/da0/structToy__Literal_1acc72205bc1e765d64407f23c139f2ecb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="d3/da0/structToy__Literal_1acc72205bc1e765d64407f23c139f2ecb" kindref="member">count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="118" refid="d3/da0/structToy__Literal_1a66f09e4605978cd280187d673b339f05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/da0/structToy__Literal_1a66f09e4605978cd280187d673b339f05" kindref="member">constant</ref>;<sp/></highlight></codeline>
+<codeline lineno="119" refid="d3/da0/structToy__Literal_1a53a9a43ed263c894e2db1ec4dafe1bfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="d3/da0/structToy__Literal_1a53a9a43ed263c894e2db1ec4dafe1bfa" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122" refid="d3/da0/structToy__Literal_1a5250d503117ff7ccd5e8b4e357e9397f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="d3/da0/structToy__Literal_1a5250d503117ff7ccd5e8b4e357e9397f" kindref="member">ptr</ref>;<sp/></highlight></codeline>
+<codeline lineno="123" refid="d3/da0/structToy__Literal_1a6f1bdd53a494c0c2f52f758ea64c31bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/da0/structToy__Literal_1a6f1bdd53a494c0c2f52f758ea64c31bb" kindref="member">tag</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124" refid="d3/da0/structToy__Literal_1aa08e9c7093a852e61e00e2886838abd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><ref refid="d3/da0/structToy__Literal_1aa08e9c7093a852e61e00e2886838abd3" kindref="member">opaque</ref>;<sp/></highlight></codeline>
+<codeline lineno="126" refid="d3/da0/structToy__Literal_1a2a9ab74449cf2f688154b6dafdd48b02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/></highlight><highlight class="keyword">generic</highlight><highlight class="normal">;<sp/></highlight></codeline>
+<codeline lineno="127" refid="d3/da0/structToy__Literal_1a2ac1e328bc8dfebb12ed1f3904f579ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><ref refid="d3/da0/structToy__Literal_1a2ac1e328bc8dfebb12ed1f3904f579ac" kindref="member">as</ref>;<sp/></highlight></codeline>
+<codeline lineno="129" refid="d3/da0/structToy__Literal_1af2919c70e5e9ca19d7bfd6423d281cad" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870ae" kindref="member">Toy_LiteralType</ref><sp/><ref refid="d3/da0/structToy__Literal_1af2919c70e5e9ca19d7bfd6423d281cad" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//4<sp/>-<sp/>unused</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//shenanigans<sp/>with<sp/>byte<sp/>alignment<sp/>reduces<sp/>the<sp/>size<sp/>of<sp/>Toy_Literal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="d3/d5f/toy__literal_8h_1ac5e1570c835c4656a57697b7f8444a56" refkind="member"><highlight class="normal">}<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="d3/d5f/toy__literal_8h_1a56006f07f1246e02710a9b3ccee30d20" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_NULL(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_NULL)<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="d3/d5f/toy__literal_8h_1a9792afb8a408a0547955ac510823509e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_BOOLEAN(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_BOOLEAN)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136" refid="d3/d5f/toy__literal_8h_1a19e938d1230ce5422516fda8abcea413" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_INTEGER(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_INTEGER)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137" refid="d3/d5f/toy__literal_8h_1a28fbc56c908b012e141f1d541e178e31" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_FLOAT(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_FLOAT)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="d3/d5f/toy__literal_8h_1a47318a85ed278d3437e3a928024707ae" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_STRING(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_STRING)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="d3/d5f/toy__literal_8h_1ab5cde11d74ac0e024b7edb72c5f0e389" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_ARRAY(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_ARRAY)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="d3/d5f/toy__literal_8h_1a1d52dd3509ecae0e0c9cd87132736e9f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_DICTIONARY(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_DICTIONARY)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="d3/d5f/toy__literal_8h_1a84638c62dc9fa5ca53693ec50f64b276" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_FUNCTION(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_FUNCTION)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="d3/d5f/toy__literal_8h_1a083d94d4cbe7f0139d669104a31c6611" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_FUNCTION_NATIVE(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_FUNCTION_NATIVE)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143" refid="d3/d5f/toy__literal_8h_1a33a1b6445ea5c840a773d9d394dca0c6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_FUNCTION_HOOK(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_FUNCTION_HOOK)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="d3/d5f/toy__literal_8h_1a1d715b3f1a82754ee0bd2c037b995274" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_IDENTIFIER(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_IDENTIFIER)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="d3/d5f/toy__literal_8h_1a6426fdc9082cd6ec13af389320ade05c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_TYPE(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_TYPE)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="d3/d5f/toy__literal_8h_1a320537d60975afe2f29c765343b0092f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_OPAQUE(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_OPAQUE)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="d3/d5f/toy__literal_8h_1af1ab53e62f05bf4a7d20054295f950b3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_BOOLEAN(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).as.boolean)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149" refid="d3/d5f/toy__literal_8h_1ae2dc43e15ada717bbf8d5447167b7a7f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_INTEGER(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).as.integer)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="d3/d5f/toy__literal_8h_1ac81f0bf20743ee01773bb77012a66d27" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_FLOAT(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).as.number)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151" refid="d3/d5f/toy__literal_8h_1a5f2014e22323f401747a520ba94f583b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_STRING(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).as.string.ptr)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="d3/d5f/toy__literal_8h_1a2574b4d9842e2142d405a550eab80816" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_ARRAY(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_LiteralArray*)((value).as.array))<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153" refid="d3/d5f/toy__literal_8h_1a0db3e7a9ca2836da47431dec4bfb4fd3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_DICTIONARY(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_LiteralDictionary*)((value).as.dictionary))<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="d3/d5f/toy__literal_8h_1a20ccf2cb21121a6e544155106d5193c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_FUNCTION(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).as.function)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="d3/d5f/toy__literal_8h_1af735072539a7786f9a15650bd5e83c7a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_FUNCTION_NATIVE(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).as.function.inner.native)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="d3/d5f/toy__literal_8h_1ac3619d503e16cb573f4e3ff218149026" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_FUNCTION_HOOK(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).as.function.inner.hook)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="d3/d5f/toy__literal_8h_1ab57ed439627f99543bcb8e3484d5bed2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_IDENTIFIER(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).as.identifier.ptr)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="d3/d5f/toy__literal_8h_1a62043f7f0a3cd3fddeccfea0c55f4329" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_TYPE(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).as.type)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159" refid="d3/d5f/toy__literal_8h_1a6a44c5f21854fb1a05c568ca1e2a6538" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_OPAQUE(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).as.opaque.ptr)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="d3/d5f/toy__literal_8h_1a437b21a2bd43bfeb2f4545e4e21d89ad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_NULL_LITERAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.integer<sp/>=<sp/>0<sp/>},<sp/>TOY_LITERAL_NULL})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="d3/d5f/toy__literal_8h_1adc51b5f1157f106f1369b260e7343c0e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_BOOLEAN_LITERAL(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.boolean<sp/>=<sp/>value<sp/>},<sp/>TOY_LITERAL_BOOLEAN})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163" refid="d3/d5f/toy__literal_8h_1a470c367a7cb484c27b7300906ff2963e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_INTEGER_LITERAL(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.integer<sp/>=<sp/>value<sp/>},<sp/>TOY_LITERAL_INTEGER})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="d3/d5f/toy__literal_8h_1ade018b2a5cfa548589f35e1aa453bf74" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_FLOAT_LITERAL(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.number<sp/>=<sp/>value<sp/>},<sp/>TOY_LITERAL_FLOAT})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="d3/d5f/toy__literal_8h_1a0e468556c58d82faaba85d0ce224f675" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_STRING_LITERAL(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.string<sp/>=<sp/>{<sp/>.ptr<sp/>=<sp/>value<sp/>}},TOY_LITERAL_STRING})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166" refid="d3/d5f/toy__literal_8h_1a3b37e311987c72e4d5704e89744f9c49" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_ARRAY_LITERAL(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.array<sp/>=<sp/>value<sp/>},<sp/>TOY_LITERAL_ARRAY})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="d3/d5f/toy__literal_8h_1a30b05f8702bea257185e80a164bfe642" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_DICTIONARY_LITERAL(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.dictionary<sp/>=<sp/>value<sp/>},<sp/>TOY_LITERAL_DICTIONARY})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="d3/d5f/toy__literal_8h_1a1f754ab6092ee802fec56e67bf71e72b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_FUNCTION_LITERAL(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.function<sp/>=<sp/>{<sp/>.inner<sp/>=<sp/>{<sp/>.ptr<sp/>=<sp/>value<sp/>},<sp/>.scope<sp/>=<sp/>NULL<sp/>}},<sp/>TOY_LITERAL_FUNCTION})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="d3/d5f/toy__literal_8h_1ae9ccd695e38eedabd91c280ce68e9ae4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_FUNCTION_NATIVE_LITERAL(value)<sp/><sp/>((Toy_Literal){{<sp/>.function<sp/>=<sp/>{<sp/>.inner<sp/>=<sp/>{<sp/>.native<sp/>=<sp/>value<sp/>},<sp/>.scope<sp/>=<sp/>NULL<sp/>}},<sp/>TOY_LITERAL_FUNCTION_NATIVE})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="d3/d5f/toy__literal_8h_1a033ec3a4d0c41936d196f9e7eecb7344" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_FUNCTION_HOOK_LITERAL(value)<sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.function<sp/>=<sp/>{<sp/>.inner<sp/>=<sp/>{<sp/>.hook<sp/>=<sp/>value<sp/>},<sp/>.scope<sp/>=<sp/>NULL<sp/>}},<sp/>TOY_LITERAL_FUNCTION_HOOK})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171" refid="d3/d5f/toy__literal_8h_1af8d65ef9b0ebb2ebf0a8e3cf282cdb5a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_IDENTIFIER_LITERAL(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>Toy_private_toIdentifierLiteral(value)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172" refid="d3/d5f/toy__literal_8h_1a431bf7737e36bb24ddf9ee60c4e28ca3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_TYPE_LITERAL(value,<sp/>c)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.type<sp/>=<sp/>{<sp/>.typeOf<sp/>=<sp/>value,<sp/>.constant<sp/>=<sp/>c,<sp/>.subtypes<sp/>=<sp/>NULL,<sp/>.capacity<sp/>=<sp/>0,<sp/>.count<sp/>=<sp/>0<sp/>}},<sp/>TOY_LITERAL_TYPE})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173" refid="d3/d5f/toy__literal_8h_1a231c19d4d9ee140e27192ad79650e8c2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_OPAQUE_LITERAL(value,<sp/>t)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.opaque<sp/>=<sp/>{<sp/>.ptr<sp/>=<sp/>value,<sp/>.tag<sp/>=<sp/>t<sp/>}},<sp/>TOY_LITERAL_OPAQUE})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="comment">//BUGFIX:<sp/>For<sp/>blank<sp/>indexing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176" refid="d3/d5f/toy__literal_8h_1ad41c40de80719b3b236be5e3f8d38997" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_INDEX_BLANK(value)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((value).type<sp/>==<sp/>TOY_LITERAL_INDEX_BLANK)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="d3/d5f/toy__literal_8h_1ad51ebc4b3d2b7bae0a1c32f30baec410" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TO_INDEX_BLANK_LITERAL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((Toy_Literal){{<sp/>.integer<sp/>=<sp/>0<sp/>},<sp/>TOY_LITERAL_INDEX_BLANK})<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185" refid="d3/d5f/toy__literal_8h_1ab26e9d53a87b73da904b5d670b10f5af" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d5f/toy__literal_8h_1ab26e9d53a87b73da904b5d670b10f5af" kindref="member">Toy_freeLiteral</ref>(<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>literal);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="d3/d5f/toy__literal_8h_1aabccb595491056818b080234d36f38f3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_IS_TRUTHY(x)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Toy_private_isTruthy(x)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189" refid="d3/d5f/toy__literal_8h_1ac75f2195b1e17fe9e90b4cc340df7e63" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AS_FUNCTION_BYTECODE_LENGTH(lit)<sp/><sp/><sp/>(Toy_lengthRefFunction((lit).inner.ptr))<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="d3/d5f/toy__literal_8h_1afd9679a46927d281dd48548753ad590e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_MAX_STRING_LENGTH<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4096<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="d3/d5f/toy__literal_8h_1a221625609a51005673cdcb2b05c08ab0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_HASH_I(lit)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>((lit).as.identifier.hash)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="d3/d5f/toy__literal_8h_1ad36f5ae9c1e8ed019661be16784faae3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_TYPE_PUSH_SUBTYPE(lit,<sp/>subtype)<sp/><sp/><sp/><sp/>Toy_private_typePushSubtype(lit,<sp/>subtype)<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194" refid="d3/d5f/toy__literal_8h_1abbea922a200e8a9e59cc40ccc0d917fc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_GET_OPAQUE_TAG(o)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>o.as.opaque.tag<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="comment">//BUGFIX:<sp/>macros<sp/>are<sp/>not<sp/>functions</highlight></codeline>
+<codeline lineno="204" refid="d3/d5f/toy__literal_8h_1aaa2e8962a687673fff9647f7b0a50baa" refkind="member"><highlight class="comment"></highlight><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/d5f/toy__literal_8h_1aaa2e8962a687673fff9647f7b0a50baa" kindref="member">Toy_private_isTruthy</ref>(<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>x);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="d3/d5f/toy__literal_8h_1abc7696ac618fab0f02c2ce24bdda13cf" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d3/d5f/toy__literal_8h_1abc7696ac618fab0f02c2ce24bdda13cf" kindref="member">Toy_private_toIdentifierLiteral</ref>(<ref refid="dd/d94/structToy__RefString" kindref="compound">Toy_RefString</ref>*<sp/>ptr);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="d3/d5f/toy__literal_8h_1a96c75bc294dcb8e8b5cda583ad4c6e58" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>*<sp/><ref refid="d3/d5f/toy__literal_8h_1a96c75bc294dcb8e8b5cda583ad4c6e58" kindref="member">Toy_private_typePushSubtype</ref>(<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref>*<sp/>lit,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>subtype);</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">//utils</highlight></codeline>
+<codeline lineno="233" refid="d3/d5f/toy__literal_8h_1a5250042b7c6443d3aded392da08bfaa0" refkind="member"><highlight class="comment"></highlight><highlight class="normal">TOY_API<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d3/d5f/toy__literal_8h_1a5250042b7c6443d3aded392da08bfaa0" kindref="member">Toy_copyLiteral</ref>(<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>original);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246" refid="d3/d5f/toy__literal_8h_1ac91521046fa2aa8f462649af6cb302b2" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/d5f/toy__literal_8h_1ac91521046fa2aa8f462649af6cb302b2" kindref="member">Toy_literalsAreEqual</ref>(<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>lhs,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>rhs);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261" refid="d3/d5f/toy__literal_8h_1ae3ec8788a9a921e00cd164f38b5eacbe" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/d5f/toy__literal_8h_1ae3ec8788a9a921e00cd164f38b5eacbe" kindref="member">Toy_hashLiteral</ref>(<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>lit);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="comment">//not<sp/>thread-safe</highlight></codeline>
+<codeline lineno="270" refid="d3/d5f/toy__literal_8h_1a2fa0bea1a678dc230a691aa6e354d35a" refkind="member"><highlight class="comment"></highlight><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d5f/toy__literal_8h_1a2fa0bea1a678dc230a691aa6e354d35a" kindref="member">Toy_printLiteral</ref>(<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>literal);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280" refid="d3/d5f/toy__literal_8h_1abae5bd712823721a0bbb91bd0f983bac" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d5f/toy__literal_8h_1abae5bd712823721a0bbb91bd0f983bac" kindref="member">Toy_printLiteralCustom</ref>(<ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>literal,<sp/><ref refid="d3/d5f/toy__literal_8h_1a176336391a32bc4eb6e8d776d3e19c35" kindref="member">Toy_PrintFn</ref>);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_LITERAL_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="interpreter/include/toy_literal.h"/>
+  </compounddef>
+</doxygen>

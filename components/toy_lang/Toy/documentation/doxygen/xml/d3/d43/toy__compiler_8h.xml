@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d3/d43/toy__compiler_8h" kind="file" language="C++">
+    <compoundname>toy_compiler.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stddef.h</includes>
+    <includes refid="d7/d1d/toy__common_8h" local="yes">toy_common.h</includes>
+    <includes refid="dc/dad/toy__opcodes_8h" local="yes">toy_opcodes.h</includes>
+    <includes refid="d3/df7/toy__ast__node_8h" local="yes">toy_ast_node.h</includes>
+    <includes refid="d0/dfc/toy__literal__array_8h" local="yes">toy_literal_array.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>toy_common.h</label>
+        <link refid="d7/d1d/toy__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>toy_literal_array.h</label>
+        <link refid="d0/dfc/toy__literal__array_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>toy_opcodes.h</label>
+        <link refid="dc/dad/toy__opcodes_8h"/>
+      </node>
+      <node id="9">
+        <label>toy_refstring.h</label>
+        <link refid="d5/de2/toy__refstring_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>toy_token_types.h</label>
+        <link refid="d8/de7/toy__token__types_8h"/>
+      </node>
+      <node id="7">
+        <label>toy_ast_node.h</label>
+        <link refid="d3/df7/toy__ast__node_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>toy_compiler.h</label>
+        <link refid="d3/d43/toy__compiler_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>toy_literal.h</label>
+        <link refid="d3/d5f/toy__literal_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>toy_reffunction.h</label>
+        <link refid="d4/d71/toy__reffunction_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="3">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="10">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d3/ddc/structToy__Compiler" prot="public">Toy_Compiler</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d3/d43/toy__compiler_8h_1a55ecbf4433b3a147401152216cc0feef" prot="public" static="no">
+        <type>struct <ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref></type>
+        <definition>Toy_Compiler</definition>
+        <argsstring></argsstring>
+        <name>Toy_Compiler</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_compiler.h" line="30" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d3/d43/toy__compiler_8h_1ae73c00c0016b7a5bc5d9d2e1cab478c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_initCompiler</definition>
+        <argsstring>(Toy_Compiler *compiler)</argsstring>
+        <name>Toy_initCompiler</name>
+        <param>
+          <type><ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref> *</type>
+          <declname>compiler</declname>
+        </param>
+        <briefdescription>
+<para>initializes the given <ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>compiler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_compiler.h" line="38" column="14" declfile="compiler/include/toy_compiler.h" declline="38" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d43/toy__compiler_8h_1a4e2deea95f9843a659e8fdef40f7a3b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>TOY_API void Toy_writeCompiler</definition>
+        <argsstring>(Toy_Compiler *compiler, Toy_ASTNode *node)</argsstring>
+        <name>Toy_writeCompiler</name>
+        <param>
+          <type><ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref> *</type>
+          <declname>compiler</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_compiler.h" line="47" column="14" declfile="compiler/include/toy_compiler.h" declline="47" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d43/toy__compiler_8h_1aac31f3ed708d2f43038fbb435a95a6ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_freeCompiler</definition>
+        <argsstring>(Toy_Compiler *compiler)</argsstring>
+        <name>Toy_freeCompiler</name>
+        <param>
+          <type><ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref> *</type>
+          <declname>compiler</declname>
+        </param>
+        <briefdescription>
+<para>Frees a <ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref>. Calling this on a compiler which has not been collated will free that compiler as expected - anything written to it will be lost. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>compiler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_compiler.h" line="55" column="14" declfile="compiler/include/toy_compiler.h" declline="55" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/d43/toy__compiler_8h_1aae29ddadf9f379737141831d48ccd9a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API unsigned char *</type>
+        <definition>unsigned char * Toy_collateCompiler</definition>
+        <argsstring>(Toy_Compiler *compiler, size_t *size)</argsstring>
+        <name>Toy_collateCompiler</name>
+        <param>
+          <type><ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref> *</type>
+          <declname>compiler</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Returns a buffer of bytes, known as &quot;bytecode&quot;, created from the given <ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref>; it also stores the size of the bytecode in the variable pointed to by size. Calling Toy_collateCompiler multiple times on the same compiler will produce undefined behaviour. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>compiler</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_compiler.h" line="67" column="23" declfile="compiler/include/toy_compiler.h" declline="67" declcolumn="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_COMPILER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_COMPILER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stddef.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d1d/toy__common_8h" kindref="compound">toy_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/dad/toy__opcodes_8h" kindref="compound">toy_opcodes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/df7/toy__ast__node_8h" kindref="compound">toy_ast_node.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/dfc/toy__literal__array_8h" kindref="compound">toy_literal_array.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//the<sp/>compiler<sp/>takes<sp/>the<sp/>nodes,<sp/>and<sp/>turns<sp/>them<sp/>into<sp/>sequential<sp/>chunks<sp/>of<sp/>bytecode,<sp/>saving<sp/>literals<sp/>to<sp/>an<sp/>external<sp/>array</highlight></codeline>
+<codeline lineno="24" refid="d3/ddc/structToy__Compiler" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref><sp/>{</highlight></codeline>
+<codeline lineno="25" refid="d3/ddc/structToy__Compiler_1a02c598a0bb6f192e28030928dac9c574" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/><ref refid="d3/ddc/structToy__Compiler_1a02c598a0bb6f192e28030928dac9c574" kindref="member">literalCache</ref>;<sp/></highlight></codeline>
+<codeline lineno="26" refid="d3/ddc/structToy__Compiler_1a6061ac384654314c4dda5230daa7cc45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="d3/ddc/structToy__Compiler_1a6061ac384654314c4dda5230daa7cc45" kindref="member">bytecode</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="d3/ddc/structToy__Compiler_1a656f00ea824058ce6e6d3f91ff50da94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/ddc/structToy__Compiler_1a656f00ea824058ce6e6d3f91ff50da94" kindref="member">capacity</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="d3/ddc/structToy__Compiler_1a2ad1f8c73febf6f8e846cb66c384c0de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d3/ddc/structToy__Compiler_1a2ad1f8c73febf6f8e846cb66c384c0de" kindref="member">count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="d3/ddc/structToy__Compiler_1a594fbc0d6259f36435ff51ff213f87e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d3/ddc/structToy__Compiler_1a594fbc0d6259f36435ff51ff213f87e5" kindref="member">panic</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="d3/d43/toy__compiler_8h_1a55ecbf4433b3a147401152216cc0feef" refkind="member"><highlight class="normal">}<sp/><ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="d3/d43/toy__compiler_8h_1ae73c00c0016b7a5bc5d9d2e1cab478c5" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d43/toy__compiler_8h_1ae73c00c0016b7a5bc5d9d2e1cab478c5" kindref="member">Toy_initCompiler</ref>(<ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref><sp/>*compiler);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Toy_writeCompiler(<ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref><sp/>*compiler,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*node);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="d3/d43/toy__compiler_8h_1aac31f3ed708d2f43038fbb435a95a6ce" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/d43/toy__compiler_8h_1aac31f3ed708d2f43038fbb435a95a6ce" kindref="member">Toy_freeCompiler</ref>(<ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref><sp/>*compiler);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//embed<sp/>the<sp/>header,<sp/>data<sp/>section,<sp/>code<sp/>section,<sp/>function<sp/>section,<sp/>etc.</highlight></codeline>
+<codeline lineno="67" refid="d3/d43/toy__compiler_8h_1aae29ddadf9f379737141831d48ccd9a0" refkind="member"><highlight class="comment"></highlight><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="d3/d43/toy__compiler_8h_1aae29ddadf9f379737141831d48ccd9a0" kindref="member">Toy_collateCompiler</ref>(<ref refid="d3/ddc/structToy__Compiler" kindref="compound">Toy_Compiler</ref><sp/>*compiler,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>*size);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_COMPILER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="compiler/include/toy_compiler.h"/>
+  </compounddef>
+</doxygen>

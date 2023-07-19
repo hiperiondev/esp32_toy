@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dc/d33/toy__parser_8h" kind="file" language="C++">
+    <compoundname>toy_parser.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="d7/d1d/toy__common_8h" local="yes">toy_common.h</includes>
+    <includes refid="d5/d51/toy__lexer_8h" local="yes">toy_lexer.h</includes>
+    <includes refid="d3/df7/toy__ast__node_8h" local="yes">toy_ast_node.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>toy_common.h</label>
+        <link refid="d7/d1d/toy__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>toy_opcodes.h</label>
+        <link refid="dc/dad/toy__opcodes_8h"/>
+      </node>
+      <node id="10">
+        <label>toy_refstring.h</label>
+        <link refid="d5/de2/toy__refstring_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>toy_token_types.h</label>
+        <link refid="d8/de7/toy__token__types_8h"/>
+      </node>
+      <node id="8">
+        <label>toy_ast_node.h</label>
+        <link refid="d3/df7/toy__ast__node_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>toy_lexer.h</label>
+        <link refid="d5/d51/toy__lexer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>toy_parser.h</label>
+        <link refid="dc/d33/toy__parser_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>toy_literal.h</label>
+        <link refid="d3/d5f/toy__literal_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>toy_reffunction.h</label>
+        <link refid="d4/d71/toy__reffunction_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="11">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="d8/d78/structToy__Parser" prot="public">Toy_Parser</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d33/toy__parser_8h_1a37fceb423abe4c03b806c4660cef2069" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_initParser</definition>
+        <argsstring>(Toy_Parser *parser, Toy_Lexer *lexer)</argsstring>
+        <name>Toy_initParser</name>
+        <param>
+          <type><ref refid="d8/d78/structToy__Parser" kindref="compound">Toy_Parser</ref> *</type>
+          <declname>parser</declname>
+        </param>
+        <param>
+          <type><ref refid="d9/d6d/structToy__Lexer" kindref="compound">Toy_Lexer</ref> *</type>
+          <declname>lexer</declname>
+        </param>
+        <briefdescription>
+<para>Initializes a <ref refid="d8/d78/structToy__Parser" kindref="compound">Toy_Parser</ref>, binding the given <ref refid="d9/d6d/structToy__Lexer" kindref="compound">Toy_Lexer</ref> to it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lexer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_parser.h" line="39" column="14" declfile="compiler/include/toy_parser.h" declline="39" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d33/toy__parser_8h_1ab2da377e2e61d7b3b0081b1f5aa4e431" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_freeParser</definition>
+        <argsstring>(Toy_Parser *parser)</argsstring>
+        <name>Toy_freeParser</name>
+        <param>
+          <type><ref refid="d8/d78/structToy__Parser" kindref="compound">Toy_Parser</ref> *</type>
+          <declname>parser</declname>
+        </param>
+        <briefdescription>
+<para>Frees a <ref refid="d8/d78/structToy__Parser" kindref="compound">Toy_Parser</ref> once its task is completed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_parser.h" line="47" column="14" declfile="compiler/include/toy_parser.h" declline="47" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d33/toy__parser_8h_1abe4c894be4a5995a709f500e74dffe2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+        <definition>Toy_ASTNode * Toy_scanParser</definition>
+        <argsstring>(Toy_Parser *parser)</argsstring>
+        <name>Toy_scanParser</name>
+        <param>
+          <type><ref refid="d8/d78/structToy__Parser" kindref="compound">Toy_Parser</ref> *</type>
+          <declname>parser</declname>
+        </param>
+        <briefdescription>
+<para>Returns an abstract syntax tree representing part of the program, or an error node. The abstract syntax tree must be passed to Toy_writeCompiler and/or Toy_freeASTNode. This function should be called repeatedly until it returns NULL, indicating the end of the program. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_parser.h" line="57" column="21" declfile="compiler/include/toy_parser.h" declline="57" declcolumn="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_PARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_PARSER_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d1d/toy__common_8h" kindref="compound">toy_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d5/d51/toy__lexer_8h" kindref="compound">toy_lexer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/df7/toy__ast__node_8h" kindref="compound">toy_ast_node.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//DOCS:<sp/>parsers<sp/>are<sp/>bound<sp/>to<sp/>a<sp/>lexer,<sp/>and<sp/>turn<sp/>the<sp/>outputted<sp/>tokens<sp/>into<sp/>AST<sp/>nodes</highlight></codeline>
+<codeline lineno="22" refid="d8/d78/structToy__Parser" refkind="compound"><highlight class="comment"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23" refid="d8/d78/structToy__Parser_1a5c0b960eea0e620ec1cdc18f50dd1640" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d6d/structToy__Lexer" kindref="compound">Toy_Lexer</ref>*<sp/><ref refid="d8/d78/structToy__Parser_1a5c0b960eea0e620ec1cdc18f50dd1640" kindref="member">lexer</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="d8/d78/structToy__Parser_1a12bea4913748bbcd24df2590d17791a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d8/d78/structToy__Parser_1a12bea4913748bbcd24df2590d17791a1" kindref="member">error</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="d8/d78/structToy__Parser_1a0c4e0a567762e5a83472325f59cfbe1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d8/d78/structToy__Parser_1a0c4e0a567762e5a83472325f59cfbe1e" kindref="member">panic</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//track<sp/>the<sp/>last<sp/>two<sp/>outputs<sp/>from<sp/>the<sp/>lexer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="d8/d78/structToy__Parser_1a2829f9503b1f99011bdadee418488106" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d78/structToy__Token" kindref="compound">Toy_Token</ref><sp/><ref refid="d8/d78/structToy__Parser_1a2829f9503b1f99011bdadee418488106" kindref="member">current</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="29" refid="d8/d78/structToy__Parser_1aeb40d8ec44f82482bc362510433ddfc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dd/d78/structToy__Token" kindref="compound">Toy_Token</ref><sp/><ref refid="d8/d78/structToy__Parser_1aeb40d8ec44f82482bc362510433ddfc2" kindref="member">previous</ref>;<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}<sp/><ref refid="d8/d78/structToy__Parser" kindref="compound">Toy_Parser</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="dc/d33/toy__parser_8h_1a37fceb423abe4c03b806c4660cef2069" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d33/toy__parser_8h_1a37fceb423abe4c03b806c4660cef2069" kindref="member">Toy_initParser</ref>(<ref refid="d8/d78/structToy__Parser" kindref="compound">Toy_Parser</ref>*<sp/>parser,<sp/><ref refid="d9/d6d/structToy__Lexer" kindref="compound">Toy_Lexer</ref>*<sp/>lexer);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="dc/d33/toy__parser_8h_1ab2da377e2e61d7b3b0081b1f5aa4e431" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="dc/d33/toy__parser_8h_1ab2da377e2e61d7b3b0081b1f5aa4e431" kindref="member">Toy_freeParser</ref>(<ref refid="d8/d78/structToy__Parser" kindref="compound">Toy_Parser</ref>*<sp/>parser);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="dc/d33/toy__parser_8h_1abe4c894be4a5995a709f500e74dffe2b" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref>*<sp/><ref refid="dc/d33/toy__parser_8h_1abe4c894be4a5995a709f500e74dffe2b" kindref="member">Toy_scanParser</ref>(<ref refid="d8/d78/structToy__Parser" kindref="compound">Toy_Parser</ref>*<sp/>parser);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_PARSER_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="compiler/include/toy_parser.h"/>
+  </compounddef>
+</doxygen>

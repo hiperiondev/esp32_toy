@@ -1,0 +1,443 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d7/dbe/toy__builtin_8h" kind="file" language="C++">
+    <compoundname>toy_builtin.h</compoundname>
+    <includes refid="dc/dcc/toy__interpreter_8h" local="yes">toy_interpreter.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>toy_common.h</label>
+        <link refid="d7/d1d/toy__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>toy_literal_array.h</label>
+        <link refid="d0/dfc/toy__literal__array_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>toy_refstring.h</label>
+        <link refid="d5/de2/toy__refstring_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>toy_builtin.h</label>
+        <link refid="d7/dbe/toy__builtin_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>toy_interpreter.h</label>
+        <link refid="dc/dcc/toy__interpreter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>toy_literal.h</label>
+        <link refid="d3/d5f/toy__literal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>toy_literal_dictionary.h</label>
+        <link refid="dd/da4/toy__literal__dictionary_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>toy_reffunction.h</label>
+        <link refid="d4/d71/toy__reffunction_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>toy_scope.h</label>
+        <link refid="d2/db4/toy__scope_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="9">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d7/dbe/toy__builtin_8h_1a5b8691df127539d9ef995999c6904389" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Toy_private_index</definition>
+        <argsstring>(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)</argsstring>
+        <name>Toy_private_index</name>
+        <param>
+          <type><ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref> *</type>
+          <declname>interpreter</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+<para>The _index function is a historical oddity - it&apos;s used whenever a compound is indexed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interpreter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_builtin.h" line="20" column="5" declfile="interpreter/include/toy_builtin.h" declline="20" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dbe/toy__builtin_8h_1ad291cff2ff13159e4015825b01b97e47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Toy_private_set</definition>
+        <argsstring>(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)</argsstring>
+        <name>Toy_private_set</name>
+        <param>
+          <type><ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref> *</type>
+          <declname>interpreter</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interpreter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_builtin.h" line="31" column="5" declfile="interpreter/include/toy_builtin.h" declline="31" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dbe/toy__builtin_8h_1aec426624c0365a29a83ea4d39c6388c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Toy_private_get</definition>
+        <argsstring>(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)</argsstring>
+        <name>Toy_private_get</name>
+        <param>
+          <type><ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref> *</type>
+          <declname>interpreter</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interpreter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_builtin.h" line="41" column="5" declfile="interpreter/include/toy_builtin.h" declline="41" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dbe/toy__builtin_8h_1a74696f67b5b59505c381dad99105612a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Toy_private_push</definition>
+        <argsstring>(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)</argsstring>
+        <name>Toy_private_push</name>
+        <param>
+          <type><ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref> *</type>
+          <declname>interpreter</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interpreter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_builtin.h" line="51" column="5" declfile="interpreter/include/toy_builtin.h" declline="51" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dbe/toy__builtin_8h_1ac77c6d79521680d9fa8f9300196e49ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Toy_private_pop</definition>
+        <argsstring>(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)</argsstring>
+        <name>Toy_private_pop</name>
+        <param>
+          <type><ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref> *</type>
+          <declname>interpreter</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interpreter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_builtin.h" line="61" column="5" declfile="interpreter/include/toy_builtin.h" declline="61" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dbe/toy__builtin_8h_1aca5b9c517d2f9e6b6ee05d72feb482ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Toy_private_length</definition>
+        <argsstring>(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)</argsstring>
+        <name>Toy_private_length</name>
+        <param>
+          <type><ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref> *</type>
+          <declname>interpreter</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interpreter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_builtin.h" line="71" column="5" declfile="interpreter/include/toy_builtin.h" declline="71" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/dbe/toy__builtin_8h_1af0cdb3095795e0d85228c8d3cbd34f28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Toy_private_clear</definition>
+        <argsstring>(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)</argsstring>
+        <name>Toy_private_clear</name>
+        <param>
+          <type><ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref> *</type>
+          <declname>interpreter</declname>
+        </param>
+        <param>
+          <type><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interpreter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_builtin.h" line="81" column="5" declfile="interpreter/include/toy_builtin.h" declline="81" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_BUILTIN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_BUILTIN_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/dcc/toy__interpreter_8h" kindref="compound">toy_interpreter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="d7/dbe/toy__builtin_8h_1a5b8691df127539d9ef995999c6904389" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/dbe/toy__builtin_8h_1a5b8691df127539d9ef995999c6904389" kindref="member">Toy_private_index</ref>(<ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref><sp/>*interpreter,<sp/><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*arguments);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//globally<sp/>available<sp/>native<sp/>functions</highlight></codeline>
+<codeline lineno="31" refid="d7/dbe/toy__builtin_8h_1ad291cff2ff13159e4015825b01b97e47" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/dbe/toy__builtin_8h_1ad291cff2ff13159e4015825b01b97e47" kindref="member">Toy_private_set</ref>(<ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref><sp/>*interpreter,<sp/><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*arguments);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="d7/dbe/toy__builtin_8h_1aec426624c0365a29a83ea4d39c6388c1" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/dbe/toy__builtin_8h_1aec426624c0365a29a83ea4d39c6388c1" kindref="member">Toy_private_get</ref>(<ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref><sp/>*interpreter,<sp/><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*arguments);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="d7/dbe/toy__builtin_8h_1a74696f67b5b59505c381dad99105612a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/dbe/toy__builtin_8h_1a74696f67b5b59505c381dad99105612a" kindref="member">Toy_private_push</ref>(<ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref><sp/>*interpreter,<sp/><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*arguments);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="d7/dbe/toy__builtin_8h_1ac77c6d79521680d9fa8f9300196e49ac" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/dbe/toy__builtin_8h_1ac77c6d79521680d9fa8f9300196e49ac" kindref="member">Toy_private_pop</ref>(<ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref><sp/>*interpreter,<sp/><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*arguments);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="d7/dbe/toy__builtin_8h_1aca5b9c517d2f9e6b6ee05d72feb482ed" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/dbe/toy__builtin_8h_1aca5b9c517d2f9e6b6ee05d72feb482ed" kindref="member">Toy_private_length</ref>(<ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref><sp/>*interpreter,<sp/><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*arguments);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="d7/dbe/toy__builtin_8h_1af0cdb3095795e0d85228c8d3cbd34f28" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d7/dbe/toy__builtin_8h_1af0cdb3095795e0d85228c8d3cbd34f28" kindref="member">Toy_private_clear</ref>(<ref refid="de/da4/structToy__Interpreter" kindref="compound">Toy_Interpreter</ref><sp/>*interpreter,<sp/><ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref><sp/>*arguments);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_BUILTIN_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="interpreter/include/toy_builtin.h"/>
+  </compounddef>
+</doxygen>

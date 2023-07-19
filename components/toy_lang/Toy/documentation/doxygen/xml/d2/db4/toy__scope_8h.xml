@@ -1,0 +1,526 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d2/db4/toy__scope_8h" kind="file" language="C++">
+    <compoundname>toy_scope.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes refid="d3/d5f/toy__literal_8h" local="yes">toy_literal.h</includes>
+    <includes refid="d0/dfc/toy__literal__array_8h" local="yes">toy_literal_array.h</includes>
+    <includes refid="dd/da4/toy__literal__dictionary_8h" local="yes">toy_literal_dictionary.h</includes>
+    <includedby refid="dc/dcc/toy__interpreter_8h" local="yes">toy_interpreter.h</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>toy_common.h</label>
+        <link refid="d7/d1d/toy__common_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>toy_literal_array.h</label>
+        <link refid="d0/dfc/toy__literal__array_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>toy_refstring.h</label>
+        <link refid="d5/de2/toy__refstring_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>toy_literal.h</label>
+        <link refid="d3/d5f/toy__literal_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>toy_literal_dictionary.h</label>
+        <link refid="dd/da4/toy__literal__dictionary_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>toy_reffunction.h</label>
+        <link refid="d4/d71/toy__reffunction_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>toy_scope.h</label>
+        <link refid="d2/db4/toy__scope_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>stdbool.h</label>
+      </node>
+      <node id="5">
+        <label>stddef.h</label>
+      </node>
+      <node id="6">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>toy_builtin.h</label>
+        <link refid="d7/dbe/toy__builtin_8h"/>
+      </node>
+      <node id="2">
+        <label>toy_interpreter.h</label>
+        <link refid="dc/dcc/toy__interpreter_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>toy_scope.h</label>
+        <link refid="d2/db4/toy__scope_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="de/de6/structToy__Scope" prot="public">Toy_Scope</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d2/db4/toy__scope_8h_1abd9abd95bd90461afcb7255c6c29f052" prot="public" static="no">
+        <type>struct <ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref></type>
+        <definition>Toy_Scope</definition>
+        <argsstring></argsstring>
+        <name>Toy_Scope</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="26" column="11"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d2/db4/toy__scope_8h_1a232b2c180394b736fe4d879b64f3f223" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+        <definition>Toy_Scope * Toy_pushScope</definition>
+        <argsstring>(Toy_Scope *scope)</argsstring>
+        <name>Toy_pushScope</name>
+        <param>
+          <type><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new Toy_scope with scope as it&apos;s ancestor, and returns it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="35" column="19" declfile="interpreter/include/toy_scope.h" declline="35" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/db4/toy__scope_8h_1a87cb17a86048e3eedb8ae4941f3da131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+        <definition>Toy_Scope * Toy_popScope</definition>
+        <argsstring>(Toy_Scope *scope)</argsstring>
+        <name>Toy_popScope</name>
+        <param>
+          <type><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <briefdescription>
+<para>Frees the given scope, and returns it&apos;s ancestor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="44" column="19" declfile="interpreter/include/toy_scope.h" declline="44" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/db4/toy__scope_8h_1a8ba99595c929450c2bf4be96cdd059f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+        <definition>Toy_Scope * Toy_copyScope</definition>
+        <argsstring>(Toy_Scope *original)</argsstring>
+        <name>Toy_copyScope</name>
+        <param>
+          <type><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+          <declname>original</declname>
+        </param>
+        <briefdescription>
+<para>Copies an existing scope, and returns the copy. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>original</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="53" column="19" declfile="interpreter/include/toy_scope.h" declline="53" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/db4/toy__scope_8h_1a007a086b273b0da5bad6d05b9abae37a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API bool</type>
+        <definition>bool Toy_declareScopeVariable</definition>
+        <argsstring>(Toy_Scope *scope, Toy_Literal key, Toy_Literal type)</argsstring>
+        <name>Toy_declareScopeVariable</name>
+        <param>
+          <type><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Declares a new variable key within scope, giving it the type of type. This function returns true on success, otherwise it returns failure (such as if the given key already exists). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="66" column="14" declfile="interpreter/include/toy_scope.h" declline="66" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/db4/toy__scope_8h_1a79490d8e741f9bd89eb8e191e1f6cc18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API bool</type>
+        <definition>bool Toy_isDelcaredScopeVariable</definition>
+        <argsstring>(Toy_Scope *scope, Toy_Literal key)</argsstring>
+        <name>Toy_isDelcaredScopeVariable</name>
+        <param>
+          <type><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Checks to see if a given variable with the name key has been previously declared. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="76" column="14" declfile="interpreter/include/toy_scope.h" declline="76" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/db4/toy__scope_8h_1a023ad033f64030b23efaa89cabc020f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API bool</type>
+        <definition>bool Toy_setScopeVariable</definition>
+        <argsstring>(Toy_Scope *scope, Toy_Literal key, Toy_Literal value, bool constCheck)</argsstring>
+        <name>Toy_setScopeVariable</name>
+        <param>
+          <type><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>constCheck</declname>
+        </param>
+        <briefdescription>
+<para>Sets an existing variable named key to the value of value. This function fails if constCheck is true and the given key&apos;s type has the constaant flag set. It also fails if the given key doesn&apos;t exist. Returns true on success, otherwise it returns false. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>constCheck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="90" column="14" declfile="interpreter/include/toy_scope.h" declline="90" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/db4/toy__scope_8h_1a9327f1f53a5e5f3fadec3775901ba8f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API bool</type>
+        <definition>bool Toy_getScopeVariable</definition>
+        <argsstring>(Toy_Scope *scope, Toy_Literal key, Toy_Literal *value)</argsstring>
+        <name>Toy_getScopeVariable</name>
+        <param>
+          <type><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref> *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the literal pointed to by value to equal the variable named key. Returns true on success, otherwise it returns false. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="102" column="14" declfile="interpreter/include/toy_scope.h" declline="102" declcolumn="14"/>
+      </memberdef>
+      <memberdef kind="function" id="d2/db4/toy__scope_8h_1a7c0f2b71796f3d7d6dbdd713270d9c2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API <ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+        <definition>Toy_Literal Toy_getScopeType</definition>
+        <argsstring>(Toy_Scope *scope, Toy_Literal key)</argsstring>
+        <name>Toy_getScopeType</name>
+        <param>
+          <type><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+          <declname>scope</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+<para>Returns a new <ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref> representing the type of the variable named key. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scope</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="112" column="21" declfile="interpreter/include/toy_scope.h" declline="112" declcolumn="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_SCOPE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_SCOPE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdbool.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d5f/toy__literal_8h" kindref="compound">toy_literal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d0/dfc/toy__literal__array_8h" kindref="compound">toy_literal_array.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dd/da4/toy__literal__dictionary_8h" kindref="compound">toy_literal_dictionary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="de/de6/structToy__Scope" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref><sp/>{</highlight></codeline>
+<codeline lineno="22" refid="de/de6/structToy__Scope_1a69803137bbec26c36ce436cbf6c1c42d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/db5/structToy__LiteralDictionary" kindref="compound">Toy_LiteralDictionary</ref><sp/><ref refid="de/de6/structToy__Scope_1a69803137bbec26c36ce436cbf6c1c42d" kindref="member">variables</ref>;<sp/></highlight></codeline>
+<codeline lineno="23" refid="de/de6/structToy__Scope_1ad65ba5620a2a1d28228843d22b7a08af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/db5/structToy__LiteralDictionary" kindref="compound">Toy_LiteralDictionary</ref><sp/><ref refid="de/de6/structToy__Scope_1ad65ba5620a2a1d28228843d22b7a08af" kindref="member">types</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24" refid="de/de6/structToy__Scope_1a4970bdc3ada46b6446c23f220fb61276" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref><sp/>*<ref refid="de/de6/structToy__Scope_1a4970bdc3ada46b6446c23f220fb61276" kindref="member">ancestor</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25" refid="de/de6/structToy__Scope_1abd611f55050b4fea5d6f193f06ba5554" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="de/de6/structToy__Scope_1abd611f55050b4fea5d6f193f06ba5554" kindref="member">references</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="d2/db4/toy__scope_8h_1abd9abd95bd90461afcb7255c6c29f052" refkind="member"><highlight class="normal">}<sp/><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="d2/db4/toy__scope_8h_1a232b2c180394b736fe4d879b64f3f223" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref>*<sp/><ref refid="d2/db4/toy__scope_8h_1a232b2c180394b736fe4d879b64f3f223" kindref="member">Toy_pushScope</ref>(<ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref><sp/>*scope);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="d2/db4/toy__scope_8h_1a87cb17a86048e3eedb8ae4941f3da131" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref>*<sp/><ref refid="d2/db4/toy__scope_8h_1a87cb17a86048e3eedb8ae4941f3da131" kindref="member">Toy_popScope</ref>(<ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref><sp/>*scope);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="d2/db4/toy__scope_8h_1a8ba99595c929450c2bf4be96cdd059f8" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref>*<sp/><ref refid="d2/db4/toy__scope_8h_1a8ba99595c929450c2bf4be96cdd059f8" kindref="member">Toy_copyScope</ref>(<ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref><sp/>*original);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">//returns<sp/>false<sp/>if<sp/>error</highlight></codeline>
+<codeline lineno="66" refid="d2/db4/toy__scope_8h_1a007a086b273b0da5bad6d05b9abae37a" refkind="member"><highlight class="comment"></highlight><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d2/db4/toy__scope_8h_1a007a086b273b0da5bad6d05b9abae37a" kindref="member">Toy_declareScopeVariable</ref>(<ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref><sp/>*scope,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>key,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>type);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="d2/db4/toy__scope_8h_1a79490d8e741f9bd89eb8e191e1f6cc18" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d2/db4/toy__scope_8h_1a79490d8e741f9bd89eb8e191e1f6cc18" kindref="member">Toy_isDelcaredScopeVariable</ref>(<ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref><sp/>*scope,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>key);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="comment">//return<sp/>false<sp/>if<sp/>undefined</highlight></codeline>
+<codeline lineno="90" refid="d2/db4/toy__scope_8h_1a023ad033f64030b23efaa89cabc020f3" refkind="member"><highlight class="comment"></highlight><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d2/db4/toy__scope_8h_1a023ad033f64030b23efaa89cabc020f3" kindref="member">Toy_setScopeVariable</ref>(<ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref><sp/>*scope,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>key,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>value,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>constCheck);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="d2/db4/toy__scope_8h_1a9327f1f53a5e5f3fadec3775901ba8f7" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="d2/db4/toy__scope_8h_1a9327f1f53a5e5f3fadec3775901ba8f7" kindref="member">Toy_getScopeVariable</ref>(<ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref><sp/>*scope,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>key,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>*value);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112" refid="d2/db4/toy__scope_8h_1a7c0f2b71796f3d7d6dbdd713270d9c2e" refkind="member"><highlight class="normal">TOY_API<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d2/db4/toy__scope_8h_1a7c0f2b71796f3d7d6dbdd713270d9c2e" kindref="member">Toy_getScopeType</ref>(<ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref><sp/>*scope,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>key);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_SCOPE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="interpreter/include/toy_scope.h"/>
+  </compounddef>
+</doxygen>

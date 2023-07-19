@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d8/d78/structToy__Parser" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_Parser</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/d78/structToy__Parser_1a5c0b960eea0e620ec1cdc18f50dd1640" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/d6d/structToy__Lexer" kindref="compound">Toy_Lexer</ref> *</type>
+        <definition>Toy_Lexer* Toy_Parser::lexer</definition>
+        <argsstring></argsstring>
+        <name>lexer</name>
+        <qualifiedname>Toy_Parser::lexer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_parser.h" line="23" column="15" bodyfile="compiler/include/toy_parser.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d78/structToy__Parser_1a12bea4913748bbcd24df2590d17791a1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_Parser::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <qualifiedname>Toy_Parser::error</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I&apos;ve had an error </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_parser.h" line="24" column="10" bodyfile="compiler/include/toy_parser.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d78/structToy__Parser_1a0c4e0a567762e5a83472325f59cfbe1e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_Parser::panic</definition>
+        <argsstring></argsstring>
+        <name>panic</name>
+        <qualifiedname>Toy_Parser::panic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>I am processing an error </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_parser.h" line="25" column="10" bodyfile="compiler/include/toy_parser.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d78/structToy__Parser_1a2829f9503b1f99011bdadee418488106" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d78/structToy__Token" kindref="compound">Toy_Token</ref></type>
+        <definition>Toy_Token Toy_Parser::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <qualifiedname>Toy_Parser::current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_parser.h" line="28" column="15" bodyfile="compiler/include/toy_parser.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d78/structToy__Parser_1aeb40d8ec44f82482bc362510433ddfc2" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d78/structToy__Token" kindref="compound">Toy_Token</ref></type>
+        <definition>Toy_Token Toy_Parser::previous</definition>
+        <argsstring></argsstring>
+        <name>previous</name>
+        <qualifiedname>Toy_Parser::previous</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_parser.h" line="29" column="15" bodyfile="compiler/include/toy_parser.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>Toy_Lexer</label>
+        <link refid="d9/d6d/structToy__Lexer"/>
+      </node>
+      <node id="1">
+        <label>Toy_Parser</label>
+        <link refid="d8/d78/structToy__Parser"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>lexer</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>current</edgelabel>
+          <edgelabel>previous</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Toy_Token</label>
+        <link refid="dd/d78/structToy__Token"/>
+      </node>
+    </collaborationgraph>
+    <location file="compiler/include/toy_parser.h" line="22" column="1" bodyfile="compiler/include/toy_parser.h" bodystart="22" bodyend="30"/>
+    <listofallmembers>
+      <member refid="d8/d78/structToy__Parser_1a2829f9503b1f99011bdadee418488106" prot="public" virt="non-virtual"><scope>Toy_Parser</scope><name>current</name></member>
+      <member refid="d8/d78/structToy__Parser_1a12bea4913748bbcd24df2590d17791a1" prot="public" virt="non-virtual"><scope>Toy_Parser</scope><name>error</name></member>
+      <member refid="d8/d78/structToy__Parser_1a5c0b960eea0e620ec1cdc18f50dd1640" prot="public" virt="non-virtual"><scope>Toy_Parser</scope><name>lexer</name></member>
+      <member refid="d8/d78/structToy__Parser_1a0c4e0a567762e5a83472325f59cfbe1e" prot="public" virt="non-virtual"><scope>Toy_Parser</scope><name>panic</name></member>
+      <member refid="d8/d78/structToy__Parser_1aeb40d8ec44f82482bc362510433ddfc2" prot="public" virt="non-virtual"><scope>Toy_Parser</scope><name>previous</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

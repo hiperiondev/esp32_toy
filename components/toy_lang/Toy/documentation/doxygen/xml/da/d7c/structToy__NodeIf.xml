@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="da/d7c/structToy__NodeIf" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_NodeIf</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="da/d7c/structToy__NodeIf_1afb403d4839453fdd60d729ee1eb7b1d7" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref></type>
+        <definition>Toy_ASTNodeType Toy_NodeIf::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Toy_NodeIf::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="406" column="21" bodyfile="compiler/include/toy_ast_node.h" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d7c/structToy__NodeIf_1af30cc9402f17aa2e862fdb1249a0e55c" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+        <definition>Toy_ASTNode* Toy_NodeIf::condition</definition>
+        <argsstring></argsstring>
+        <name>condition</name>
+        <qualifiedname>Toy_NodeIf::condition</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="407" column="17" bodyfile="compiler/include/toy_ast_node.h" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d7c/structToy__NodeIf_1a9e3159c617511de4d23abae3d6640f49" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+        <definition>Toy_ASTNode* Toy_NodeIf::thenPath</definition>
+        <argsstring></argsstring>
+        <name>thenPath</name>
+        <qualifiedname>Toy_NodeIf::thenPath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="408" column="17" bodyfile="compiler/include/toy_ast_node.h" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d7c/structToy__NodeIf_1a946cc95ecb22d127e2ad14215753e9e4" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+        <definition>Toy_ASTNode* Toy_NodeIf::elsePath</definition>
+        <argsstring></argsstring>
+        <name>elsePath</name>
+        <qualifiedname>Toy_NodeIf::elsePath</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="409" column="17" bodyfile="compiler/include/toy_ast_node.h" bodystart="409" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="10">
+        <label>Toy_Interpreter</label>
+        <link refid="de/da4/structToy__Interpreter"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>literalCache</edgelabel>
+          <edgelabel>stack</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>hooks</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Toy_Literal</label>
+        <link refid="d3/da0/structToy__Literal"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>array</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>dictionary</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>hook</edgelabel>
+          <edgelabel>native</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>subtypes</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Toy_LiteralArray</label>
+        <link refid="d5/d6a/structToy__LiteralArray"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>literals</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Toy_LiteralDictionary</label>
+        <link refid="d9/db5/structToy__LiteralDictionary"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>entries</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Toy_NodeBinary</label>
+        <link refid="d1/d1b/structToy__NodeBinary"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Toy_NodeBlock</label>
+        <link refid="d1/da1/structToy__NodeBlock"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>nodes</edgelabel>
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Toy_NodeBreak</label>
+        <link refid="d7/da7/structToy__NodeBreak"/>
+      </node>
+      <node id="17">
+        <label>Toy_NodeCompound</label>
+        <link refid="d9/d8d/structToy__NodeCompound"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>nodes</edgelabel>
+        </childnode>
+      </node>
+      <node id="28">
+        <label>Toy_NodeContinue</label>
+        <link refid="d3/db6/structToy__NodeContinue"/>
+      </node>
+      <node id="23">
+        <label>Toy_NodeFnCall</label>
+        <link refid="dc/db5/structToy__NodeFnCall"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>arguments</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Toy_NodeFnCollection</label>
+        <link refid="d6/df7/structToy__NodeFnCollection"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>nodes</edgelabel>
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Toy_NodeFnDecl</label>
+        <link refid="d5/dce/structToy__NodeFnDecl"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>identifier</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>arguments</edgelabel>
+          <edgelabel>block</edgelabel>
+          <edgelabel>returns</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>Toy_NodeFnReturn</label>
+        <link refid="df/d54/structToy__NodeFnReturn"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>returns</edgelabel>
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Toy_NodeFor</label>
+        <link refid="d5/d2a/structToy__NodeFor"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>condition</edgelabel>
+          <edgelabel>postClause</edgelabel>
+          <edgelabel>preClause</edgelabel>
+          <edgelabel>thenPath</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Toy_NodeGrouping</label>
+        <link refid="d1/dad/structToy__NodeGrouping"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>child</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Toy_NodeIf</label>
+        <link refid="da/d7c/structToy__NodeIf"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>condition</edgelabel>
+          <edgelabel>elsePath</edgelabel>
+          <edgelabel>thenPath</edgelabel>
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Toy_NodeImport</label>
+        <link refid="d9/dab/structToy__NodeImport"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>alias</edgelabel>
+          <edgelabel>identifier</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Toy_NodeIndex</label>
+        <link refid="d4/d04/structToy__NodeIndex"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>first</edgelabel>
+          <edgelabel>second</edgelabel>
+          <edgelabel>third</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Toy_NodeLiteral</label>
+        <link refid="d5/da5/structToy__NodeLiteral"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>literal</edgelabel>
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Toy_NodePair</label>
+        <link refid="d4/dee/structToy__NodePair"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>left</edgelabel>
+          <edgelabel>right</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Toy_NodePostfixDecrement</label>
+        <link refid="d6/df8/structToy__NodePostfixDecrement"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>identifier</edgelabel>
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Toy_NodePostfixIncrement</label>
+        <link refid="df/d6e/structToy__NodePostfixIncrement"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>identifier</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Toy_NodePrefixDecrement</label>
+        <link refid="de/de1/structToy__NodePrefixDecrement"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>identifier</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Toy_NodePrefixIncrement</label>
+        <link refid="db/dca/structToy__NodePrefixIncrement"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>identifier</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Toy_NodeTernary</label>
+        <link refid="d3/d18/structToy__NodeTernary"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>condition</edgelabel>
+          <edgelabel>elsePath</edgelabel>
+          <edgelabel>thenPath</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Toy_NodeUnary</label>
+        <link refid="d5/de1/structToy__NodeUnary"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>child</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>Toy_NodeVarDecl</label>
+        <link refid="d9/d84/structToy__NodeVarDecl"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>identifier</edgelabel>
+          <edgelabel>typeLiteral</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>expression</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Toy_NodeWhile</label>
+        <link refid="d2/d3a/structToy__NodeWhile"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>condition</edgelabel>
+          <edgelabel>thenPath</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Toy_RefFunction</label>
+        <link refid="d3/d2c/structToy__RefFunction"/>
+      </node>
+      <node id="5">
+        <label>Toy_RefString</label>
+        <link refid="dd/d94/structToy__RefString"/>
+      </node>
+      <node id="11">
+        <label>Toy_Scope</label>
+        <link refid="de/de6/structToy__Scope"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>types</edgelabel>
+          <edgelabel>variables</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>ancestor</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Toy_private_dictionary_entry</label>
+        <link refid="d2/d62/structToy__private__dictionary__entry"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>key</edgelabel>
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Toy_private_node</label>
+        <link refid="d8/dcd/unionToy__private__node"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>atomic</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>unary</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>binary</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>ternary</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>grouping</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>block</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>compound</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>pair</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>index</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>varDecl</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>fnCollection</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>fnDecl</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>fnCall</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>returns</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>pathIf</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>pathWhile</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>pathFor</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>pathBreak</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>pathContinue</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>prefixIncrement</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>prefixDecrement</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>postfixIncrement</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>postfixDecrement</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>import</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="compiler/include/toy_ast_node.h" line="405" column="1" bodyfile="compiler/include/toy_ast_node.h" bodystart="405" bodyend="410"/>
+    <listofallmembers>
+      <member refid="da/d7c/structToy__NodeIf_1af30cc9402f17aa2e862fdb1249a0e55c" prot="public" virt="non-virtual"><scope>Toy_NodeIf</scope><name>condition</name></member>
+      <member refid="da/d7c/structToy__NodeIf_1a946cc95ecb22d127e2ad14215753e9e4" prot="public" virt="non-virtual"><scope>Toy_NodeIf</scope><name>elsePath</name></member>
+      <member refid="da/d7c/structToy__NodeIf_1a9e3159c617511de4d23abae3d6640f49" prot="public" virt="non-virtual"><scope>Toy_NodeIf</scope><name>thenPath</name></member>
+      <member refid="da/d7c/structToy__NodeIf_1afb403d4839453fdd60d729ee1eb7b1d7" prot="public" virt="non-virtual"><scope>Toy_NodeIf</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

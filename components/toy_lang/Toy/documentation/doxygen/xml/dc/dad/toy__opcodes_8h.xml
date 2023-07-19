@@ -1,0 +1,599 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dc/dad/toy__opcodes_8h" kind="file" language="C++">
+    <compoundname>toy_opcodes.h</compoundname>
+    <includedby refid="d3/df7/toy__ast__node_8h" local="yes">toy_ast_node.h</includedby>
+    <includedby refid="d3/d43/toy__compiler_8h" local="yes">toy_compiler.h</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>toy_opcodes.h</label>
+        <link refid="dc/dad/toy__opcodes_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>toy_ast_node.h</label>
+        <link refid="d3/df7/toy__ast__node_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>toy_compiler.h</label>
+        <link refid="d3/d43/toy__compiler_8h"/>
+      </node>
+      <node id="4">
+        <label>toy_parser.h</label>
+        <link refid="dc/d33/toy__parser_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Toy_Opcode</name>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba76f541f49ae8b41a9d4a7b7b0b2eb9e9" prot="public">
+          <name>TOY_OP_EOF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_EOF </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba925fc36b1148f6697a7b480617c8c818" prot="public">
+          <name>TOY_OP_PASS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_PASS </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba6c7ae5ac30c8623f40b64afc704898b5" prot="public">
+          <name>TOY_OP_ASSERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_ASSERT </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba74fdaa27e04a29e28a495c4791968dc1" prot="public">
+          <name>TOY_OP_PRINT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_PRINT </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba2795d9ea59fbb521159e95360676cb32" prot="public">
+          <name>TOY_OP_LITERAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_LITERAL </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba583a7be614ac811e22c88edebbbb3547" prot="public">
+          <name>TOY_OP_LITERAL_LONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for more than 256 literals in a chunk </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba090779aabe53b88a37b0bee852ca4c5f" prot="public">
+          <name>TOY_OP_LITERAL_RAW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>forcibly get the raw value of the literal </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba2b060b732e23c640bf1cabb88aa71821" prot="public">
+          <name>TOY_OP_NEGATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_NEGATE </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9babf011ef02173acc966f1b6fe6091d219" prot="public">
+          <name>TOY_OP_ADDITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_ADDITION </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bad00bfcbb6226984b74d05c99dfa63959" prot="public">
+          <name>TOY_OP_SUBTRACTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_SUBTRACTION </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba82b442fd5b15e758aedc4627ec44a85b" prot="public">
+          <name>TOY_OP_MULTIPLICATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_MULTIPLICATION </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baf36b259abf2783d66a20e19c55919619" prot="public">
+          <name>TOY_OP_DIVISION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_DIVISION </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba5276ba38f42683ddeffafc43fb9056bd" prot="public">
+          <name>TOY_OP_MODULO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_MODULO </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba26108d9eec80c6bbf56bdccf6c4fa5d3" prot="public">
+          <name>TOY_OP_GROUPING_BEGIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_GROUPING_BEGIN </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba87e46c0c1405f5f13e68ef52623ba0d0" prot="public">
+          <name>TOY_OP_GROUPING_END</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_GROUPING_END </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bac866b58bad5d36320b1a1174815ea9f9" prot="public">
+          <name>TOY_OP_SCOPE_BEGIN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_SCOPE_BEGIN </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba74db6d3c13231fe6482ee4de96fbed59" prot="public">
+          <name>TOY_OP_SCOPE_END</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_SCOPE_END </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae3a93df76c5e1e2cd5460809ac4bde2b" prot="public">
+          <name>TOY_OP_TYPE_DECL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>declare a type to be used (as a literal) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba4baacd27689b5be0a38987c0b33ecf94" prot="public">
+          <name>TOY_OP_TYPE_DECL_LONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>declare a type to be used (as a long literal) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae3aa83a89c8c3df85491719e11c48d9a" prot="public">
+          <name>TOY_OP_VAR_DECL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>declare a variable to be used (as a literal) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba44fd8ae56e293a1230abec1db701d0eb" prot="public">
+          <name>TOY_OP_VAR_DECL_LONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>declare a variable to be used (as a long literal) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bad62b0e76f83b5fdf682d404a38012e4c" prot="public">
+          <name>TOY_OP_FN_DECL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>declare a function to be used (as a literal) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba7390189f55b8bbd4c04afeda505cdddf" prot="public">
+          <name>TOY_OP_FN_DECL_LONG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>declare a function to be used (as a long literal) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba4ef1d630e4bd91541db31e133a118488" prot="public">
+          <name>TOY_OP_VAR_ASSIGN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>assign to a literal </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae4383b89e03eea6d5e78823683f67736" prot="public">
+          <name>TOY_OP_VAR_ADDITION_ASSIGN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_VAR_ADDITION_ASSIGN </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba19c20383edec9fd95d3516edbe18ecc3" prot="public">
+          <name>TOY_OP_VAR_SUBTRACTION_ASSIGN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_VAR_SUBTRACTION_ASSIGN </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae926c097abec87711bdb63a830fb8d04" prot="public">
+          <name>TOY_OP_VAR_MULTIPLICATION_ASSIGN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_VAR_MULTIPLICATION_ASSIGN </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba9017425a4c6e25b545dd5886b22a4543" prot="public">
+          <name>TOY_OP_VAR_DIVISION_ASSIGN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_VAR_DIVISION_ASSIGN </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0b858b0f1c092845328f616e38ed8c1a" prot="public">
+          <name>TOY_OP_VAR_MODULO_ASSIGN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_VAR_MODULO_ASSIGN </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bace05a875bcf9962d1dc632af5c873a86" prot="public">
+          <name>TOY_OP_TYPE_CAST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>temporarily change a type of an atomic value </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba5380a4ece28991c33c340a8d93f15879" prot="public">
+          <name>TOY_OP_TYPE_OF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>get the type of a variable </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baa5c56000f6265206498ba93537ba5368" prot="public">
+          <name>TOY_OP_IMPORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_IMPORT </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9badcb8892eede7458740493568e3899c21" prot="public">
+          <name>TOY_OP_EXPORT_removed</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_EXPORT_removed </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9badebdfb5a05319a9c21cfdcbc4dc048bd" prot="public">
+          <name>TOY_OP_INDEX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_INDEX </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba2963706288347b09c3daa75a0cbb0513" prot="public">
+          <name>TOY_OP_INDEX_ASSIGN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_INDEX_ASSIGN </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baed30de82189dd98a210ab05a770f9cec" prot="public">
+          <name>TOY_OP_INDEX_ASSIGN_INTERMEDIATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_INDEX_ASSIGN_INTERMEDIATE </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9babebbed538fb4891a99b26c1ccd47ecc2" prot="public">
+          <name>TOY_OP_DOT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_DOT </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae47928f380cfabb73653405c2126f7dd" prot="public">
+          <name>TOY_OP_COMPARE_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_COMPARE_EQUAL </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0d947f19e328861bbd34fb431bd52c28" prot="public">
+          <name>TOY_OP_COMPARE_NOT_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_COMPARE_NOT_EQUAL </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baba9e5633d33177ce68156623d08fb052" prot="public">
+          <name>TOY_OP_COMPARE_LESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_COMPARE_LESS </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba187629007f7a1b4d341cff7581963941" prot="public">
+          <name>TOY_OP_COMPARE_LESS_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_COMPARE_LESS_EQUAL </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae9d74f99bebcdcc1536102b37f9487a5" prot="public">
+          <name>TOY_OP_COMPARE_GREATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_COMPARE_GREATER </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba8acfc5f548e2d8401d27008f97a5b025" prot="public">
+          <name>TOY_OP_COMPARE_GREATER_EQUAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_COMPARE_GREATER_EQUAL </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba031f666e97010732fe601affe853f78c" prot="public">
+          <name>TOY_OP_INVERT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for booleans </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba657d83652427b93936e0282940e1c3b9" prot="public">
+          <name>TOY_OP_AND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_AND </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bab637a0474331b30b3d9ad36f0ebfd7de" prot="public">
+          <name>TOY_OP_OR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_OR </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba82f7ac64b0808a9c38c286a189e11975" prot="public">
+          <name>TOY_OP_JUMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_JUMP </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0f3e19da75af7690156b3f4defaeee49" prot="public">
+          <name>TOY_OP_IF_FALSE_JUMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_IF_FALSE_JUMP </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba5ff91ada361a2332643e9f9de622e4d2" prot="public">
+          <name>TOY_OP_FN_CALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_FN_CALL </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba9b9611687b9118d243a1b1f8889ec64e" prot="public">
+          <name>TOY_OP_FN_RETURN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_FN_RETURN </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bab646414abe121de027279112919e66a8" prot="public">
+          <name>TOY_OP_POP_STACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_POP_STACK </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0cb9d67e6a57752e83421f7ad8ef7da1" prot="public">
+          <name>TOY_OP_TERNARY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_TERNARY </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba370c512cf19e132ae3f8f6c5899c085f" prot="public">
+          <name>TOY_OP_FN_END</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>different from SECTION_END </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9badd9dbe77b583862d754c71a96792b06e" prot="public">
+          <name>TOY_OP_SECTION_END</name>
+          <initializer>= 255</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_SECTION_END </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baf45f938184824957d7076589d7bf14fa" prot="public">
+          <name>TOY_OP_PREFIX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_PREFIX </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baec75281f8d060e1d0d1f2592ae0d024d" prot="public">
+          <name>TOY_OP_POSTFIX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>TOY_OP_POSTFIX </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Interpreter opcodes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_opcodes.h" line="15" column="1" bodyfile="common/include/toy_opcodes.h" bodystart="15" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="dc/dad/toy__opcodes_8h_1a44894895fcb92adac241f9fafe078373" prot="public" static="no">
+        <type>enum <ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" kindref="member">Toy_Opcode</ref></type>
+        <definition>typedef enum Toy_Opcode Toy_Opcode</definition>
+        <argsstring></argsstring>
+        <name>Toy_Opcode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_opcodes.h" line="105" column="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_OPCODES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_OPCODES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" kindref="member">Toy_Opcode</ref><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba76f541f49ae8b41a9d4a7b7b0b2eb9e9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba76f541f49ae8b41a9d4a7b7b0b2eb9e9" kindref="member">TOY_OP_EOF</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//do<sp/>nothing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba925fc36b1148f6697a7b480617c8c818" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba925fc36b1148f6697a7b480617c8c818" kindref="member">TOY_OP_PASS</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//basic<sp/>statements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba6c7ae5ac30c8623f40b64afc704898b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba6c7ae5ac30c8623f40b64afc704898b5" kindref="member">TOY_OP_ASSERT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="23" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba74fdaa27e04a29e28a495c4791968dc1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba74fdaa27e04a29e28a495c4791968dc1" kindref="member">TOY_OP_PRINT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba2795d9ea59fbb521159e95360676cb32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba2795d9ea59fbb521159e95360676cb32" kindref="member">TOY_OP_LITERAL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba583a7be614ac811e22c88edebbbb3547" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba583a7be614ac811e22c88edebbbb3547" kindref="member">TOY_OP_LITERAL_LONG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba090779aabe53b88a37b0bee852ca4c5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba090779aabe53b88a37b0bee852ca4c5f" kindref="member">TOY_OP_LITERAL_RAW</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//arithmetic<sp/>operators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba2b060b732e23c640bf1cabb88aa71821" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba2b060b732e23c640bf1cabb88aa71821" kindref="member">TOY_OP_NEGATE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9babf011ef02173acc966f1b6fe6091d219" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9babf011ef02173acc966f1b6fe6091d219" kindref="member">TOY_OP_ADDITION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bad00bfcbb6226984b74d05c99dfa63959" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bad00bfcbb6226984b74d05c99dfa63959" kindref="member">TOY_OP_SUBTRACTION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba82b442fd5b15e758aedc4627ec44a85b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba82b442fd5b15e758aedc4627ec44a85b" kindref="member">TOY_OP_MULTIPLICATION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baf36b259abf2783d66a20e19c55919619" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baf36b259abf2783d66a20e19c55919619" kindref="member">TOY_OP_DIVISION</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba5276ba38f42683ddeffafc43fb9056bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba5276ba38f42683ddeffafc43fb9056bd" kindref="member">TOY_OP_MODULO</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba26108d9eec80c6bbf56bdccf6c4fa5d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba26108d9eec80c6bbf56bdccf6c4fa5d3" kindref="member">TOY_OP_GROUPING_BEGIN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba87e46c0c1405f5f13e68ef52623ba0d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba87e46c0c1405f5f13e68ef52623ba0d0" kindref="member">TOY_OP_GROUPING_END</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//variable<sp/>stuff</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bac866b58bad5d36320b1a1174815ea9f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bac866b58bad5d36320b1a1174815ea9f9" kindref="member">TOY_OP_SCOPE_BEGIN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba74db6d3c13231fe6482ee4de96fbed59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba74db6d3c13231fe6482ee4de96fbed59" kindref="member">TOY_OP_SCOPE_END</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae3a93df76c5e1e2cd5460809ac4bde2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae3a93df76c5e1e2cd5460809ac4bde2b" kindref="member">TOY_OP_TYPE_DECL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba4baacd27689b5be0a38987c0b33ecf94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba4baacd27689b5be0a38987c0b33ecf94" kindref="member">TOY_OP_TYPE_DECL_LONG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae3aa83a89c8c3df85491719e11c48d9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae3aa83a89c8c3df85491719e11c48d9a" kindref="member">TOY_OP_VAR_DECL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba44fd8ae56e293a1230abec1db701d0eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba44fd8ae56e293a1230abec1db701d0eb" kindref="member">TOY_OP_VAR_DECL_LONG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bad62b0e76f83b5fdf682d404a38012e4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bad62b0e76f83b5fdf682d404a38012e4c" kindref="member">TOY_OP_FN_DECL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba7390189f55b8bbd4c04afeda505cdddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba7390189f55b8bbd4c04afeda505cdddf" kindref="member">TOY_OP_FN_DECL_LONG</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba4ef1d630e4bd91541db31e133a118488" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba4ef1d630e4bd91541db31e133a118488" kindref="member">TOY_OP_VAR_ASSIGN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae4383b89e03eea6d5e78823683f67736" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae4383b89e03eea6d5e78823683f67736" kindref="member">TOY_OP_VAR_ADDITION_ASSIGN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba19c20383edec9fd95d3516edbe18ecc3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba19c20383edec9fd95d3516edbe18ecc3" kindref="member">TOY_OP_VAR_SUBTRACTION_ASSIGN</ref>,<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae926c097abec87711bdb63a830fb8d04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae926c097abec87711bdb63a830fb8d04" kindref="member">TOY_OP_VAR_MULTIPLICATION_ASSIGN</ref>,<sp/></highlight></codeline>
+<codeline lineno="57" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba9017425a4c6e25b545dd5886b22a4543" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba9017425a4c6e25b545dd5886b22a4543" kindref="member">TOY_OP_VAR_DIVISION_ASSIGN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0b858b0f1c092845328f616e38ed8c1a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0b858b0f1c092845328f616e38ed8c1a" kindref="member">TOY_OP_VAR_MODULO_ASSIGN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bace05a875bcf9962d1dc632af5c873a86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bace05a875bcf9962d1dc632af5c873a86" kindref="member">TOY_OP_TYPE_CAST</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba5380a4ece28991c33c340a8d93f15879" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba5380a4ece28991c33c340a8d93f15879" kindref="member">TOY_OP_TYPE_OF</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baa5c56000f6265206498ba93537ba5368" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baa5c56000f6265206498ba93537ba5368" kindref="member">TOY_OP_IMPORT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9badcb8892eede7458740493568e3899c21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9badcb8892eede7458740493568e3899c21" kindref="member">TOY_OP_EXPORT_removed</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//for<sp/>indexing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9badebdfb5a05319a9c21cfdcbc4dc048bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9badebdfb5a05319a9c21cfdcbc4dc048bd" kindref="member">TOY_OP_INDEX</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba2963706288347b09c3daa75a0cbb0513" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba2963706288347b09c3daa75a0cbb0513" kindref="member">TOY_OP_INDEX_ASSIGN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baed30de82189dd98a210ab05a770f9cec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baed30de82189dd98a210ab05a770f9cec" kindref="member">TOY_OP_INDEX_ASSIGN_INTERMEDIATE</ref>,<sp/></highlight></codeline>
+<codeline lineno="70" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9babebbed538fb4891a99b26c1ccd47ecc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9babebbed538fb4891a99b26c1ccd47ecc2" kindref="member">TOY_OP_DOT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//comparison<sp/>of<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae47928f380cfabb73653405c2126f7dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae47928f380cfabb73653405c2126f7dd" kindref="member">TOY_OP_COMPARE_EQUAL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0d947f19e328861bbd34fb431bd52c28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0d947f19e328861bbd34fb431bd52c28" kindref="member">TOY_OP_COMPARE_NOT_EQUAL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baba9e5633d33177ce68156623d08fb052" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baba9e5633d33177ce68156623d08fb052" kindref="member">TOY_OP_COMPARE_LESS</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba187629007f7a1b4d341cff7581963941" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba187629007f7a1b4d341cff7581963941" kindref="member">TOY_OP_COMPARE_LESS_EQUAL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae9d74f99bebcdcc1536102b37f9487a5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bae9d74f99bebcdcc1536102b37f9487a5" kindref="member">TOY_OP_COMPARE_GREATER</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba8acfc5f548e2d8401d27008f97a5b025" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba8acfc5f548e2d8401d27008f97a5b025" kindref="member">TOY_OP_COMPARE_GREATER_EQUAL</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba031f666e97010732fe601affe853f78c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba031f666e97010732fe601affe853f78c" kindref="member">TOY_OP_INVERT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//logical<sp/>operators</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba657d83652427b93936e0282940e1c3b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba657d83652427b93936e0282940e1c3b9" kindref="member">TOY_OP_AND</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bab637a0474331b30b3d9ad36f0ebfd7de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bab637a0474331b30b3d9ad36f0ebfd7de" kindref="member">TOY_OP_OR</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//jumps,<sp/>and<sp/>conditional<sp/>jumps<sp/>(absolute)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba82f7ac64b0808a9c38c286a189e11975" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba82f7ac64b0808a9c38c286a189e11975" kindref="member">TOY_OP_JUMP</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0f3e19da75af7690156b3f4defaeee49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0f3e19da75af7690156b3f4defaeee49" kindref="member">TOY_OP_IF_FALSE_JUMP</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba5ff91ada361a2332643e9f9de622e4d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba5ff91ada361a2332643e9f9de622e4d2" kindref="member">TOY_OP_FN_CALL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba9b9611687b9118d243a1b1f8889ec64e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba9b9611687b9118d243a1b1f8889ec64e" kindref="member">TOY_OP_FN_RETURN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pop<sp/>the<sp/>stack<sp/>at<sp/>the<sp/>end<sp/>of<sp/>a<sp/>complex<sp/>statement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bab646414abe121de027279112919e66a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9bab646414abe121de027279112919e66a8" kindref="member">TOY_OP_POP_STACK</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ternary<sp/>shorthand</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0cb9d67e6a57752e83421f7ad8ef7da1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba0cb9d67e6a57752e83421f7ad8ef7da1" kindref="member">TOY_OP_TERNARY</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//meta</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba370c512cf19e132ae3f8f6c5899c085f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9ba370c512cf19e132ae3f8f6c5899c085f" kindref="member">TOY_OP_FN_END</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9badd9dbe77b583862d754c71a96792b06e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9badd9dbe77b583862d754c71a96792b06e" kindref="member">TOY_OP_SECTION_END</ref><sp/>=<sp/>255,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>add<sp/>more</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//prefix<sp/>&amp;<sp/>postfix<sp/>signals<sp/>(used<sp/>internally)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baf45f938184824957d7076589d7bf14fa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baf45f938184824957d7076589d7bf14fa" kindref="member">TOY_OP_PREFIX</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104" refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baec75281f8d060e1d0d1f2592ae0d024d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9baec75281f8d060e1d0d1f2592ae0d024d" kindref="member">TOY_OP_POSTFIX</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}<sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" kindref="member">Toy_Opcode</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_OPCODES_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/include/toy_opcodes.h"/>
+  </compounddef>
+</doxygen>

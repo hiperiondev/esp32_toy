@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d9/db5/structToy__LiteralDictionary" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_LiteralDictionary</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/db5/structToy__LiteralDictionary_1ab6af73d0216b6ad3cccafa41257c1475" prot="public" static="no" mutable="no">
+        <type><ref refid="d2/d62/structToy__private__dictionary__entry" kindref="compound">Toy_private_dictionary_entry</ref> *</type>
+        <definition>Toy_private_dictionary_entry* Toy_LiteralDictionary::entries</definition>
+        <argsstring></argsstring>
+        <name>entries</name>
+        <qualifiedname>Toy_LiteralDictionary::entries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal_dictionary.h" line="32" column="34" bodyfile="interpreter/include/toy_literal_dictionary.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db5/structToy__LiteralDictionary_1acd187f5fad312435a5b177571f271bec" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_LiteralDictionary::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <qualifiedname>Toy_LiteralDictionary::capacity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal_dictionary.h" line="33" column="9" bodyfile="interpreter/include/toy_literal_dictionary.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db5/structToy__LiteralDictionary_1ae3b55ea909e9c47475b1f035f671d132" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_LiteralDictionary::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <qualifiedname>Toy_LiteralDictionary::count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal_dictionary.h" line="34" column="9" bodyfile="interpreter/include/toy_literal_dictionary.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/db5/structToy__LiteralDictionary_1a841664718804bc72fd90aedcdb26e797" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_LiteralDictionary::contains</definition>
+        <argsstring></argsstring>
+        <name>contains</name>
+        <qualifiedname>Toy_LiteralDictionary::contains</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>count + tombstones, for internal use </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal_dictionary.h" line="35" column="9" bodyfile="interpreter/include/toy_literal_dictionary.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>Toy_Interpreter</label>
+        <link refid="de/da4/structToy__Interpreter"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>literalCache</edgelabel>
+          <edgelabel>stack</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>hooks</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Toy_Literal</label>
+        <link refid="d3/da0/structToy__Literal"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>array</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>dictionary</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>hook</edgelabel>
+          <edgelabel>native</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>subtypes</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Toy_LiteralArray</label>
+        <link refid="d5/d6a/structToy__LiteralArray"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>literals</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Toy_LiteralDictionary</label>
+        <link refid="d9/db5/structToy__LiteralDictionary"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>entries</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Toy_RefFunction</label>
+        <link refid="d3/d2c/structToy__RefFunction"/>
+      </node>
+      <node id="4">
+        <label>Toy_RefString</label>
+        <link refid="dd/d94/structToy__RefString"/>
+      </node>
+      <node id="8">
+        <label>Toy_Scope</label>
+        <link refid="de/de6/structToy__Scope"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>types</edgelabel>
+          <edgelabel>variables</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>ancestor</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Toy_private_dictionary_entry</label>
+        <link refid="d2/d62/structToy__private__dictionary__entry"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>key</edgelabel>
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="interpreter/include/toy_literal_dictionary.h" line="31" column="1" bodyfile="interpreter/include/toy_literal_dictionary.h" bodystart="31" bodyend="36"/>
+    <listofallmembers>
+      <member refid="d9/db5/structToy__LiteralDictionary_1acd187f5fad312435a5b177571f271bec" prot="public" virt="non-virtual"><scope>Toy_LiteralDictionary</scope><name>capacity</name></member>
+      <member refid="d9/db5/structToy__LiteralDictionary_1a841664718804bc72fd90aedcdb26e797" prot="public" virt="non-virtual"><scope>Toy_LiteralDictionary</scope><name>contains</name></member>
+      <member refid="d9/db5/structToy__LiteralDictionary_1ae3b55ea909e9c47475b1f035f671d132" prot="public" virt="non-virtual"><scope>Toy_LiteralDictionary</scope><name>count</name></member>
+      <member refid="d9/db5/structToy__LiteralDictionary_1ab6af73d0216b6ad3cccafa41257c1475" prot="public" virt="non-virtual"><scope>Toy_LiteralDictionary</scope><name>entries</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

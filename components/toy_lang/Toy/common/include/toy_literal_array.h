@@ -1,3 +1,9 @@
+/**
+ * @file toy_literal_array.h
+ * @brief @@????@@
+ *
+ */
+
 #ifndef TOY_LITERAL_ARRAY_H_
 #define TOY_LITERAL_ARRAY_H_
 
@@ -8,18 +14,18 @@
 
 /**
  * @struct Toy_LiteralArray
- * @brief
+ * @brief @@????@@
  *
  */
 typedef struct Toy_LiteralArray {
-    Toy_Literal *literals; /**< */
-    int capacity;          /**< */
-    int count;             /**< */
+    Toy_Literal *literals; /**< @@???@@ */
+    int capacity;          /**< @@???@@ */
+    int count;             /**< @@???@@ */
 } Toy_LiteralArray;
 
 /**
  * @fn void Toy_initLiteralArray(Toy_LiteralArray *array)
- * @brief
+ * @brief initializes a Toy_LiteralArray pointed to by array.
  *
  * @param array
  */
@@ -27,7 +33,7 @@ TOY_API void Toy_initLiteralArray(Toy_LiteralArray *array);
 
 /**
  * @fn void Toy_freeLiteralArray(Toy_LiteralArray *array)
- * @brief
+ * @brief Frees a Toy_LiteralArray pointed to by array. Every literal within is passed to Toy_freeLiteral before its memory is released.
  *
  * @param array
  */
@@ -35,37 +41,38 @@ TOY_API void Toy_freeLiteralArray(Toy_LiteralArray *array);
 
 /**
  * @fn int Toy_pushLiteralArray(Toy_LiteralArray *array, Toy_Literal literal)
- * @brief
+ * @brief Adds a new literal to the end of the array, growing the array's internal buffer if needed.
  *
  * @param array
  * @param literal
- * @return
+ * @return index of the inserted value.
  */
 TOY_API int Toy_pushLiteralArray(Toy_LiteralArray *array, Toy_Literal literal);
 
 /**
  * @fn Toy_Literal Toy_popLiteralArray(Toy_LiteralArray *array)
- * @brief
+ * @brief Removes the literal at the end of the array
  *
  * @param array
- * @return
+ * @return index of the deleted value.
  */
 TOY_API Toy_Literal Toy_popLiteralArray(Toy_LiteralArray *array);
 
 /**
  * @fn bool Toy_setLiteralArray(Toy_LiteralArray *array, Toy_Literal index, Toy_Literal value)
- * @brief
+ * @brief Frees the literal at the position represented by the integer literal index, and stores value in its place.
  *
  * @param array
  * @param index
  * @param value
- * @return
+ * @return true on success, otherwise it returns false.
  */
 TOY_API bool Toy_setLiteralArray(Toy_LiteralArray *array, Toy_Literal index, Toy_Literal value);
 
 /**
  * @fn Toy_Literal Toy_getLiteralArray(Toy_LiteralArray *array, Toy_Literal index)
- * @brief
+ * @brief Returns the literal at the position represented by the integer literal index, or returns a null literal if none is found.
+ *        If index is not an integer literal or is out of bounds, this function returns a null literal.
  *
  * @param array
  * @param index
@@ -75,7 +82,7 @@ TOY_API Toy_Literal Toy_getLiteralArray(Toy_LiteralArray *array, Toy_Literal ind
 
 /**
  * @fn int Toy_findLiteralIndex(Toy_LiteralArray *array, Toy_Literal literal)
- * @brief
+ * @brief @@????@@
  *
  * @param array
  * @param literal

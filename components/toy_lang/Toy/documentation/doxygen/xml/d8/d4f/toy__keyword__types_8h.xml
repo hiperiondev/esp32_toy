@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d8/d4f/toy__keyword__types_8h" kind="file" language="C++">
+    <compoundname>toy_keyword_types.h</compoundname>
+    <includes refid="d8/de7/toy__token__types_8h" local="yes">toy_token_types.h</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>toy_token_types.h</label>
+        <link refid="d8/de7/toy__token__types_8h"/>
+      </node>
+      <node id="1">
+        <label>toy_keyword_types.h</label>
+        <link refid="d8/d4f/toy__keyword__types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="da/d96/structToy__KeywordType" prot="public">Toy_KeywordType</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d8/d4f/toy__keyword__types_8h_1a82ed7986eacda991e859ab2e93a612fa" prot="public" static="no" mutable="no">
+        <type><ref refid="da/d96/structToy__KeywordType" kindref="compound">Toy_KeywordType</ref></type>
+        <definition>Toy_KeywordType Toy_keywordTypes[]</definition>
+        <argsstring>[]</argsstring>
+        <name>Toy_keywordTypes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_keyword_types.h" line="23" column="24" declfile="interpreter/include/toy_keyword_types.h" declline="23" declcolumn="24"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d8/d4f/toy__keyword__types_8h_1a328b319e3195cb4e4b681a0f71f1d65c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char *</type>
+        <definition>char * Toy_findKeywordByType</definition>
+        <argsstring>(Toy_TokenType type)</argsstring>
+        <name>Toy_findKeywordByType</name>
+        <param>
+          <type><ref refid="d8/de7/toy__token__types_8h_1a2f0b4502e3d37ef79801c9ce7570c09f" kindref="member">Toy_TokenType</ref></type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_keyword_types.h" line="32" column="6" declfile="interpreter/include/toy_keyword_types.h" declline="32" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d4f/toy__keyword__types_8h_1ab6867f52747a3cf7a75036b55f436f4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="d8/de7/toy__token__types_8h_1a2f0b4502e3d37ef79801c9ce7570c09f" kindref="member">Toy_TokenType</ref></type>
+        <definition>Toy_TokenType Toy_findTypeByKeyword</definition>
+        <argsstring>(const char *keyword)</argsstring>
+        <name>Toy_findTypeByKeyword</name>
+        <param>
+          <type>const char *</type>
+          <declname>keyword</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>keyword</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_keyword_types.h" line="41" column="15" declfile="interpreter/include/toy_keyword_types.h" declline="41" declcolumn="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_KEYWORD_TYPES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_KEYWORD_TYPES_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d8/de7/toy__token__types_8h" kindref="compound">toy_token_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="da/d96/structToy__KeywordType" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18" refid="da/d96/structToy__KeywordType_1a3fb1a88b6a0a8f49f85eb06cf99bbfea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/de7/toy__token__types_8h_1a2f0b4502e3d37ef79801c9ce7570c09f" kindref="member">Toy_TokenType</ref><sp/><ref refid="da/d96/structToy__KeywordType_1a3fb1a88b6a0a8f49f85eb06cf99bbfea" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="19" refid="da/d96/structToy__KeywordType_1a89296bbe38a6bd042b67021d2a4b310c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*<ref refid="da/d96/structToy__KeywordType_1a89296bbe38a6bd042b67021d2a4b310c" kindref="member">keyword</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}<sp/><ref refid="da/d96/structToy__KeywordType" kindref="compound">Toy_KeywordType</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="da/d96/structToy__KeywordType" kindref="compound">Toy_KeywordType</ref><sp/><ref refid="d8/d4f/toy__keyword__types_8h_1a82ed7986eacda991e859ab2e93a612fa" kindref="member">Toy_keywordTypes</ref>[];<sp/></highlight></codeline>
+<codeline lineno="32" refid="d8/d4f/toy__keyword__types_8h_1a328b319e3195cb4e4b681a0f71f1d65c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="d8/d4f/toy__keyword__types_8h_1a328b319e3195cb4e4b681a0f71f1d65c" kindref="member">Toy_findKeywordByType</ref>(<ref refid="d8/de7/toy__token__types_8h_1a2f0b4502e3d37ef79801c9ce7570c09f" kindref="member">Toy_TokenType</ref><sp/>type);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="d8/d4f/toy__keyword__types_8h_1ab6867f52747a3cf7a75036b55f436f4e" refkind="member"><highlight class="normal"><ref refid="d8/de7/toy__token__types_8h_1a2f0b4502e3d37ef79801c9ce7570c09f" kindref="member">Toy_TokenType</ref><sp/><ref refid="d8/d4f/toy__keyword__types_8h_1ab6867f52747a3cf7a75036b55f436f4e" kindref="member">Toy_findTypeByKeyword</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*keyword);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_KEYWORD_TYPES_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="interpreter/include/toy_keyword_types.h"/>
+  </compounddef>
+</doxygen>

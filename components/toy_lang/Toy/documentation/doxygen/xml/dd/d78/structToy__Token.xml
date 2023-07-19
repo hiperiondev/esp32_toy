@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dd/d78/structToy__Token" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_Token</compoundname>
+    <includes refid="d5/d51/toy__lexer_8h" local="no">toy_lexer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dd/d78/structToy__Token_1a0fd8a155621571012e0f3d497245f3f9" prot="public" static="no" mutable="no">
+        <type><ref refid="d8/de7/toy__token__types_8h_1a2f0b4502e3d37ef79801c9ce7570c09f" kindref="member">Toy_TokenType</ref></type>
+        <definition>Toy_TokenType Toy_Token::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Toy_Token::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_lexer.h" line="36" column="19" bodyfile="compiler/include/toy_lexer.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d78/structToy__Token_1a5a6aac13ba9c0b293033b50372a8e2d4" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Toy_Token::lexeme</definition>
+        <argsstring></argsstring>
+        <name>lexeme</name>
+        <qualifiedname>Toy_Token::lexeme</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_lexer.h" line="37" column="16" bodyfile="compiler/include/toy_lexer.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d78/structToy__Token_1a8d1dad08fdb05d0f2974cac93a5f9b70" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Token::length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <qualifiedname>Toy_Token::length</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_lexer.h" line="38" column="9" bodyfile="compiler/include/toy_lexer.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d78/structToy__Token_1aac880a9aff85b636ab9077144e8a4c34" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Token::line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <qualifiedname>Toy_Token::line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_lexer.h" line="39" column="9" bodyfile="compiler/include/toy_lexer.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="compiler/include/toy_lexer.h" line="35" column="1" bodyfile="compiler/include/toy_lexer.h" bodystart="35" bodyend="40"/>
+    <listofallmembers>
+      <member refid="dd/d78/structToy__Token_1a8d1dad08fdb05d0f2974cac93a5f9b70" prot="public" virt="non-virtual"><scope>Toy_Token</scope><name>length</name></member>
+      <member refid="dd/d78/structToy__Token_1a5a6aac13ba9c0b293033b50372a8e2d4" prot="public" virt="non-virtual"><scope>Toy_Token</scope><name>lexeme</name></member>
+      <member refid="dd/d78/structToy__Token_1aac880a9aff85b636ab9077144e8a4c34" prot="public" virt="non-virtual"><scope>Toy_Token</scope><name>line</name></member>
+      <member refid="dd/d78/structToy__Token_1a0fd8a155621571012e0f3d497245f3f9" prot="public" virt="non-virtual"><scope>Toy_Token</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

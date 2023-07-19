@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_b3faaf715d3b6134f9a1fcdf9ae3d9ef" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="d7/dbe/toy__builtin_8h">toy_builtin.h</innerfile>
+    <innerfile refid="dc/dcc/toy__interpreter_8h">toy_interpreter.h</innerfile>
+    <innerfile refid="d8/d4f/toy__keyword__types_8h">toy_keyword_types.h</innerfile>
+    <innerfile refid="d3/d5f/toy__literal_8h">toy_literal.h</innerfile>
+    <innerfile refid="dd/da4/toy__literal__dictionary_8h">toy_literal_dictionary.h</innerfile>
+    <innerfile refid="d4/d71/toy__reffunction_8h">toy_reffunction.h</innerfile>
+    <innerfile refid="d2/db4/toy__scope_8h">toy_scope.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="interpreter/include/"/>
+  </compounddef>
+</doxygen>

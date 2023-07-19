@@ -1,0 +1,530 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d3/da0/structToy__Literal" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_Literal</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a0f3db6cab471fd5e8ed1b9f22612dccd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_Literal::boolean</definition>
+        <argsstring></argsstring>
+        <name>boolean</name>
+        <qualifiedname>Toy_Literal::boolean</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="87" column="14" bodyfile="interpreter/include/toy_literal.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a15dd92d09a8ce35fc6848e44fdf0504f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Literal::integer</definition>
+        <argsstring></argsstring>
+        <name>integer</name>
+        <qualifiedname>Toy_Literal::integer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="88" column="13" bodyfile="interpreter/include/toy_literal.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1adc9a4af6e036b3e59a3f167ce1d9eb4e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Toy_Literal::number</definition>
+        <argsstring></argsstring>
+        <name>number</name>
+        <qualifiedname>Toy_Literal::number</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="89" column="15" bodyfile="interpreter/include/toy_literal.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a12643673f85db726c7b11345e1a0d233" prot="public" static="no" mutable="no">
+        <type><ref refid="dd/d94/structToy__RefString" kindref="compound">Toy_RefString</ref> *</type>
+        <definition>Toy_RefString* Toy_Literal::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>Toy_Literal::ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="92" column="27" bodyfile="interpreter/include/toy_literal.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a2f528eb60d2c87a217dc3e41002759f4" prot="public" static="no" mutable="no">
+        <type>struct Toy_Literal::@0::@1</type>
+        <definition>struct Toy_Literal::@0::@1 Toy_Literal::string</definition>
+        <argsstring></argsstring>
+        <name>string</name>
+        <qualifiedname>Toy_Literal::string</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="94" column="22"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a1196beb73e9a9b41996751ff410a5451" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="d5/d6a/structToy__LiteralArray" kindref="compound">Toy_LiteralArray</ref> *</type>
+        <definition>struct Toy_LiteralArray* Toy_Literal::array</definition>
+        <argsstring></argsstring>
+        <name>array</name>
+        <qualifiedname>Toy_Literal::array</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="96" column="32" bodyfile="interpreter/include/toy_literal.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1abf6529939cacb4908366d073aeb6b68c" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="d9/db5/structToy__LiteralDictionary" kindref="compound">Toy_LiteralDictionary</ref> *</type>
+        <definition>struct Toy_LiteralDictionary* Toy_Literal::dictionary</definition>
+        <argsstring></argsstring>
+        <name>dictionary</name>
+        <qualifiedname>Toy_Literal::dictionary</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="97" column="37" bodyfile="interpreter/include/toy_literal.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a770bd064383915fdb704c1d484b25ca7" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/d2c/structToy__RefFunction" kindref="compound">Toy_RefFunction</ref> *</type>
+        <definition>Toy_RefFunction* Toy_Literal::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>Toy_Literal::ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="101" column="33" bodyfile="interpreter/include/toy_literal.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1ae10810389e3bfc21da685d2b15097b82" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/d5f/toy__literal_8h_1a75c718108573cac8d200bf51870c522b" kindref="member">Toy_NativeFn</ref></type>
+        <definition>Toy_NativeFn Toy_Literal::native</definition>
+        <argsstring></argsstring>
+        <name>native</name>
+        <qualifiedname>Toy_Literal::native</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="102" column="30" bodyfile="interpreter/include/toy_literal.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1af2e492ede6c1c0e04445c3d0537704ec" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/d5f/toy__literal_8h_1a6569b94d4c6ef28b9c1f948fdd14fc4a" kindref="member">Toy_HookFn</ref></type>
+        <definition>Toy_HookFn Toy_Literal::hook</definition>
+        <argsstring></argsstring>
+        <name>hook</name>
+        <qualifiedname>Toy_Literal::hook</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="103" column="28" bodyfile="interpreter/include/toy_literal.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a4cf4ec82246bb4aee3bbc12eb29ed1af" prot="public" static="no" mutable="no">
+        <type>union Toy_Literal::@0::@2::@6</type>
+        <definition>union Toy_Literal::@0::@2::@6 Toy_Literal::inner</definition>
+        <argsstring></argsstring>
+        <name>inner</name>
+        <qualifiedname>Toy_Literal::inner</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="104" column="25"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a7e4344571d532464d076b4f968161bf3" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+        <definition>struct Toy_Scope* Toy_Literal::scope</definition>
+        <argsstring></argsstring>
+        <name>scope</name>
+        <qualifiedname>Toy_Literal::scope</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="105" column="29" bodyfile="interpreter/include/toy_literal.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a404a273ca93a9e989c934c045fadb40c" prot="public" static="no" mutable="no">
+        <type>struct Toy_Literal::@0::@2</type>
+        <definition>struct Toy_Literal::@0::@2 Toy_Literal::function</definition>
+        <argsstring></argsstring>
+        <name>function</name>
+        <qualifiedname>Toy_Literal::function</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>16 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="106" column="24"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1afec909043e208f91645f0e39464be7af" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Literal::hash</definition>
+        <argsstring></argsstring>
+        <name>hash</name>
+        <qualifiedname>Toy_Literal::hash</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="110" column="17" bodyfile="interpreter/include/toy_literal.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1aebd020b5b3dfba1b89ee3554c4357546" prot="public" static="no" mutable="no">
+        <type>struct Toy_Literal::@0::@3</type>
+        <definition>struct Toy_Literal::@0::@3 Toy_Literal::identifier</definition>
+        <argsstring></argsstring>
+        <name>identifier</name>
+        <qualifiedname>Toy_Literal::identifier</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>16 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="111" column="26"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1ac2865745b2749ec6ef7ddd16128b1cb1" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref> *</type>
+        <definition>struct Toy_Literal* Toy_Literal::subtypes</definition>
+        <argsstring></argsstring>
+        <name>subtypes</name>
+        <qualifiedname>Toy_Literal::subtypes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="114" column="31" bodyfile="interpreter/include/toy_literal.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1aceb733ce6f4bc542023690bbd7ac9b7d" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870ae" kindref="member">Toy_LiteralType</ref></type>
+        <definition>Toy_LiteralType Toy_Literal::typeOf</definition>
+        <argsstring></argsstring>
+        <name>typeOf</name>
+        <qualifiedname>Toy_Literal::typeOf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="115" column="29" bodyfile="interpreter/include/toy_literal.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1ab3ba853b6db7435acc23761e2be0eb90" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Toy_Literal::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <qualifiedname>Toy_Literal::capacity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="116" column="27" bodyfile="interpreter/include/toy_literal.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1acc72205bc1e765d64407f23c139f2ecb" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Toy_Literal::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <qualifiedname>Toy_Literal::count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="117" column="27" bodyfile="interpreter/include/toy_literal.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a66f09e4605978cd280187d673b339f05" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_Literal::constant</definition>
+        <argsstring></argsstring>
+        <name>constant</name>
+        <qualifiedname>Toy_Literal::constant</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>1 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="118" column="18" bodyfile="interpreter/include/toy_literal.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a53a9a43ed263c894e2db1ec4dafe1bfa" prot="public" static="no" mutable="no">
+        <type>struct Toy_Literal::@0::@4</type>
+        <definition>struct Toy_Literal::@0::@4 Toy_Literal::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Toy_Literal::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>16 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="119" column="20"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a5250d503117ff7ccd5e8b4e357e9397f" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* Toy_Literal::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <qualifiedname>Toy_Literal::ptr</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="122" column="18" bodyfile="interpreter/include/toy_literal.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a6f1bdd53a494c0c2f52f758ea64c31bb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Literal::tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <qualifiedname>Toy_Literal::tag</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="123" column="17" bodyfile="interpreter/include/toy_literal.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1aa08e9c7093a852e61e00e2886838abd3" prot="public" static="no" mutable="no">
+        <type>struct Toy_Literal::@0::@5</type>
+        <definition>struct Toy_Literal::@0::@5 Toy_Literal::opaque</definition>
+        <argsstring></argsstring>
+        <name>opaque</name>
+        <qualifiedname>Toy_Literal::opaque</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>16 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="124" column="22"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a2a9ab74449cf2f688154b6dafdd48b02" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* Toy_Literal::generic</definition>
+        <argsstring></argsstring>
+        <name>generic</name>
+        <qualifiedname>Toy_Literal::generic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>8 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="126" column="14" bodyfile="interpreter/include/toy_literal.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1a2ac1e328bc8dfebb12ed1f3904f579ac" prot="public" static="no" mutable="no">
+        <type>union Toy_Literal::@0</type>
+        <definition>union Toy_Literal::@0 Toy_Literal::as</definition>
+        <argsstring></argsstring>
+        <name>as</name>
+        <qualifiedname>Toy_Literal::as</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>16 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="127" column="14"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/da0/structToy__Literal_1af2919c70e5e9ca19d7bfd6423d281cad" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870ae" kindref="member">Toy_LiteralType</ref></type>
+        <definition>Toy_LiteralType Toy_Literal::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>Toy_Literal::type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>4 </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_literal.h" line="129" column="21" bodyfile="interpreter/include/toy_literal.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>Toy_Interpreter</label>
+        <link refid="de/da4/structToy__Interpreter"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>literalCache</edgelabel>
+          <edgelabel>stack</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>hooks</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Toy_Literal</label>
+        <link refid="d3/da0/structToy__Literal"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>array</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dictionary</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>hook</edgelabel>
+          <edgelabel>native</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>subtypes</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Toy_LiteralArray</label>
+        <link refid="d5/d6a/structToy__LiteralArray"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>literals</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Toy_LiteralDictionary</label>
+        <link refid="d9/db5/structToy__LiteralDictionary"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>entries</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Toy_RefFunction</label>
+        <link refid="d3/d2c/structToy__RefFunction"/>
+      </node>
+      <node id="2">
+        <label>Toy_RefString</label>
+        <link refid="dd/d94/structToy__RefString"/>
+      </node>
+      <node id="8">
+        <label>Toy_Scope</label>
+        <link refid="de/de6/structToy__Scope"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>types</edgelabel>
+          <edgelabel>variables</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>ancestor</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Toy_private_dictionary_entry</label>
+        <link refid="d2/d62/structToy__private__dictionary__entry"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>key</edgelabel>
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="interpreter/include/toy_literal.h" line="85" column="1" bodyfile="interpreter/include/toy_literal.h" bodystart="85" bodyend="132"/>
+    <listofallmembers>
+      <member refid="d3/da0/structToy__Literal_1a1196beb73e9a9b41996751ff410a5451" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>array</name></member>
+      <member refid="d3/da0/structToy__Literal_1a2ac1e328bc8dfebb12ed1f3904f579ac" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>as</name></member>
+      <member refid="d3/da0/structToy__Literal_1a0f3db6cab471fd5e8ed1b9f22612dccd" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>boolean</name></member>
+      <member refid="d3/da0/structToy__Literal_1ab3ba853b6db7435acc23761e2be0eb90" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>capacity</name></member>
+      <member refid="d3/da0/structToy__Literal_1a66f09e4605978cd280187d673b339f05" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>constant</name></member>
+      <member refid="d3/da0/structToy__Literal_1acc72205bc1e765d64407f23c139f2ecb" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>count</name></member>
+      <member refid="d3/da0/structToy__Literal_1abf6529939cacb4908366d073aeb6b68c" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>dictionary</name></member>
+      <member refid="d3/da0/structToy__Literal_1a404a273ca93a9e989c934c045fadb40c" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>function</name></member>
+      <member refid="d3/da0/structToy__Literal_1a2a9ab74449cf2f688154b6dafdd48b02" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>generic</name></member>
+      <member refid="d3/da0/structToy__Literal_1afec909043e208f91645f0e39464be7af" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>hash</name></member>
+      <member refid="d3/da0/structToy__Literal_1af2e492ede6c1c0e04445c3d0537704ec" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>hook</name></member>
+      <member refid="d3/da0/structToy__Literal_1aebd020b5b3dfba1b89ee3554c4357546" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>identifier</name></member>
+      <member refid="d3/da0/structToy__Literal_1a4cf4ec82246bb4aee3bbc12eb29ed1af" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>inner</name></member>
+      <member refid="d3/da0/structToy__Literal_1a15dd92d09a8ce35fc6848e44fdf0504f" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>integer</name></member>
+      <member refid="d3/da0/structToy__Literal_1ae10810389e3bfc21da685d2b15097b82" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>native</name></member>
+      <member refid="d3/da0/structToy__Literal_1adc9a4af6e036b3e59a3f167ce1d9eb4e" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>number</name></member>
+      <member refid="d3/da0/structToy__Literal_1aa08e9c7093a852e61e00e2886838abd3" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>opaque</name></member>
+      <member refid="d3/da0/structToy__Literal_1a12643673f85db726c7b11345e1a0d233" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>ptr</name></member>
+      <member refid="d3/da0/structToy__Literal_1a770bd064383915fdb704c1d484b25ca7" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>ptr</name></member>
+      <member refid="d3/da0/structToy__Literal_1a5250d503117ff7ccd5e8b4e357e9397f" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>ptr</name></member>
+      <member refid="d3/da0/structToy__Literal_1a7e4344571d532464d076b4f968161bf3" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>scope</name></member>
+      <member refid="d3/da0/structToy__Literal_1a2f528eb60d2c87a217dc3e41002759f4" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>string</name></member>
+      <member refid="d3/da0/structToy__Literal_1ac2865745b2749ec6ef7ddd16128b1cb1" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>subtypes</name></member>
+      <member refid="d3/da0/structToy__Literal_1a6f1bdd53a494c0c2f52f758ea64c31bb" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>tag</name></member>
+      <member refid="d3/da0/structToy__Literal_1a53a9a43ed263c894e2db1ec4dafe1bfa" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>type</name></member>
+      <member refid="d3/da0/structToy__Literal_1af2919c70e5e9ca19d7bfd6423d281cad" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>type</name></member>
+      <member refid="d3/da0/structToy__Literal_1aceb733ce6f4bc542023690bbd7ac9b7d" prot="public" virt="non-virtual"><scope>Toy_Literal</scope><name>typeOf</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

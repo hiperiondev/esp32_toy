@@ -1,3 +1,9 @@
+/**
+ * @file toy_console_colors.h
+ * @brief
+ *
+ */
+
 #ifndef TOY_CONSOLE_COLOR_H_
 #define TOY_CONSOLE_COLOR_H_
 

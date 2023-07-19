@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="de/de6/structToy__Scope" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_Scope</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="de/de6/structToy__Scope_1a69803137bbec26c36ce436cbf6c1c42d" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/db5/structToy__LiteralDictionary" kindref="compound">Toy_LiteralDictionary</ref></type>
+        <definition>Toy_LiteralDictionary Toy_Scope::variables</definition>
+        <argsstring></argsstring>
+        <name>variables</name>
+        <qualifiedname>Toy_Scope::variables</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>only allow identifiers as the keys </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="22" column="27" bodyfile="interpreter/include/toy_scope.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/de6/structToy__Scope_1ad65ba5620a2a1d28228843d22b7a08af" prot="public" static="no" mutable="no">
+        <type><ref refid="d9/db5/structToy__LiteralDictionary" kindref="compound">Toy_LiteralDictionary</ref></type>
+        <definition>Toy_LiteralDictionary Toy_Scope::types</definition>
+        <argsstring></argsstring>
+        <name>types</name>
+        <qualifiedname>Toy_Scope::types</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>the types, indexed by identifiers </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="23" column="27" bodyfile="interpreter/include/toy_scope.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/de6/structToy__Scope_1a4970bdc3ada46b6446c23f220fb61276" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="de/de6/structToy__Scope" kindref="compound">Toy_Scope</ref> *</type>
+        <definition>struct Toy_Scope* Toy_Scope::ancestor</definition>
+        <argsstring></argsstring>
+        <name>ancestor</name>
+        <qualifiedname>Toy_Scope::ancestor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="24" column="20" bodyfile="interpreter/include/toy_scope.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/de6/structToy__Scope_1abd611f55050b4fea5d6f193f06ba5554" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Scope::references</definition>
+        <argsstring></argsstring>
+        <name>references</name>
+        <qualifiedname>Toy_Scope::references</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>how many scopes point here </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="interpreter/include/toy_scope.h" line="25" column="9" bodyfile="interpreter/include/toy_scope.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>Toy_Interpreter</label>
+        <link refid="de/da4/structToy__Interpreter"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>literalCache</edgelabel>
+          <edgelabel>stack</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>hooks</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Toy_Literal</label>
+        <link refid="d3/da0/structToy__Literal"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>array</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>dictionary</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>hook</edgelabel>
+          <edgelabel>native</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>subtypes</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Toy_LiteralArray</label>
+        <link refid="d5/d6a/structToy__LiteralArray"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>literals</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Toy_LiteralDictionary</label>
+        <link refid="d9/db5/structToy__LiteralDictionary"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>entries</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Toy_RefFunction</label>
+        <link refid="d3/d2c/structToy__RefFunction"/>
+      </node>
+      <node id="5">
+        <label>Toy_RefString</label>
+        <link refid="dd/d94/structToy__RefString"/>
+      </node>
+      <node id="1">
+        <label>Toy_Scope</label>
+        <link refid="de/de6/structToy__Scope"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>types</edgelabel>
+          <edgelabel>variables</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>ancestor</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Toy_private_dictionary_entry</label>
+        <link refid="d2/d62/structToy__private__dictionary__entry"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>key</edgelabel>
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="interpreter/include/toy_scope.h" line="21" column="1" bodyfile="interpreter/include/toy_scope.h" bodystart="21" bodyend="26"/>
+    <listofallmembers>
+      <member refid="de/de6/structToy__Scope_1a4970bdc3ada46b6446c23f220fb61276" prot="public" virt="non-virtual"><scope>Toy_Scope</scope><name>ancestor</name></member>
+      <member refid="de/de6/structToy__Scope_1abd611f55050b4fea5d6f193f06ba5554" prot="public" virt="non-virtual"><scope>Toy_Scope</scope><name>references</name></member>
+      <member refid="de/de6/structToy__Scope_1ad65ba5620a2a1d28228843d22b7a08af" prot="public" virt="non-virtual"><scope>Toy_Scope</scope><name>types</name></member>
+      <member refid="de/de6/structToy__Scope_1a69803137bbec26c36ce436cbf6c1c42d" prot="public" virt="non-virtual"><scope>Toy_Scope</scope><name>variables</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

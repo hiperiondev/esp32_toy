@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="dir_11fbc4217d50ab21044e5ad6614aede5" kind="dir">
+    <compoundname>include</compoundname>
+    <innerfile refid="d7/d1d/toy__common_8h">toy_common.h</innerfile>
+    <innerfile refid="d8/dcf/toy__console__colors_8h">toy_console_colors.h</innerfile>
+    <innerfile refid="d0/dfc/toy__literal__array_8h">toy_literal_array.h</innerfile>
+    <innerfile refid="df/d06/toy__memory_8h">toy_memory.h</innerfile>
+    <innerfile refid="dc/dad/toy__opcodes_8h">toy_opcodes.h</innerfile>
+    <innerfile refid="d5/de2/toy__refstring_8h">toy_refstring.h</innerfile>
+    <innerfile refid="d8/de7/toy__token__types_8h">toy_token_types.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="common/include/"/>
+  </compounddef>
+</doxygen>

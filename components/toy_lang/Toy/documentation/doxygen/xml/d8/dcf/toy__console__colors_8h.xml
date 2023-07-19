@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d8/dcf/toy__console__colors_8h" kind="file" language="C++">
+    <compoundname>toy_console_colors.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a636171a572234fc79d567594de40521c" prot="public" static="no">
+        <name>TOY_CC_FONT_BLACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="55" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a91e2abc393707082be54c072e2aea313" prot="public" static="no">
+        <name>TOY_CC_FONT_RED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="56" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a84fffcfa89e7b9f3a28042cd7afc8957" prot="public" static="no">
+        <name>TOY_CC_FONT_GREEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="57" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1af2dc8cf3494c261867c13f05d93a73c5" prot="public" static="no">
+        <name>TOY_CC_FONT_YELLOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="58" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a4be96433918644ff44acb5007ab4dfa1" prot="public" static="no">
+        <name>TOY_CC_FONT_BLUE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="59" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1affe445f6748b7f7ca8a16462b059a40a" prot="public" static="no">
+        <name>TOY_CC_FONT_PURPLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="60" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a659ec00389155669764cdd2faca29dc2" prot="public" static="no">
+        <name>TOY_CC_FONT_DGREEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="61" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a0d5f4ef316632d94fb33f4efa772813a" prot="public" static="no">
+        <name>TOY_CC_FONT_WHITE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="62" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a97b0aba8611049963a09a4d813ae827a" prot="public" static="no">
+        <name>TOY_CC_FONT_CYAN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="63" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1acaf1b53b598354e2f0956fd32f5dcd41" prot="public" static="no">
+        <name>TOY_CC_BACK_BLACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="66" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a25417d10e7da22117a50e2b37b9ecb4c" prot="public" static="no">
+        <name>TOY_CC_BACK_RED</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="67" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1aab7469b2567275336aeac2deb500c05c" prot="public" static="no">
+        <name>TOY_CC_BACK_GREEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="68" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1ae90409a70e822c22a4c61b4c21b79c87" prot="public" static="no">
+        <name>TOY_CC_BACK_YELLOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="69" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a1000eb84b91c95814442cf200cd4d2cc" prot="public" static="no">
+        <name>TOY_CC_BACK_BLUE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="70" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a204a189af0e850650aa4bb80051125d8" prot="public" static="no">
+        <name>TOY_CC_BACK_PURPLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="71" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a3db99064d660665825423b61920429cb" prot="public" static="no">
+        <name>TOY_CC_BACK_DGREEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="72" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a5db09154679739320699f67ceec28685" prot="public" static="no">
+        <name>TOY_CC_BACK_WHITE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="73" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1a96f6e939954515e0b33b6733c4deb3d8" prot="public" static="no">
+        <name>TOY_CC_NOTICE</name>
+        <initializer>TOY_CC_FONT_GREEN TOY_CC_BACK_BLACK</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="76" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1aed6365d9055c82a0ee5796a33f04df67" prot="public" static="no">
+        <name>TOY_CC_WARN</name>
+        <initializer>TOY_CC_FONT_YELLOW TOY_CC_BACK_BLACK</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="77" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1aa8815bc2483c10500ed868a445d6b11f" prot="public" static="no">
+        <name>TOY_CC_ERROR</name>
+        <initializer>TOY_CC_FONT_RED TOY_CC_BACK_BLACK</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="78" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="d8/dcf/toy__console__colors_8h_1aa548591b031be8a8ba0e37699356511c" prot="public" static="no">
+        <name>TOY_CC_RESET</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_console_colors.h" line="79" column="9" bodyfile="common/include/toy_console_colors.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_CONSOLE_COLOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CONSOLE_COLOR_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>toy_console_colors.h<sp/>-<sp/>console<sp/>utility</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"></highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>This<sp/>file<sp/>provides<sp/>a<sp/>number<sp/>of<sp/>macros<sp/>that<sp/>can<sp/>set<sp/>the<sp/>color<sp/>of<sp/>text<sp/>in<sp/>a<sp/>console</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>window.<sp/>These<sp/>are<sp/>used<sp/>for<sp/>convenience<sp/>only.<sp/>They<sp/>are<sp/>supposed<sp/>to<sp/>be<sp/>dropped<sp/>into</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>a<sp/>printf()&apos;s<sp/>first<sp/>argument,<sp/>like<sp/>so:</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>printf(TOY_CC_NOTICE<sp/>&quot;Hello<sp/>world&quot;<sp/>TOY_CC_RESET);</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"></highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>NOTE:<sp/>you<sp/>need<sp/>both<sp/>font<sp/>AND<sp/>background<sp/>for<sp/>these<sp/>to<sp/>work</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//platform/compiler-specific<sp/>instructions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__linux__)<sp/>||<sp/>defined(__MINGW32__)<sp/>||<sp/>defined(__GNUC__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//fonts<sp/>color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_BLACK<sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[30;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_RED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[31;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_GREEN<sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[32;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_YELLOW<sp/><sp/><sp/><sp/><sp/>&quot;\033[33;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_BLUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[34;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_PURPLE<sp/><sp/><sp/><sp/><sp/>&quot;\033[35;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_DGREEN<sp/><sp/><sp/><sp/><sp/>&quot;\033[6;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_WHITE<sp/><sp/><sp/><sp/><sp/><sp/>&quot;\033[7;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_CYAN<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;\x1b[36m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//background<sp/>color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_BLACK<sp/><sp/><sp/><sp/><sp/><sp/>&quot;40m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_RED<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;41m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_GREEN<sp/><sp/><sp/><sp/><sp/><sp/>&quot;42m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_YELLOW<sp/><sp/><sp/><sp/><sp/>&quot;43m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_BLUE<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;44m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_PURPLE<sp/><sp/><sp/><sp/><sp/>&quot;45m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_DGREEN<sp/><sp/><sp/><sp/><sp/>&quot;46m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_WHITE<sp/><sp/><sp/><sp/><sp/><sp/>&quot;47m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">//useful</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_NOTICE<sp/>TOY_CC_FONT_GREEN<sp/>TOY_CC_BACK_BLACK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_WARN<sp/>TOY_CC_FONT_YELLOW<sp/>TOY_CC_BACK_BLACK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_ERROR<sp/>TOY_CC_FONT_RED<sp/>TOY_CC_BACK_BLACK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_RESET<sp/>&quot;\033[0m&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//fonts<sp/>color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_BLACK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_RED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_GREEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_YELLOW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_BLUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_PURPLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_DGREEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_WHITE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_FONT_CYAN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//background<sp/>color</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_BLACK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_RED</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_GREEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_YELLOW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_BLUE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_PURPLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_DGREEN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_BACK_WHITE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//useful</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_NOTICE<sp/>TOY_CC_FONT_GREEN<sp/>TOY_CC_BACK_BLACK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_WARN<sp/>TOY_CC_FONT_YELLOW<sp/>TOY_CC_BACK_BLACK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_ERROR<sp/>TOY_CC_FONT_RED<sp/>TOY_CC_BACK_BLACK</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_CC_RESET</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_CONSOLE_COLOR_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="common/include/toy_console_colors.h"/>
+  </compounddef>
+</doxygen>

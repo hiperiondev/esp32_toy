@@ -1,0 +1,2190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d3/df7/toy__ast__node_8h" kind="file" language="C++">
+    <compoundname>toy_ast_node.h</compoundname>
+    <includes refid="d7/d1d/toy__common_8h" local="yes">toy_common.h</includes>
+    <includes refid="d3/d5f/toy__literal_8h" local="yes">toy_literal.h</includes>
+    <includes refid="dc/dad/toy__opcodes_8h" local="yes">toy_opcodes.h</includes>
+    <includes refid="d8/de7/toy__token__types_8h" local="yes">toy_token_types.h</includes>
+    <includedby refid="d3/d43/toy__compiler_8h" local="yes">toy_compiler.h</includedby>
+    <includedby refid="dc/d33/toy__parser_8h" local="yes">toy_parser.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>toy_common.h</label>
+        <link refid="d7/d1d/toy__common_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>toy_opcodes.h</label>
+        <link refid="dc/dad/toy__opcodes_8h"/>
+      </node>
+      <node id="7">
+        <label>toy_refstring.h</label>
+        <link refid="d5/de2/toy__refstring_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>toy_token_types.h</label>
+        <link refid="d8/de7/toy__token__types_8h"/>
+      </node>
+      <node id="1">
+        <label>toy_ast_node.h</label>
+        <link refid="d3/df7/toy__ast__node_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>toy_literal.h</label>
+        <link refid="d3/d5f/toy__literal_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>toy_reffunction.h</label>
+        <link refid="d4/d71/toy__reffunction_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>stdbool.h</label>
+      </node>
+      <node id="4">
+        <label>stddef.h</label>
+      </node>
+      <node id="5">
+        <label>stdint.h</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>toy_ast_node.h</label>
+        <link refid="d3/df7/toy__ast__node_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>toy_compiler.h</label>
+        <link refid="d3/d43/toy__compiler_8h"/>
+      </node>
+      <node id="3">
+        <label>toy_parser.h</label>
+        <link refid="dc/d33/toy__parser_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="d5/da5/structToy__NodeLiteral" prot="public">Toy_NodeLiteral</innerclass>
+    <innerclass refid="d5/de1/structToy__NodeUnary" prot="public">Toy_NodeUnary</innerclass>
+    <innerclass refid="d1/d1b/structToy__NodeBinary" prot="public">Toy_NodeBinary</innerclass>
+    <innerclass refid="d3/d18/structToy__NodeTernary" prot="public">Toy_NodeTernary</innerclass>
+    <innerclass refid="d1/dad/structToy__NodeGrouping" prot="public">Toy_NodeGrouping</innerclass>
+    <innerclass refid="d1/da1/structToy__NodeBlock" prot="public">Toy_NodeBlock</innerclass>
+    <innerclass refid="d9/d8d/structToy__NodeCompound" prot="public">Toy_NodeCompound</innerclass>
+    <innerclass refid="d4/dee/structToy__NodePair" prot="public">Toy_NodePair</innerclass>
+    <innerclass refid="d4/d04/structToy__NodeIndex" prot="public">Toy_NodeIndex</innerclass>
+    <innerclass refid="d9/d84/structToy__NodeVarDecl" prot="public">Toy_NodeVarDecl</innerclass>
+    <innerclass refid="d6/df7/structToy__NodeFnCollection" prot="public">Toy_NodeFnCollection</innerclass>
+    <innerclass refid="d5/dce/structToy__NodeFnDecl" prot="public">Toy_NodeFnDecl</innerclass>
+    <innerclass refid="dc/db5/structToy__NodeFnCall" prot="public">Toy_NodeFnCall</innerclass>
+    <innerclass refid="df/d54/structToy__NodeFnReturn" prot="public">Toy_NodeFnReturn</innerclass>
+    <innerclass refid="da/d7c/structToy__NodeIf" prot="public">Toy_NodeIf</innerclass>
+    <innerclass refid="d2/d3a/structToy__NodeWhile" prot="public">Toy_NodeWhile</innerclass>
+    <innerclass refid="d5/d2a/structToy__NodeFor" prot="public">Toy_NodeFor</innerclass>
+    <innerclass refid="d7/da7/structToy__NodeBreak" prot="public">Toy_NodeBreak</innerclass>
+    <innerclass refid="d3/db6/structToy__NodeContinue" prot="public">Toy_NodeContinue</innerclass>
+    <innerclass refid="db/dca/structToy__NodePrefixIncrement" prot="public">Toy_NodePrefixIncrement</innerclass>
+    <innerclass refid="de/de1/structToy__NodePrefixDecrement" prot="public">Toy_NodePrefixDecrement</innerclass>
+    <innerclass refid="df/d6e/structToy__NodePostfixIncrement" prot="public">Toy_NodePostfixIncrement</innerclass>
+    <innerclass refid="d6/df8/structToy__NodePostfixDecrement" prot="public">Toy_NodePostfixDecrement</innerclass>
+    <innerclass refid="d9/dab/structToy__NodeImport" prot="public">Toy_NodeImport</innerclass>
+    <innerclass refid="d8/dcd/unionToy__private__node" prot="public">Toy_private_node</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Toy_ASTNodeType</name>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775ac6ea2b12f3f1c13044c6751df0a02a2a" prot="public">
+          <name>TOY_AST_NODE_ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775af5e104bbe7ad500d7a036bb62cce1509" prot="public">
+          <name>TOY_AST_NODE_LITERAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>a simple value </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a2d0156014e8fa142fa679088b753b92b" prot="public">
+          <name>TOY_AST_NODE_UNARY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>one child + opcode </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775ae7430a96e83d4abaecfd64b3ff0bde91" prot="public">
+          <name>TOY_AST_NODE_BINARY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>two children, left and right + opcode </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a380013ca8863ad7189ea1832d6b6a107" prot="public">
+          <name>TOY_AST_NODE_TERNARY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>three children, condition, then path &amp; else path </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775aec19412bd13d317f808bc55d3c626fd4" prot="public">
+          <name>TOY_AST_NODE_GROUPING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>one child </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a88e8d23a5be865679d25ca36367a32a7" prot="public">
+          <name>TOY_AST_NODE_BLOCK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>contains a sub-node array </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a12bb06ac42a45274737234a06c7d4474" prot="public">
+          <name>TOY_AST_NODE_COMPOUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>contains a sub-node array </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a99bce9a5448a2b76bf3696d8bcd8417d" prot="public">
+          <name>TOY_AST_NODE_PAIR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>contains a left and right </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775ad054bbd34565f66563b9a2129b73ec3e" prot="public">
+          <name>TOY_AST_NODE_INDEX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>index a variable </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a3baf9ea1cdd2f53a6e3fdd1d5a3e581d" prot="public">
+          <name>TOY_AST_NODE_VAR_DECL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>contains identifier literal, typenode, expression definition </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a1211f14c949154c4ac1ec05ad662b87b" prot="public">
+          <name>TOY_AST_NODE_FN_DECL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>contains identifier literal, arguments node, returns node, block node </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775abfb949e3726d9ec35447c4dcf3fc45f1" prot="public">
+          <name>TOY_AST_NODE_FN_COLLECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>parts of a function </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a436f3b91b4a8f83eaf30b634db2f3ac2" prot="public">
+          <name>TOY_AST_NODE_FN_CALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>call a function </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a934d76ab495b6012807265f5d4748700" prot="public">
+          <name>TOY_AST_NODE_FN_RETURN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for control flow </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a63f24985704943c3d5d48e90bea3513a" prot="public">
+          <name>TOY_AST_NODE_IF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for control flow </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775adf80ef0ce41aa1e0b02a9e9ed6c62408" prot="public">
+          <name>TOY_AST_NODE_WHILE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for control flow </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775abfe14e7196593d0bfd88ee8b126bccba" prot="public">
+          <name>TOY_AST_NODE_FOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for control flow </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a19c252225851603a8ea6b26f036432b8" prot="public">
+          <name>TOY_AST_NODE_BREAK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for control flow </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a0a3dec6cdcf3580b104b9fcba321aa02" prot="public">
+          <name>TOY_AST_NODE_CONTINUE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for control flow </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a308d625c750fe00e5f4251041261a234" prot="public">
+          <name>TOY_AST_NODE_PREFIX_INCREMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>increment a variable </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a8444db84422f8db241fb7985b5a7c7ab" prot="public">
+          <name>TOY_AST_NODE_POSTFIX_INCREMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>increment a variable </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775afa816e82088228d30993c325627beddf" prot="public">
+          <name>TOY_AST_NODE_PREFIX_DECREMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>decrement a variable </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a26f171421dbee7287bd55bc937658949" prot="public">
+          <name>TOY_AST_NODE_POSTFIX_DECREMENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>decrement a variable </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a342e68161fa05b91c8b195f16cf9d3a9" prot="public">
+          <name>TOY_AST_NODE_IMPORT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>import a library </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775ab6058ca2f1854334507dbff6e23ff787" prot="public">
+          <name>TOY_AST_NODE_PASS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>for doing nothing </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="28" column="1" bodyfile="compiler/include/toy_ast_node.h" bodystart="28" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" prot="public" static="no">
+        <type>union <ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_private_node</ref></type>
+        <definition>Toy_ASTNode</definition>
+        <argsstring></argsstring>
+        <name>Toy_ASTNode</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="21" column="31" bodyfile="compiler/include/toy_ast_node.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1ae1a0871a5660132e439a0dc23bfbc267" prot="public" static="no">
+        <type>enum <ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref></type>
+        <definition>typedef enum Toy_ASTNodeType Toy_ASTNodeType</definition>
+        <argsstring></argsstring>
+        <name>Toy_ASTNodeType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="55" column="17"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1ae39b3b24cbeb3bed54f1af9ab094fe89" prot="public" static="no">
+        <type>struct <ref refid="d5/da5/structToy__NodeLiteral" kindref="compound">Toy_NodeLiteral</ref></type>
+        <definition>typedef struct Toy_NodeLiteral Toy_NodeLiteral</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeLiteral</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="75" column="17"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a7f04c93b1dcdad3192149d24d7a8c44e" prot="public" static="no">
+        <type>struct <ref refid="d5/de1/structToy__NodeUnary" kindref="compound">Toy_NodeUnary</ref></type>
+        <definition>typedef struct Toy_NodeUnary Toy_NodeUnary</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeUnary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="92" column="15"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a9bfa2b9966d4e3f873953bddef448540" prot="public" static="no">
+        <type>struct <ref refid="d1/d1b/structToy__NodeBinary" kindref="compound">Toy_NodeBinary</ref></type>
+        <definition>typedef struct Toy_NodeBinary Toy_NodeBinary</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeBinary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="115" column="16"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1ae615ac4a897ad525e4400e756833aa58" prot="public" static="no">
+        <type>struct <ref refid="d3/d18/structToy__NodeTernary" kindref="compound">Toy_NodeTernary</ref></type>
+        <definition>Toy_NodeTernary</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeTernary</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="139" column="17"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a5b6dd223c7921050026410363b9e68b4" prot="public" static="no">
+        <type>struct <ref refid="d1/dad/structToy__NodeGrouping" kindref="compound">Toy_NodeGrouping</ref></type>
+        <definition>Toy_NodeGrouping</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeGrouping</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="158" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a60ed49233a3cea765035ed69820a9cf5" prot="public" static="no">
+        <type>struct <ref refid="d1/da1/structToy__NodeBlock" kindref="compound">Toy_NodeBlock</ref></type>
+        <definition>typedef struct Toy_NodeBlock Toy_NodeBlock</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="174" column="15"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1ab0e30253eb7cfa053c0c5ac773ede383" prot="public" static="no">
+        <type>struct <ref refid="d9/d8d/structToy__NodeCompound" kindref="compound">Toy_NodeCompound</ref></type>
+        <definition>Toy_NodeCompound</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeCompound</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="197" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a5b9b0901308555bb684b8dcfb9ffc728" prot="public" static="no">
+        <type>struct <ref refid="d4/dee/structToy__NodePair" kindref="compound">Toy_NodePair</ref></type>
+        <definition>Toy_NodePair</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodePair</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="218" column="14"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a683c16dfba6c5ea7e538ed3179e3d99c" prot="public" static="no">
+        <type>struct <ref refid="d4/d04/structToy__NodeIndex" kindref="compound">Toy_NodeIndex</ref></type>
+        <definition>typedef struct Toy_NodeIndex Toy_NodeIndex</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="236" column="15"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a31c3578909246c4e08004ccc34ffb1a2" prot="public" static="no">
+        <type>struct <ref refid="d9/d84/structToy__NodeVarDecl" kindref="compound">Toy_NodeVarDecl</ref></type>
+        <definition>Toy_NodeVarDecl</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeVarDecl</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="260" column="17"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a77c27023dab5f3dcdbef20d37640eb9b" prot="public" static="no">
+        <type>struct <ref refid="d6/df7/structToy__NodeFnCollection" kindref="compound">Toy_NodeFnCollection</ref></type>
+        <definition>typedef struct Toy_NodeFnCollection Toy_NodeFnCollection</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeFnCollection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="281" column="22"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a2f9d5859b24fc94676b5dfae2df7bb68" prot="public" static="no">
+        <type>struct <ref refid="d5/dce/structToy__NodeFnDecl" kindref="compound">Toy_NodeFnDecl</ref></type>
+        <definition>Toy_NodeFnDecl</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeFnDecl</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="307" column="16"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a80aaeaaab5453edbe9b9a5be28c35742" prot="public" static="no">
+        <type>struct <ref refid="dc/db5/structToy__NodeFnCall" kindref="compound">Toy_NodeFnCall</ref></type>
+        <definition>Toy_NodeFnCall</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeFnCall</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="328" column="16"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1ac96430e867b52f25798846baa1af1d72" prot="public" static="no">
+        <type>struct <ref refid="df/d54/structToy__NodeFnReturn" kindref="compound">Toy_NodeFnReturn</ref></type>
+        <definition>typedef struct Toy_NodeFnReturn Toy_NodeFnReturn</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeFnReturn</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para>@stypedef <ref refid="df/d54/structToy__NodeFnReturn" kindref="compound">Toy_NodeFnReturn</ref>  </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="348" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1ab190849254d31291f27916dbe7ff0318" prot="public" static="no">
+        <type>struct <ref refid="da/d7c/structToy__NodeIf" kindref="compound">Toy_NodeIf</ref></type>
+        <definition>Toy_NodeIf</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeIf</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="410" column="12"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a3005a1c59079e17b7802bef72f09800f" prot="public" static="no">
+        <type>struct <ref refid="d2/d3a/structToy__NodeWhile" kindref="compound">Toy_NodeWhile</ref></type>
+        <definition>Toy_NodeWhile</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeWhile</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="421" column="15"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a480c6b94c077e99703f8bf6c08db7312" prot="public" static="no">
+        <type>struct <ref refid="d5/d2a/structToy__NodeFor" kindref="compound">Toy_NodeFor</ref></type>
+        <definition>Toy_NodeFor</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeFor</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="434" column="13"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a899910fca96cb2373f7696ae966a64a8" prot="public" static="no">
+        <type>struct <ref refid="d7/da7/structToy__NodeBreak" kindref="compound">Toy_NodeBreak</ref></type>
+        <definition>Toy_NodeBreak</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeBreak</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="443" column="15"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1ab799b987f2cf760d04a4714acb70b9fd" prot="public" static="no">
+        <type>struct <ref refid="d3/db6/structToy__NodeContinue" kindref="compound">Toy_NodeContinue</ref></type>
+        <definition>Toy_NodeContinue</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeContinue</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="452" column="18"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1ab193f256e72ddb3428465c54e27d9679" prot="public" static="no">
+        <type>struct <ref refid="db/dca/structToy__NodePrefixIncrement" kindref="compound">Toy_NodePrefixIncrement</ref></type>
+        <definition>Toy_NodePrefixIncrement</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodePrefixIncrement</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="499" column="25"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a386b01f2855a4b24ae279e5275a33544" prot="public" static="no">
+        <type>struct <ref refid="de/de1/structToy__NodePrefixDecrement" kindref="compound">Toy_NodePrefixDecrement</ref></type>
+        <definition>Toy_NodePrefixDecrement</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodePrefixDecrement</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="509" column="25"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1af40edd7ce460d1c677a3ee7760ce6e76" prot="public" static="no">
+        <type>struct <ref refid="df/d6e/structToy__NodePostfixIncrement" kindref="compound">Toy_NodePostfixIncrement</ref></type>
+        <definition>Toy_NodePostfixIncrement</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodePostfixIncrement</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="519" column="26"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a337b4d333ef95f988265a11ea246f0a4" prot="public" static="no">
+        <type>struct <ref refid="d6/df8/structToy__NodePostfixDecrement" kindref="compound">Toy_NodePostfixDecrement</ref></type>
+        <definition>Toy_NodePostfixDecrement</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodePostfixDecrement</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="529" column="26"/>
+      </memberdef>
+      <memberdef kind="typedef" id="d3/df7/toy__ast__node_8h_1a326ee19a5170d59984e29a53ccb012cf" prot="public" static="no">
+        <type>struct <ref refid="d9/dab/structToy__NodeImport" kindref="compound">Toy_NodeImport</ref></type>
+        <definition>Toy_NodeImport</definition>
+        <argsstring></argsstring>
+        <name>Toy_NodeImport</name>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="551" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a92c83f5357ab868df688ea60192ae125" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeLiteral</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_Literal literal)</argsstring>
+        <name>Toy_emitASTNodeLiteral</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>literal</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>literal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="65" column="6" declfile="compiler/include/toy_ast_node.h" declline="65" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1ae4872c012b7af7c7230267e5e4f7ba91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeUnary</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_Opcode opcode, Toy_ASTNode *child)</argsstring>
+        <name>Toy_emitASTNodeUnary</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" kindref="member">Toy_Opcode</ref></type>
+          <declname>opcode</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>child</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opcode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>child</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="86" column="6" declfile="compiler/include/toy_ast_node.h" declline="86" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1ae0485199701308d2d72721d3a43ebf2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeBinary</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_ASTNode *rhs, Toy_Opcode opcode)</argsstring>
+        <name>Toy_emitASTNodeBinary</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>rhs</declname>
+        </param>
+        <param>
+          <type><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" kindref="member">Toy_Opcode</ref></type>
+          <declname>opcode</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>opcode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="103" column="6" declfile="compiler/include/toy_ast_node.h" declline="103" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a5da38dacd8551e8618dd162354c6c7fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeTernary</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_ASTNode *condition, Toy_ASTNode *thenPath, Toy_ASTNode *elsePath)</argsstring>
+        <name>Toy_emitASTNodeTernary</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>condition</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>thenPath</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>elsePath</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thenPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>elsePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="127" column="6" declfile="compiler/include/toy_ast_node.h" declline="127" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a5254cd11ed9ab05082ffd466944bd791" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeGrouping</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle)</argsstring>
+        <name>Toy_emitASTNodeGrouping</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="148" column="6" declfile="compiler/include/toy_ast_node.h" declline="148" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a6041c55ca39da3fbfd88a8d716d93ccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeBlock</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle)</argsstring>
+        <name>Toy_emitASTNodeBlock</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="167" column="6" declfile="compiler/include/toy_ast_node.h" declline="167" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1aea90f72855ea9d188e138d2a3e3c3e2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeCompound</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_LiteralType literalType)</argsstring>
+        <name>Toy_emitASTNodeCompound</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870ae" kindref="member">Toy_LiteralType</ref></type>
+          <declname>literalType</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>literalType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="184" column="6" declfile="compiler/include/toy_ast_node.h" declline="184" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1af5cda2b8f11ee9e8e397579770ae110e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_setASTNodePair</definition>
+        <argsstring>(Toy_ASTNode *node, Toy_ASTNode *left, Toy_ASTNode *right)</argsstring>
+        <name>Toy_setASTNodePair</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="207" column="6" declfile="compiler/include/toy_ast_node.h" declline="207" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a7e4989785522344b3f666939b0032209" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeIndex</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_ASTNode *first, Toy_ASTNode *second, Toy_ASTNode *third)</argsstring>
+        <name>Toy_emitASTNodeIndex</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>second</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>third</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>third</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="229" column="6" declfile="compiler/include/toy_ast_node.h" declline="229" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a8b151ee2bfe064a3916520a4f523b353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeVarDecl</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_Literal identifier, Toy_Literal type, Toy_ASTNode *expression)</argsstring>
+        <name>Toy_emitASTNodeVarDecl</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>identifier</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>expression</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>expression</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="248" column="6" declfile="compiler/include/toy_ast_node.h" declline="248" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1af61ca563ab803ee58637a09f8e897c53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeFnCollection</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle)</argsstring>
+        <name>Toy_emitASTNodeFnCollection</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="269" column="6" declfile="compiler/include/toy_ast_node.h" declline="269" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a36362b272d22c3e795a8c69673ef265d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeFnDecl</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_Literal identifier, Toy_ASTNode *arguments, Toy_ASTNode *returns, Toy_ASTNode *block)</argsstring>
+        <name>Toy_emitASTNodeFnDecl</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>identifier</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>returns</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>block</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>returns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>block</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="294" column="6" declfile="compiler/include/toy_ast_node.h" declline="294" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a4e4821349329f24d2152f44303075d66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeFnCall</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_ASTNode *arguments)</argsstring>
+        <name>Toy_emitASTNodeFnCall</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="317" column="6" declfile="compiler/include/toy_ast_node.h" declline="317" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1ac932f515ebbba5bc567557400ff080ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeFnReturn</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_ASTNode *returns)</argsstring>
+        <name>Toy_emitASTNodeFnReturn</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>returns</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>returns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="338" column="6" declfile="compiler/include/toy_ast_node.h" declline="338" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a403b33ad8c2d3494315780224eadad13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeIf</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_ASTNode *condition, Toy_ASTNode *thenPath, Toy_ASTNode *elsePath)</argsstring>
+        <name>Toy_emitASTNodeIf</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>condition</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>thenPath</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>elsePath</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thenPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>elsePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="360" column="6" declfile="compiler/include/toy_ast_node.h" declline="360" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1ad38bba986c6a0545394e18320c57ba24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeWhile</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_ASTNode *condition, Toy_ASTNode *thenPath)</argsstring>
+        <name>Toy_emitASTNodeWhile</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>condition</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>thenPath</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thenPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="370" column="6" declfile="compiler/include/toy_ast_node.h" declline="370" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1aecb9ea4f64a43d1a6fdea49a23bbd094" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeFor</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_ASTNode *preClause, Toy_ASTNode *condition, Toy_ASTNode *postClause, Toy_ASTNode *thenPath)</argsstring>
+        <name>Toy_emitASTNodeFor</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>preClause</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>condition</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>postClause</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>thenPath</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>preClause</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>condition</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>postClause</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thenPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="382" column="6" declfile="compiler/include/toy_ast_node.h" declline="382" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1ac6aea74df0b0bd01c0098e48f30d6b42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeBreak</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle)</argsstring>
+        <name>Toy_emitASTNodeBreak</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="390" column="6" declfile="compiler/include/toy_ast_node.h" declline="390" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a978cb1c9563a67c698af4ea6494d82e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeContinue</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle)</argsstring>
+        <name>Toy_emitASTNodeContinue</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="398" column="6" declfile="compiler/include/toy_ast_node.h" declline="398" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1ae1d5b598c34f9c4ab0128869e1b18277" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodePrefixIncrement</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_Literal identifier)</argsstring>
+        <name>Toy_emitASTNodePrefixIncrement</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>identifier</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="462" column="6" declfile="compiler/include/toy_ast_node.h" declline="462" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1ae5e9133fb23472fc736837f722d64c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodePrefixDecrement</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_Literal identifier)</argsstring>
+        <name>Toy_emitASTNodePrefixDecrement</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>identifier</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="471" column="6" declfile="compiler/include/toy_ast_node.h" declline="471" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a2703b3ddae5d5eb290c25e959f2afbc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodePostfixIncrement</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_Literal identifier)</argsstring>
+        <name>Toy_emitASTNodePostfixIncrement</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>identifier</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="480" column="6" declfile="compiler/include/toy_ast_node.h" declline="480" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a974a509e024d8b479bf7f2e6f6ed2492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodePostfixDecrement</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_Literal identifier)</argsstring>
+        <name>Toy_emitASTNodePostfixDecrement</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>identifier</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="489" column="6" declfile="compiler/include/toy_ast_node.h" declline="489" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a3f20729c67584c1b277690e43e3f21f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodeImport</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle, Toy_Literal identifier, Toy_Literal alias)</argsstring>
+        <name>Toy_emitASTNodeImport</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>identifier</declname>
+        </param>
+        <param>
+          <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref></type>
+          <declname>alias</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>identifier</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>alias</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="540" column="6" declfile="compiler/include/toy_ast_node.h" declline="540" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a4755a210086c1794345f9c2583f7b07f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Toy_emitASTNodePass</definition>
+        <argsstring>(Toy_ASTNode **nodeHandle)</argsstring>
+        <name>Toy_emitASTNodePass</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> **</type>
+          <declname>nodeHandle</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nodeHandle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="560" column="6" declfile="compiler/include/toy_ast_node.h" declline="560" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="d3/df7/toy__ast__node_8h_1a41800f63dc16c75e800bb02b405e6c9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TOY_API void</type>
+        <definition>void Toy_freeASTNode</definition>
+        <argsstring>(Toy_ASTNode *node)</argsstring>
+        <name>Toy_freeASTNode</name>
+        <param>
+          <type><ref refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" kindref="member">Toy_ASTNode</ref> *</type>
+          <declname>node</declname>
+        </param>
+        <briefdescription>
+<para>@???@ </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_ast_node.h" line="601" column="14" declfile="compiler/include/toy_ast_node.h" declline="601" declcolumn="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@???@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TOY_AST_NODE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TOY_AST_NODE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d7/d1d/toy__common_8h" kindref="compound">toy_common.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d3/d5f/toy__literal_8h" kindref="compound">toy_literal.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/dad/toy__opcodes_8h" kindref="compound">toy_opcodes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="d8/de7/toy__token__types_8h" kindref="compound">toy_token_types.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//nodes<sp/>are<sp/>the<sp/>intermediaries<sp/>between<sp/>parsers<sp/>and<sp/>compilers</highlight></codeline>
+<codeline lineno="21" refid="d3/df7/toy__ast__node_8h_1a885768195f2ff9c0a631d6cfe226e354" refkind="member"><highlight class="comment"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_private_node</ref><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>TOY_AST_NODE_ERROR,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="30" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775af5e104bbe7ad500d7a036bb62cce1509" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775af5e104bbe7ad500d7a036bb62cce1509" kindref="member">TOY_AST_NODE_LITERAL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a2d0156014e8fa142fa679088b753b92b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a2d0156014e8fa142fa679088b753b92b" kindref="member">TOY_AST_NODE_UNARY</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775ae7430a96e83d4abaecfd64b3ff0bde91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775ae7430a96e83d4abaecfd64b3ff0bde91" kindref="member">TOY_AST_NODE_BINARY</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a380013ca8863ad7189ea1832d6b6a107" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a380013ca8863ad7189ea1832d6b6a107" kindref="member">TOY_AST_NODE_TERNARY</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775aec19412bd13d317f808bc55d3c626fd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775aec19412bd13d317f808bc55d3c626fd4" kindref="member">TOY_AST_NODE_GROUPING</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a88e8d23a5be865679d25ca36367a32a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a88e8d23a5be865679d25ca36367a32a7" kindref="member">TOY_AST_NODE_BLOCK</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a12bb06ac42a45274737234a06c7d4474" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a12bb06ac42a45274737234a06c7d4474" kindref="member">TOY_AST_NODE_COMPOUND</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a99bce9a5448a2b76bf3696d8bcd8417d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a99bce9a5448a2b76bf3696d8bcd8417d" kindref="member">TOY_AST_NODE_PAIR</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775ad054bbd34565f66563b9a2129b73ec3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775ad054bbd34565f66563b9a2129b73ec3e" kindref="member">TOY_AST_NODE_INDEX</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a3baf9ea1cdd2f53a6e3fdd1d5a3e581d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a3baf9ea1cdd2f53a6e3fdd1d5a3e581d" kindref="member">TOY_AST_NODE_VAR_DECL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a1211f14c949154c4ac1ec05ad662b87b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a1211f14c949154c4ac1ec05ad662b87b" kindref="member">TOY_AST_NODE_FN_DECL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775abfb949e3726d9ec35447c4dcf3fc45f1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775abfb949e3726d9ec35447c4dcf3fc45f1" kindref="member">TOY_AST_NODE_FN_COLLECTION</ref>,<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a436f3b91b4a8f83eaf30b634db2f3ac2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a436f3b91b4a8f83eaf30b634db2f3ac2" kindref="member">TOY_AST_NODE_FN_CALL</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a934d76ab495b6012807265f5d4748700" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a934d76ab495b6012807265f5d4748700" kindref="member">TOY_AST_NODE_FN_RETURN</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a63f24985704943c3d5d48e90bea3513a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a63f24985704943c3d5d48e90bea3513a" kindref="member">TOY_AST_NODE_IF</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775adf80ef0ce41aa1e0b02a9e9ed6c62408" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775adf80ef0ce41aa1e0b02a9e9ed6c62408" kindref="member">TOY_AST_NODE_WHILE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="46" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775abfe14e7196593d0bfd88ee8b126bccba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775abfe14e7196593d0bfd88ee8b126bccba" kindref="member">TOY_AST_NODE_FOR</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a19c252225851603a8ea6b26f036432b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a19c252225851603a8ea6b26f036432b8" kindref="member">TOY_AST_NODE_BREAK</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="48" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a0a3dec6cdcf3580b104b9fcba321aa02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a0a3dec6cdcf3580b104b9fcba321aa02" kindref="member">TOY_AST_NODE_CONTINUE</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a308d625c750fe00e5f4251041261a234" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a308d625c750fe00e5f4251041261a234" kindref="member">TOY_AST_NODE_PREFIX_INCREMENT</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="50" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a8444db84422f8db241fb7985b5a7c7ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a8444db84422f8db241fb7985b5a7c7ab" kindref="member">TOY_AST_NODE_POSTFIX_INCREMENT</ref>,<sp/></highlight></codeline>
+<codeline lineno="51" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775afa816e82088228d30993c325627beddf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775afa816e82088228d30993c325627beddf" kindref="member">TOY_AST_NODE_PREFIX_DECREMENT</ref>,<sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a26f171421dbee7287bd55bc937658949" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a26f171421dbee7287bd55bc937658949" kindref="member">TOY_AST_NODE_POSTFIX_DECREMENT</ref>,<sp/></highlight></codeline>
+<codeline lineno="53" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a342e68161fa05b91c8b195f16cf9d3a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775a342e68161fa05b91c8b195f16cf9d3a9" kindref="member">TOY_AST_NODE_IMPORT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54" refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775ab6058ca2f1854334507dbff6e23ff787" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775ab6058ca2f1854334507dbff6e23ff787" kindref="member">TOY_AST_NODE_PASS</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}<sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//literals</highlight></codeline>
+<codeline lineno="65" refid="d3/df7/toy__ast__node_8h_1a92c83f5357ab868df688ea60192ae125" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a92c83f5357ab868df688ea60192ae125" kindref="member">Toy_emitASTNodeLiteral</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>literal);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="d5/da5/structToy__NodeLiteral" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/da5/structToy__NodeLiteral" kindref="compound">Toy_NodeLiteral</ref><sp/>{</highlight></codeline>
+<codeline lineno="73" refid="d5/da5/structToy__NodeLiteral_1a4b85bda7764031ee0f5052b9c7dec32d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d5/da5/structToy__NodeLiteral_1a4b85bda7764031ee0f5052b9c7dec32d" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="74" refid="d5/da5/structToy__NodeLiteral_1af85c754e34aab7667aea1f2114a27755" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d5/da5/structToy__NodeLiteral_1af85c754e34aab7667aea1f2114a27755" kindref="member">literal</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}<sp/><ref refid="d5/da5/structToy__NodeLiteral" kindref="compound">Toy_NodeLiteral</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//unary<sp/>operator</highlight></codeline>
+<codeline lineno="86" refid="d3/df7/toy__ast__node_8h_1ae4872c012b7af7c7230267e5e4f7ba91" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1ae4872c012b7af7c7230267e5e4f7ba91" kindref="member">Toy_emitASTNodeUnary</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" kindref="member">Toy_Opcode</ref><sp/>opcode,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*child);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="d5/de1/structToy__NodeUnary" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/de1/structToy__NodeUnary" kindref="compound">Toy_NodeUnary</ref><sp/>{</highlight></codeline>
+<codeline lineno="89" refid="d5/de1/structToy__NodeUnary_1a34428999e4345d1684c5247a9020eeda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d5/de1/structToy__NodeUnary_1a34428999e4345d1684c5247a9020eeda" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="90" refid="d5/de1/structToy__NodeUnary_1a724088e67ea78413a04b5067974244de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" kindref="member">Toy_Opcode</ref><sp/><ref refid="d5/de1/structToy__NodeUnary_1a724088e67ea78413a04b5067974244de" kindref="member">opcode</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="d5/de1/structToy__NodeUnary_1af01ba4c7a2264a172470e633824ba7c2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d5/de1/structToy__NodeUnary_1af01ba4c7a2264a172470e633824ba7c2" kindref="member">child</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}<sp/><ref refid="d5/de1/structToy__NodeUnary" kindref="compound">Toy_NodeUnary</ref>;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//binary<sp/>operator</highlight></codeline>
+<codeline lineno="103" refid="d3/df7/toy__ast__node_8h_1ae0485199701308d2d72721d3a43ebf2a" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1ae0485199701308d2d72721d3a43ebf2a" kindref="member">Toy_emitASTNodeBinary</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*rhs,<sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" kindref="member">Toy_Opcode</ref><sp/>opcode);<sp/></highlight><highlight class="comment">//handled<sp/>node<sp/>becomes<sp/>lhs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="d1/d1b/structToy__NodeBinary" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d1/d1b/structToy__NodeBinary" kindref="compound">Toy_NodeBinary</ref><sp/>{</highlight></codeline>
+<codeline lineno="111" refid="d1/d1b/structToy__NodeBinary_1a58cd5764d9771e08597158af37599af0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d1/d1b/structToy__NodeBinary_1a58cd5764d9771e08597158af37599af0" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="112" refid="d1/d1b/structToy__NodeBinary_1a9c4b52e84c32752347ae92d0f971a193" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/dad/toy__opcodes_8h_1a1ef246032b7432a9e6be729623160f9b" kindref="member">Toy_Opcode</ref><sp/><ref refid="d1/d1b/structToy__NodeBinary_1a9c4b52e84c32752347ae92d0f971a193" kindref="member">opcode</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113" refid="d1/d1b/structToy__NodeBinary_1a072361fac002bc10a8a95694a3fd01de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d1/d1b/structToy__NodeBinary_1a072361fac002bc10a8a95694a3fd01de" kindref="member">left</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114" refid="d1/d1b/structToy__NodeBinary_1a9d319ece57dcc9703f3be585ede19c5b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d1/d1b/structToy__NodeBinary_1a9d319ece57dcc9703f3be585ede19c5b" kindref="member">right</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}<sp/><ref refid="d1/d1b/structToy__NodeBinary" kindref="compound">Toy_NodeBinary</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//ternary<sp/>operator</highlight></codeline>
+<codeline lineno="127" refid="d3/df7/toy__ast__node_8h_1a5da38dacd8551e8618dd162354c6c7fc" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a5da38dacd8551e8618dd162354c6c7fc" kindref="member">Toy_emitASTNodeTernary</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*condition,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*thenPath,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*elsePath);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="d3/d18/structToy__NodeTernary" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/d18/structToy__NodeTernary" kindref="compound">Toy_NodeTernary</ref><sp/>{</highlight></codeline>
+<codeline lineno="135" refid="d3/d18/structToy__NodeTernary_1afed026387545cf37a2f610e7d4b3a511" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d3/d18/structToy__NodeTernary_1afed026387545cf37a2f610e7d4b3a511" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="136" refid="d3/d18/structToy__NodeTernary_1a1562776a4670acabf45e8a9eb3890bd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d3/d18/structToy__NodeTernary_1a1562776a4670acabf45e8a9eb3890bd4" kindref="member">condition</ref>;<sp/></highlight></codeline>
+<codeline lineno="137" refid="d3/d18/structToy__NodeTernary_1a1e2aa13e3ca0e34eb91c7066ed801fbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d3/d18/structToy__NodeTernary_1a1e2aa13e3ca0e34eb91c7066ed801fbb" kindref="member">thenPath</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="138" refid="d3/d18/structToy__NodeTernary_1a6d0eb02e05281287702570618dbc199e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d3/d18/structToy__NodeTernary_1a6d0eb02e05281287702570618dbc199e" kindref="member">elsePath</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="139" refid="d3/df7/toy__ast__node_8h_1ae615ac4a897ad525e4400e756833aa58" refkind="member"><highlight class="normal">}<sp/><ref refid="d3/d18/structToy__NodeTernary" kindref="compound">Toy_NodeTernary</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">//grouping<sp/>of<sp/>other<sp/>AST<sp/>nodes</highlight></codeline>
+<codeline lineno="148" refid="d3/df7/toy__ast__node_8h_1a5254cd11ed9ab05082ffd466944bd791" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a5254cd11ed9ab05082ffd466944bd791" kindref="member">Toy_emitASTNodeGrouping</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155" refid="d1/dad/structToy__NodeGrouping" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d1/dad/structToy__NodeGrouping" kindref="compound">Toy_NodeGrouping</ref><sp/>{</highlight></codeline>
+<codeline lineno="156" refid="d1/dad/structToy__NodeGrouping_1a6a1c36b1bebf7929be955c3f394f4beb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d1/dad/structToy__NodeGrouping_1a6a1c36b1bebf7929be955c3f394f4beb" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="157" refid="d1/dad/structToy__NodeGrouping_1a0821ff1cd1d2d907920261da9863745c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d1/dad/structToy__NodeGrouping_1a0821ff1cd1d2d907920261da9863745c" kindref="member">child</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="158" refid="d3/df7/toy__ast__node_8h_1a5b6dd223c7921050026410363b9e68b4" refkind="member"><highlight class="normal">}<sp/><ref refid="d1/dad/structToy__NodeGrouping" kindref="compound">Toy_NodeGrouping</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">//block<sp/>of<sp/>statement<sp/>nodes</highlight></codeline>
+<codeline lineno="167" refid="d3/df7/toy__ast__node_8h_1a6041c55ca39da3fbfd88a8d716d93ccb" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a6041c55ca39da3fbfd88a8d716d93ccb" kindref="member">Toy_emitASTNodeBlock</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="d1/da1/structToy__NodeBlock" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d1/da1/structToy__NodeBlock" kindref="compound">Toy_NodeBlock</ref><sp/>{</highlight></codeline>
+<codeline lineno="170" refid="d1/da1/structToy__NodeBlock_1a46222e1bbc8ba42053d8986ba0c00cd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d1/da1/structToy__NodeBlock_1a46222e1bbc8ba42053d8986ba0c00cd2" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="171" refid="d1/da1/structToy__NodeBlock_1a83e771d1465f78f9b7723b915edf159d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d1/da1/structToy__NodeBlock_1a83e771d1465f78f9b7723b915edf159d" kindref="member">nodes</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="172" refid="d1/da1/structToy__NodeBlock_1aa79dcdd11020ee7598c1cecad6d2e1d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d1/da1/structToy__NodeBlock_1aa79dcdd11020ee7598c1cecad6d2e1d7" kindref="member">capacity</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="173" refid="d1/da1/structToy__NodeBlock_1ad47d653e687c6dd4371c9e397dd6bd39" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d1/da1/structToy__NodeBlock_1ad47d653e687c6dd4371c9e397dd6bd39" kindref="member">count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">}<sp/><ref refid="d1/da1/structToy__NodeBlock" kindref="compound">Toy_NodeBlock</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="comment">//compound<sp/>literals<sp/>(array,<sp/>dictionary)</highlight></codeline>
+<codeline lineno="184" refid="d3/df7/toy__ast__node_8h_1aea90f72855ea9d188e138d2a3e3c3e2b" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1aea90f72855ea9d188e138d2a3e3c3e2b" kindref="member">Toy_emitASTNodeCompound</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870ae" kindref="member">Toy_LiteralType</ref><sp/>literalType);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191" refid="d9/d8d/structToy__NodeCompound" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d9/d8d/structToy__NodeCompound" kindref="compound">Toy_NodeCompound</ref><sp/>{</highlight></codeline>
+<codeline lineno="192" refid="d9/d8d/structToy__NodeCompound_1adee0166917da5c0aa29851f7e6afef75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d9/d8d/structToy__NodeCompound_1adee0166917da5c0aa29851f7e6afef75" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193" refid="d9/d8d/structToy__NodeCompound_1a7c4fd78626b6026984b12c11b06a3144" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d5f/toy__literal_8h_1ae241e9fb03b2480fd4646587661870ae" kindref="member">Toy_LiteralType</ref><sp/><ref refid="d9/d8d/structToy__NodeCompound_1a7c4fd78626b6026984b12c11b06a3144" kindref="member">literalType</ref>;<sp/></highlight></codeline>
+<codeline lineno="194" refid="d9/d8d/structToy__NodeCompound_1ae6fa097ba4e081892154ee32e4c6ca01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d9/d8d/structToy__NodeCompound_1ae6fa097ba4e081892154ee32e4c6ca01" kindref="member">nodes</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195" refid="d9/d8d/structToy__NodeCompound_1abd9f815c4e7ac5ebfbf6a00e0ed78c2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/d8d/structToy__NodeCompound_1abd9f815c4e7ac5ebfbf6a00e0ed78c2b" kindref="member">capacity</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196" refid="d9/d8d/structToy__NodeCompound_1ac191553ede4cf1a3a3dd2cb4bd1b4669" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d9/d8d/structToy__NodeCompound_1ac191553ede4cf1a3a3dd2cb4bd1b4669" kindref="member">count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197" refid="d3/df7/toy__ast__node_8h_1ab0e30253eb7cfa053c0c5ac773ede383" refkind="member"><highlight class="normal">}<sp/><ref refid="d9/d8d/structToy__NodeCompound" kindref="compound">Toy_NodeCompound</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207" refid="d3/df7/toy__ast__node_8h_1af5cda2b8f11ee9e8e397579770ae110e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1af5cda2b8f11ee9e8e397579770ae110e" kindref="member">Toy_setASTNodePair</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*node,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*left,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*right);<sp/></highlight><highlight class="comment">//NOTE:<sp/>this<sp/>is<sp/>a<sp/>set<sp/>function,<sp/>not<sp/>an<sp/>emit<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214" refid="d4/dee/structToy__NodePair" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d4/dee/structToy__NodePair" kindref="compound">Toy_NodePair</ref><sp/>{</highlight></codeline>
+<codeline lineno="215" refid="d4/dee/structToy__NodePair_1a1ae71584aa67bdf9c637f7ed10f45b31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d4/dee/structToy__NodePair_1a1ae71584aa67bdf9c637f7ed10f45b31" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="216" refid="d4/dee/structToy__NodePair_1ad29fd973af4c0655f894d8f4b342858a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d4/dee/structToy__NodePair_1ad29fd973af4c0655f894d8f4b342858a" kindref="member">left</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217" refid="d4/dee/structToy__NodePair_1ae97c039c6716633cd72085d1ad41af91" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d4/dee/structToy__NodePair_1ae97c039c6716633cd72085d1ad41af91" kindref="member">right</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218" refid="d3/df7/toy__ast__node_8h_1a5b9b0901308555bb684b8dcfb9ffc728" refkind="member"><highlight class="normal">}<sp/><ref refid="d4/dee/structToy__NodePair" kindref="compound">Toy_NodePair</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229" refid="d3/df7/toy__ast__node_8h_1a7e4989785522344b3f666939b0032209" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a7e4989785522344b3f666939b0032209" kindref="member">Toy_emitASTNodeIndex</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*first,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*second,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*third);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="d4/d04/structToy__NodeIndex" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d4/d04/structToy__NodeIndex" kindref="compound">Toy_NodeIndex</ref><sp/>{</highlight></codeline>
+<codeline lineno="232" refid="d4/d04/structToy__NodeIndex_1af7d557730ca1790eb3d6f8e1340742ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d4/d04/structToy__NodeIndex_1af7d557730ca1790eb3d6f8e1340742ac" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="233" refid="d4/d04/structToy__NodeIndex_1aec5bc70d12c26a085f8e2096e93b228e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d4/d04/structToy__NodeIndex_1aec5bc70d12c26a085f8e2096e93b228e" kindref="member">first</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="234" refid="d4/d04/structToy__NodeIndex_1a1979656ea9ccd4b0270790991f3a947c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d4/d04/structToy__NodeIndex_1a1979656ea9ccd4b0270790991f3a947c" kindref="member">second</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="235" refid="d4/d04/structToy__NodeIndex_1a561d27a84fd19652fb8c27f21da527f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d4/d04/structToy__NodeIndex_1a561d27a84fd19652fb8c27f21da527f7" kindref="member">third</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="236"><highlight class="normal">}<sp/><ref refid="d4/d04/structToy__NodeIndex" kindref="compound">Toy_NodeIndex</ref>;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="comment">//variable<sp/>declaration</highlight></codeline>
+<codeline lineno="248" refid="d3/df7/toy__ast__node_8h_1a8b151ee2bfe064a3916520a4f523b353" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a8b151ee2bfe064a3916520a4f523b353" kindref="member">Toy_emitASTNodeVarDecl</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>identifier,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>type,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*expression);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255" refid="d9/d84/structToy__NodeVarDecl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d9/d84/structToy__NodeVarDecl" kindref="compound">Toy_NodeVarDecl</ref><sp/>{</highlight></codeline>
+<codeline lineno="256" refid="d9/d84/structToy__NodeVarDecl_1acba9ff4d4af2618f330811dc4c757c11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d9/d84/structToy__NodeVarDecl_1acba9ff4d4af2618f330811dc4c757c11" kindref="member">type</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="257" refid="d9/d84/structToy__NodeVarDecl_1a241d2f8fb4d15c9b750cea467bf778ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d9/d84/structToy__NodeVarDecl_1a241d2f8fb4d15c9b750cea467bf778ea" kindref="member">identifier</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="258" refid="d9/d84/structToy__NodeVarDecl_1aea6ca83fc93c42995ddcbda4ad17f774" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d9/d84/structToy__NodeVarDecl_1aea6ca83fc93c42995ddcbda4ad17f774" kindref="member">typeLiteral</ref>;<sp/></highlight></codeline>
+<codeline lineno="259" refid="d9/d84/structToy__NodeVarDecl_1ac7144646f109a29b4beb23c7580b107b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d9/d84/structToy__NodeVarDecl_1ac7144646f109a29b4beb23c7580b107b" kindref="member">expression</ref>;<sp/></highlight></codeline>
+<codeline lineno="260" refid="d3/df7/toy__ast__node_8h_1a31c3578909246c4e08004ccc34ffb1a2" refkind="member"><highlight class="normal">}<sp/><ref refid="d9/d84/structToy__NodeVarDecl" kindref="compound">Toy_NodeVarDecl</ref>;</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight><highlight class="comment">//NOTE:<sp/>fnCollection<sp/>is<sp/>used<sp/>by<sp/>fnDecl,<sp/>fnCall<sp/>and<sp/>fnReturn</highlight></codeline>
+<codeline lineno="269" refid="d3/df7/toy__ast__node_8h_1af61ca563ab803ee58637a09f8e897c53" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1af61ca563ab803ee58637a09f8e897c53" kindref="member">Toy_emitASTNodeFnCollection</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276" refid="d6/df7/structToy__NodeFnCollection" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d6/df7/structToy__NodeFnCollection" kindref="compound">Toy_NodeFnCollection</ref><sp/>{</highlight></codeline>
+<codeline lineno="277" refid="d6/df7/structToy__NodeFnCollection_1a1a9572672c3cdce77cf344c2c1037067" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d6/df7/structToy__NodeFnCollection_1a1a9572672c3cdce77cf344c2c1037067" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="278" refid="d6/df7/structToy__NodeFnCollection_1a4e5a97e7c327e693e6b6423280cdb223" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d6/df7/structToy__NodeFnCollection_1a4e5a97e7c327e693e6b6423280cdb223" kindref="member">nodes</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="279" refid="d6/df7/structToy__NodeFnCollection_1af6cf5795ab4dd0b420024b085834d5e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d6/df7/structToy__NodeFnCollection_1af6cf5795ab4dd0b420024b085834d5e8" kindref="member">capacity</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="280" refid="d6/df7/structToy__NodeFnCollection_1a5fb5c11fe72a760bbd0491296d82020c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="d6/df7/structToy__NodeFnCollection_1a5fb5c11fe72a760bbd0491296d82020c" kindref="member">count</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="281"><highlight class="normal">}<sp/><ref refid="d6/df7/structToy__NodeFnCollection" kindref="compound">Toy_NodeFnCollection</ref>;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="comment">//function<sp/>declaration</highlight></codeline>
+<codeline lineno="294" refid="d3/df7/toy__ast__node_8h_1a36362b272d22c3e795a8c69673ef265d" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a36362b272d22c3e795a8c69673ef265d" kindref="member">Toy_emitASTNodeFnDecl</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>identifier,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*arguments,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*returns,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*block);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="d5/dce/structToy__NodeFnDecl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/dce/structToy__NodeFnDecl" kindref="compound">Toy_NodeFnDecl</ref><sp/>{</highlight></codeline>
+<codeline lineno="302" refid="d5/dce/structToy__NodeFnDecl_1a5d81dc3cd2215c975ad1b6dc5368b447" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d5/dce/structToy__NodeFnDecl_1a5d81dc3cd2215c975ad1b6dc5368b447" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="303" refid="d5/dce/structToy__NodeFnDecl_1a3110bf20817ac292b5df8784566918d1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d5/dce/structToy__NodeFnDecl_1a3110bf20817ac292b5df8784566918d1" kindref="member">identifier</ref>;<sp/></highlight></codeline>
+<codeline lineno="304" refid="d5/dce/structToy__NodeFnDecl_1ad07bd8f2f240b737b70e89522751a633" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d5/dce/structToy__NodeFnDecl_1ad07bd8f2f240b737b70e89522751a633" kindref="member">arguments</ref>;<sp/></highlight></codeline>
+<codeline lineno="305" refid="d5/dce/structToy__NodeFnDecl_1a696ff2399f4768e9f8b0a31dfc39a8fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d5/dce/structToy__NodeFnDecl_1a696ff2399f4768e9f8b0a31dfc39a8fc" kindref="member">returns</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="306" refid="d5/dce/structToy__NodeFnDecl_1a11d5ec2019cc8a2f69dec5bddc79e934" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d5/dce/structToy__NodeFnDecl_1a11d5ec2019cc8a2f69dec5bddc79e934" kindref="member">block</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="307" refid="d3/df7/toy__ast__node_8h_1a2f9d5859b24fc94676b5dfae2df7bb68" refkind="member"><highlight class="normal">}<sp/><ref refid="d5/dce/structToy__NodeFnDecl" kindref="compound">Toy_NodeFnDecl</ref>;</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="comment">//function<sp/>call</highlight></codeline>
+<codeline lineno="317" refid="d3/df7/toy__ast__node_8h_1a4e4821349329f24d2152f44303075d66" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a4e4821349329f24d2152f44303075d66" kindref="member">Toy_emitASTNodeFnCall</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*arguments);</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324" refid="dc/db5/structToy__NodeFnCall" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="dc/db5/structToy__NodeFnCall" kindref="compound">Toy_NodeFnCall</ref><sp/>{</highlight></codeline>
+<codeline lineno="325" refid="dc/db5/structToy__NodeFnCall_1a296b600167c3388b69329b82c04477fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="dc/db5/structToy__NodeFnCall_1a296b600167c3388b69329b82c04477fe" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="326" refid="dc/db5/structToy__NodeFnCall_1a373cd79b233aeed84f58f7e55aad4014" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="dc/db5/structToy__NodeFnCall_1a373cd79b233aeed84f58f7e55aad4014" kindref="member">arguments</ref>;<sp/></highlight></codeline>
+<codeline lineno="327" refid="dc/db5/structToy__NodeFnCall_1a7bc6917a72e9b46fcb390faa6e203335" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="dc/db5/structToy__NodeFnCall_1a7bc6917a72e9b46fcb390faa6e203335" kindref="member">argumentCount</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//NOTE:<sp/>leave<sp/>this,<sp/>so<sp/>it<sp/>can<sp/>be<sp/>hacked<sp/>by<sp/>dottify()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328" refid="d3/df7/toy__ast__node_8h_1a80aaeaaab5453edbe9b9a5be28c35742" refkind="member"><highlight class="normal">}<sp/><ref refid="dc/db5/structToy__NodeFnCall" kindref="compound">Toy_NodeFnCall</ref>;</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight><highlight class="comment">//function<sp/>return</highlight></codeline>
+<codeline lineno="338" refid="d3/df7/toy__ast__node_8h_1ac932f515ebbba5bc567557400ff080ee" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1ac932f515ebbba5bc567557400ff080ee" kindref="member">Toy_emitASTNodeFnReturn</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*returns);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="345" refid="df/d54/structToy__NodeFnReturn" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="df/d54/structToy__NodeFnReturn" kindref="compound">Toy_NodeFnReturn</ref><sp/>{</highlight></codeline>
+<codeline lineno="346" refid="df/d54/structToy__NodeFnReturn_1a03ff2ae44cecb1a11119340a39185c8b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="df/d54/structToy__NodeFnReturn_1a03ff2ae44cecb1a11119340a39185c8b" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="347" refid="df/d54/structToy__NodeFnReturn_1a89d1beb019f23b2c569c263028d075c3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="df/d54/structToy__NodeFnReturn_1a89d1beb019f23b2c569c263028d075c3" kindref="member">returns</ref>;<sp/></highlight></codeline>
+<codeline lineno="348" refid="d3/df7/toy__ast__node_8h_1ac96430e867b52f25798846baa1af1d72" refkind="member"><highlight class="normal">}<sp/><ref refid="df/d54/structToy__NodeFnReturn" kindref="compound">Toy_NodeFnReturn</ref>;</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight><highlight class="comment">//control<sp/>flow<sp/>path<sp/>-<sp/>if-else,<sp/>while,<sp/>for,<sp/>break,<sp/>continue,<sp/>return</highlight></codeline>
+<codeline lineno="360" refid="d3/df7/toy__ast__node_8h_1a403b33ad8c2d3494315780224eadad13" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a403b33ad8c2d3494315780224eadad13" kindref="member">Toy_emitASTNodeIf</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*condition,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*thenPath,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*elsePath);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370" refid="d3/df7/toy__ast__node_8h_1ad38bba986c6a0545394e18320c57ba24" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1ad38bba986c6a0545394e18320c57ba24" kindref="member">Toy_emitASTNodeWhile</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*condition,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*thenPath);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"></highlight></codeline>
+<codeline lineno="382" refid="d3/df7/toy__ast__node_8h_1aecb9ea4f64a43d1a6fdea49a23bbd094" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1aecb9ea4f64a43d1a6fdea49a23bbd094" kindref="member">Toy_emitASTNodeFor</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*preClause,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*condition,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*postClause,<sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*thenPath);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390" refid="d3/df7/toy__ast__node_8h_1ac6aea74df0b0bd01c0098e48f30d6b42" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1ac6aea74df0b0bd01c0098e48f30d6b42" kindref="member">Toy_emitASTNodeBreak</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle);</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"></highlight></codeline>
+<codeline lineno="398" refid="d3/df7/toy__ast__node_8h_1a978cb1c9563a67c698af4ea6494d82e8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a978cb1c9563a67c698af4ea6494d82e8" kindref="member">Toy_emitASTNodeContinue</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405" refid="da/d7c/structToy__NodeIf" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="da/d7c/structToy__NodeIf" kindref="compound">Toy_NodeIf</ref><sp/>{</highlight></codeline>
+<codeline lineno="406" refid="da/d7c/structToy__NodeIf_1afb403d4839453fdd60d729ee1eb7b1d7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="da/d7c/structToy__NodeIf_1afb403d4839453fdd60d729ee1eb7b1d7" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="407" refid="da/d7c/structToy__NodeIf_1af30cc9402f17aa2e862fdb1249a0e55c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="da/d7c/structToy__NodeIf_1af30cc9402f17aa2e862fdb1249a0e55c" kindref="member">condition</ref>;<sp/></highlight></codeline>
+<codeline lineno="408" refid="da/d7c/structToy__NodeIf_1a9e3159c617511de4d23abae3d6640f49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="da/d7c/structToy__NodeIf_1a9e3159c617511de4d23abae3d6640f49" kindref="member">thenPath</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="409" refid="da/d7c/structToy__NodeIf_1a946cc95ecb22d127e2ad14215753e9e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="da/d7c/structToy__NodeIf_1a946cc95ecb22d127e2ad14215753e9e4" kindref="member">elsePath</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="410" refid="d3/df7/toy__ast__node_8h_1ab190849254d31291f27916dbe7ff0318" refkind="member"><highlight class="normal">}<sp/><ref refid="da/d7c/structToy__NodeIf" kindref="compound">Toy_NodeIf</ref>;</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"></highlight></codeline>
+<codeline lineno="417" refid="d2/d3a/structToy__NodeWhile" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d2/d3a/structToy__NodeWhile" kindref="compound">Toy_NodeWhile</ref><sp/>{</highlight></codeline>
+<codeline lineno="418" refid="d2/d3a/structToy__NodeWhile_1a80a67681b051536a12553ed826d7d68b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d2/d3a/structToy__NodeWhile_1a80a67681b051536a12553ed826d7d68b" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="419" refid="d2/d3a/structToy__NodeWhile_1ab1dd1b481069ad36d069cf11eb0081e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d2/d3a/structToy__NodeWhile_1ab1dd1b481069ad36d069cf11eb0081e7" kindref="member">condition</ref>;<sp/></highlight></codeline>
+<codeline lineno="420" refid="d2/d3a/structToy__NodeWhile_1a224e9c231b28a8620598a749a90e0a42" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d2/d3a/structToy__NodeWhile_1a224e9c231b28a8620598a749a90e0a42" kindref="member">thenPath</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="421" refid="d3/df7/toy__ast__node_8h_1a3005a1c59079e17b7802bef72f09800f" refkind="member"><highlight class="normal">}<sp/><ref refid="d2/d3a/structToy__NodeWhile" kindref="compound">Toy_NodeWhile</ref>;</highlight></codeline>
+<codeline lineno="422"><highlight class="normal"></highlight></codeline>
+<codeline lineno="428" refid="d5/d2a/structToy__NodeFor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d5/d2a/structToy__NodeFor" kindref="compound">Toy_NodeFor</ref><sp/>{</highlight></codeline>
+<codeline lineno="429" refid="d5/d2a/structToy__NodeFor_1afe3b122e7dce0b01799e2c3da1b4c5da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d5/d2a/structToy__NodeFor_1afe3b122e7dce0b01799e2c3da1b4c5da" kindref="member">type</ref>;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="430" refid="d5/d2a/structToy__NodeFor_1a48022dc61540d2e26d59c54d83ca60c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d5/d2a/structToy__NodeFor_1a48022dc61540d2e26d59c54d83ca60c9" kindref="member">preClause</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="431" refid="d5/d2a/structToy__NodeFor_1a0d3f183411f4d5f9a9041ee463356d7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d5/d2a/structToy__NodeFor_1a0d3f183411f4d5f9a9041ee463356d7a" kindref="member">condition</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="432" refid="d5/d2a/structToy__NodeFor_1a90910ce01e7f249e5b30ae8d8a466dcf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d5/d2a/structToy__NodeFor_1a90910ce01e7f249e5b30ae8d8a466dcf" kindref="member">postClause</ref>;<sp/></highlight></codeline>
+<codeline lineno="433" refid="d5/d2a/structToy__NodeFor_1a9b050a1f9e6ad7d944bf19fb71386d5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*<ref refid="d5/d2a/structToy__NodeFor_1a9b050a1f9e6ad7d944bf19fb71386d5c" kindref="member">thenPath</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="434" refid="d3/df7/toy__ast__node_8h_1a480c6b94c077e99703f8bf6c08db7312" refkind="member"><highlight class="normal">}<sp/><ref refid="d5/d2a/structToy__NodeFor" kindref="compound">Toy_NodeFor</ref>;</highlight></codeline>
+<codeline lineno="435"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441" refid="d7/da7/structToy__NodeBreak" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d7/da7/structToy__NodeBreak" kindref="compound">Toy_NodeBreak</ref><sp/>{</highlight></codeline>
+<codeline lineno="442" refid="d7/da7/structToy__NodeBreak_1adeb4353a7be90cc3b091e05136d34d17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d7/da7/structToy__NodeBreak_1adeb4353a7be90cc3b091e05136d34d17" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="443" refid="d3/df7/toy__ast__node_8h_1a899910fca96cb2373f7696ae966a64a8" refkind="member"><highlight class="normal">}<sp/><ref refid="d7/da7/structToy__NodeBreak" kindref="compound">Toy_NodeBreak</ref>;</highlight></codeline>
+<codeline lineno="444"><highlight class="normal"></highlight></codeline>
+<codeline lineno="450" refid="d3/db6/structToy__NodeContinue" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d3/db6/structToy__NodeContinue" kindref="compound">Toy_NodeContinue</ref><sp/>{</highlight></codeline>
+<codeline lineno="451" refid="d3/db6/structToy__NodeContinue_1a098f3bae435a04c7ca4aec3faa4ab8ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d3/db6/structToy__NodeContinue_1a098f3bae435a04c7ca4aec3faa4ab8ea" kindref="member">type</ref>;<sp/></highlight></codeline>
+<codeline lineno="452" refid="d3/df7/toy__ast__node_8h_1ab799b987f2cf760d04a4714acb70b9fd" refkind="member"><highlight class="normal">}<sp/><ref refid="d3/db6/structToy__NodeContinue" kindref="compound">Toy_NodeContinue</ref>;</highlight></codeline>
+<codeline lineno="453"><highlight class="normal"></highlight></codeline>
+<codeline lineno="454"><highlight class="normal"></highlight><highlight class="comment">//pre-post<sp/>increment/decrement</highlight></codeline>
+<codeline lineno="462" refid="d3/df7/toy__ast__node_8h_1ae1d5b598c34f9c4ab0128869e1b18277" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1ae1d5b598c34f9c4ab0128869e1b18277" kindref="member">Toy_emitASTNodePrefixIncrement</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>identifier);</highlight></codeline>
+<codeline lineno="463"><highlight class="normal"></highlight></codeline>
+<codeline lineno="471" refid="d3/df7/toy__ast__node_8h_1ae5e9133fb23472fc736837f722d64c1f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1ae5e9133fb23472fc736837f722d64c1f" kindref="member">Toy_emitASTNodePrefixDecrement</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>identifier);</highlight></codeline>
+<codeline lineno="472"><highlight class="normal"></highlight></codeline>
+<codeline lineno="480" refid="d3/df7/toy__ast__node_8h_1a2703b3ddae5d5eb290c25e959f2afbc4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a2703b3ddae5d5eb290c25e959f2afbc4" kindref="member">Toy_emitASTNodePostfixIncrement</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>identifier);</highlight></codeline>
+<codeline lineno="481"><highlight class="normal"></highlight></codeline>
+<codeline lineno="489" refid="d3/df7/toy__ast__node_8h_1a974a509e024d8b479bf7f2e6f6ed2492" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a974a509e024d8b479bf7f2e6f6ed2492" kindref="member">Toy_emitASTNodePostfixDecrement</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>identifier);</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"></highlight></codeline>
+<codeline lineno="496" refid="db/dca/structToy__NodePrefixIncrement" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="db/dca/structToy__NodePrefixIncrement" kindref="compound">Toy_NodePrefixIncrement</ref><sp/>{</highlight></codeline>
+<codeline lineno="497" refid="db/dca/structToy__NodePrefixIncrement_1af0dcfa6c7d3cc201ad596bccabf7767e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="db/dca/structToy__NodePrefixIncrement_1af0dcfa6c7d3cc201ad596bccabf7767e" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="498" refid="db/dca/structToy__NodePrefixIncrement_1a211ea665a8eb7dfb963db22027c68202" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="db/dca/structToy__NodePrefixIncrement_1a211ea665a8eb7dfb963db22027c68202" kindref="member">identifier</ref>;<sp/></highlight></codeline>
+<codeline lineno="499" refid="d3/df7/toy__ast__node_8h_1ab193f256e72ddb3428465c54e27d9679" refkind="member"><highlight class="normal">}<sp/><ref refid="db/dca/structToy__NodePrefixIncrement" kindref="compound">Toy_NodePrefixIncrement</ref>;</highlight></codeline>
+<codeline lineno="500"><highlight class="normal"></highlight></codeline>
+<codeline lineno="506" refid="de/de1/structToy__NodePrefixDecrement" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="de/de1/structToy__NodePrefixDecrement" kindref="compound">Toy_NodePrefixDecrement</ref><sp/>{</highlight></codeline>
+<codeline lineno="507" refid="de/de1/structToy__NodePrefixDecrement_1a013615637a1b4ebabfbde574b5d9fc9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="de/de1/structToy__NodePrefixDecrement_1a013615637a1b4ebabfbde574b5d9fc9c" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="508" refid="de/de1/structToy__NodePrefixDecrement_1a80d074b4cecd86cf019078c036ceab84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="de/de1/structToy__NodePrefixDecrement_1a80d074b4cecd86cf019078c036ceab84" kindref="member">identifier</ref>;<sp/></highlight></codeline>
+<codeline lineno="509" refid="d3/df7/toy__ast__node_8h_1a386b01f2855a4b24ae279e5275a33544" refkind="member"><highlight class="normal">}<sp/><ref refid="de/de1/structToy__NodePrefixDecrement" kindref="compound">Toy_NodePrefixDecrement</ref>;</highlight></codeline>
+<codeline lineno="510"><highlight class="normal"></highlight></codeline>
+<codeline lineno="516" refid="df/d6e/structToy__NodePostfixIncrement" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="df/d6e/structToy__NodePostfixIncrement" kindref="compound">Toy_NodePostfixIncrement</ref><sp/>{</highlight></codeline>
+<codeline lineno="517" refid="df/d6e/structToy__NodePostfixIncrement_1a0a8e1b71f71c246192f3eb02dd9e35f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="df/d6e/structToy__NodePostfixIncrement_1a0a8e1b71f71c246192f3eb02dd9e35f3" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="518" refid="df/d6e/structToy__NodePostfixIncrement_1a36bdd439c61b01f2a1440a2431af22b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="df/d6e/structToy__NodePostfixIncrement_1a36bdd439c61b01f2a1440a2431af22b4" kindref="member">identifier</ref>;<sp/></highlight></codeline>
+<codeline lineno="519" refid="d3/df7/toy__ast__node_8h_1af40edd7ce460d1c677a3ee7760ce6e76" refkind="member"><highlight class="normal">}<sp/><ref refid="df/d6e/structToy__NodePostfixIncrement" kindref="compound">Toy_NodePostfixIncrement</ref>;</highlight></codeline>
+<codeline lineno="520"><highlight class="normal"></highlight></codeline>
+<codeline lineno="526" refid="d6/df8/structToy__NodePostfixDecrement" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d6/df8/structToy__NodePostfixDecrement" kindref="compound">Toy_NodePostfixDecrement</ref><sp/>{</highlight></codeline>
+<codeline lineno="527" refid="d6/df8/structToy__NodePostfixDecrement_1a6e2daec9554d26310bc34e8ed6cf6afd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d6/df8/structToy__NodePostfixDecrement_1a6e2daec9554d26310bc34e8ed6cf6afd" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="528" refid="d6/df8/structToy__NodePostfixDecrement_1a570d90b2ec603dfd2efd98239978510a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d6/df8/structToy__NodePostfixDecrement_1a570d90b2ec603dfd2efd98239978510a" kindref="member">identifier</ref>;<sp/></highlight></codeline>
+<codeline lineno="529" refid="d3/df7/toy__ast__node_8h_1a337b4d333ef95f988265a11ea246f0a4" refkind="member"><highlight class="normal">}<sp/><ref refid="d6/df8/structToy__NodePostfixDecrement" kindref="compound">Toy_NodePostfixDecrement</ref>;</highlight></codeline>
+<codeline lineno="530"><highlight class="normal"></highlight></codeline>
+<codeline lineno="531"><highlight class="normal"></highlight><highlight class="comment">//import<sp/>a<sp/>library</highlight></codeline>
+<codeline lineno="540" refid="d3/df7/toy__ast__node_8h_1a3f20729c67584c1b277690e43e3f21f3" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3f20729c67584c1b277690e43e3f21f3" kindref="member">Toy_emitASTNodeImport</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>identifier,<sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/>alias);</highlight></codeline>
+<codeline lineno="541"><highlight class="normal"></highlight></codeline>
+<codeline lineno="547" refid="d9/dab/structToy__NodeImport" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="d9/dab/structToy__NodeImport" kindref="compound">Toy_NodeImport</ref><sp/>{</highlight></codeline>
+<codeline lineno="548" refid="d9/dab/structToy__NodeImport_1af7c7f2a43fb964629f41ca81797d2339" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d9/dab/structToy__NodeImport_1af7c7f2a43fb964629f41ca81797d2339" kindref="member">type</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="549" refid="d9/dab/structToy__NodeImport_1a418e7fcb6499e6cb010cc0ada2bece8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d9/dab/structToy__NodeImport_1a418e7fcb6499e6cb010cc0ada2bece8f" kindref="member">identifier</ref>;<sp/></highlight></codeline>
+<codeline lineno="550" refid="d9/dab/structToy__NodeImport_1a2cea4521308827ee628e7550f2e6b85c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref><sp/><ref refid="d9/dab/structToy__NodeImport_1a2cea4521308827ee628e7550f2e6b85c" kindref="member">alias</ref>;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="551" refid="d3/df7/toy__ast__node_8h_1a326ee19a5170d59984e29a53ccb012cf" refkind="member"><highlight class="normal">}<sp/><ref refid="d9/dab/structToy__NodeImport" kindref="compound">Toy_NodeImport</ref>;</highlight></codeline>
+<codeline lineno="552"><highlight class="normal"></highlight></codeline>
+<codeline lineno="553"><highlight class="normal"></highlight><highlight class="comment">//for<sp/>doing<sp/>nothing</highlight></codeline>
+<codeline lineno="560" refid="d3/df7/toy__ast__node_8h_1a4755a210086c1794345f9c2583f7b07f" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a4755a210086c1794345f9c2583f7b07f" kindref="member">Toy_emitASTNodePass</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>**nodeHandle);</highlight></codeline>
+<codeline lineno="561"><highlight class="normal"></highlight></codeline>
+<codeline lineno="567" refid="d8/dcd/unionToy__private__node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">union<sp/></highlight><highlight class="normal"><ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_private_node</ref><sp/>{</highlight></codeline>
+<codeline lineno="568" refid="d8/dcd/unionToy__private__node_1a51e4706cf257c395008b01607c68b70d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/df7/toy__ast__node_8h_1a3332bba26704c5d0f42d70784367d775" kindref="member">Toy_ASTNodeType</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a51e4706cf257c395008b01607c68b70d" kindref="member">type</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="569" refid="d8/dcd/unionToy__private__node_1a2b2dcb1198eddc715871846edf72d223" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/da5/structToy__NodeLiteral" kindref="compound">Toy_NodeLiteral</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a2b2dcb1198eddc715871846edf72d223" kindref="member">atomic</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="570" refid="d8/dcd/unionToy__private__node_1ae10510bccc386dec5725f650080cfd3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/de1/structToy__NodeUnary" kindref="compound">Toy_NodeUnary</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1ae10510bccc386dec5725f650080cfd3c" kindref="member">unary</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="571" refid="d8/dcd/unionToy__private__node_1a58850c4457dc56349ab3a9794a89ac69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/d1b/structToy__NodeBinary" kindref="compound">Toy_NodeBinary</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a58850c4457dc56349ab3a9794a89ac69" kindref="member">binary</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="572" refid="d8/dcd/unionToy__private__node_1abbf9620e8de061523c5767b06a563449" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/d18/structToy__NodeTernary" kindref="compound">Toy_NodeTernary</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1abbf9620e8de061523c5767b06a563449" kindref="member">ternary</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="573" refid="d8/dcd/unionToy__private__node_1a1c11b69aea7d106f219766b4c087e25f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/dad/structToy__NodeGrouping" kindref="compound">Toy_NodeGrouping</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a1c11b69aea7d106f219766b4c087e25f" kindref="member">grouping</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="574" refid="d8/dcd/unionToy__private__node_1a5b58b9802eb439784ffc2486f029866f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d1/da1/structToy__NodeBlock" kindref="compound">Toy_NodeBlock</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a5b58b9802eb439784ffc2486f029866f" kindref="member">block</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="575" refid="d8/dcd/unionToy__private__node_1a7ddd1bf490c8955b70b5d2c919c35fd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d8d/structToy__NodeCompound" kindref="compound">Toy_NodeCompound</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a7ddd1bf490c8955b70b5d2c919c35fd9" kindref="member">compound</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="576" refid="d8/dcd/unionToy__private__node_1ab41af4ddf89d9e40322653d051331da2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/dee/structToy__NodePair" kindref="compound">Toy_NodePair</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1ab41af4ddf89d9e40322653d051331da2" kindref="member">pair</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="577" refid="d8/dcd/unionToy__private__node_1ac5771cb8b3766d669fd44f70cfe4a81c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d4/d04/structToy__NodeIndex" kindref="compound">Toy_NodeIndex</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1ac5771cb8b3766d669fd44f70cfe4a81c" kindref="member">index</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="578" refid="d8/dcd/unionToy__private__node_1aa94233714c3604159195d9f5b45d099a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/d84/structToy__NodeVarDecl" kindref="compound">Toy_NodeVarDecl</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1aa94233714c3604159195d9f5b45d099a" kindref="member">varDecl</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="579" refid="d8/dcd/unionToy__private__node_1ab704564e33f38af4494572cae768c676" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d6/df7/structToy__NodeFnCollection" kindref="compound">Toy_NodeFnCollection</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1ab704564e33f38af4494572cae768c676" kindref="member">fnCollection</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="580" refid="d8/dcd/unionToy__private__node_1a81f8cfacb9756133a39029fa10ef0472" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/dce/structToy__NodeFnDecl" kindref="compound">Toy_NodeFnDecl</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a81f8cfacb9756133a39029fa10ef0472" kindref="member">fnDecl</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="581" refid="d8/dcd/unionToy__private__node_1a9ac1734257e46dac713ca137192fb814" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dc/db5/structToy__NodeFnCall" kindref="compound">Toy_NodeFnCall</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a9ac1734257e46dac713ca137192fb814" kindref="member">fnCall</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="582" refid="d8/dcd/unionToy__private__node_1a064b3c68eb7d17917e09efa104052b8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/d54/structToy__NodeFnReturn" kindref="compound">Toy_NodeFnReturn</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a064b3c68eb7d17917e09efa104052b8d" kindref="member">returns</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="583" refid="d8/dcd/unionToy__private__node_1a42518d103309923824bd81b3c481d420" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="da/d7c/structToy__NodeIf" kindref="compound">Toy_NodeIf</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a42518d103309923824bd81b3c481d420" kindref="member">pathIf</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="584" refid="d8/dcd/unionToy__private__node_1aa40432f3273417c90141050fb9b4fd40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d2/d3a/structToy__NodeWhile" kindref="compound">Toy_NodeWhile</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1aa40432f3273417c90141050fb9b4fd40" kindref="member">pathWhile</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="585" refid="d8/dcd/unionToy__private__node_1abe3741688e91a8615b231c4f37ccedda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d5/d2a/structToy__NodeFor" kindref="compound">Toy_NodeFor</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1abe3741688e91a8615b231c4f37ccedda" kindref="member">pathFor</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="586" refid="d8/dcd/unionToy__private__node_1aa08f06c4260feb74b13b708472bfe5f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d7/da7/structToy__NodeBreak" kindref="compound">Toy_NodeBreak</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1aa08f06c4260feb74b13b708472bfe5f9" kindref="member">pathBreak</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="587" refid="d8/dcd/unionToy__private__node_1a812e9ee26945f48467e6b4b531e2e570" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d3/db6/structToy__NodeContinue" kindref="compound">Toy_NodeContinue</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a812e9ee26945f48467e6b4b531e2e570" kindref="member">pathContinue</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="588" refid="d8/dcd/unionToy__private__node_1aec8a1019071e2f306b48f13c64d1cd99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="db/dca/structToy__NodePrefixIncrement" kindref="compound">Toy_NodePrefixIncrement</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1aec8a1019071e2f306b48f13c64d1cd99" kindref="member">prefixIncrement</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="589" refid="d8/dcd/unionToy__private__node_1a4d5d6307c5faa5acad6544a8cdf6ef6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="de/de1/structToy__NodePrefixDecrement" kindref="compound">Toy_NodePrefixDecrement</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a4d5d6307c5faa5acad6544a8cdf6ef6b" kindref="member">prefixDecrement</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="590" refid="d8/dcd/unionToy__private__node_1aec8d18636d7570024a91e9cafc91ae7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="df/d6e/structToy__NodePostfixIncrement" kindref="compound">Toy_NodePostfixIncrement</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1aec8d18636d7570024a91e9cafc91ae7b" kindref="member">postfixIncrement</ref>;<sp/></highlight></codeline>
+<codeline lineno="591" refid="d8/dcd/unionToy__private__node_1a65e1a282cab468e4df7731673f1ec94d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d6/df8/structToy__NodePostfixDecrement" kindref="compound">Toy_NodePostfixDecrement</ref><sp/><ref refid="d8/dcd/unionToy__private__node_1a65e1a282cab468e4df7731673f1ec94d" kindref="member">postfixDecrement</ref>;<sp/></highlight></codeline>
+<codeline lineno="592" refid="d8/dcd/unionToy__private__node_1aee78d6fd528281768468492cdb66f083" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d9/dab/structToy__NodeImport" kindref="compound">Toy_NodeImport</ref><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="593"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="594"><highlight class="normal"></highlight></codeline>
+<codeline lineno="601" refid="d3/df7/toy__ast__node_8h_1a41800f63dc16c75e800bb02b405e6c9b" refkind="member"><highlight class="normal">TOY_API<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d3/df7/toy__ast__node_8h_1a41800f63dc16c75e800bb02b405e6c9b" kindref="member">Toy_freeASTNode</ref>(<ref refid="d8/dcd/unionToy__private__node" kindref="compound">Toy_ASTNode</ref><sp/>*node);</highlight></codeline>
+<codeline lineno="602"><highlight class="normal"></highlight></codeline>
+<codeline lineno="603"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>TOY_AST_NODE_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="compiler/include/toy_ast_node.h"/>
+  </compounddef>
+</doxygen>

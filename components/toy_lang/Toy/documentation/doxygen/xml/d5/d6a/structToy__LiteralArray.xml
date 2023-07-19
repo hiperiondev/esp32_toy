@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d5/d6a/structToy__LiteralArray" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_LiteralArray</compoundname>
+    <includes refid="d0/dfc/toy__literal__array_8h" local="no">toy_literal_array.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d5/d6a/structToy__LiteralArray_1a13be77c2d51ef60c330823d80aa17be4" prot="public" static="no" mutable="no">
+        <type><ref refid="d3/da0/structToy__Literal" kindref="compound">Toy_Literal</ref> *</type>
+        <definition>Toy_Literal* Toy_LiteralArray::literals</definition>
+        <argsstring></argsstring>
+        <name>literals</name>
+        <qualifiedname>Toy_LiteralArray::literals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="21" column="17" bodyfile="common/include/toy_literal_array.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d6a/structToy__LiteralArray_1af09ac41c521e3d673848d4d019f2ab0e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_LiteralArray::capacity</definition>
+        <argsstring></argsstring>
+        <name>capacity</name>
+        <qualifiedname>Toy_LiteralArray::capacity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="22" column="9" bodyfile="common/include/toy_literal_array.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d5/d6a/structToy__LiteralArray_1a7921894446c581c39ff12a9499c67154" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_LiteralArray::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <qualifiedname>Toy_LiteralArray::count</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>@???@ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="common/include/toy_literal_array.h" line="23" column="9" bodyfile="common/include/toy_literal_array.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>@????@ </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="7">
+        <label>Toy_Interpreter</label>
+        <link refid="de/da4/structToy__Interpreter"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>literalCache</edgelabel>
+          <edgelabel>stack</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>hooks</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Toy_Literal</label>
+        <link refid="d3/da0/structToy__Literal"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>array</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>dictionary</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>hook</edgelabel>
+          <edgelabel>native</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>scope</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>subtypes</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Toy_LiteralArray</label>
+        <link refid="d5/d6a/structToy__LiteralArray"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>literals</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Toy_LiteralDictionary</label>
+        <link refid="d9/db5/structToy__LiteralDictionary"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>entries</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Toy_RefFunction</label>
+        <link refid="d3/d2c/structToy__RefFunction"/>
+      </node>
+      <node id="3">
+        <label>Toy_RefString</label>
+        <link refid="dd/d94/structToy__RefString"/>
+      </node>
+      <node id="8">
+        <label>Toy_Scope</label>
+        <link refid="de/de6/structToy__Scope"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>types</edgelabel>
+          <edgelabel>variables</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>ancestor</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Toy_private_dictionary_entry</label>
+        <link refid="d2/d62/structToy__private__dictionary__entry"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>key</edgelabel>
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="common/include/toy_literal_array.h" line="20" column="1" bodyfile="common/include/toy_literal_array.h" bodystart="20" bodyend="24"/>
+    <listofallmembers>
+      <member refid="d5/d6a/structToy__LiteralArray_1af09ac41c521e3d673848d4d019f2ab0e" prot="public" virt="non-virtual"><scope>Toy_LiteralArray</scope><name>capacity</name></member>
+      <member refid="d5/d6a/structToy__LiteralArray_1a7921894446c581c39ff12a9499c67154" prot="public" virt="non-virtual"><scope>Toy_LiteralArray</scope><name>count</name></member>
+      <member refid="d5/d6a/structToy__LiteralArray_1a13be77c2d51ef60c330823d80aa17be4" prot="public" virt="non-virtual"><scope>Toy_LiteralArray</scope><name>literals</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

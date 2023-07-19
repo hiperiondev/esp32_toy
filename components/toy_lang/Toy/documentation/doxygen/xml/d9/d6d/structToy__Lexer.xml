@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.6" xml:lang="en-US">
+  <compounddef id="d9/d6d/structToy__Lexer" kind="struct" language="C++" prot="public">
+    <compoundname>Toy_Lexer</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/d6d/structToy__Lexer_1a3801524b7e0c9d9c4b9302566367ab1c" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* Toy_Lexer::source</definition>
+        <argsstring></argsstring>
+        <name>source</name>
+        <qualifiedname>Toy_Lexer::source</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_lexer.h" line="22" column="16" bodyfile="compiler/include/toy_lexer.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d6d/structToy__Lexer_1a9fe498f4a7e1eaa3a99a50e06250a649" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Lexer::start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <qualifiedname>Toy_Lexer::start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>start of the token </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_lexer.h" line="23" column="9" bodyfile="compiler/include/toy_lexer.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d6d/structToy__Lexer_1a7f055e7647689c7044c0b67d7b8b9986" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Lexer::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <qualifiedname>Toy_Lexer::current</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>current position of the lexer </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_lexer.h" line="24" column="9" bodyfile="compiler/include/toy_lexer.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d6d/structToy__Lexer_1accafbd267b1735f3c2b170aee50b4cce" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Toy_Lexer::line</definition>
+        <argsstring></argsstring>
+        <name>line</name>
+        <qualifiedname>Toy_Lexer::line</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>track this for error handling </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_lexer.h" line="25" column="9" bodyfile="compiler/include/toy_lexer.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d6d/structToy__Lexer_1ab7eaf031781d077ac1ac816243fbb3b6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Toy_Lexer::commentsEnabled</definition>
+        <argsstring></argsstring>
+        <name>commentsEnabled</name>
+        <qualifiedname>Toy_Lexer::commentsEnabled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>BUGFIX: enable comments (disabled in repl) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="compiler/include/toy_lexer.h" line="26" column="10" bodyfile="compiler/include/toy_lexer.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="compiler/include/toy_lexer.h" line="21" column="1" bodyfile="compiler/include/toy_lexer.h" bodystart="21" bodyend="27"/>
+    <listofallmembers>
+      <member refid="d9/d6d/structToy__Lexer_1ab7eaf031781d077ac1ac816243fbb3b6" prot="public" virt="non-virtual"><scope>Toy_Lexer</scope><name>commentsEnabled</name></member>
+      <member refid="d9/d6d/structToy__Lexer_1a7f055e7647689c7044c0b67d7b8b9986" prot="public" virt="non-virtual"><scope>Toy_Lexer</scope><name>current</name></member>
+      <member refid="d9/d6d/structToy__Lexer_1accafbd267b1735f3c2b170aee50b4cce" prot="public" virt="non-virtual"><scope>Toy_Lexer</scope><name>line</name></member>
+      <member refid="d9/d6d/structToy__Lexer_1a3801524b7e0c9d9c4b9302566367ab1c" prot="public" virt="non-virtual"><scope>Toy_Lexer</scope><name>source</name></member>
+      <member refid="d9/d6d/structToy__Lexer_1a9fe498f4a7e1eaa3a99a50e06250a649" prot="public" virt="non-virtual"><scope>Toy_Lexer</scope><name>start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
