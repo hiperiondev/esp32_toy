@@ -12,9 +12,9 @@
  *
  */
 typedef struct Toy_LiteralArray {
-    Toy_Literal *literals;
-    int capacity;
-    int count;
+    Toy_Literal *literals; /**< */
+    int capacity;          /**< */
+    int count;             /**< */
 } Toy_LiteralArray;
 
 /**

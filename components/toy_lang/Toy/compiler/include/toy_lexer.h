@@ -14,10 +14,10 @@
  */
 typedef struct {
     const char *source;
-    int start; //start of the token
-    int current; //current position of the lexer
-    int line; //track this for error handling
-    bool commentsEnabled; //BUGFIX: enable comments (disabled in repl)
+    int start;            /**< */ //start of the token
+    int current;          /**< */ //current position of the lexer
+    int line;             /**< */ //track this for error handling
+    bool commentsEnabled; /**< */ //BUGFIX: enable comments (disabled in repl)
 } Toy_Lexer;
 
 //tokens are intermediaries between lexers and parsers
@@ -27,10 +27,10 @@ typedef struct {
  *
  */
 typedef struct {
-    Toy_TokenType type;
-    const char *lexeme;
-    int length;
-    int line;
+    Toy_TokenType type; /**< */
+    const char *lexeme; /**< */
+    int length;         /**< */
+    int line;           /**< */
 } Toy_Token;
 
 /**

@@ -15,12 +15,12 @@
  */
 typedef struct {
     Toy_Lexer* lexer;
-    bool error; //I've had an error
-    bool panic; //I am processing an error
+    bool error;         /**< */ //I've had an error
+    bool panic;         /**< */ //I am processing an error
 
     //track the last two outputs from the lexer
-    Toy_Token current;
-    Toy_Token previous;
+    Toy_Token current;  /**< */
+    Toy_Token previous; /**< */
 } Toy_Parser;
 
 /**

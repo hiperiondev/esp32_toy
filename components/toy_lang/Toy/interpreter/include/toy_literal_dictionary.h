@@ -13,8 +13,8 @@
  *
  */
 typedef struct Toy_private_dictionary_entry {
-    Toy_Literal key;
-    Toy_Literal value;
+    Toy_Literal key;   /**< */
+    Toy_Literal value; /**< */
 } Toy_private_dictionary_entry;
 
 /**
@@ -23,10 +23,10 @@ typedef struct Toy_private_dictionary_entry {
  *
  */
 typedef struct Toy_LiteralDictionary {
-    Toy_private_dictionary_entry *entries;
-    int capacity;
-    int count;
-    int contains; //count + tombstones, for internal use
+    Toy_private_dictionary_entry *entries; /**< */
+    int capacity; /**< */
+    int count;    /**< */
+    int contains; /**< */ //count + tombstones, for internal use
 } Toy_LiteralDictionary;
 
 /**

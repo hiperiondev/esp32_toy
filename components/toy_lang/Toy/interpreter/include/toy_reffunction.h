@@ -31,9 +31,9 @@ TOY_API void Toy_setRefFunctionAllocatorFn(Toy_RefFunctionAllocatorFn);
  *
  */
 typedef struct Toy_RefFunction {
-    size_t length;
-    int refCount;
-    unsigned char data[];
+    size_t length;        /**< */
+    int refCount;         /**< */
+    unsigned char data[]; /**< */
 } Toy_RefFunction;
 
 //API

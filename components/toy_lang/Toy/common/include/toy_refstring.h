@@ -33,9 +33,9 @@ TOY_API void Toy_setRefStringAllocatorFn(Toy_RefStringAllocatorFn);
  *
  */
 typedef struct Toy_RefString {
-    size_t length;
-    int refCount;
-    char data[];
+    size_t length; /**< */
+    int refCount;  /**< */
+    char data[];   /**< */
 } Toy_RefString;
 
 //API

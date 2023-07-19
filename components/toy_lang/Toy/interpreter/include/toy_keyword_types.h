@@ -9,8 +9,8 @@
  *
  */
 typedef struct {
-    Toy_TokenType type;
-    char *keyword;
+    Toy_TokenType type; /**< */
+    char *keyword;      /**< */
 } Toy_KeywordType;
 
 

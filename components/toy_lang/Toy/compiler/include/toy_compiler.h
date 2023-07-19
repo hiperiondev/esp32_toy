@@ -16,11 +16,11 @@
  *
  */
 typedef struct Toy_Compiler {
-    Toy_LiteralArray literalCache;
-    unsigned char *bytecode;
-    int capacity;
-    int count;
-    bool panic;
+    Toy_LiteralArray literalCache; /**< */
+    unsigned char *bytecode;       /**< */
+    int capacity;                  /**< */
+    int count;                     /**< */
+    bool panic;                    /**< */
 } Toy_Compiler;
 
 /**
