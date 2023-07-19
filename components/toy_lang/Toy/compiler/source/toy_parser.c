@@ -5,6 +5,7 @@
 #include "toy_literal.h"
 #include "toy_opcodes.h"
 #include "toy_console_colors.h"
+#include "toy_repl_common.h"
 
 //utility functions
 static void error(Toy_Parser *parser, Toy_Token token, const char *message) {

@@ -11,6 +11,7 @@
 #include "toy_parser.h"
 #include "toy_compiler.h"
 #include "toy_interpreter.h"
+#include "toy_repl_common.h"
 
 // for external filesystem HAL
 #ifdef _EXTERNAL_FS_HAL_

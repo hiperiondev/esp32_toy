@@ -5,6 +5,7 @@
 #include "toy_lexer.h"
 #include "toy_console_colors.h"
 #include "toy_keyword_types.h"
+#include "toy_repl_common.h"
 
 //static generic utility functions
 static void cleanLexer(Toy_Lexer *lexer) {

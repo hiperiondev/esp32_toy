@@ -1,5 +1,6 @@
 #include "toy_lib_about.h"
 #include "toy_memory.h"
+#include "toy_repl_common.h"
 
 int Toy_hookAbout(Toy_Interpreter *interpreter, Toy_Literal identifier, Toy_Literal alias) {
     //the about keys

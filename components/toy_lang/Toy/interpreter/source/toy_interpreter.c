@@ -8,6 +8,7 @@
 #include "toy_keyword_types.h"
 #include "toy_opcodes.h"
 #include "toy_builtin.h"
+#include "toy_repl_common.h"
 
 static void printWrapper(const char *output) {
     //allow for disabling of newlines in the repl

@@ -7,6 +7,7 @@
 #include "toy_literal_array.h"
 #include "toy_literal_dictionary.h"
 #include "toy_console_colors.h"
+#include "toy_repl_common.h"
 
 void Toy_initCompiler(Toy_Compiler *compiler) {
     Toy_initLiteralArray(&compiler->literalCache);

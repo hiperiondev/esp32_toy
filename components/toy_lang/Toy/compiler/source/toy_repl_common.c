@@ -3,6 +3,7 @@
 #include <assert.h>
 
 #include "toy_common.h"
+#include "toy_repl_common.h"
 
 //test variable sizes based on platform - see issue #35
 #define STATIC_ASSERT(test_for_true) static_assert((test_for_true), "(" #test_for_true ") failed")
