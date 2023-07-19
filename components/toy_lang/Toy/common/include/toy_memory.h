@@ -17,10 +17,33 @@
 #define TOY_SHRINK_ARRAY(type, pointer, oldCount, count)  (type*)Toy_reallocate((type*)pointer, sizeof(type) * (oldCount), sizeof(type) * (count))
 
 //implementation details
+/**
+ * @fn  void* Toy_reallocate(void *pointer, size_t oldSize, size_t newSize)
+ * @brief
+ *
+ * @param pointer
+ * @param oldSize
+ * @param newSize
+ */
 TOY_API void* Toy_reallocate(void *pointer, size_t oldSize, size_t newSize);
 
 //assign the memory allocator
+/**
+ * @typedef void* (*Toy_MemoryAllocatorFn)(void *pointer, size_t oldSize, size_t newSize)
+ * @brief
+ *
+ * @param pointer
+ * @param oldSize
+ * @param newSize
+ */
 typedef void* (*Toy_MemoryAllocatorFn)(void *pointer, size_t oldSize, size_t newSize);
+
+/**
+ * @fn void Toy_setMemoryAllocator(Toy_MemoryAllocatorFn)
+ * @brief
+ *
+ * @param
+ */
 TOY_API void Toy_setMemoryAllocator(Toy_MemoryAllocatorFn);
 
 #endif /* TOY_MEMORY_H_ */

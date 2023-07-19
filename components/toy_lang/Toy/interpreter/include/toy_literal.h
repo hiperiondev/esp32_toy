@@ -7,29 +7,59 @@
 #include "toy_refstring.h"
 #include "toy_reffunction.h"
 
-//forward delcare stuff
 struct Toy_Literal;
 struct Toy_Interpreter;
 struct Toy_LiteralArray;
 struct Toy_LiteralDictionary;
 struct Toy_Scope;
+
+/**
+ * @fn int (*Toy_NativeFn)(struct Toy_Interpreter* interpreter, struct Toy_LiteralArray* arguments)
+ * @brief
+ *
+ * @param interpreter
+ * @param arguments
+ * @return
+ */
 typedef int (*Toy_NativeFn)(struct Toy_Interpreter* interpreter, struct Toy_LiteralArray* arguments);
+
+/**
+ * @fn int (*Toy_HookFn)(struct Toy_Interpreter* interpreter, struct Toy_Literal identifier, struct Toy_Literal alias)
+ * @brief
+ *
+ * @param interpreter
+ * @param identifier
+ * @param alias
+ * @return
+ */
 typedef int (*Toy_HookFn)(struct Toy_Interpreter* interpreter, struct Toy_Literal identifier, struct Toy_Literal alias);
+
+/**
+ * @fn void (*Toy_PrintFn)(const char*)
+ * @brief
+ *
+ * @param
+ */
 typedef void (*Toy_PrintFn)(const char*);
 
+/**
+ * @enum Toy_LiteralType
+ * @brief
+ *
+ */
 typedef enum {
-    TOY_LITERAL_NULL,
-    TOY_LITERAL_BOOLEAN,
-    TOY_LITERAL_INTEGER,
-    TOY_LITERAL_FLOAT,
-    TOY_LITERAL_STRING,
-    TOY_LITERAL_ARRAY,
-    TOY_LITERAL_DICTIONARY,
-    TOY_LITERAL_FUNCTION,
-    TOY_LITERAL_IDENTIFIER,
-    TOY_LITERAL_TYPE,
-    TOY_LITERAL_OPAQUE,
-    TOY_LITERAL_ANY,
+    TOY_LITERAL_NULL,      /**< TOY_LITERAL_NULL */
+    TOY_LITERAL_BOOLEAN,   /**< TOY_LITERAL_BOOLEAN */
+    TOY_LITERAL_INTEGER,   /**< TOY_LITERAL_INTEGER */
+    TOY_LITERAL_FLOAT,     /**< TOY_LITERAL_FLOAT */
+    TOY_LITERAL_STRING,    /**< TOY_LITERAL_STRING */
+    TOY_LITERAL_ARRAY,     /**< TOY_LITERAL_ARRAY */
+    TOY_LITERAL_DICTIONARY,/**< TOY_LITERAL_DICTIONARY */
+    TOY_LITERAL_FUNCTION,  /**< TOY_LITERAL_FUNCTION */
+    TOY_LITERAL_IDENTIFIER,/**< TOY_LITERAL_IDENTIFIER */
+    TOY_LITERAL_TYPE,      /**< TOY_LITERAL_TYPE */
+    TOY_LITERAL_OPAQUE,    /**< TOY_LITERAL_OPAQUE */
+    TOY_LITERAL_ANY,       /**< TOY_LITERAL_ANY */
 
     //these are meta-level types - not for general use
     TOY_LITERAL_TYPE_INTERMEDIATE, //used to process types in the compiler only
@@ -42,6 +72,11 @@ typedef enum {
     TOY_LITERAL_INDEX_BLANK, //for blank indexing i.e. arr[:]
 } Toy_LiteralType;
 
+/**
+ * @typedef Toy_Literal
+ * @brief
+ *
+ */
 typedef struct Toy_Literal {
     union {
         bool boolean; //1
@@ -136,6 +171,12 @@ typedef struct Toy_Literal {
 #define TOY_IS_INDEX_BLANK(value)                ((value).type == TOY_LITERAL_INDEX_BLANK)
 #define TOY_TO_INDEX_BLANK_LITERAL                ((Toy_Literal){{ .integer = 0 }, TOY_LITERAL_INDEX_BLANK})
 
+/**
+ * @fn void Toy_freeLiteral(Toy_Literal literal)
+ * @brief
+ *
+ * @param literal
+ */
 TOY_API void Toy_freeLiteral(Toy_Literal literal);
 
 #define TOY_IS_TRUTHY(x) Toy_private_isTruthy(x)
@@ -148,17 +189,79 @@ TOY_API void Toy_freeLiteral(Toy_Literal literal);
 #define TOY_GET_OPAQUE_TAG(o)                    o.as.opaque.tag
 
 //BUGFIX: macros are not functions
+/**
+ * @fn bool Toy_private_isTruthy(Toy_Literal x)
+ * @brief
+ *
+ * @param x
+ * @return
+ */
 TOY_API bool Toy_private_isTruthy(Toy_Literal x);
+
+/**
+ * @fn Toy_Literal Toy_private_toIdentifierLiteral(Toy_RefString* ptr)
+ * @brief
+ *
+ * @param ptr
+ * @return
+ */
 TOY_API Toy_Literal Toy_private_toIdentifierLiteral(Toy_RefString* ptr);
+
+/**
+ * @fn Toy_Literal* Toy_private_typePushSubtype(Toy_Literal* lit, Toy_Literal subtype)
+ * @brief
+ *
+ * @param lit
+ * @param subtype
+ * @return
+ */
 TOY_API Toy_Literal* Toy_private_typePushSubtype(Toy_Literal* lit, Toy_Literal subtype);
 
 //utils
+/**
+ * @fn Toy_Literal Toy_copyLiteral(Toy_Literal original)
+ * @brief
+ *
+ * @param original
+ * @return
+ */
 TOY_API Toy_Literal Toy_copyLiteral(Toy_Literal original);
+
+/**
+ * @fn bool Toy_literalsAreEqual(Toy_Literal lhs, Toy_Literal rhs)
+ * @brief
+ *
+ * @param lhs
+ * @param rhs
+ * @return
+ */
 TOY_API bool Toy_literalsAreEqual(Toy_Literal lhs, Toy_Literal rhs);
+
+/**
+ * @fn int Toy_hashLiteral(Toy_Literal lit)
+ * @brief
+ *
+ * @param lit
+ * @return
+ */
 TOY_API int Toy_hashLiteral(Toy_Literal lit);
 
 //not thread-safe
+/**
+ * @fn void Toy_printLiteral(Toy_Literal literal)
+ * @brief
+ *
+ * @param literal
+ */
 TOY_API void Toy_printLiteral(Toy_Literal literal);
+
+/**
+ * @fn void Toy_printLiteralCustom(Toy_Literal literal, Toy_PrintFn)
+ * @brief
+ *
+ * @param literal
+ * @param
+ */
 TOY_API void Toy_printLiteralCustom(Toy_Literal literal, Toy_PrintFn);
 
 #endif /* TOY_LITERAL_H_ */

@@ -31,29 +31,63 @@
 
 TOY_API const char* Toy_private_version_build();
 
-//for processing the command line arguments in the repl
+/**
+ * @typedef Toy_CommandLine
+ * @brief Structure for processing the command line arguments in the repl
+ *
+ */
 typedef struct {
-    bool error;
-    bool help;
-    bool version;
-    char *binaryfile;
-    char *sourcefile;
-    char *compilefile;
-    char *outfile; //defaults to out.tb
-    char *source;
-    char *initialfile;
-    bool enablePrintNewline;
-    bool parseBytecodeHeader;
-    bool verbose;
-} Toy_CommandLine;
+    bool error;               /**< */
+    bool help;                /**< */
+    bool version;             /**< */
+    char *binaryfile;         /**< */
+    char *sourcefile;         /**< */
+    char *compilefile;        /**< */
+    char *outfile;            /**< defaults to out.tb */
+    char *source;             /**< */
+    char *initialfile;        /**< */
+    bool enablePrintNewline;  /**< */
+    bool parseBytecodeHeader; /**< */
+    bool verbose;             /**< */
+} Toy_CommandLine; /**< Toy_commandLine */
 
 //these are intended for the repl only, despite using the api prefix
-TOY_API Toy_CommandLine Toy_commandLine;
+TOY_API Toy_CommandLine Toy_commandLine; /**< Toy_commandLine */
 
+/**
+ * @fnTOY_API void Toy_initCommandLine(int argc, const char *argv[])
+ * @brief
+ *
+ * @param argc
+ * @param argv
+ */
 TOY_API void Toy_initCommandLine(int argc, const char *argv[]);
 
+/**
+ * @fn TOY_API void Toy_usageCommandLine(int argc, const char *argv[])
+ * @brief
+ *
+ * @param argc
+ * @param argv
+ */
 TOY_API void Toy_usageCommandLine(int argc, const char *argv[]);
+
+/**
+ * @fn TOY_API void Toy_helpCommandLine(int argc, const char *argv[])
+ * @brief
+ *
+ * @param argc
+ * @param argv
+ */
 TOY_API void Toy_helpCommandLine(int argc, const char *argv[]);
+
+/**
+ * @fn TOY_API void Toy_copyrightCommandLine(int argc, const char *argv[])
+ * @brief
+ *
+ * @param argc
+ * @param argv
+ */
 TOY_API void Toy_copyrightCommandLine(int argc, const char *argv[]);
 
 #endif /* TOY_COMMON_H_ */

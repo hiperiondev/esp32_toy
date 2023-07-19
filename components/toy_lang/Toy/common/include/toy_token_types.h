@@ -1,6 +1,11 @@
 #ifndef TOY_TOKEN_TYPES_H_
 #define TOY_TOKEN_TYPES_H_
 
+/**
+ * @enum Toy_TokenType
+ * @brief
+ *
+ */
 typedef enum Toy_TokenType {
     //types
     TOY_TOKEN_NULL, //

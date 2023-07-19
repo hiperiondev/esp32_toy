@@ -9,11 +9,11 @@
 //file system API
 static Toy_LiteralDictionary driveDictionary;
 
-void Toy_initDriveSystem() {
+void Toy_initDriveSystem(void) {
     Toy_initLiteralDictionary(&driveDictionary);
 }
 
-void Toy_freeDriveSystem() {
+void Toy_freeDriveSystem(void) {
     Toy_freeLiteralDictionary(&driveDictionary);
 }
 

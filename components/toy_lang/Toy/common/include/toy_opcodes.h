@@ -1,6 +1,11 @@
 #ifndef TOY_OPCODES_H_
 #define TOY_OPCODES_H_
 
+/**
+ * @enum Toy_Opcode
+ * @brief
+ *
+ */
 typedef enum Toy_Opcode {
     TOY_OP_EOF, //
 
@@ -85,7 +90,7 @@ typedef enum Toy_Opcode {
 
     //meta
     TOY_OP_FN_END, //different from SECTION_END
-    TOY_OP_SECTION_END = 255,
+    TOY_OP_SECTION_END = 255,/**< TOY_OP_SECTION_END */
     //TODO: add more
 
     //prefix & postfix signals (used internally)
