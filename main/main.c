@@ -1,13 +1,9 @@
 /*
- * Copyright 2022 Emiliano Gonzalez (egonzalez . hiperion @ gmail . com))
- * * Project Site: https://github.com/hiperiondev/esp32-berry-lang *
+ * Copyright 2023 Emiliano Gonzalez (egonzalez . hiperion @ gmail . com))
+ * * Project Site: https://github.com/hiperiondev/esp32_toy *
  *
  * This is based on other projects:
- *    Berry (https://github.com/berry-lang/berry)
- *    LittleFS port for ESP-IDF (https://github.com/joltwallet/esp_littlefs)
- *    Lightweight TFTP server library (https://github.com/lexus2k/libtftp)
- *    esp32 run berry language (https://github.com/HoGC/esp32_berry)
- *    Tasmota (https://github.com/arendst/Tasmota)
+ *    Toy programming language (https://github.com/Ratstail91/Toy)
  *    Others (see individual files)
  *
  *    please contact their authors for more information.
@@ -70,37 +66,26 @@ TaskHandle_t ftpservertsk_handle;
 #define WIFI_PASS "test1234"
 #define CONSOLE_UART_CHANNEL  UART_NUM_0
 
-void interpret_line(Toy_Interpreter *interp, const char *source) {
-    //const char *source = "print \"minimal test: OK\";";
-
-    //test basic compilation & collation
+void interpret_line(Toy_Interpreter *interpreter, const char *source) {
     Toy_Lexer lexer;
     Toy_Parser parser;
     Toy_Compiler compiler;
-    Toy_Interpreter interpreter = *interp;
 
     Toy_initLexer(&lexer, source);
     Toy_initParser(&parser, &lexer);
     Toy_initCompiler(&compiler);
-    Toy_initInterpreter(&interpreter);
 
     Toy_ASTNode *node = Toy_scanParser(&parser);
-
-    //write
     Toy_writeCompiler(&compiler, node);
 
-    //collate
     size_t size = 0;
     const unsigned char *bytecode = Toy_collateCompiler(&compiler, &size);
 
-    //run
-    Toy_runInterpreter(&interpreter, bytecode, size);
+    Toy_runInterpreter(interpreter, bytecode, size);
 
-    //cleanup
     Toy_freeASTNode(node);
     Toy_freeParser(&parser);
     Toy_freeCompiler(&compiler);
-    //Toy_freeInterpreter(&interpreter);
 }
 
 void toy_task(void *arg) {
@@ -154,7 +139,7 @@ void toy_task(void *arg) {
 
     ///////////////////////////////////////////////////////
 
-    interpret_line(&interpreter, "print \"minimal test: OK\";");
+    interpret_line(&interpreter, "print \"start test: OK\";");
 
     ///////////////////////////////////////////////////////
 
