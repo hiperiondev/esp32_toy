@@ -57,6 +57,7 @@
 #include "toy_lib_random.h"
 #include "toy_lib_runner.h"
 #include "toy_lib_standard.h"
+#include "esp32_toy_lib_wifi.h"
 
 static char TAG[] = "main";
 TaskHandle_t toytsk_handle;
@@ -64,7 +65,7 @@ TaskHandle_t ftpservertsk_handle;
 
 #define WIFI_SSID "test"
 #define WIFI_PASS "test1234"
-#define CONSOLE_UART_CHANNEL  UART_NUM_0
+#define CONSOLE_UART_CHANNEL UART_NUM_0
 
 void interpret_line(Toy_Interpreter *interpreter, const char *source) {
     Toy_Lexer lexer;
@@ -136,10 +137,11 @@ void toy_task(void *arg) {
     Toy_injectNativeHook(&interpreter, "standard", Toy_hookStandard);
     Toy_injectNativeHook(&interpreter, "random", Toy_hookRandom);
     Toy_injectNativeHook(&interpreter, "runner", Toy_hookRunner);
+    Toy_injectNativeHook(&interpreter, "wifi", Toy_hookWifi);
 
     ///////////////////////////////////////////////////////
 
-    interpret_line(&interpreter, "print \"start test: OK\";");
+    interpret_line(&interpreter, "print \"Toy start: OK\n\";");
 
     ///////////////////////////////////////////////////////
 

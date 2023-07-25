@@ -9,5 +9,6 @@ idf_component_register(
         ftpserver
         nvs_flash
         hal_esp32
+        esp32_toy_libs
         toy_lang
 )  

@@ -81,14 +81,14 @@ TOY_API bool Toy_setLiteralArray(Toy_LiteralArray *array, Toy_Literal index, Toy
 TOY_API Toy_Literal Toy_getLiteralArray(Toy_LiteralArray *array, Toy_Literal index);
 
 /**
- * @fn int Toy_findLiteralIndex(Toy_LiteralArray *array, Toy_Literal literal)
+ * @fn int Toy_private_findLiteralIndex(Toy_LiteralArray *array, Toy_Literal literal)
  * @brief @@????@@
  *
  * @param array
  * @param literal
  * @return
  */
-int Toy_findLiteralIndex(Toy_LiteralArray *array, Toy_Literal literal);
+int Toy_private_findLiteralIndex(Toy_LiteralArray *array, Toy_Literal literal);
 
 //TODO: add a function to get the capacity & count
 

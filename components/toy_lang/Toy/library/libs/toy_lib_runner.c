@@ -487,9 +487,17 @@ typedef struct Natives {
 
 int Toy_hookRunner(Toy_Interpreter *interpreter, Toy_Literal identifier, Toy_Literal alias) {
     //build the natives list
-    Natives natives[] = { { "loadScript", nativeLoadScript }, { "loadScriptBytecode", nativeLoadScriptBytecode }, { "runScript", nativeRunScript }, {
-            "getScriptVar", nativeGetScriptVar }, { "callScriptFn", nativeCallScriptFn }, { "resetScript", nativeResetScript },
-            { "freeScript", nativeFreeScript }, { "checkScriptDirty", nativeCheckScriptDirty }, { NULL, NULL } };
+    Natives natives[] = {
+            { "loadScript", nativeLoadScript },
+            { "loadScriptBytecode", nativeLoadScriptBytecode },
+            { "runScript", nativeRunScript },
+            { "getScriptVar", nativeGetScriptVar },
+            { "callScriptFn", nativeCallScriptFn },
+            { "resetScript", nativeResetScript },
+            { "freeScript", nativeFreeScript },
+            { "checkScriptDirty", nativeCheckScriptDirty },
+            { NULL, NULL }
+    };
 
     //store the library in an aliased dictionary
     if (!TOY_IS_NULL(alias)) {
@@ -540,4 +548,3 @@ int Toy_hookRunner(Toy_Interpreter *interpreter, Toy_Literal identifier, Toy_Lit
 
     return 0;
 }
-

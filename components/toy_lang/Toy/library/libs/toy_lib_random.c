@@ -137,8 +137,12 @@ typedef struct Natives {
 
 int Toy_hookRandom(Toy_Interpreter *interpreter, Toy_Literal identifier, Toy_Literal alias) {
     //build the natives list
-    Natives natives[] = { { "createRandomGenerator", nativeCreateRandomGenerator }, { "generateRandomNumber", nativeGenerateRandomNumber }, {
-            "freeRandomGenerator", nativeFreeRandomGenerator }, { NULL, NULL } };
+    Natives natives[] = {
+            { "createRandomGenerator", nativeCreateRandomGenerator },
+            { "generateRandomNumber", nativeGenerateRandomNumber },
+            { "freeRandomGenerator", nativeFreeRandomGenerator },
+            { NULL, NULL }
+    };
 
     //store the library in an aliased dictionary
     if (!TOY_IS_NULL(alias)) {
