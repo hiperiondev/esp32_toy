@@ -49,7 +49,7 @@ typedef struct Toy_Interpreter {
     const unsigned char *bytecode;
     int length;
     int count;
-    int codeStart; //BUGFIX: for jumps, must be initialized to -1
+    int codeStart;                 //BUGFIX: for jumps, must be initialized to -1
     Toy_LiteralArray literalCache; //read-only - built from the bytecode, refreshed each time new bytecode is provided
 
     //operation

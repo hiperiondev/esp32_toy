@@ -1,10 +1,8 @@
-#include "toy_literal_dictionary.h"
-
-#include "toy_memory.h"
-
-#include "toy_console_colors.h"
-
 #include <stdio.h>
+
+#include "toy_literal_dictionary.h"
+#include "toy_memory.h"
+#include "toy_console_colors.h"
 
 //util functions
 static void setEntryValues(Toy_private_dictionary_entry *entry, Toy_Literal key, Toy_Literal value) {

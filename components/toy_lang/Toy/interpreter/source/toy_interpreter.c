@@ -1,15 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+
 #include "toy_interpreter.h"
 #include "toy_console_colors.h"
-
 #include "toy_common.h"
 #include "toy_memory.h"
 #include "toy_keyword_types.h"
 #include "toy_opcodes.h"
 #include "toy_repl_common.h"
 #include "toy_builtin.h"
-
-#include <stdio.h>
-#include <string.h>
 
 static void printWrapper(const char *output) {
     //allow for disabling of newlines in the repl
@@ -20,7 +19,7 @@ static void printWrapper(const char *output) {
         printf("%s", output);
     }
 #else
-	printf("%s\n", output);
+    printf("%s\n", output);
 #endif
 }
 
@@ -192,7 +191,7 @@ bool Toy_parseIdentifierToValue(Toy_Interpreter *interpreter, Toy_Literal *liter
     }
 
     // if (TOY_IS_ARRAY(*literalPtr) || TOY_IS_DICTIONARY(*literalPtr)) {
-    // 	Toy_parseCompoundToPureValues(interpreter, literalPtr);
+    //     Toy_parseCompoundToPureValues(interpreter, literalPtr);
     // }
 
     return true;

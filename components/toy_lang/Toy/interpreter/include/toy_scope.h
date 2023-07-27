@@ -17,9 +17,9 @@
 
 typedef struct Toy_Scope {
     Toy_LiteralDictionary variables; //only allow identifiers as the keys
-    Toy_LiteralDictionary types; //the types, indexed by identifiers
+    Toy_LiteralDictionary types;     //the types, indexed by identifiers
     struct Toy_Scope *ancestor;
-    int references; //how many scopes point here
+    int references;                  //how many scopes point here
 } Toy_Scope;
 
 /*!

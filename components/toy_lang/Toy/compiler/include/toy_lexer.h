@@ -13,9 +13,9 @@
 //lexers are bound to a string of code, and return a single token every time scan is called
 typedef struct {
     const char *source;
-    int start; //start of the token
-    int current; //current position of the lexer
-    int line; //track this for error handling
+    int start;            //start of the token
+    int current;          //current position of the lexer
+    int line;             //track this for error handling
     bool commentsEnabled; //BUGFIX: enable comments (disabled in repl)
 } Toy_Lexer;
 

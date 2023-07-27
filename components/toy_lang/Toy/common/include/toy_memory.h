@@ -20,14 +20,14 @@
 
  This macro calculates, in place, what size of memory should be allocated based on the previous size.
  !*/
-#define TOY_GROW_CAPACITY(capacity) 						((capacity) < 8 ? 8 : (capacity) * 2)
+#define TOY_GROW_CAPACITY(capacity)                         ((capacity) < 8 ? 8 : (capacity) * 2)
 
 /*!
  ### TOY_GROW_CAPACITY_FAST(capacity)
 
  This macro calculates, in place, what size of memory should be allocated based on the previous size. It grows faster than `TOY_GROW_CAPACITY`.
  !*/
-#define TOY_GROW_CAPACITY_FAST(capacity)					((capacity) < 32 ? 32 : (capacity) * 2)
+#define TOY_GROW_CAPACITY_FAST(capacity)                    ((capacity) < 32 ? 32 : (capacity) * 2)
 
 /*
  ### TOY_ALLOCATE(type, count)
@@ -36,21 +36,21 @@
 
  This returns a pointer of `type`.
  */
-#define TOY_ALLOCATE(type, count)							((type*)Toy_reallocate(NULL, 0, sizeof(type) * (count)))
+#define TOY_ALLOCATE(type, count)                            ((type*)Toy_reallocate(NULL, 0, sizeof(type) * (count)))
 
 /*!
  ### TOY_FREE(type, pointer)
 
  This macro wraps `Toy_reallocate()`, which itself calls the allocator function. `type` is the type that will be freed, and `pointer` is to what is being freed. This should only be used when a single element has been allocated, as opposed to an array.
  !*/
-#define TOY_FREE(type, pointer)								Toy_reallocate(pointer, sizeof(type), 0)
+#define TOY_FREE(type, pointer)                                Toy_reallocate(pointer, sizeof(type), 0)
 
 /*!
  ### TOY_FREE_ARRAY(type, pointer, oldCount)
 
  This macro wraps `Toy_reallocate()`, which itself calls the allocator function. `type` is the type that will be freed, `pointer` is a reference to what is being freed, and `oldCount` is the size of the array being freed. This should only be used when an array has been allocated, as opposed to a single element.
  !*/
-#define TOY_FREE_ARRAY(type, pointer, oldCount)				Toy_reallocate((type*)pointer, sizeof(type) * (oldCount), 0)
+#define TOY_FREE_ARRAY(type, pointer, oldCount)                Toy_reallocate((type*)pointer, sizeof(type) * (oldCount), 0)
 
 /*!
  ### TOY_GROW_ARRAY(type, pointer, oldCount, count)
@@ -59,7 +59,7 @@
 
  This returns a pointer of `type`.
  !*/
-#define TOY_GROW_ARRAY(type, pointer, oldCount, count)		(type*)Toy_reallocate((type*)pointer, sizeof(type) * (oldCount), sizeof(type) * (count))
+#define TOY_GROW_ARRAY(type, pointer, oldCount, count)        (type*)Toy_reallocate((type*)pointer, sizeof(type) * (oldCount), sizeof(type) * (count))
 
 /*!
  ### TOY_SHRINK_ARRAY(type, pointer, oldCount, count)
@@ -68,7 +68,7 @@
 
  This returns a pointer of `type`.
  !*/
-#define TOY_SHRINK_ARRAY(type, pointer, oldCount, count)	(type*)Toy_reallocate((type*)pointer, sizeof(type) * (oldCount), sizeof(type) * (count))
+#define TOY_SHRINK_ARRAY(type, pointer, oldCount, count)    (type*)Toy_reallocate((type*)pointer, sizeof(type) * (oldCount), sizeof(type) * (count))
 
 /*!
  ## Defined Interfaces

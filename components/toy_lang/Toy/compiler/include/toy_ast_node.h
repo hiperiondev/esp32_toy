@@ -10,32 +10,32 @@
 typedef union Toy_private_node Toy_ASTNode;
 
 typedef enum Toy_ASTNodeType {
-    TOY_AST_NODE_ERROR, //
-    TOY_AST_NODE_LITERAL, //a simple value
-    TOY_AST_NODE_UNARY, //one child + opcode
-    TOY_AST_NODE_BINARY, //two children, left and right + opcode
-    TOY_AST_NODE_TERNARY, //three children, condition, then path & else path
-    TOY_AST_NODE_GROUPING, //one child
-    TOY_AST_NODE_BLOCK, //contains a sub-node array
-    TOY_AST_NODE_COMPOUND, //contains a sub-node array
-    TOY_AST_NODE_PAIR, //contains a left and right
-    TOY_AST_NODE_INDEX, //index a variable
-    TOY_AST_NODE_VAR_DECL, //contains identifier literal, typenode, expression definition
-    TOY_AST_NODE_FN_DECL, //containd identifier literal, arguments node, returns node, block node
-    TOY_AST_NODE_FN_COLLECTION, //parts of a function
-    TOY_AST_NODE_FN_CALL, //call a function
-    TOY_AST_NODE_FN_RETURN, //for control flow
-    TOY_AST_NODE_IF, //for control flow
-    TOY_AST_NODE_WHILE, //for control flow
-    TOY_AST_NODE_FOR, //for control flow
-    TOY_AST_NODE_BREAK, //for control flow
-    TOY_AST_NODE_CONTINUE, //for control flow
-    TOY_AST_NODE_PREFIX_INCREMENT, //increment a variable
+    TOY_AST_NODE_ERROR,             //
+    TOY_AST_NODE_LITERAL,           //a simple value
+    TOY_AST_NODE_UNARY,             //one child + opcode
+    TOY_AST_NODE_BINARY,            //two children, left and right + opcode
+    TOY_AST_NODE_TERNARY,           //three children, condition, then path & else path
+    TOY_AST_NODE_GROUPING,          //one child
+    TOY_AST_NODE_BLOCK,             //contains a sub-node array
+    TOY_AST_NODE_COMPOUND,          //contains a sub-node array
+    TOY_AST_NODE_PAIR,              //contains a left and right
+    TOY_AST_NODE_INDEX,             //index a variable
+    TOY_AST_NODE_VAR_DECL,          //contains identifier literal, typenode, expression definition
+    TOY_AST_NODE_FN_DECL,           //contains identifier literal, arguments node, returns node, block node
+    TOY_AST_NODE_FN_COLLECTION,     //parts of a function
+    TOY_AST_NODE_FN_CALL,           //call a function
+    TOY_AST_NODE_FN_RETURN,         //for control flow
+    TOY_AST_NODE_IF,                //for control flow
+    TOY_AST_NODE_WHILE,             //for control flow
+    TOY_AST_NODE_FOR,               //for control flow
+    TOY_AST_NODE_BREAK,             //for control flow
+    TOY_AST_NODE_CONTINUE,          //for control flow
+    TOY_AST_NODE_PREFIX_INCREMENT,  //increment a variable
     TOY_AST_NODE_POSTFIX_INCREMENT, //increment a variable
-    TOY_AST_NODE_PREFIX_DECREMENT, //decrement a variable
+    TOY_AST_NODE_PREFIX_DECREMENT,  //decrement a variable
     TOY_AST_NODE_POSTFIX_DECREMENT, //decrement a variable
-    TOY_AST_NODE_IMPORT, //import a library
-    TOY_AST_NODE_PASS, //for doing nothing
+    TOY_AST_NODE_IMPORT,            //import a library
+    TOY_AST_NODE_PASS,              //for doing nothing
 } Toy_ASTNodeType;
 
 //literals

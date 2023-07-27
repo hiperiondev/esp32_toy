@@ -1,5 +1,4 @@
 #include "toy_scope.h"
-
 #include "toy_memory.h"
 
 //run up the ancestor chain, freeing anything with 0 references left

@@ -10,7 +10,6 @@
  !*/
 
 #include "toy_common.h"
-
 #include "toy_literal.h"
 
 /*!

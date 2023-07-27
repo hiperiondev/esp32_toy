@@ -12,7 +12,6 @@
  !*/
 
 #include "toy_common.h"
-
 #include "toy_refstring.h"
 #include "toy_reffunction.h"
 
@@ -52,28 +51,28 @@ typedef void (*Toy_PrintFn)(const char*);
  !*/
 
 typedef enum {
-    TOY_LITERAL_NULL,
-    TOY_LITERAL_BOOLEAN,
-    TOY_LITERAL_INTEGER,
-    TOY_LITERAL_FLOAT,
-    TOY_LITERAL_STRING,
-    TOY_LITERAL_ARRAY,
-    TOY_LITERAL_DICTIONARY,
-    TOY_LITERAL_FUNCTION,
-    TOY_LITERAL_IDENTIFIER,
-    TOY_LITERAL_TYPE,
-    TOY_LITERAL_OPAQUE,
-    TOY_LITERAL_ANY,
+    TOY_LITERAL_NULL,                    //
+    TOY_LITERAL_BOOLEAN,                 //
+    TOY_LITERAL_INTEGER,                 //
+    TOY_LITERAL_FLOAT,                   //
+    TOY_LITERAL_STRING,                  //
+    TOY_LITERAL_ARRAY,                   //
+    TOY_LITERAL_DICTIONARY,              //
+    TOY_LITERAL_FUNCTION,                //
+    TOY_LITERAL_IDENTIFIER,              //
+    TOY_LITERAL_TYPE,                    //
+    TOY_LITERAL_OPAQUE,                  //
+    TOY_LITERAL_ANY,                     //
 
     //these are meta-level types - not for general use
-    TOY_LITERAL_TYPE_INTERMEDIATE, //used to process types in the compiler only
-    TOY_LITERAL_ARRAY_INTERMEDIATE, //used to process arrays in the compiler only
+    TOY_LITERAL_TYPE_INTERMEDIATE,       //used to process types in the compiler only
+    TOY_LITERAL_ARRAY_INTERMEDIATE,      //used to process arrays in the compiler only
     TOY_LITERAL_DICTIONARY_INTERMEDIATE, //used to process dictionaries in the compiler only
-    TOY_LITERAL_FUNCTION_INTERMEDIATE, //used to process functions in the compiler only
-    TOY_LITERAL_FUNCTION_ARG_REST, //used to process function rest parameters only
-    TOY_LITERAL_FUNCTION_NATIVE, //for handling native functions only
-    TOY_LITERAL_FUNCTION_HOOK, //for handling hook functions within literals only
-    TOY_LITERAL_INDEX_BLANK, //for blank indexing i.e. arr[:]
+    TOY_LITERAL_FUNCTION_INTERMEDIATE,   //used to process functions in the compiler only
+    TOY_LITERAL_FUNCTION_ARG_REST,       //used to process function rest parameters only
+    TOY_LITERAL_FUNCTION_NATIVE,         //for handling native functions only
+    TOY_LITERAL_FUNCTION_HOOK,           //for handling hook functions within literals only
+    TOY_LITERAL_INDEX_BLANK,             //for blank indexing i.e. arr[:]
 } Toy_LiteralType;
 
 typedef struct Toy_Literal {
@@ -147,19 +146,19 @@ typedef struct Toy_Literal {
  * `TOY_IS_OPAQUE(value)`
  !*/
 
-#define TOY_IS_NULL(value)						((value).type == TOY_LITERAL_NULL)
-#define TOY_IS_BOOLEAN(value)					((value).type == TOY_LITERAL_BOOLEAN)
-#define TOY_IS_INTEGER(value)					((value).type == TOY_LITERAL_INTEGER)
-#define TOY_IS_FLOAT(value)						((value).type == TOY_LITERAL_FLOAT)
-#define TOY_IS_STRING(value)					((value).type == TOY_LITERAL_STRING)
-#define TOY_IS_ARRAY(value)						((value).type == TOY_LITERAL_ARRAY)
-#define TOY_IS_DICTIONARY(value)				((value).type == TOY_LITERAL_DICTIONARY)
-#define TOY_IS_FUNCTION(value)					((value).type == TOY_LITERAL_FUNCTION)
-#define TOY_IS_FUNCTION_NATIVE(value)			((value).type == TOY_LITERAL_FUNCTION_NATIVE)
-#define TOY_IS_FUNCTION_HOOK(value)				((value).type == TOY_LITERAL_FUNCTION_HOOK)
-#define TOY_IS_IDENTIFIER(value)				((value).type == TOY_LITERAL_IDENTIFIER)
-#define TOY_IS_TYPE(value)						((value).type == TOY_LITERAL_TYPE)
-#define TOY_IS_OPAQUE(value)					((value).type == TOY_LITERAL_OPAQUE)
+#define TOY_IS_NULL(value)                        ((value).type == TOY_LITERAL_NULL)
+#define TOY_IS_BOOLEAN(value)                    ((value).type == TOY_LITERAL_BOOLEAN)
+#define TOY_IS_INTEGER(value)                    ((value).type == TOY_LITERAL_INTEGER)
+#define TOY_IS_FLOAT(value)                        ((value).type == TOY_LITERAL_FLOAT)
+#define TOY_IS_STRING(value)                    ((value).type == TOY_LITERAL_STRING)
+#define TOY_IS_ARRAY(value)                        ((value).type == TOY_LITERAL_ARRAY)
+#define TOY_IS_DICTIONARY(value)                ((value).type == TOY_LITERAL_DICTIONARY)
+#define TOY_IS_FUNCTION(value)                    ((value).type == TOY_LITERAL_FUNCTION)
+#define TOY_IS_FUNCTION_NATIVE(value)            ((value).type == TOY_LITERAL_FUNCTION_NATIVE)
+#define TOY_IS_FUNCTION_HOOK(value)                ((value).type == TOY_LITERAL_FUNCTION_HOOK)
+#define TOY_IS_IDENTIFIER(value)                ((value).type == TOY_LITERAL_IDENTIFIER)
+#define TOY_IS_TYPE(value)                        ((value).type == TOY_LITERAL_TYPE)
+#define TOY_IS_OPAQUE(value)                    ((value).type == TOY_LITERAL_OPAQUE)
 
 /*!
  The following macros are used to cast a literal to a specific C type to be used.
@@ -178,18 +177,18 @@ typedef struct Toy_Literal {
  * `TOY_AS_OPAQUE(value)`
  !*/
 
-#define TOY_AS_BOOLEAN(value)					((value).as.boolean)
-#define TOY_AS_INTEGER(value)					((value).as.integer)
-#define TOY_AS_FLOAT(value)						((value).as.number)
-#define TOY_AS_STRING(value)					((value).as.string.ptr)
-#define TOY_AS_ARRAY(value)						((Toy_LiteralArray*)((value).as.array))
-#define TOY_AS_DICTIONARY(value)				((Toy_LiteralDictionary*)((value).as.dictionary))
-#define TOY_AS_FUNCTION(value)					((value).as.function)
-#define TOY_AS_FUNCTION_NATIVE(value)			((value).as.function.inner.native)
-#define TOY_AS_FUNCTION_HOOK(value)				((value).as.function.inner.hook)
-#define TOY_AS_IDENTIFIER(value)				((value).as.identifier.ptr)
-#define TOY_AS_TYPE(value)						((value).as.type)
-#define TOY_AS_OPAQUE(value)					((value).as.opaque.ptr)
+#define TOY_AS_BOOLEAN(value)                   ((value).as.boolean)
+#define TOY_AS_INTEGER(value)                   ((value).as.integer)
+#define TOY_AS_FLOAT(value)                     ((value).as.number)
+#define TOY_AS_STRING(value)                    ((value).as.string.ptr)
+#define TOY_AS_ARRAY(value)                     ((Toy_LiteralArray*)((value).as.array))
+#define TOY_AS_DICTIONARY(value)                ((Toy_LiteralDictionary*)((value).as.dictionary))
+#define TOY_AS_FUNCTION(value)                  ((value).as.function)
+#define TOY_AS_FUNCTION_NATIVE(value)           ((value).as.function.inner.native)
+#define TOY_AS_FUNCTION_HOOK(value)             ((value).as.function.inner.hook)
+#define TOY_AS_IDENTIFIER(value)                ((value).as.identifier.ptr)
+#define TOY_AS_TYPE(value)                      ((value).as.type)
+#define TOY_AS_OPAQUE(value)                    ((value).as.opaque.ptr)
 
 /*!
  The following macros are used to create a new literal, with the given `value` as it's internal value.
@@ -209,23 +208,23 @@ typedef struct Toy_Literal {
  * `TOY_TO_OPAQUE_LITERAL(value, t)` - `t` is the integer tag
  !*/
 
-#define TOY_TO_NULL_LITERAL						((Toy_Literal){{ .integer = 0 }, TOY_LITERAL_NULL})
-#define TOY_TO_BOOLEAN_LITERAL(value)			((Toy_Literal){{ .boolean = value }, TOY_LITERAL_BOOLEAN})
-#define TOY_TO_INTEGER_LITERAL(value)			((Toy_Literal){{ .integer = value }, TOY_LITERAL_INTEGER})
-#define TOY_TO_FLOAT_LITERAL(value)				((Toy_Literal){{ .number = value }, TOY_LITERAL_FLOAT})
-#define TOY_TO_STRING_LITERAL(value)			((Toy_Literal){{ .string = { .ptr = value }},TOY_LITERAL_STRING})
-#define TOY_TO_ARRAY_LITERAL(value)				((Toy_Literal){{ .array = value }, TOY_LITERAL_ARRAY})
-#define TOY_TO_DICTIONARY_LITERAL(value)		((Toy_Literal){{ .dictionary = value }, TOY_LITERAL_DICTIONARY})
-#define TOY_TO_FUNCTION_LITERAL(value)			((Toy_Literal){{ .function = { .inner = { .ptr = value }, .scope = NULL }}, TOY_LITERAL_FUNCTION})
-#define TOY_TO_FUNCTION_NATIVE_LITERAL(value)	((Toy_Literal){{ .function = { .inner = { .native = value }, .scope = NULL }}, TOY_LITERAL_FUNCTION_NATIVE})
-#define TOY_TO_FUNCTION_HOOK_LITERAL(value)		((Toy_Literal){{ .function = { .inner = { .hook = value }, .scope = NULL }}, TOY_LITERAL_FUNCTION_HOOK})
-#define TOY_TO_IDENTIFIER_LITERAL(value)		Toy_private_toIdentifierLiteral(value)
-#define TOY_TO_TYPE_LITERAL(value, c)			((Toy_Literal){{ .type = { .typeOf = value, .constant = c, .subtypes = NULL, .capacity = 0, .count = 0 }}, TOY_LITERAL_TYPE})
-#define TOY_TO_OPAQUE_LITERAL(value, t)			((Toy_Literal){{ .opaque = { .ptr = value, .tag = t }}, TOY_LITERAL_OPAQUE})
+#define TOY_TO_NULL_LITERAL                     ((Toy_Literal){{ .integer = 0 }, TOY_LITERAL_NULL})
+#define TOY_TO_BOOLEAN_LITERAL(value)           ((Toy_Literal){{ .boolean = value }, TOY_LITERAL_BOOLEAN})
+#define TOY_TO_INTEGER_LITERAL(value)           ((Toy_Literal){{ .integer = value }, TOY_LITERAL_INTEGER})
+#define TOY_TO_FLOAT_LITERAL(value)             ((Toy_Literal){{ .number = value }, TOY_LITERAL_FLOAT})
+#define TOY_TO_STRING_LITERAL(value)            ((Toy_Literal){{ .string = { .ptr = value }},TOY_LITERAL_STRING})
+#define TOY_TO_ARRAY_LITERAL(value)             ((Toy_Literal){{ .array = value }, TOY_LITERAL_ARRAY})
+#define TOY_TO_DICTIONARY_LITERAL(value)        ((Toy_Literal){{ .dictionary = value }, TOY_LITERAL_DICTIONARY})
+#define TOY_TO_FUNCTION_LITERAL(value)          ((Toy_Literal){{ .function = { .inner = { .ptr = value }, .scope = NULL }}, TOY_LITERAL_FUNCTION})
+#define TOY_TO_FUNCTION_NATIVE_LITERAL(value)   ((Toy_Literal){{ .function = { .inner = { .native = value }, .scope = NULL }}, TOY_LITERAL_FUNCTION_NATIVE})
+#define TOY_TO_FUNCTION_HOOK_LITERAL(value)     ((Toy_Literal){{ .function = { .inner = { .hook = value }, .scope = NULL }}, TOY_LITERAL_FUNCTION_HOOK})
+#define TOY_TO_IDENTIFIER_LITERAL(value)        Toy_private_toIdentifierLiteral(value)
+#define TOY_TO_TYPE_LITERAL(value, c)           ((Toy_Literal){{ .type = { .typeOf = value, .constant = c, .subtypes = NULL, .capacity = 0, .count = 0 }}, TOY_LITERAL_TYPE})
+#define TOY_TO_OPAQUE_LITERAL(value, t)         ((Toy_Literal){{ .opaque = { .ptr = value, .tag = t }}, TOY_LITERAL_OPAQUE})
 
 //BUGFIX: For blank indexing - not for general use
-#define TOY_IS_INDEX_BLANK(value)				((value).type == TOY_LITERAL_INDEX_BLANK)
-#define TOY_TO_INDEX_BLANK_LITERAL				((Toy_Literal){{ .integer = 0 }, TOY_LITERAL_INDEX_BLANK})
+#define TOY_IS_INDEX_BLANK(value)               ((value).type == TOY_LITERAL_INDEX_BLANK)
+#define TOY_TO_INDEX_BLANK_LITERAL              ((Toy_Literal){{ .integer = 0 }, TOY_LITERAL_INDEX_BLANK})
 
 /*!
  ## More Defined Macros
@@ -241,7 +240,7 @@ typedef struct Toy_Literal {
  Currently, every value is considered truthy except `false`, which is falsy and `null`, which is neither true or false.
  !*/
 
-#define TOY_IS_TRUTHY(x) 						Toy_private_isTruthy(x)
+#define TOY_IS_TRUTHY(x)                         Toy_private_isTruthy(x)
 
 /*!
  ### TOY_AS_FUNCTION_BYTECODE_LENGTH(lit)
@@ -250,14 +249,14 @@ typedef struct Toy_Literal {
 
  This macro is only valid on `TOY_LITERAL_FUNCTION`.
  !*/
-#define TOY_AS_FUNCTION_BYTECODE_LENGTH(lit)	(Toy_lengthRefFunction((lit).inner.ptr))
+#define TOY_AS_FUNCTION_BYTECODE_LENGTH(lit)    (Toy_lengthRefFunction((lit).inner.ptr))
 
 /*!
  ### TOY_MAX_STRING_LENGTH
 
  The maximum length of a string in Toy, which is 4096 bytes by default. This can be changed at compile time, but the results of doing so are not officially supported.
  !*/
-#define TOY_MAX_STRING_LENGTH					4096
+#define TOY_MAX_STRING_LENGTH                    4096
 
 /*!
  ### TOY_HASH_I(lit)
@@ -266,7 +265,7 @@ typedef struct Toy_Literal {
 
  This macro is only valid on `TOY_LITERAL_IDENTIFIER`.
  !*/
-#define TOY_HASH_I(lit)							((lit).as.identifier.hash)
+#define TOY_HASH_I(lit)                            ((lit).as.identifier.hash)
 
 /*!
  ### TOY_TYPE_PUSH_SUBTYPE(lit, subtype)
@@ -277,7 +276,7 @@ typedef struct Toy_Literal {
 
  This macro is only valid on `TOY_LITERAL_TYPE`, for both `type` and `subtype`.
  !*/
-#define TOY_TYPE_PUSH_SUBTYPE(lit, subtype)		Toy_private_typePushSubtype(lit, subtype)
+#define TOY_TYPE_PUSH_SUBTYPE(lit, subtype)        Toy_private_typePushSubtype(lit, subtype)
 
 /*!
  ### TOY_GET_OPAQUE_TAG(o)
@@ -286,7 +285,7 @@ typedef struct Toy_Literal {
 
  This macro is only valid on `TOY_LITERAL_OPAQUE`.
  !*/
-#define TOY_GET_OPAQUE_TAG(o)					o.as.opaque.tag
+#define TOY_GET_OPAQUE_TAG(o)                    o.as.opaque.tag
 
 /*!
  ## Defined Functions
