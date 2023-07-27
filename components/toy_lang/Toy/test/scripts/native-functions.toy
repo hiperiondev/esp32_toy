@@ -1,90 +1,90 @@
 
 {
-    //test arrays without types
-    var array = [];
+	//test arrays without types
+	var array = [];
 
-    assert length(array) == 0, "length failed with array";
+	assert length(array) == 0, "length failed with array";
 
-    push(array, 1);
-    push(array, 2);
-    push(array, 3);
-    push(array, 4);
-    push(array, "foo");
+	push(array, 1);
+	push(array, 2);
+	push(array, 3);
+	push(array, 4);
+	push(array, "foo");
 
-    assert length(array) == 5, "push failed with array";
-    assert pop(array) == "foo", "pop failed with array";
+	assert length(array) == 5, "push failed with array";
+	assert pop(array) == "foo", "pop failed with array";
 
-    set(array, 2, "bar");
-    assert array == [1, 2, "bar", 4], "set failed with array";
-    assert get(array, 3) == 4, "get failed with array";
-
-
-    //test dictionaries without types
-    var dict = [:];
-
-    set(dict, "key", "value");
-    set(dict, 1, 2);
-
-    assert dict == ["key":"value", 1:2], "set failed with dictionaries";
-    assert get(dict, "key") == "value", "get failed with dictionaries";
+	set(array, 2, "bar");
+	assert array == [1, 2, "bar", 4], "set failed with array";
+	assert get(array, 3) == 4, "get failed with array";
 
 
-    //test length
-    assert length(array) == 4 && length(dict) == 2, "length failed with array or dictionaries";
+	//test dictionaries without types
+	var dict = [:];
+
+	set(dict, "key", "value");
+	set(dict, 1, 2);
+
+	assert dict == ["key":"value", 1:2], "set failed with dictionaries";
+	assert get(dict, "key") == "value", "get failed with dictionaries";
 
 
-    //test clear
-    clear(array);
-    clear(dict);
+	//test length
+	assert length(array) == 4 && length(dict) == 2, "length failed with array or dictionaries";
 
-    assert length(array) == 0 && length(dict) == 0, "clear failed with array or dictionaries";
+
+	//test clear
+	clear(array);
+	clear(dict);
+
+	assert length(array) == 0 && length(dict) == 0, "clear failed with array or dictionaries";
 }
 
 
 {
-    //test arrays with types
-    var array: [int] = [];
+	//test arrays with types
+	var array: [int] = [];
 
-    assert length(array) == 0, "length failed with array (+ types)";
+	assert length(array) == 0, "length failed with array (+ types)";
 
-    push(array, 1);
-    push(array, 2);
-    push(array, 3);
-    push(array, 4);
-    push(array, 10);
+	push(array, 1);
+	push(array, 2);
+	push(array, 3);
+	push(array, 4);
+	push(array, 10);
 
-    assert length(array) == 5, "push or failed with array (+ types)";
-    assert pop(array) == 10, "pop failed with array (+ types)";
+	assert length(array) == 5, "push or failed with array (+ types)";
+	assert pop(array) == 10, "pop failed with array (+ types)";
 
-    set(array, 2, 70);
-    assert array == [1, 2, 70, 4], "set failed with array (+ types)";
-    assert get(array, 3) == 4, "get failed with array (+ types)";
-
-
-    //test dictionaries with types
-    var dict: [string : string] = [:];
-
-    set(dict, "key", "value");
-
-    assert dict == ["key":"value"], "set failed with dictionaries (+ types)";
-    assert get(dict, "key") == "value", "get failed with dictionaries (+ types)";
+	set(array, 2, 70);
+	assert array == [1, 2, 70, 4], "set failed with array (+ types)";
+	assert get(array, 3) == 4, "get failed with array (+ types)";
 
 
-    //test length with types
-    assert length(array) == 4 && length(dict) == 1, "length failed with array or dictionaries (+ types)";
+	//test dictionaries with types
+	var dict: [string : string] = [:];
+
+	set(dict, "key", "value");
+
+	assert dict == ["key":"value"], "set failed with dictionaries (+ types)";
+	assert get(dict, "key") == "value", "get failed with dictionaries (+ types)";
 
 
-    //test clear with types
-    clear(array);
-    clear(dict);
+	//test length with types
+	assert length(array) == 4 && length(dict) == 1, "length failed with array or dictionaries (+ types)";
 
-    assert length(array) == 0 && length(dict) == 0, "clear failed with array or dictionaries (+ types)";
+
+	//test clear with types
+	clear(array);
+	clear(dict);
+
+	assert length(array) == 0 && length(dict) == 0, "clear failed with array or dictionaries (+ types)";
 }
 
 {
-    var str = "hello world";
+	var str = "hello world";
 
-    assert length(str) == 11, "length failed with string";
+	assert length(str) == 11, "length failed with string";
 }
 
 

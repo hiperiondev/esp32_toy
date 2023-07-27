@@ -1,16 +1,16 @@
 //polyfill the remove function
 fn remove(self, k) {
-    var result = [];
+	var result = [];
 
-    for (var i = 0; i <= k - 1; i++) {
-        result.push( self[i] );
-    }
+	for (var i = 0; i <= k - 1; i++) {
+		result.push( self[i] );
+	}
 
-    for (var i = k + 1; i < self.length(); i++) {
-        result.push( self[i] );
-    }
+	for (var i = k + 1; i < self.length(); i++) {
+		result.push( self[i] );
+	}
 
-    return result;
+	return result;
 }
 
 var a = [1, 2, 3];

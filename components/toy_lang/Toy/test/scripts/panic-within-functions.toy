@@ -1,7 +1,7 @@
 
 
 fn panic() {
-    assert false, "!ignore panicking within a function";
+	assert false, "!ignore panicking within a function";
 }
 
 panic();

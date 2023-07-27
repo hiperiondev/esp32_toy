@@ -6,7 +6,7 @@ assert length(a) == length(b), "a and b lengths are wrong";
 
 var acc = 0;
 for (var i = 0; i < length(a); i++) {
-    acc += get(a, i) * get(b, i);
+	acc += get(a, i) * get(b, i);
 }
 
 assert acc == 32, "dot product failed";
@@ -14,46 +14,46 @@ assert acc == 32, "dot product failed";
 
 //assume the args are matrices
 fn matrix(first, second) {
-    //get the matrix size
-    var l1 = length(first); //rows
-    var l2 = length(get(first, 0)); //cols
+	//get the matrix size
+	var l1 = length(first); //rows
+	var l2 = length(get(first, 0)); //cols
 
-    var l3 = length(second); //rows
-    var l4 = length(get(second, 0)); //cols
+	var l3 = length(second); //rows
+	var l4 = length(get(second, 0)); //cols
 
-    //pre-allocate the matrix
-    var row = [];
-    for (var j = 0; j < l4; j++) {
-        push(row, 0);
-    }
+	//pre-allocate the matrix
+	var row = [];
+	for (var j = 0; j < l4; j++) {
+		push(row, 0);
+	}
 
-    var result = [];
-    for (var i = 0; i < l1; i++) {
-        push(result, row);
-    }
+	var result = [];
+	for (var i = 0; i < l1; i++) {
+		push(result, row);
+	}
 
-    //assign the values
-    for (var i = 0; i < length(first); i++) {
-        //select each element of "first"
-        var firstElement = get(first, i);
+	//assign the values
+	for (var i = 0; i < length(first); i++) {
+		//select each element of "first"
+		var firstElement = get(first, i);
 
-        //for each element of second
-        for (var i2 = 0; i2 < length(second); i2++) {
-            for (var j2 = 0; j2 < length(get(second, 0)); j2++) {
+		//for each element of second
+		for (var i2 = 0; i2 < length(second); i2++) {
+			for (var j2 = 0; j2 < length(get(second, 0)); j2++) {
 
-                var val = get(get(first, i), i2) * get(get(second, i2), j2);
+				var val = get(get(first, i), i2) * get(get(second, i2), j2);
 
-                //TODO: needs better notation than this tmpRow variable
-                var tmpRow = get(result, i);
-                set(tmpRow, j2, val);
-                set(result, i, tmpRow);
+				//TODO: needs better notation than this tmpRow variable
+				var tmpRow = get(result, i);
+				set(tmpRow, j2, val);
+				set(result, i, tmpRow);
 
-                //result[ i ][ j2 ] += first[i][i2] * second[i2][j2]
-            }
-        }
-    }
+				//result[ i ][ j2 ] += first[i][i2] * second[i2][j2]
+			}
+		}
+	}
 
-    return result;
+	return result;
 }
 
 //matrix multiply

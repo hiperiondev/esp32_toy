@@ -1,102 +1,91 @@
-/**
- * @file toy_reffunction.h
- * @brief @@???@@
- *
- */
+#ifndef TOY_REFFUNTION_H_
+#define TOY_REFFUNTION_H_
 
-#ifndef TOY_REFFUNCTION_H_
-#define TOY_REFFUNCTION_H_
+/*!
+ # toy_reffunction.h
 
-#include <stddef.h>
+ This header defines the Toy_RefFunction structure, as well as all of the related utilities.
+
+ See [Toy_RefString](toy_refstring_h.md) for more information about the reference pattern.
+
+ This module reserves the right to instead preform a deep copy when it sees fit (this is for future debugging purposes).
+ !*/
 
 #include "toy_common.h"
 
-//memory allocation hook
-/**
- * @fn void* (*Toy_RefFunctionAllocatorFn)(void *pointer, size_t oldSize, size_t newSize)
- * @brief @@???@@
- *
- * @param pointer
- * @param oldSize
- * @param newSize
- */
-typedef void* (*Toy_RefFunctionAllocatorFn)(void *pointer, size_t oldSize, size_t newSize);
-
-/**
- * @fn void Toy_setRefFunctionAllocatorFn(Toy_RefFunctionAllocatorFn)
- * @brief Conforms to and is invoked by Toy's memory API, and generally shouldn't be used.
- *
- * @param Toy_RefFunctionAllocatorFn
- */
-TOY_API void Toy_setRefFunctionAllocatorFn(Toy_RefFunctionAllocatorFn);
-
 //the RefFunction structure
-/**
- * @typedef Toy_RefFunction
- * @brief @@???@@
- *
- */
 typedef struct Toy_RefFunction {
-    size_t length;        /**< @@???@@ */
-    int refCount;         /**< @@???@@ */
-    unsigned char data[]; /**< @@???@@ */
+    size_t length;
+    int refCount;
+    unsigned char data[];
 } Toy_RefFunction;
 
-//API
-/**
- * @fn Toy_RefFunction* Toy_createRefFunction(const void *data, size_t length)
- * @brief Returns a new Toy_RefFunction, containing a copy of data, or NULL on error.
- *        This function also sets the returned refFunction's reference counter to 1.
- *
- * @param data
- * @param length
- * @return
- */
+/*!
+ ## Defined Interfaces
+ !*/
+
+/*!
+ ### typedef void* (*Toy_RefFunctionAllocatorFn)(void* pointer, size_t oldSize, size_t newSize)
+
+ This interface conforms to Toy's memory API, and generally shouldn't be used without a good reason.
+ !*/
+typedef void* (*Toy_RefFunctionAllocatorFn)(void *pointer, size_t oldSize, size_t newSize);
+
+/*!
+ ## Defined Functions
+ !*/
+
+/*!
+ ### void Toy_setRefFunctionAllocatorFn(Toy_RefFunctionAllocatorFn)
+
+ This function conforms to and is invoked by Toy's memory API, and generally shouldn't be used without a good reason.
+ !*/
+TOY_API void Toy_setRefFunctionAllocatorFn(Toy_RefFunctionAllocatorFn);
+
+/*!
+ ### Toy_RefFunction* Toy_createRefFunction(const void* data, size_t length)
+
+ This function returns a new `Toy_RefFunction`, containing a copy of `data`, or `NULL` on error.
+
+ This function also sets the returned `refFunction`'s reference counter to 1.
+ !*/
 TOY_API Toy_RefFunction* Toy_createRefFunction(const void *data, size_t length);
 
-/**
- * @fn void Toy_deleteRefFunction(Toy_RefFunction *refFunction)
- * @brief Reduces the refFunction's reference counter by 1 and, if it reaches 0, frees the memory.
- *
- * @param refFunction
- */
+/*!
+ ### void Toy_deleteRefFunction(Toy_RefFunction* refFunction)
+
+ This function reduces the `refFunction`'s reference counter by 1 and, if it reaches 0, frees the memory.
+ !*/
 TOY_API void Toy_deleteRefFunction(Toy_RefFunction *refFunction);
 
-/**
- * @fn int Toy_countRefFunction(Toy_RefFunction *refFunction)
- * @brief Returns the total number of references to refFunction, for debugging.
- *
- * @param refFunction
- * @return
- */
+/*!
+ ### int Toy_countRefFunction(Toy_RefFunction* refFunction)
+
+ This function returns the total number of references to `refFunction`, for debugging.
+ !*/
 TOY_API int Toy_countRefFunction(Toy_RefFunction *refFunction);
 
-/**
- * @fn size_t Toy_lengthRefFunction(Toy_RefFunction *refFunction)
- * @brief Returns the length of the underlying bytecode of refFunction.
- *
- * @param refFunction
- * @return
- */
+/*!
+ ### size_t Toy_lengthRefFunction(Toy_RefFunction* refFunction)
+
+ This function returns the length of the underlying bytecode of `refFunction`.
+ !*/
 TOY_API size_t Toy_lengthRefFunction(Toy_RefFunction *refFunction);
 
-/**
- * @fn Toy_RefFunction* Toy_copyRefFunction(Toy_RefFunction *refFunction)
- * @brief Increases the reference counter of refFunction by 1, before returning the given pointer.
- *
- * @param refFunction
- * @return
- */
+/*!
+ ### Toy_RefFunction* Toy_copyRefFunction(Toy_RefFunction* refFunction)
+
+ This function increases the reference counter of `refFunction` by 1, before returning the given pointer.
+
+ This function reserves the right to create a deep copy where needed.
+ !*/
 TOY_API Toy_RefFunction* Toy_copyRefFunction(Toy_RefFunction *refFunction);
 
-/**
- * @fn Toy_RefFunction* Toy_deepCopyRefFunction(Toy_RefFunction *refFunction)
- * @brief Behaves identically to Toy_copyRefFunction, except that it explicitly preforms a deep copy of the internal memory. Using this function should be done carefully, as it incurs a performance penalty that negates the benefit of this module.
- *
- * @param refFunction
- * @return
- */
+/*!
+ ### Toy_RefFunction* Toy_deepCopyRefFunction(Toy_RefFunction* refFunction)
+
+ This function behaves identically to `Toy_copyRefFunction`, except that it explicitly forces a deep copy of the internal memory. Using this function should be done carefully, as it incurs a performance penalty that negates the benefit of this module.
+ !*/
 TOY_API Toy_RefFunction* Toy_deepCopyRefFunction(Toy_RefFunction *refFunction);
 
-#endif /* TOY_REFFUNCTION_H_ */
-
+#endif /* TOY_REFFUNTION_H_ */

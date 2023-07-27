@@ -1,11 +1,5 @@
-/**
- * @file toy_console_colors.h
- * @brief
- *
- */
-
-#ifndef TOY_CONSOLE_COLOR_H_
-#define TOY_CONSOLE_COLOR_H_
+#ifndef TOY_CONSOLE_COLORS_H_
+#define TOY_CONSOLE_COLORS_H_
 
 /* toy_console_colors.h - console utility
 
@@ -80,4 +74,4 @@
 
 #endif
 
-#endif /* TOY_CONSOLE_COLOR_H_ */
+#endif /* TOY_CONSOLE_COLORS_H_ */

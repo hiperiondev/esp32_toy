@@ -1,4 +1,4 @@
 {
-    var a: [int] = [1, 2, 3];
-    print a[a];
+	var a: [int] = [1, 2, 3];
+	print a[a];
 }

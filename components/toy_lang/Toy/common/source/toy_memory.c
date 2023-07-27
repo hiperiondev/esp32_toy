@@ -10,7 +10,7 @@
 void* Toy_private_defaultMemoryAllocator(void *pointer, size_t oldSize, size_t newSize) {
     //causes issues, so just skip out with a NO-OP (DISABLED for performance reasons)
     // if (newSize == 0 && oldSize == 0) {
-    //     return NULL;
+    // 	return NULL;
     // }
 
     if (newSize == 0) {

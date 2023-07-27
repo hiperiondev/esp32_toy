@@ -2,48 +2,48 @@
 
 //test basic import
 {
-    import standard;
+	import standard;
 
-    //this depends on external factors, so only check the length
-    assert clock().length() == 24, "import library failed";
+	//this depends on external factors, so only check the length
+	assert clock().length() == 24, "import library failed";
 }
 
 
 //test import within a function
 {
-    fn f() {
-        import standard;
+	fn f() {
+		import standard;
 
-        assert clock != null, "import library within function failed";
+		assert clock != null, "import library within function failed";
 
-        return clock;
-    }
+		return clock;
+	}
 
-    //invoke
-    assert f()().length() == 24, "import library within function and return failed";
+	//invoke
+	assert f()().length() == 24, "import library within function and return failed";
 }
 
 
 //test closing over standard library element
 {
-    import standard;
+	import standard;
 
-    fn f() {
-        assert clock != null, "import library outside function failed";
+	fn f() {
+		assert clock != null, "import library outside function failed";
 
-        return clock;
-    }
+		return clock;
+	}
 
-    //invoke
-    assert f()().length() == 24, "import library outside function and return failed";
+	//invoke
+	assert f()().length() == 24, "import library outside function and return failed";
 }
 
 
 //test importing as an alias
 {
-    import standard as std;
+	import standard as std;
 
-    assert std["clock"]().length() == 24, "import library as alias failed";
+	assert std["clock"]().length() == 24, "import library as alias failed";
 }
 
 

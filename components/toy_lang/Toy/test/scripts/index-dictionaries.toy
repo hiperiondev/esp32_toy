@@ -1,40 +1,40 @@
 //test basic insertion
 {
-    var d = [:];
+	var d = [:];
 
-    d["foo"] = "bar";
+	d["foo"] = "bar";
 
-    assert d == ["foo":"bar"], "basic insertion failed";
+	assert d == ["foo":"bar"], "basic insertion failed";
 }
 
 
 //test index arithmetic
 {
-    var d = ["one":1, "two":2, "three":3];
+	var d = ["one":1, "two":2, "three":3];
 
-    d["three"] *= 3;
+	d["three"] *= 3;
 
-    assert d == ["one":1, "two":2, "three":9], "index arithmetic failed";
+	assert d == ["one":1, "two":2, "three":9], "index arithmetic failed";
 }
 
 
 //test indexing with variables
 {
-    var d = ["one":1, "two":2, "three":3];
+	var d = ["one":1, "two":2, "three":3];
 
-    var first = "two";
+	var first = "two";
 
-    assert d[first] == 2, "indexing with variables failed";
+	assert d[first] == 2, "indexing with variables failed";
 }
 
 
 //test nested indexing
 {
-    var d = ["foo" : ["bar" : ["bazz" : ["fizz" : 5]]]];
+	var d = ["foo" : ["bar" : ["bazz" : ["fizz" : 5]]]];
 
-    d["foo"]["bar"]["bazz"]["fizz"] = 66;
+	d["foo"]["bar"]["bazz"]["fizz"] = 66;
 
-    assert d == ["foo": ["bar": ["bazz": ["fizz": 66]]]], "nested indexing failed";
+	assert d == ["foo": ["bar": ["bazz": ["fizz": 66]]]], "nested indexing failed";
 }
 
 

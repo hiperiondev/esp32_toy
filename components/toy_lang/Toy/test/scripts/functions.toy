@@ -1,6 +1,6 @@
 //test function return
 fn testFourtyTwo() {
-    return 42;
+	return 42;
 }
 
 assert testFourtyTwo() == 42, "function returns failed";
@@ -8,7 +8,7 @@ assert testFourtyTwo() == 42, "function returns failed";
 
 //test function parameters
 fn identity(x) {
-    return x;
+	return x;
 }
 
 assert identity("hello world") == "hello world", "identity function failed";
@@ -16,13 +16,13 @@ assert identity("hello world") == "hello world", "identity function failed";
 
 //test closures
 fn make() {
-    var counter = 0;
+	var counter = 0;
 
-    fn count() {
-        return ++counter;
-    }
+	fn count() {
+		return ++counter;
+	}
 
-    return count;
+	return count;
 }
 
 var tally = make();
@@ -32,11 +32,11 @@ assert tally() == 1 && tally() == 2, "Closures failed";
 
 //test closures self-capture
 fn capture(count: int) {
-    if (count > 5) {
-        return count;
-    }
+	if (count > 5) {
+		return count;
+	}
 
-    return capture(count + 1);
+	return capture(count + 1);
 }
 
 assert capture(0) == 6, "Self capture failed";
@@ -44,11 +44,11 @@ assert capture(0) == 6, "Self capture failed";
 
 //test expressions as arguments
 fn argFn() {
-    return 42;
+	return 42;
 }
 
 fn outerFn(val) {
-    assert val == 42, "expression as argument failed";
+	assert val == 42, "expression as argument failed";
 }
 
 outerFn(argFn());
@@ -56,7 +56,7 @@ outerFn(argFn());
 
 //test extra parameters
 fn extra(one, two, ...rest) {
-    assert rest == ["three", "four", "five", "six", "seven"], "rest parameters failed";
+	assert rest == ["three", "four", "five", "six", "seven"], "rest parameters failed";
 }
 
 extra("one", "two", "three", "four", "five", "six", "seven");
@@ -64,10 +64,10 @@ extra("one", "two", "three", "four", "five", "six", "seven");
 
 //test underscore functions
 fn example(self, a, b, c) {
-    assert a == "a", "underscore failed (a)";
-    assert b == "b", "underscore failed (b)";
-    assert c == "c", "underscore failed (c)";
-    return self;
+	assert a == "a", "underscore failed (a)";
+	assert b == "b", "underscore failed (b)";
+	assert c == "c", "underscore failed (c)";
+	return self;
 }
 
 assert "hello world".example("a", "b", "c") == "hello world", "underscore call failed";

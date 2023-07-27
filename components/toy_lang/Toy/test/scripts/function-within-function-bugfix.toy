@@ -1,29 +1,29 @@
 {
-    fn a() {
-        fn b() {
-            return 42;
-        }
+	fn a() {
+		fn b() {
+			return 42;
+		}
 
-        return b;
-    }
+		return b;
+	}
 
-    assert a()() == 42, "function within function failed";
+	assert a()() == 42, "function within function failed";
 }
 
 {
-    fn a() {
-        fn b() {
-            fn c() {
-                return 42;
-            }
+	fn a() {
+		fn b() {
+			fn c() {
+				return 42;
+			}
 
-            return c;
-        }
+			return c;
+		}
 
-        return b;
-    }
+		return b;
+	}
 
-    assert a()()() == 42, "function within function within function failed";
+	assert a()()() == 42, "function within function within function failed";
 }
 
 

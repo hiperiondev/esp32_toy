@@ -23,20 +23,8 @@ const char* Toy_private_version_build(void) {
 }
 
 //declare the singleton with default values
-Toy_CommandLine Toy_commandLine = {
-        .error = false,
-        .help = false,
-        .version = false,
-        .binaryfile = NULL,
-        .sourcefile = NULL,
-        .compilefile = NULL,
-        .outfile = "out.tb",
-        .source = NULL,
-        .initialfile = NULL,
-        .enablePrintNewline = true,
-        .parseBytecodeHeader = false,
-        .verbose = false
-};
+Toy_CommandLine Toy_commandLine = { .error = false, .help = false, .version = false, .binaryfile = NULL, .sourcefile = NULL, .compilefile = NULL, .outfile =
+        "out.tb", .source = NULL, .initialfile = NULL, .enablePrintNewline = true, .parseBytecodeHeader = false, .verbose = false };
 
 void Toy_initCommandLine(int argc, const char *argv[]) {
     for (int i = 1; i < argc; i++) { //start at 1 to skip the program name
@@ -146,7 +134,7 @@ void Toy_helpCommandLine(int argc, const char *argv[]) {
 
 void Toy_copyrightCommandLine(int argc, const char *argv[]) {
     printf("Toy Programming Language Interpreter Version %d.%d.%d (built on %s)\n\n", TOY_VERSION_MAJOR, TOY_VERSION_MINOR, TOY_VERSION_PATCH,
-            TOY_VERSION_BUILD);
+    TOY_VERSION_BUILD);
     printf("Copyright (c) 2020-2023 Kayne Ruse, KR Game Studios\n\n");
     printf(
             "This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.\n\n");

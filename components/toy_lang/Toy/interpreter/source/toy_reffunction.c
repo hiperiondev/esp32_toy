@@ -1,6 +1,6 @@
-#include <string.h>
-
 #include "toy_reffunction.h"
+
+#include <string.h>
 
 //memory allocation
 extern void* Toy_private_defaultMemoryAllocator(void *pointer, size_t oldSize, size_t newSize);

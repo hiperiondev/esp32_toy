@@ -6,8 +6,8 @@
 #include "toy_literal.h"
 #include "toy_literal_array.h"
 #include "toy_literal_dictionary.h"
-#include "toy_console_colors.h"
 #include "toy_repl_common.h"
+#include "toy_console_colors.h"
 
 void Toy_initCompiler(Toy_Compiler *compiler) {
     Toy_initLiteralArray(&compiler->literalCache);
@@ -648,7 +648,7 @@ static Toy_Opcode Toy_writeCompilerWithJumps(Toy_Compiler *compiler, Toy_ASTNode
                 if (node->fnCall.arguments->fnCollection.nodes[i].type != TOY_AST_NODE_LITERAL) {
                     Toy_Opcode override = Toy_writeCompilerWithJumps(compiler, &node->fnCall.arguments->fnCollection.nodes[i], breakAddressesPtr,
                             continueAddressesPtr, jumpOffsets, rootNode);
-                    if (override != TOY_OP_EOF) {                //compensate for indexing & dot notation being screwy
+                    if (override != TOY_OP_EOF) {				//compensate for indexing & dot notation being screwy
                         compiler->bytecode[compiler->count++] = (unsigned char) override; //1 byte
                     }
                     continue;
@@ -702,7 +702,7 @@ static Toy_Opcode Toy_writeCompilerWithJumps(Toy_Compiler *compiler, Toy_ASTNode
         case TOY_AST_NODE_IF: {
             //process the condition
             Toy_Opcode override = Toy_writeCompilerWithJumps(compiler, node->pathIf.condition, breakAddressesPtr, continueAddressesPtr, jumpOffsets, rootNode);
-            if (override != TOY_OP_EOF) {            //compensate for indexing & dot notation being screwy
+            if (override != TOY_OP_EOF) {			//compensate for indexing & dot notation being screwy
                 compiler->bytecode[compiler->count++] = (unsigned char) override; //1 byte
             }
 

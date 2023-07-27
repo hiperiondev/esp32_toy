@@ -2,86 +2,86 @@ import runner;
 
 //test basic loading and freeing of a script file
 {
-    var s = loadScript("scripts:/runner_sample_code.toy");
+	var s = loadScript("scripts:/runner_sample_code.toy");
 
-    s.freeScript();
+	s.freeScript();
 }
 
 //test basic loading and freeing of a binary file
 {
-    var s = loadScriptBytecode("scripts:/lib/runner/sample_bytecode.tb");
+	var s = loadScriptBytecode("scripts:/lib/runner/sample_bytecode.tb");
 
-    s.freeScript();
+	s.freeScript();
 }
 
 //test running an external script
 {
-    var s = loadScript("scripts:/runner_sample_code.toy");
+	var s = loadScript("scripts:/runner_sample_code.toy");
 
-    s.runScript();
+	s.runScript();
 
-    s.freeScript();
+	s.freeScript();
 }
 
 //test running an external binary file
 {
-    var s = loadScriptBytecode("scripts:/lib/runner/sample_bytecode.tb");
+	var s = loadScriptBytecode("scripts:/lib/runner/sample_bytecode.tb");
 
-    s.runScript();
+	s.runScript();
 
-    s.freeScript();
+	s.freeScript();
 }
 
 //test resetting an external script
 {
-    var s = loadScript("scripts:/runner_sample_code.toy");
+	var s = loadScript("scripts:/runner_sample_code.toy");
 
-    s.runScript();
-    s.resetScript();
+	s.runScript();
+	s.resetScript();
 
-    assert !s.checkScriptDirty(), "checkScriptDirty failed";
+	assert !s.checkScriptDirty(), "checkScriptDirty failed";
 
-    s.runScript();
+	s.runScript();
 
-    assert s.checkScriptDirty(), "_checkScriptDirty() failed";
+	assert s.checkScriptDirty(), "_checkScriptDirty() failed";
 
-    s.resetScript();
-    s.runScript();
+	s.resetScript();
+	s.runScript();
 
-    s.freeScript();
+	s.freeScript();
 }
 
 //test running a nested external script
 {
-    var s = loadScript("scripts:/lib/runner/sample_1.toy");
+	var s = loadScript("scripts:/lib/runner/sample_1.toy");
 
-    s.runScript();
+	s.runScript();
 
-    s.freeScript();
+	s.freeScript();
 }
 
 //test retrieving a script variable
 {
-    var s = loadScript("scripts:/runner_sample_code.toy");
+	var s = loadScript("scripts:/runner_sample_code.toy");
 
-    s.runScript();
+	s.runScript();
 
-    var fib = s.getScriptVar("fib");
+	var fib = s.getScriptVar("fib");
 
-    assert fib(12) == 144, "_getScriptVar() failed";
+	assert fib(12) == 144, "_getScriptVar() failed";
 
-    s.freeScript();
+	s.freeScript();
 }
 
 //test calling a script function
 {
-    var s = loadScript("scripts:/runner_sample_code.toy");
+	var s = loadScript("scripts:/runner_sample_code.toy");
 
-    s.runScript();
+	s.runScript();
 
-    assert s.callScriptFn("fib", 12) == 144, "_callScriptFn() failed";
+	assert s.callScriptFn("fib", 12) == 144, "_callScriptFn() failed";
 
-    s.freeScript();
+	s.freeScript();
 }
 
 

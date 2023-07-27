@@ -1,14 +1,15 @@
-#include <stdio.h>
-#include <string.h>
-
 #include "toy_interpreter.h"
 #include "toy_console_colors.h"
+
 #include "toy_common.h"
 #include "toy_memory.h"
 #include "toy_keyword_types.h"
 #include "toy_opcodes.h"
-#include "toy_builtin.h"
 #include "toy_repl_common.h"
+#include "toy_builtin.h"
+
+#include <stdio.h>
+#include <string.h>
 
 static void printWrapper(const char *output) {
     //allow for disabling of newlines in the repl
@@ -19,7 +20,7 @@ static void printWrapper(const char *output) {
         printf("%s", output);
     }
 #else
-    printf("%s\n", output);
+	printf("%s\n", output);
 #endif
 }
 
@@ -191,7 +192,7 @@ bool Toy_parseIdentifierToValue(Toy_Interpreter *interpreter, Toy_Literal *liter
     }
 
     // if (TOY_IS_ARRAY(*literalPtr) || TOY_IS_DICTIONARY(*literalPtr)) {
-    //     Toy_parseCompoundToPureValues(interpreter, literalPtr);
+    // 	Toy_parseCompoundToPureValues(interpreter, literalPtr);
     // }
 
     return true;
@@ -691,7 +692,7 @@ static bool execVarAssign(Toy_Interpreter *interpreter) {
         return false;
     }
 
-    if (!Toy_isDelcaredScopeVariable(interpreter->scope, lhs)) {
+    if (!Toy_isDeclaredScopeVariable(interpreter->scope, lhs)) {
         interpreter->errorOutput("Undeclared variable \"");
         Toy_printLiteralCustom(lhs, interpreter->errorOutput);
         interpreter->errorOutput("\"\n");
@@ -1454,7 +1455,7 @@ bool Toy_callFn(Toy_Interpreter *interpreter, const char *name, Toy_LiteralArray
     Toy_Literal key = TOY_TO_IDENTIFIER_LITERAL(Toy_createRefStringLength(name, strlen(name)));
     Toy_Literal val = TOY_TO_NULL_LITERAL;
 
-    if (!Toy_isDelcaredScopeVariable(interpreter->scope, key)) {
+    if (!Toy_isDeclaredScopeVariable(interpreter->scope, key)) {
         interpreter->errorOutput("No function with that name\n");
         return false;
     }

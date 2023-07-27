@@ -1,7 +1,7 @@
 /*
 
 NOTES: For some reason, this code results in the error:
-    Undeclared variable "inner"
+	Undeclared variable "inner"
 
 It only occurs under these very specific conditions.
 
@@ -10,7 +10,7 @@ It appears to be a compiler issue, see issue #38 for more info.
 */
 
 fn getValue(self) {
-    return self;
+	return self;
 }
 
 var cache;

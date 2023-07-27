@@ -1,8 +1,10 @@
-#include <stdio.h>
-
 #include "toy_literal_dictionary.h"
+
 #include "toy_memory.h"
+
 #include "toy_console_colors.h"
+
+#include <stdio.h>
 
 //util functions
 static void setEntryValues(Toy_private_dictionary_entry *entry, Toy_Literal key, Toy_Literal value) {
@@ -128,7 +130,6 @@ static void freeEntryArray(Toy_private_dictionary_entry *array, int capacity) {
 
 //exposed functions
 void Toy_initLiteralDictionary(Toy_LiteralDictionary *dictionary) {
-    //HACK: because modulo by 0 is undefined, set the capacity to a non-zero value (and allocate the arrays)
     dictionary->entries = NULL;
     dictionary->capacity = 0;
     dictionary->contains = 0;
