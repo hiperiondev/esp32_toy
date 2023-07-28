@@ -60,8 +60,8 @@
 //Parsers are bound to a lexer, and turn the outputted tokens into AST nodes
 typedef struct {
     Toy_Lexer *lexer;
-    bool error; //I've had an error
-    bool panic; //I am processing an error
+    bool error; // I've had an error
+    bool panic; // I am processing an error
 
     //track the last two outputs from the lexer
     Toy_Token current;

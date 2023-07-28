@@ -15,7 +15,7 @@
 #include "toy_refstring.h"
 #include "toy_reffunction.h"
 
-//forward delcare stuff
+// forward declare stuff
 struct Toy_Literal;
 struct Toy_Interpreter;
 struct Toy_LiteralArray;
@@ -64,15 +64,15 @@ typedef enum {
     TOY_LITERAL_OPAQUE,                  //
     TOY_LITERAL_ANY,                     //
 
-    //these are meta-level types - not for general use
-    TOY_LITERAL_TYPE_INTERMEDIATE,       //used to process types in the compiler only
-    TOY_LITERAL_ARRAY_INTERMEDIATE,      //used to process arrays in the compiler only
-    TOY_LITERAL_DICTIONARY_INTERMEDIATE, //used to process dictionaries in the compiler only
-    TOY_LITERAL_FUNCTION_INTERMEDIATE,   //used to process functions in the compiler only
-    TOY_LITERAL_FUNCTION_ARG_REST,       //used to process function rest parameters only
-    TOY_LITERAL_FUNCTION_NATIVE,         //for handling native functions only
-    TOY_LITERAL_FUNCTION_HOOK,           //for handling hook functions within literals only
-    TOY_LITERAL_INDEX_BLANK,             //for blank indexing i.e. arr[:]
+    // these are meta-level types - not for general use
+    TOY_LITERAL_TYPE_INTERMEDIATE,       // used to process types in the compiler only
+    TOY_LITERAL_ARRAY_INTERMEDIATE,      // used to process arrays in the compiler only
+    TOY_LITERAL_DICTIONARY_INTERMEDIATE, // used to process dictionaries in the compiler only
+    TOY_LITERAL_FUNCTION_INTERMEDIATE,   // used to process functions in the compiler only
+    TOY_LITERAL_FUNCTION_ARG_REST,       // used to process function rest parameters only
+    TOY_LITERAL_FUNCTION_NATIVE,         // for handling native functions only
+    TOY_LITERAL_FUNCTION_HOOK,           // for handling hook functions within literals only
+    TOY_LITERAL_INDEX_BLANK,             // for blank indexing i.e. arr[:]
 } Toy_LiteralType;
 
 typedef struct Toy_Literal {
@@ -222,7 +222,7 @@ typedef struct Toy_Literal {
 #define TOY_TO_TYPE_LITERAL(value, c)           ((Toy_Literal){{ .type = { .typeOf = value, .constant = c, .subtypes = NULL, .capacity = 0, .count = 0 }}, TOY_LITERAL_TYPE})
 #define TOY_TO_OPAQUE_LITERAL(value, t)         ((Toy_Literal){{ .opaque = { .ptr = value, .tag = t }}, TOY_LITERAL_OPAQUE})
 
-//BUGFIX: For blank indexing - not for general use
+// BUGFIX: For blank indexing - not for general use
 #define TOY_IS_INDEX_BLANK(value)               ((value).type == TOY_LITERAL_INDEX_BLANK)
 #define TOY_TO_INDEX_BLANK_LITERAL              ((Toy_Literal){{ .integer = 0 }, TOY_LITERAL_INDEX_BLANK})
 

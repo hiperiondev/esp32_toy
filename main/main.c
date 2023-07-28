@@ -171,7 +171,7 @@ void app_main(void) {
     xTaskCreatePinnedToCore(
             toy_task,
             "toy_task",
-            35000,
+            55000,
             NULL,
             10,
             &toytsk_handle,

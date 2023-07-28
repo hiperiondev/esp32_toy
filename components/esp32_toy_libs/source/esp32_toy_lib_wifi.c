@@ -139,13 +139,14 @@ static int nativeWifiConnect(Toy_Interpreter *interpreter, Toy_LiteralArray *arg
         return -1;
     }
 
-    Toy_RefString *ssidString = TOY_AS_STRING(ssidLiteral);
+    Toy_RefString *passwdString = TOY_AS_STRING(ssidLiteral);
+    Toy_RefString *ssidString = TOY_AS_STRING(passwdLiteral);
     const char *ssid = Toy_toCString(ssidString);
-    Toy_RefString *passwdString = TOY_AS_STRING(passwdLiteral);
     const char *passwd = Toy_toCString(passwdString);
 
     if (wifi_connected)
         wifi_stop();
+    printf("trying to connect: %s : %s\n", ssid, passwd);
     wifi_connect_sta(ssid, passwd);
 
     Toy_freeLiteral(ssidLiteral);

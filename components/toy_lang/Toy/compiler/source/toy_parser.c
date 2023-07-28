@@ -925,96 +925,96 @@ static Toy_Opcode dot(Toy_Parser *parser, Toy_ASTNode **nodeHandle) {
 }
 
 ParseRule parseRules[] = { //must match the token types
-        //types
-                { atomic, NULL, PREC_PRIMARY },    // TOKEN_NULL,
-                { castingPrefix, NULL, PREC_CALL },    // TOKEN_BOOLEAN,
-                { castingPrefix, NULL, PREC_CALL },    // TOKEN_INTEGER,
-                { castingPrefix, NULL, PREC_CALL },    // TOKEN_FLOAT,
-                { castingPrefix, NULL, PREC_CALL },    // TOKEN_STRING,
-                { NULL, NULL, PREC_NONE },    // TOKEN_ARRAY,
-                { NULL, NULL, PREC_NONE },    // TOKEN_DICTIONARY,
-                { NULL, NULL, PREC_NONE },    // TOKEN_FUNCTION,
-                { NULL, NULL, PREC_NONE },    // TOKEN_OPAQUE,
-                { castingPrefix, NULL, PREC_CALL },    // TOKEN_ANY,
+        // types
+        { atomic, NULL, PREC_PRIMARY },                 // TOKEN_NULL
+        { castingPrefix, NULL, PREC_CALL },             // TOKEN_BOOLEAN
+        { castingPrefix, NULL, PREC_CALL },             // TOKEN_INTEGER
+        { castingPrefix, NULL, PREC_CALL },             // TOKEN_FLOAT
+        { castingPrefix, NULL, PREC_CALL },             // TOKEN_STRING
+        { NULL, NULL, PREC_NONE },                      // TOKEN_ARRAY
+        { NULL, NULL, PREC_NONE },                      // TOKEN_DICTIONARY
+        { NULL, NULL, PREC_NONE },                      // TOKEN_FUNCTION
+        { NULL, NULL, PREC_NONE },                      // TOKEN_OPAQUE
+        { castingPrefix, NULL, PREC_CALL },             // TOKEN_ANY
 
-                //keywords and reserved words
-                { NULL, NULL, PREC_NONE },    // TOKEN_AS,
-                { NULL, NULL, PREC_NONE },    // TOKEN_ASSERT,
-                { NULL, NULL, PREC_NONE },    // TOKEN_BREAK,
-                { NULL, NULL, PREC_NONE },    // TOKEN_CLASS,
-                { NULL, NULL, PREC_NONE },    // TOKEN_CONST,
-                { NULL, NULL, PREC_NONE },    // TOKEN_CONTINUE,
-                { NULL, NULL, PREC_NONE },    // TOKEN_DO,
-                { NULL, NULL, PREC_NONE },    // TOKEN_ELSE,
-                { NULL, NULL, PREC_NONE },    // TOKEN_EXPORT,
-                { NULL, NULL, PREC_NONE },    // TOKEN_FOR,
-                { NULL, NULL, PREC_NONE },    // TOKEN_FOREACH,
-                { NULL, NULL, PREC_NONE },    // TOKEN_IF,
-                { NULL, NULL, PREC_NONE },    // TOKEN_IMPORT,
-                { NULL, NULL, PREC_NONE },    // TOKEN_IN,
-                { NULL, NULL, PREC_NONE },    // TOKEN_OF,
-                { NULL, NULL, PREC_NONE },    // TOKEN_PRINT,
-                { NULL, NULL, PREC_NONE },    // TOKEN_RETURN,
-                { atomic, NULL, PREC_PRIMARY },    // TOKEN_TYPE,
-                { asType, NULL, PREC_CALL },    // TOKEN_ASTYPE,
-                { typeOf, NULL, PREC_CALL },    // TOKEN_TYPEOF,
-                { NULL, NULL, PREC_NONE },    // TOKEN_VAR,
-                { NULL, NULL, PREC_NONE },    // TOKEN_WHILE,
+        // keywords and reserved words
+        { NULL, NULL, PREC_NONE },                      // TOKEN_AS
+        { NULL, NULL, PREC_NONE },                      // TOKEN_ASSERT
+        { NULL, NULL, PREC_NONE },                      // TOKEN_BREAK
+        { NULL, NULL, PREC_NONE },                      // TOKEN_CLASS
+        { NULL, NULL, PREC_NONE },                      // TOKEN_CONST
+        { NULL, NULL, PREC_NONE },                      // TOKEN_CONTINUE
+        { NULL, NULL, PREC_NONE },                      // TOKEN_DO
+        { NULL, NULL, PREC_NONE },                      // TOKEN_ELSE
+        { NULL, NULL, PREC_NONE },                      // TOKEN_EXPORT
+        { NULL, NULL, PREC_NONE },                      // TOKEN_FOR
+        { NULL, NULL, PREC_NONE },                      // TOKEN_FOREACH
+        { NULL, NULL, PREC_NONE },                      // TOKEN_IF
+        { NULL, NULL, PREC_NONE },                      // TOKEN_IMPORT
+        { NULL, NULL, PREC_NONE },                      // TOKEN_IN
+        { NULL, NULL, PREC_NONE },                      // TOKEN_OF
+        { NULL, NULL, PREC_NONE },                      // TOKEN_PRINT
+        { NULL, NULL, PREC_NONE },                      // TOKEN_RETURN
+        { atomic, NULL, PREC_PRIMARY },                 // TOKEN_TYPE
+        { asType, NULL, PREC_CALL },                    // TOKEN_ASTYPE
+        { typeOf, NULL, PREC_CALL },                    // TOKEN_TYPEOF
+        { NULL, NULL, PREC_NONE },                      // TOKEN_VAR
+        { NULL, NULL, PREC_NONE },                      // TOKEN_WHILE
 
-                //literal values
-                { identifier, castingInfix, PREC_PRIMARY },    // TOKEN_IDENTIFIER,
-                { atomic, castingInfix, PREC_PRIMARY },    // TOKEN_LITERAL_TRUE,
-                { atomic, castingInfix, PREC_PRIMARY },    // TOKEN_LITERAL_FALSE,
-                { atomic, castingInfix, PREC_PRIMARY },    // TOKEN_LITERAL_INTEGER,
-                { atomic, castingInfix, PREC_PRIMARY },    // TOKEN_LITERAL_FLOAT,
-                { string, castingInfix, PREC_PRIMARY },    // TOKEN_LITERAL_STRING,
+        // literal values
+        { identifier, castingInfix, PREC_PRIMARY },     // TOKEN_IDENTIFIER
+        { atomic, castingInfix, PREC_PRIMARY },         // TOKEN_LITERAL_TRUE
+        { atomic, castingInfix, PREC_PRIMARY },         // TOKEN_LITERAL_FALSE
+        { atomic, castingInfix, PREC_PRIMARY },         // TOKEN_LITERAL_INTEGER
+        { atomic, castingInfix, PREC_PRIMARY },         // TOKEN_LITERAL_FLOAT
+        { string, castingInfix, PREC_PRIMARY },         // TOKEN_LITERAL_STRING
 
-                //math operators
-                { NULL, binary, PREC_TERM },    // TOKEN_PLUS,
-                { unary, binary, PREC_TERM },    // TOKEN_MINUS,
-                { NULL, binary, PREC_FACTOR },    // TOKEN_MULTIPLY,
-                { NULL, binary, PREC_FACTOR },    // TOKEN_DIVIDE,
-                { NULL, binary, PREC_FACTOR },    // TOKEN_MODULO,
-                { NULL, binary, PREC_ASSIGNMENT },    // TOKEN_PLUS_ASSIGN,
-                { NULL, binary, PREC_ASSIGNMENT },    // TOKEN_MINUS_ASSIGN,
-                { NULL, binary, PREC_ASSIGNMENT },    // TOKEN_MULTIPLY_ASSIGN,
-                { NULL, binary, PREC_ASSIGNMENT },    // TOKEN_DIVIDE_ASSIGN,
-                { NULL, binary, PREC_ASSIGNMENT },    // TOKEN_MODULO_ASSIGN,
-                { incrementPrefix, incrementInfix, PREC_CALL },    // TOKEN_PLUS_PLUS,
-                { decrementPrefix, decrementInfix, PREC_CALL },    // TOKEN_MINUS_MINUS,
-                { NULL, binary, PREC_ASSIGNMENT },    // TOKEN_ASSIGN,
+        // math operators
+        { NULL, binary, PREC_TERM },                    // TOKEN_PLUS
+        { unary, binary, PREC_TERM },                   // TOKEN_MINUS
+        { NULL, binary, PREC_FACTOR },                  // TOKEN_MULTIPLY
+        { NULL, binary, PREC_FACTOR },                  // TOKEN_DIVIDE
+        { NULL, binary, PREC_FACTOR },                  // TOKEN_MODULO
+        { NULL, binary, PREC_ASSIGNMENT },              // TOKEN_PLUS_ASSIGN
+        { NULL, binary, PREC_ASSIGNMENT },              // TOKEN_MINUS_ASSIGN
+        { NULL, binary, PREC_ASSIGNMENT },              // TOKEN_MULTIPLY_ASSIGN
+        { NULL, binary, PREC_ASSIGNMENT },              // TOKEN_DIVIDE_ASSIGN
+        { NULL, binary, PREC_ASSIGNMENT },              // TOKEN_MODULO_ASSIGN
+        { incrementPrefix, incrementInfix, PREC_CALL }, // TOKEN_PLUS_PLUS
+        { decrementPrefix, decrementInfix, PREC_CALL }, // TOKEN_MINUS_MINUS
+        { NULL, binary, PREC_ASSIGNMENT },              // TOKEN_ASSIGN
 
-                //logical operators
-                { grouping, fnCall, PREC_CALL },    // TOKEN_PAREN_LEFT,
-                { NULL, NULL, PREC_NONE },    // TOKEN_PAREN_RIGHT,
-                { compound, indexAccess, PREC_CALL },    // TOKEN_BRACKET_LEFT,
-                { NULL, NULL, PREC_NONE },    // TOKEN_BRACKET_RIGHT,
-                { NULL, NULL, PREC_NONE },    // TOKEN_BRACE_LEFT,
-                { NULL, NULL, PREC_NONE },    // TOKEN_BRACE_RIGHT,
-                { unary, NULL, PREC_CALL },    // TOKEN_NOT,
-                { NULL, binary, PREC_COMPARISON },    // TOKEN_NOT_EQUAL,
-                { NULL, binary, PREC_COMPARISON },    // TOKEN_EQUAL,
-                { NULL, binary, PREC_COMPARISON },    // TOKEN_LESS,
-                { NULL, binary, PREC_COMPARISON },    // TOKEN_GREATER,
-                { NULL, binary, PREC_COMPARISON },    // TOKEN_LESS_EQUAL,
-                { NULL, binary, PREC_COMPARISON },    // TOKEN_GREATER_EQUAL,
-                { NULL, binary, PREC_AND },    // TOKEN_AND,
-                { NULL, binary, PREC_OR },    // TOKEN_OR,
+        // logical operators
+        { grouping, fnCall, PREC_CALL },                // TOKEN_PAREN_LEFT
+        { NULL, NULL, PREC_NONE },                      // TOKEN_PAREN_RIGHT
+        { compound, indexAccess, PREC_CALL },           // TOKEN_BRACKET_LEFT
+        { NULL, NULL, PREC_NONE },                      // TOKEN_BRACKET_RIGHT
+        { NULL, NULL, PREC_NONE },                      // TOKEN_BRACE_LEFT
+        { NULL, NULL, PREC_NONE },                      // TOKEN_BRACE_RIGHT
+        { unary, NULL, PREC_CALL },                     // TOKEN_NOT
+        { NULL, binary, PREC_COMPARISON },              // TOKEN_NOT_EQUAL
+        { NULL, binary, PREC_COMPARISON },              // TOKEN_EQUAL
+        { NULL, binary, PREC_COMPARISON },              // TOKEN_LESS
+        { NULL, binary, PREC_COMPARISON },              // TOKEN_GREATER
+        { NULL, binary, PREC_COMPARISON },              // TOKEN_LESS_EQUAL
+        { NULL, binary, PREC_COMPARISON },              // TOKEN_GREATER_EQUAL
+        { NULL, binary, PREC_AND },                     // TOKEN_AND
+        { NULL, binary, PREC_OR },                      // TOKEN_OR
 
-                //other operators
-                { NULL, question, PREC_TERNARY }, //TOKEN_QUESTION,
-                { NULL, NULL, PREC_NONE }, // TOKEN_COLON,
-                { NULL, NULL, PREC_NONE }, // TOKEN_SEMICOLON,
-                { NULL, NULL, PREC_NONE }, // TOKEN_COMMA,
-                { NULL, dot, PREC_CALL }, // TOKEN_DOT,
-                { NULL, NULL, PREC_NONE }, // TOKEN_PIPE,
-                { NULL, NULL, PREC_NONE }, // TOKEN_REST,
+        // other operators
+        { NULL, question, PREC_TERNARY },               // TOKEN_QUESTION
+        { NULL, NULL, PREC_NONE },                      // TOKEN_COLON
+        { NULL, NULL, PREC_NONE },                      // TOKEN_SEMICOLON
+        { NULL, NULL, PREC_NONE },                      // TOKEN_COMMA
+        { NULL, dot, PREC_CALL },                       // TOKEN_DOT
+        { NULL, NULL, PREC_NONE },                      // TOKEN_PIPE
+        { NULL, NULL, PREC_NONE },                      // TOKEN_REST
 
-                //meta tokens
-                { NULL, NULL, PREC_NONE }, // TOKEN_PASS,
-                { NULL, NULL, PREC_NONE }, // TOKEN_ERROR,
-                { NULL, NULL, PREC_NONE }, // TOKEN_EOF,
-        };
+        // meta tokens
+        { NULL, NULL, PREC_NONE },                      // TOKEN_PASS
+        { NULL, NULL, PREC_NONE },                      // TOKEN_ERROR
+        { NULL, NULL, PREC_NONE },                      // TOKEN_EOF
+};
 
 ParseRule* getRule(Toy_TokenType type) {
     return &parseRules[type];
@@ -1455,7 +1455,7 @@ static void returnStmt(Toy_Parser *parser, Toy_ASTNode **nodeHandle) {
 
     if (!match(parser, TOY_TOKEN_SEMICOLON)) {
         do { //loop for multiple returns (disabled later in the pipeline)
-             //append the node to the return list (grow the node if needed)
+            //append the node to the return list (grow the node if needed)
             if (returnValues->fnCollection.capacity < returnValues->fnCollection.count + 1) {
                 int oldCapacity = returnValues->fnCollection.capacity;
 

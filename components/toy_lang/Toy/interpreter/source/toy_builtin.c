@@ -7,7 +7,7 @@
 
 //static math utils, copied from the interpreter
 static Toy_Literal addition(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_Literal rhs) {
-    //special case for string concatenation ONLY
+    // special case for string concatenation ONLY
     if (TOY_IS_STRING(lhs) && TOY_IS_STRING(rhs)) {
         //check for overflow
         int totalLength = TOY_AS_STRING(lhs)->length + TOY_AS_STRING(rhs)->length;
@@ -16,7 +16,7 @@ static Toy_Literal addition(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_L
             return TOY_TO_NULL_LITERAL;
         }
 
-        //concat the strings
+        // concat the strings
         char buffer[TOY_MAX_STRING_LENGTH];
         snprintf(buffer, TOY_MAX_STRING_LENGTH, "%s%s", Toy_toCString(TOY_AS_STRING(lhs)), Toy_toCString(TOY_AS_STRING(rhs)));
         Toy_Literal literal = TOY_TO_STRING_LITERAL(Toy_createRefStringLength(buffer, totalLength));
@@ -27,7 +27,7 @@ static Toy_Literal addition(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_L
         return literal;
     }
 
-    //type coersion
+    // type coercion
     if (TOY_IS_FLOAT(lhs) && TOY_IS_INTEGER(rhs)) {
         rhs = TOY_TO_FLOAT_LITERAL(TOY_AS_INTEGER(rhs));
     }
@@ -57,7 +57,7 @@ static Toy_Literal addition(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_L
         return result;
     }
 
-    //wrong types
+    // wrong types
     interpreter->errorOutput("Bad arithmetic argument ");
     Toy_printLiteralCustom(lhs, interpreter->errorOutput);
     interpreter->errorOutput(" and ");
@@ -71,7 +71,7 @@ static Toy_Literal addition(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_L
 }
 
 static Toy_Literal subtraction(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_Literal rhs) {
-    //type coersion
+    // type coersion
     if (TOY_IS_FLOAT(lhs) && TOY_IS_INTEGER(rhs)) {
         rhs = TOY_TO_FLOAT_LITERAL(TOY_AS_INTEGER(rhs));
     }
@@ -80,7 +80,7 @@ static Toy_Literal subtraction(Toy_Interpreter *interpreter, Toy_Literal lhs, To
         lhs = TOY_TO_FLOAT_LITERAL(TOY_AS_INTEGER(lhs));
     }
 
-    //results
+    // results
     Toy_Literal result = TOY_TO_NULL_LITERAL;
 
     if (TOY_IS_INTEGER(lhs) && TOY_IS_INTEGER(rhs)) {
@@ -101,7 +101,7 @@ static Toy_Literal subtraction(Toy_Interpreter *interpreter, Toy_Literal lhs, To
         return result;
     }
 
-    //wrong types
+    // wrong types
     interpreter->errorOutput("Bad arithmetic argument ");
     Toy_printLiteralCustom(lhs, interpreter->errorOutput);
     interpreter->errorOutput(" and ");
@@ -115,7 +115,7 @@ static Toy_Literal subtraction(Toy_Interpreter *interpreter, Toy_Literal lhs, To
 }
 
 static Toy_Literal multiplication(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_Literal rhs) {
-    //type coersion
+    // type coersion
     if (TOY_IS_FLOAT(lhs) && TOY_IS_INTEGER(rhs)) {
         rhs = TOY_TO_FLOAT_LITERAL(TOY_AS_INTEGER(rhs));
     }
@@ -124,7 +124,7 @@ static Toy_Literal multiplication(Toy_Interpreter *interpreter, Toy_Literal lhs,
         lhs = TOY_TO_FLOAT_LITERAL(TOY_AS_INTEGER(lhs));
     }
 
-    //results
+    // results
     Toy_Literal result = TOY_TO_NULL_LITERAL;
 
     if (TOY_IS_INTEGER(lhs) && TOY_IS_INTEGER(rhs)) {
@@ -145,7 +145,7 @@ static Toy_Literal multiplication(Toy_Interpreter *interpreter, Toy_Literal lhs,
         return result;
     }
 
-    //wrong types
+    // wrong types
     interpreter->errorOutput("Bad arithmetic argument ");
     Toy_printLiteralCustom(lhs, interpreter->errorOutput);
     interpreter->errorOutput(" and ");
@@ -159,12 +159,12 @@ static Toy_Literal multiplication(Toy_Interpreter *interpreter, Toy_Literal lhs,
 }
 
 static Toy_Literal division(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_Literal rhs) {
-    //division check
+    // division check
     if ((TOY_IS_INTEGER(rhs) && TOY_AS_INTEGER(rhs) == 0) || (TOY_IS_FLOAT(rhs) && TOY_AS_FLOAT(rhs) == 0)) {
         interpreter->errorOutput("Can't divide by zero");
     }
 
-    //type coersion
+    // type coersion
     if (TOY_IS_FLOAT(lhs) && TOY_IS_INTEGER(rhs)) {
         rhs = TOY_TO_FLOAT_LITERAL(TOY_AS_INTEGER(rhs));
     }
@@ -173,7 +173,7 @@ static Toy_Literal division(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_L
         lhs = TOY_TO_FLOAT_LITERAL(TOY_AS_INTEGER(lhs));
     }
 
-    //results
+    // results
     Toy_Literal result = TOY_TO_NULL_LITERAL;
 
     if (TOY_IS_INTEGER(lhs) && TOY_IS_INTEGER(rhs)) {
@@ -194,7 +194,7 @@ static Toy_Literal division(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_L
         return result;
     }
 
-    //wrong types
+    // wrong types
     interpreter->errorOutput("Bad arithmetic argument ");
     Toy_printLiteralCustom(lhs, interpreter->errorOutput);
     interpreter->errorOutput(" and ");
@@ -208,12 +208,12 @@ static Toy_Literal division(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_L
 }
 
 static Toy_Literal modulo(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_Literal rhs) {
-    //division check
+    // division check
     if ((TOY_IS_INTEGER(rhs) && TOY_AS_INTEGER(rhs) == 0) || (TOY_IS_FLOAT(rhs) && TOY_AS_FLOAT(rhs) == 0)) {
         interpreter->errorOutput("Can't divide by zero");
     }
 
-    //type coersion
+    // type coersion
     if (TOY_IS_FLOAT(lhs) && TOY_IS_INTEGER(rhs)) {
         rhs = TOY_TO_FLOAT_LITERAL(TOY_AS_INTEGER(rhs));
     }
@@ -222,7 +222,7 @@ static Toy_Literal modulo(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_Lit
         lhs = TOY_TO_FLOAT_LITERAL(TOY_AS_INTEGER(lhs));
     }
 
-    //results
+    // results
     Toy_Literal result = TOY_TO_NULL_LITERAL;
 
     if (TOY_IS_INTEGER(lhs) && TOY_IS_INTEGER(rhs)) {
@@ -234,9 +234,9 @@ static Toy_Literal modulo(Toy_Interpreter *interpreter, Toy_Literal lhs, Toy_Lit
         return result;
     }
 
-    //NOTE: no float modulo
+    // NOTE: no float modulo
 
-    //wrong types
+    // wrong types
     interpreter->errorOutput("Bad arithmetic argument ");
     Toy_printLiteralCustom(lhs, interpreter->errorOutput);
     interpreter->errorOutput(" and ");
@@ -258,7 +258,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
     Toy_Literal first = Toy_popLiteralArray(arguments);
     Toy_Literal compound = Toy_popLiteralArray(arguments);
 
-    //dictionary - no slicing
+    // dictionary - no slicing
     if (TOY_IS_DICTIONARY(compound)) {
         if (TOY_IS_IDENTIFIER(first)) {
             Toy_Literal idn = first;
@@ -289,7 +289,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             return -1;
         }
 
-        //second and third are bad args to dictionaries
+        // second and third are bad args to dictionaries
         if (!TOY_IS_NULL(second) || !TOY_IS_NULL(third)) {
             interpreter->errorOutput("Index slicing not allowed for dictionaries\n");
 
@@ -303,7 +303,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             return -1;
         }
 
-        //get the value
+        // get the value
         Toy_Literal value = Toy_getLiteralDictionary(TOY_AS_DICTIONARY(compound), first);
 
         //dictionary
@@ -355,7 +355,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             Toy_freeLiteral(lit);
         }
 
-        //leave the dictionary on the stack
+        // leave the dictionary on the stack
         Toy_pushLiteralArray(&interpreter->stack, compound);
 
         Toy_freeLiteral(op);
@@ -369,11 +369,11 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
         return 1;
     }
 
-    //array - slicing
+    // array - slicing
     if (TOY_IS_ARRAY(compound)) {
-        //array slice
+        // array slice
         if (TOY_IS_NULL(op)) {
-            //parse out the blanks & their defaults
+            // parse out the blanks & their defaults
             if (!TOY_IS_NULL(first)) {
                 if (TOY_IS_INDEX_BLANK(first)) {
                     Toy_freeLiteral(first);
@@ -422,11 +422,11 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return -1;
             }
 
-            //handle each error case
+            // handle each error case
             if (!TOY_IS_INTEGER(first) || TOY_AS_INTEGER(first) < 0 || TOY_AS_INTEGER(first) >= TOY_AS_ARRAY(compound)->count) {
                 interpreter->errorOutput("Bad first indexing\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -454,7 +454,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             if ((!TOY_IS_NULL(third) && !TOY_IS_INTEGER(third)) || TOY_AS_INTEGER(third) == 0) {
                 interpreter->errorOutput("Bad third indexing\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -465,7 +465,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return -1;
             }
 
-            //simple indexing if second is null
+            // simple indexing if second is null
             if (TOY_IS_NULL(second)) {
                 Toy_Literal result = Toy_getLiteralArray(TOY_AS_ARRAY(compound), first);
                 Toy_pushLiteralArray(&interpreter->stack, result);
@@ -481,11 +481,11 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return 1;
             }
 
-            //start building a new array from the old one
+            // start building a new array from the old one
             Toy_LiteralArray *result = TOY_ALLOCATE(Toy_LiteralArray, 1);
             Toy_initLiteralArray(result);
 
-            //copy compound into result
+            // copy compound into result
             if (TOY_AS_INTEGER(third) > 0) {
                 for (int i = TOY_AS_INTEGER(first); i <= TOY_AS_INTEGER(second); i += TOY_AS_INTEGER(third)) {
                     Toy_Literal idx = TOY_TO_INTEGER_LITERAL(i);
@@ -506,11 +506,11 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 }
             }
 
-            //finally, swap out the compound for the result
+            // finally, swap out the compound for the result
             Toy_freeLiteral(compound);
             compound = TOY_TO_ARRAY_LITERAL(result);
 
-            //leave the array on the stack
+            // leave the array on the stack
             Toy_pushLiteralArray(&interpreter->stack, compound);
 
             Toy_freeLiteral(op);
@@ -523,9 +523,9 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             return 1;
         }
 
-        //array slice assignment
+        // array slice assignment
         if (TOY_IS_STRING(op) && Toy_equalsRefStringCString(TOY_AS_STRING(op), "=")) {
-            //parse out the blanks & their defaults
+            // parse out the blanks & their defaults
             if (!TOY_IS_NULL(first)) {
                 if (TOY_IS_INDEX_BLANK(first)) {
                     Toy_freeLiteral(first);
@@ -574,11 +574,11 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return -1;
             }
 
-            //handle each error case
+            // handle each error case
             if (!TOY_IS_INTEGER(first) || TOY_AS_INTEGER(first) < 0 || TOY_AS_INTEGER(first) >= TOY_AS_ARRAY(compound)->count) {
                 interpreter->errorOutput("Bad first indexing assignment\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -592,7 +592,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             if ((!TOY_IS_NULL(second) && !TOY_IS_INTEGER(second)) || TOY_AS_INTEGER(second) < 0 || TOY_AS_INTEGER(second) >= TOY_AS_ARRAY(compound)->count) {
                 interpreter->errorOutput("Bad second indexing assignment\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -606,7 +606,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             if ((!TOY_IS_NULL(third) && !TOY_IS_INTEGER(third)) || TOY_AS_INTEGER(third) == 0) {
                 interpreter->errorOutput("Bad third indexing assignment\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -617,7 +617,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return -1;
             }
 
-            //simple indexing assignment if second is null
+            // simple indexing assignment if second is null
             if (TOY_IS_NULL(second)) {
                 int ret = -1;
 
@@ -640,11 +640,11 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return ret;
             }
 
-            //start building a new array from the old one
+            // start building a new array from the old one
             Toy_LiteralArray *result = TOY_ALLOCATE(Toy_LiteralArray, 1);
             Toy_initLiteralArray(result);
 
-            //if third is abs(1), simply insert into the correct positions
+            // if third is abs(1), simply insert into the correct positions
             if (TOY_AS_INTEGER(third) == 1 || TOY_AS_INTEGER(third) == -1) {
                 for (int i = 0; i < TOY_AS_INTEGER(first); i++) {
                     Toy_Literal idx = TOY_TO_INTEGER_LITERAL(i);
@@ -657,18 +657,18 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
 
                 int min = TOY_AS_INTEGER(third) > 0 ? 0 : TOY_AS_ARRAY(assign)->count - 1;
 
-                if (TOY_IS_ARRAY(assign)) { //push elements of an assigned array
+                if (TOY_IS_ARRAY(assign)) { // push elements of an assigned array
                     for (int i = min; i >= 0 && i < TOY_AS_ARRAY(assign)->count; i += TOY_AS_INTEGER(third)) {
                         Toy_Literal idx = TOY_TO_INTEGER_LITERAL(i);
-                        Toy_Literal tmp = Toy_getLiteralArray(TOY_AS_ARRAY(assign), idx); //backwards
+                        Toy_Literal tmp = Toy_getLiteralArray(TOY_AS_ARRAY(assign), idx); // backwards
 
-                        //set result
+                        // set result
                         Toy_pushLiteralArray(result, tmp);
 
                         Toy_freeLiteral(idx);
                         Toy_freeLiteral(tmp);
                     }
-                } else { //push just one element into the array
+                } else { // push just one element into the array
                     Toy_pushLiteralArray(result, assign);
                 }
 
@@ -682,9 +682,9 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 }
             }
 
-            //else override elements of the array instead
+            // else override elements of the array instead
             else {
-                //copy compound to result
+                // copy compound to result
                 for (int i = 0; i < TOY_AS_ARRAY(compound)->count; i++) {
                     Toy_Literal idx = TOY_TO_INTEGER_LITERAL(i);
                     Toy_Literal tmp = Toy_getLiteralArray(TOY_AS_ARRAY(compound), idx);
@@ -711,11 +711,11 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 }
             }
 
-            //finally, swap out the compound for the result
+            // finally, swap out the compound for the result
             Toy_freeLiteral(compound);
             compound = TOY_TO_ARRAY_LITERAL(result);
 
-            //leave the array on the stack
+            // leave the array on the stack
             Toy_pushLiteralArray(&interpreter->stack, compound);
 
             Toy_freeLiteral(op);
@@ -728,7 +728,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             return 1;
         }
 
-        //assignment and other operations
+        // assignment and other operations
         if (TOY_IS_IDENTIFIER(first)) {
             Toy_Literal idn = first;
             Toy_parseIdentifierToValue(interpreter, &first);
@@ -778,7 +778,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             Toy_freeLiteral(lit);
         }
 
-        //leave the array on the stack
+        // leave the array on the stack
         Toy_pushLiteralArray(&interpreter->stack, compound);
 
         Toy_freeLiteral(op);
@@ -791,11 +791,11 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
         return 1;
     }
 
-    //string - slicing
+    // string - slicing
     if (TOY_IS_STRING(compound)) {
-        //string slice
+        // string slice
         if (TOY_IS_NULL(op)) {
-            //parse out the blanks & their defaults
+            // parse out the blanks & their defaults
             if (!TOY_IS_NULL(first)) {
                 if (TOY_IS_INDEX_BLANK(first)) {
                     Toy_freeLiteral(first);
@@ -845,11 +845,11 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return -1;
             }
 
-            //handle each error case
+            // handle each error case
             if (!TOY_IS_INTEGER(first) || TOY_AS_INTEGER(first) < 0 || TOY_AS_INTEGER(first) >= (int) Toy_lengthRefString(TOY_AS_STRING(compound))) {
                 interpreter->errorOutput("Bad first indexing in string\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -864,7 +864,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                     || TOY_AS_INTEGER(second) >= (int) Toy_lengthRefString(TOY_AS_STRING(compound))) {
                 interpreter->errorOutput("Bad second indexing in string\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -878,7 +878,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             if ((!TOY_IS_NULL(third) && !TOY_IS_INTEGER(third)) || TOY_AS_INTEGER(third) == 0) {
                 interpreter->errorOutput("Bad third indexing in string\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -889,7 +889,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return -1;
             }
 
-            //simple indexing if second is null
+            // simple indexing if second is null
             if (TOY_IS_NULL(second)) {
 
                 const char *cstr = Toy_toCString(TOY_AS_STRING(compound));
@@ -911,10 +911,10 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return 1;
             }
 
-            //start building a new string from the old one
+            // start building a new string from the old one
             char *result = TOY_ALLOCATE(char, TOY_MAX_STRING_LENGTH);
 
-            //copy compound into result
+            // copy compound into result
             int resultIndex = 0;
 
             if (TOY_AS_INTEGER(third) > 0) {
@@ -929,13 +929,13 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
 
             result[resultIndex] = '\0';
 
-            //finally, swap out the compound for the result
+            // finally, swap out the compound for the result
             Toy_freeLiteral(compound);
             compound = TOY_TO_STRING_LITERAL(Toy_createRefStringLength(result, resultIndex));
 
             TOY_FREE_ARRAY(char, result, TOY_MAX_STRING_LENGTH);
 
-            //leave the string on the stack
+            // leave the string on the stack
             Toy_pushLiteralArray(&interpreter->stack, compound);
 
             Toy_freeLiteral(op);
@@ -948,9 +948,9 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             return 1;
         }
 
-        //string slice assignment
+        // string slice assignment
         else if (TOY_IS_STRING(op) && Toy_equalsRefStringCString(TOY_AS_STRING(op), "=")) {
-            //parse out the blanks & their defaults
+            // parse out the blanks & their defaults
             if (!TOY_IS_NULL(first)) {
                 if (TOY_IS_INDEX_BLANK(first)) {
                     Toy_freeLiteral(first);
@@ -1000,11 +1000,11 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return -1;
             }
 
-            //handle each error case
+            // handle each error case
             if (!TOY_IS_INTEGER(first) || TOY_AS_INTEGER(first) < 0 || TOY_AS_INTEGER(first) >= (int) Toy_lengthRefString(TOY_AS_STRING(compound))) {
                 interpreter->errorOutput("Bad first indexing in string assignment\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -1019,7 +1019,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                     || TOY_AS_INTEGER(second) >= (int) Toy_lengthRefString(TOY_AS_STRING(compound))) {
                 interpreter->errorOutput("Bad second indexing in string assignment\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -1033,7 +1033,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
             if ((!TOY_IS_NULL(third) && !TOY_IS_INTEGER(third)) || TOY_AS_INTEGER(third) == 0) {
                 interpreter->errorOutput("Bad third indexing in string assignment\n");
 
-                //something is weird - skip out
+                // something is weird - skip out
                 Toy_freeLiteral(op);
                 Toy_freeLiteral(assign);
                 Toy_freeLiteral(third);
@@ -1044,10 +1044,10 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 return -1;
             }
 
-            //start building a new string from the old one
+            // start building a new string from the old one
             char *result = TOY_ALLOCATE(char, TOY_MAX_STRING_LENGTH);
 
-            //if third is abs(1), simply insert into the correct positions
+            // if third is abs(1), simply insert into the correct positions
             int resultIndex = 0;
             if (TOY_AS_INTEGER(third) == 1 || TOY_AS_INTEGER(third) == -1) {
                 for (int i = 0; i < TOY_AS_INTEGER(first); i++) {
@@ -1068,9 +1068,9 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 result[resultIndex] = '\0';
             }
 
-            //else override elements of the array instead
+            // else override elements of the array instead
             else {
-                //copy compound to result
+                // copy compound to result
                 snprintf(result, TOY_MAX_STRING_LENGTH, "%s", Toy_toCString(TOY_AS_STRING(compound)));
 
                 int assignLength = TOY_AS_STRING(assign)->length;
@@ -1083,13 +1083,13 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
                 resultIndex = strlen(result);
             }
 
-            //finally, swap out the compound for the result
+            // finally, swap out the compound for the result
             Toy_freeLiteral(compound);
             compound = TOY_TO_STRING_LITERAL(Toy_createRefStringLength(result, resultIndex));
 
             TOY_FREE_ARRAY(char, result, TOY_MAX_STRING_LENGTH);
 
-            //leave the string on the stack
+            // leave the string on the stack
             Toy_pushLiteralArray(&interpreter->stack, compound);
 
             Toy_freeLiteral(op);
@@ -1106,10 +1106,10 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
         else if (TOY_IS_STRING(op) && Toy_equalsRefStringCString(TOY_AS_STRING(op), "+=")) {
             Toy_Literal tmp = addition(interpreter, compound, assign);
             Toy_freeLiteral(compound);
-            compound = tmp; //don't clear tmp
+            compound = tmp; // don't clear tmp
         }
 
-        //leave the string on the stack
+        // leave the string on the stack
         Toy_pushLiteralArray(&interpreter->stack, compound);
 
         Toy_freeLiteral(op);
@@ -1126,7 +1126,7 @@ int Toy_private_index(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
 }
 
 int Toy_private_set(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
-    //if wrong number of arguments, fail
+    // if wrong number of arguments, fail
     if (arguments->count != 3) {
         interpreter->errorOutput("Incorrect number of arguments to set\n");
         return -1;
@@ -1172,7 +1172,7 @@ int Toy_private_set(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
 
     switch (obj.type) {
         case TOY_LITERAL_ARRAY: {
-            //check the subtype of the array, if there is one, against the given argument
+            // check the subtype of the array, if there is one, against the given argument
             Toy_Literal typeLiteral = Toy_getScopeType(interpreter->scope, idn);
 
             if (TOY_AS_TYPE(typeLiteral).typeOf == TOY_LITERAL_ARRAY) {
@@ -1197,7 +1197,7 @@ int Toy_private_set(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
                 return -1;
             }
 
-            //don't use pushLiteralArray, since we're setting
+            // don't use pushLiteralArray, since we're setting
             Toy_freeLiteral(TOY_AS_ARRAY(obj)->literals[TOY_AS_INTEGER(key)]); //BUGFIX: clear any existing data first
             TOY_AS_ARRAY(obj)->literals[TOY_AS_INTEGER(key)] = Toy_copyLiteral(val);
 
@@ -1262,7 +1262,7 @@ int Toy_private_set(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
 }
 
 int Toy_private_get(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
-    //if wrong number of arguments, fail
+    // if wrong number of arguments, fail
     if (arguments->count != 2) {
         interpreter->errorOutput("Incorrect number of arguments to get");
         return -1;
@@ -1343,7 +1343,7 @@ int Toy_private_get(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
 }
 
 int Toy_private_push(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
-    //if wrong number of arguments, fail
+    // if wrong number of arguments, fail
     if (arguments->count != 2) {
         interpreter->errorOutput("Incorrect number of arguments to push\n");
         return -1;
@@ -1376,7 +1376,7 @@ int Toy_private_push(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) 
 
     switch (obj.type) {
         case TOY_LITERAL_ARRAY: {
-            //check the subtype of the array, if there is one, against the given argument
+            // check the subtype of the array, if there is one, against the given argument
             Toy_Literal typeLiteral = Toy_getScopeType(interpreter->scope, idn);
 
             if (TOY_AS_TYPE(typeLiteral).typeOf == TOY_LITERAL_ARRAY) {
@@ -1418,7 +1418,7 @@ int Toy_private_push(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) 
 }
 
 int Toy_private_pop(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
-    //if wrong number of arguments, fail
+    // if wrong number of arguments, fail
     if (arguments->count != 1) {
         interpreter->errorOutput("Incorrect number of arguments to pop\n");
         return -1;
@@ -1444,7 +1444,7 @@ int Toy_private_pop(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
             Toy_pushLiteralArray(&interpreter->stack, lit);
             Toy_freeLiteral(lit);
 
-            if (!Toy_setScopeVariable(interpreter->scope, idn, obj, true)) { //TODO: could definitely be more efficient than overwriting the whole original object
+            if (!Toy_setScopeVariable(interpreter->scope, idn, obj, true)) { // TODO: could definitely be more efficient than overwriting the whole original object
                 interpreter->errorOutput("Incorrect type assigned to array in pop: ");
                 Toy_printLiteralCustom(obj, interpreter->errorOutput);
                 interpreter->errorOutput("\n");
@@ -1465,7 +1465,7 @@ int Toy_private_pop(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
 }
 
 int Toy_private_length(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
-    //if wrong number of arguments, fail
+    // if wrong number of arguments, fail
     if (arguments->count != 1) {
         interpreter->errorOutput("Incorrect number of arguments to length\n");
         return -1;
@@ -1520,7 +1520,7 @@ int Toy_private_length(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments
 }
 
 int Toy_private_clear(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments) {
-    //if wrong number of arguments, fail
+    // if wrong number of arguments, fail
     if (arguments->count != 1) {
         interpreter->errorOutput("Incorrect number of arguments to clear\n");
         return -1;
@@ -1540,7 +1540,7 @@ int Toy_private_clear(Toy_Interpreter *interpreter, Toy_LiteralArray *arguments)
         return -1;
     }
 
-    //NOTE: just pass in new compounds
+    // NOTE: just pass in new compounds
 
     switch (obj.type) {
         case TOY_LITERAL_ARRAY: {

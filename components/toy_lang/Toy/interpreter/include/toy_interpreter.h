@@ -49,22 +49,22 @@ typedef struct Toy_Interpreter {
     const unsigned char *bytecode;
     int length;
     int count;
-    int codeStart;                 //BUGFIX: for jumps, must be initialized to -1
-    Toy_LiteralArray literalCache; //read-only - built from the bytecode, refreshed each time new bytecode is provided
+    int codeStart;                 // BUGFIX: for jumps, must be initialized to -1
+    Toy_LiteralArray literalCache; // read-only - built from the bytecode, refreshed each time new bytecode is provided
 
-    //operation
+    // operation
     Toy_Scope *scope;
     Toy_LiteralArray stack;
 
-    //Library APIs
+    // Library APIs
     Toy_LiteralDictionary *hooks;
 
-    //debug outputs
+    // debug outputs
     Toy_PrintFn printOutput;
     Toy_PrintFn assertOutput;
     Toy_PrintFn errorOutput;
 
-    int depth; //don't overflow
+    int depth; // don't overflow
     bool panic;
 } Toy_Interpreter;
 

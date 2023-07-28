@@ -46,6 +46,7 @@ void wifi_stop(void) {
     esp_event_loop_delete_default();
     esp_netif_deinit();
     wifi_connected = false;
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
 }
 
 uint32_t wifi_scan(hal_wifi_ap_record_t **ap_record) {
@@ -114,7 +115,7 @@ static void _wifi_event_handler(void *arg, esp_event_base_t event_base, int32_t 
         }
         ESP_LOGI(TAG, "connect to the AP fail");
         wifi_connected = false;
-        wifi_stop();
+        //wifi_stop();
     } else if (event_base == IP_EVENT && event_id == IP_EVENT_STA_GOT_IP) {
         ip_event_got_ip_t *event = (ip_event_got_ip_t*) event_data;
         ESP_LOGI(TAG, "got ip: %d.%d.%d.%d", IP2STR(&event->ip_info.ip));
